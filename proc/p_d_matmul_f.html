@@ -174,53 +174,53 @@
 <polygon fill="none" stroke="black" points="87,-150 0,-150 0,-126 87,-126 87,-150"/>
 <text text-anchor="middle" x="43.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">p_d_matmul_f</text>
 </g>
-<!-- distribute_blacs -->
+<!-- numroc -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_node2" class="node">
-<title>distribute_blacs</title>
-<polygon fill="#777777" stroke="#777777" points="219,-276 123,-276 123,-252 219,-252 219,-276"/>
-<text text-anchor="middle" x="171" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">distribute_blacs</text>
+<title>numroc</title>
+<polygon fill="#777777" stroke="#777777" points="198,-276 144,-276 144,-252 198,-252 198,-276"/>
+<text text-anchor="middle" x="171" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
 </g>
-<!-- proc~p_d_matmul_f&#45;&gt;distribute_blacs -->
+<!-- proc~p_d_matmul_f&#45;&gt;numroc -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_edge1" class="edge">
-<title>proc~p_d_matmul_f&#45;&gt;distribute_blacs</title>
-<path fill="none" stroke="#000000" d="M50.91,-150.29C62.63,-171.71 89.4,-216.14 123,-243 124.57,-244.26 126.23,-245.45 127.95,-246.59"/>
-<polygon fill="#000000" stroke="#000000" points="126.5,-249.8 136.9,-251.81 130.02,-243.75 126.5,-249.8"/>
-</g>
-<!-- shift_dw -->
-<g id="proc~~p_d_matmul_f~~CallsGraph_node3" class="node">
-<title>shift_dw</title>
-<polygon fill="#777777" stroke="#777777" points="198.5,-234 143.5,-234 143.5,-210 198.5,-210 198.5,-234"/>
-<text text-anchor="middle" x="171" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">shift_dw</text>
-</g>
-<!-- proc~p_d_matmul_f&#45;&gt;shift_dw -->
-<g id="proc~~p_d_matmul_f~~CallsGraph_edge2" class="edge">
-<title>proc~p_d_matmul_f&#45;&gt;shift_dw</title>
-<path fill="none" stroke="#000000" d="M57.34,-150.03C72.28,-163.61 98.09,-185.79 123,-201 126.42,-203.09 130.08,-205.09 133.8,-206.97"/>
-<polygon fill="#000000" stroke="#000000" points="132.51,-210.23 143.05,-211.38 135.52,-203.91 132.51,-210.23"/>
+<title>proc~p_d_matmul_f&#45;&gt;numroc</title>
+<path fill="none" stroke="#000000" d="M50.91,-150.29C62.63,-171.71 89.4,-216.14 123,-243 126.55,-245.84 130.55,-248.38 134.67,-250.63"/>
+<polygon fill="#000000" stroke="#000000" points="133.26,-253.83 143.78,-255.08 136.33,-247.55 133.26,-253.83"/>
 </g>
 <!-- gather_blacs -->
-<g id="proc~~p_d_matmul_f~~CallsGraph_node4" class="node">
+<g id="proc~~p_d_matmul_f~~CallsGraph_node3" class="node">
 <title>gather_blacs</title>
-<polygon fill="#777777" stroke="#777777" points="211.5,-192 130.5,-192 130.5,-168 211.5,-168 211.5,-192"/>
-<text text-anchor="middle" x="171" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
+<polygon fill="#777777" stroke="#777777" points="211.5,-234 130.5,-234 130.5,-210 211.5,-210 211.5,-234"/>
+<text text-anchor="middle" x="171" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
 </g>
 <!-- proc~p_d_matmul_f&#45;&gt;gather_blacs -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_edge4" class="edge">
 <title>proc~p_d_matmul_f&#45;&gt;gather_blacs</title>
-<path fill="none" stroke="#000000" d="M80.46,-150.04C94.12,-154.6 109.85,-159.87 124.29,-164.7"/>
-<polygon fill="#000000" stroke="#000000" points="123.44,-168.11 134.03,-167.96 125.66,-161.47 123.44,-168.11"/>
+<path fill="none" stroke="#000000" d="M57.34,-150.03C72.28,-163.61 98.09,-185.79 123,-201 125.43,-202.48 127.99,-203.93 130.59,-205.31"/>
+<polygon fill="#000000" stroke="#000000" points="129.07,-208.46 139.58,-209.78 132.19,-202.19 129.07,-208.46"/>
 </g>
-<!-- descinit -->
+<!-- shift_dw -->
+<g id="proc~~p_d_matmul_f~~CallsGraph_node4" class="node">
+<title>shift_dw</title>
+<polygon fill="#777777" stroke="#777777" points="198.5,-192 143.5,-192 143.5,-168 198.5,-168 198.5,-192"/>
+<text text-anchor="middle" x="171" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">shift_dw</text>
+</g>
+<!-- proc~p_d_matmul_f&#45;&gt;shift_dw -->
+<g id="proc~~p_d_matmul_f~~CallsGraph_edge2" class="edge">
+<title>proc~p_d_matmul_f&#45;&gt;shift_dw</title>
+<path fill="none" stroke="#000000" d="M80.46,-150.04C97.02,-155.58 116.64,-162.14 133.28,-167.71"/>
+<polygon fill="#000000" stroke="#000000" points="132.62,-171.18 143.21,-171.03 134.84,-164.54 132.62,-171.18"/>
+</g>
+<!-- distribute_blacs -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_node5" class="node">
-<title>descinit</title>
-<polygon fill="#777777" stroke="#777777" points="198,-150 144,-150 144,-126 198,-126 198,-150"/>
-<text text-anchor="middle" x="171" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
+<title>distribute_blacs</title>
+<polygon fill="#777777" stroke="#777777" points="219,-150 123,-150 123,-126 219,-126 219,-150"/>
+<text text-anchor="middle" x="171" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">distribute_blacs</text>
 </g>
-<!-- proc~p_d_matmul_f&#45;&gt;descinit -->
+<!-- proc~p_d_matmul_f&#45;&gt;distribute_blacs -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_edge3" class="edge">
-<title>proc~p_d_matmul_f&#45;&gt;descinit</title>
-<path fill="none" stroke="#000000" d="M87.34,-138C102.42,-138 119.22,-138 133.71,-138"/>
-<polygon fill="#000000" stroke="#000000" points="133.8,-141.5 143.8,-138 133.8,-134.5 133.8,-141.5"/>
+<title>proc~p_d_matmul_f&#45;&gt;distribute_blacs</title>
+<path fill="none" stroke="#000000" d="M87.34,-138C95.42,-138 103.98,-138 112.43,-138"/>
+<polygon fill="#000000" stroke="#000000" points="112.62,-141.5 122.62,-138 112.62,-134.5 112.62,-141.5"/>
 </g>
 <!-- blacs_gridinfo -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_node6" class="node">
@@ -234,15 +234,15 @@
 <path fill="none" stroke="#000000" d="M80.46,-125.96C94.12,-121.4 109.85,-116.13 124.29,-111.3"/>
 <polygon fill="#000000" stroke="#000000" points="125.66,-114.53 134.03,-108.04 123.44,-107.89 125.66,-114.53"/>
 </g>
-<!-- numroc -->
+<!-- descinit -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_node7" class="node">
-<title>numroc</title>
+<title>descinit</title>
 <polygon fill="#777777" stroke="#777777" points="198,-66 144,-66 144,-42 198,-42 198,-66"/>
-<text text-anchor="middle" x="171" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
+<text text-anchor="middle" x="171" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
 </g>
-<!-- proc~p_d_matmul_f&#45;&gt;numroc -->
+<!-- proc~p_d_matmul_f&#45;&gt;descinit -->
 <g id="proc~~p_d_matmul_f~~CallsGraph_edge6" class="edge">
-<title>proc~p_d_matmul_f&#45;&gt;numroc</title>
+<title>proc~p_d_matmul_f&#45;&gt;descinit</title>
 <path fill="none" stroke="#000000" d="M57.34,-125.97C72.28,-112.39 98.09,-90.21 123,-75 126.6,-72.8 130.48,-70.7 134.4,-68.73"/>
 <polygon fill="#000000" stroke="#000000" points="136,-71.84 143.54,-64.4 133,-65.52 136,-71.84"/>
 </g>

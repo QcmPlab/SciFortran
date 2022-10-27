@@ -174,89 +174,89 @@
 <polygon fill="none" stroke="black" points="85,-150 0,-150 0,-126 85,-126 85,-150"/>
 <text text-anchor="middle" x="42.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">p_z_matmul_f</text>
 </g>
-<!-- distribute_blacs -->
+<!-- numroc -->
 <g id="proc~~p_z_matmul_f~~CallsGraph_node2" class="node">
-<title>distribute_blacs</title>
-<polygon fill="#777777" stroke="#777777" points="217,-276 121,-276 121,-252 217,-252 217,-276"/>
-<text text-anchor="middle" x="169" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">distribute_blacs</text>
+<title>numroc</title>
+<polygon fill="#777777" stroke="#777777" points="196,-276 142,-276 142,-252 196,-252 196,-276"/>
+<text text-anchor="middle" x="169" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
 </g>
-<!-- proc~p_z_matmul_f&#45;&gt;distribute_blacs -->
+<!-- proc~p_z_matmul_f&#45;&gt;numroc -->
 <g id="proc~~p_z_matmul_f~~CallsGraph_edge1" class="edge">
-<title>proc~p_z_matmul_f&#45;&gt;distribute_blacs</title>
-<path fill="none" stroke="#000000" d="M49.79,-150.3C61.29,-171.72 87.64,-216.15 121,-243 122.57,-244.26 124.22,-245.46 125.94,-246.6"/>
-<polygon fill="#000000" stroke="#000000" points="124.48,-249.81 134.88,-251.83 128.01,-243.76 124.48,-249.81"/>
+<title>proc~p_z_matmul_f&#45;&gt;numroc</title>
+<path fill="none" stroke="#000000" d="M49.79,-150.3C61.29,-171.72 87.64,-216.15 121,-243 124.54,-245.85 128.53,-248.4 132.65,-250.65"/>
+<polygon fill="#000000" stroke="#000000" points="131.24,-253.85 141.76,-255.11 134.32,-247.57 131.24,-253.85"/>
+</g>
+<!-- gather_blacs -->
+<g id="proc~~p_z_matmul_f~~CallsGraph_node3" class="node">
+<title>gather_blacs</title>
+<polygon fill="#777777" stroke="#777777" points="209.5,-234 128.5,-234 128.5,-210 209.5,-210 209.5,-234"/>
+<text text-anchor="middle" x="169" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
+</g>
+<!-- proc~p_z_matmul_f&#45;&gt;gather_blacs -->
+<g id="proc~~p_z_matmul_f~~CallsGraph_edge4" class="edge">
+<title>proc~p_z_matmul_f&#45;&gt;gather_blacs</title>
+<path fill="none" stroke="#000000" d="M56.14,-150.05C70.87,-163.64 96.33,-185.83 121,-201 123.43,-202.49 125.98,-203.94 128.58,-205.33"/>
+<polygon fill="#000000" stroke="#000000" points="127.05,-208.47 137.56,-209.81 130.18,-202.21 127.05,-208.47"/>
 </g>
 <!-- shift_dw -->
-<g id="proc~~p_z_matmul_f~~CallsGraph_node3" class="node">
+<g id="proc~~p_z_matmul_f~~CallsGraph_node4" class="node">
 <title>shift_dw</title>
-<polygon fill="#777777" stroke="#777777" points="196.5,-234 141.5,-234 141.5,-210 196.5,-210 196.5,-234"/>
-<text text-anchor="middle" x="169" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">shift_dw</text>
+<polygon fill="#777777" stroke="#777777" points="196.5,-192 141.5,-192 141.5,-168 196.5,-168 196.5,-192"/>
+<text text-anchor="middle" x="169" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">shift_dw</text>
 </g>
 <!-- proc~p_z_matmul_f&#45;&gt;shift_dw -->
 <g id="proc~~p_z_matmul_f~~CallsGraph_edge2" class="edge">
 <title>proc~p_z_matmul_f&#45;&gt;shift_dw</title>
-<path fill="none" stroke="#000000" d="M56.14,-150.05C70.87,-163.64 96.33,-185.83 121,-201 124.41,-203.1 128.07,-205.11 131.79,-206.99"/>
-<polygon fill="#000000" stroke="#000000" points="130.5,-210.25 141.03,-211.4 133.51,-203.94 130.5,-210.25"/>
+<path fill="none" stroke="#000000" d="M79.18,-150.04C95.6,-155.58 115.06,-162.14 131.58,-167.71"/>
+<polygon fill="#000000" stroke="#000000" points="130.83,-171.15 141.42,-171.03 133.07,-164.52 130.83,-171.15"/>
 </g>
-<!-- gather_blacs -->
-<g id="proc~~p_z_matmul_f~~CallsGraph_node4" class="node">
-<title>gather_blacs</title>
-<polygon fill="#777777" stroke="#777777" points="209.5,-192 128.5,-192 128.5,-168 209.5,-168 209.5,-192"/>
-<text text-anchor="middle" x="169" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
-</g>
-<!-- proc~p_z_matmul_f&#45;&gt;gather_blacs -->
-<g id="proc~~p_z_matmul_f~~CallsGraph_edge5" class="edge">
-<title>proc~p_z_matmul_f&#45;&gt;gather_blacs</title>
-<path fill="none" stroke="#000000" d="M79.18,-150.04C92.72,-154.6 108.33,-159.87 122.65,-164.7"/>
-<polygon fill="#000000" stroke="#000000" points="121.72,-168.08 132.32,-167.96 123.96,-161.45 121.72,-168.08"/>
-</g>
-<!-- descinit -->
+<!-- distribute_blacs -->
 <g id="proc~~p_z_matmul_f~~CallsGraph_node5" class="node">
-<title>descinit</title>
-<polygon fill="#777777" stroke="#777777" points="196,-150 142,-150 142,-126 196,-126 196,-150"/>
-<text text-anchor="middle" x="169" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
+<title>distribute_blacs</title>
+<polygon fill="#777777" stroke="#777777" points="217,-150 121,-150 121,-126 217,-126 217,-150"/>
+<text text-anchor="middle" x="169" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">distribute_blacs</text>
 </g>
-<!-- proc~p_z_matmul_f&#45;&gt;descinit -->
+<!-- proc~p_z_matmul_f&#45;&gt;distribute_blacs -->
 <g id="proc~~p_z_matmul_f~~CallsGraph_edge3" class="edge">
-<title>proc~p_z_matmul_f&#45;&gt;descinit</title>
-<path fill="none" stroke="#000000" d="M85.3,-138C100.31,-138 117.1,-138 131.61,-138"/>
-<polygon fill="#000000" stroke="#000000" points="131.72,-141.5 141.72,-138 131.72,-134.5 131.72,-141.5"/>
-</g>
-<!-- pzgemm -->
-<g id="proc~~p_z_matmul_f~~CallsGraph_node6" class="node">
-<title>pzgemm</title>
-<polygon fill="#777777" stroke="#777777" points="198.5,-108 139.5,-108 139.5,-84 198.5,-84 198.5,-108"/>
-<text text-anchor="middle" x="169" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pzgemm</text>
-</g>
-<!-- proc~p_z_matmul_f&#45;&gt;pzgemm -->
-<g id="proc~~p_z_matmul_f~~CallsGraph_edge4" class="edge">
-<title>proc~p_z_matmul_f&#45;&gt;pzgemm</title>
-<path fill="none" stroke="#000000" d="M79.18,-125.96C95,-120.62 113.65,-114.33 129.77,-108.9"/>
-<polygon fill="#000000" stroke="#000000" points="131.07,-112.15 139.43,-105.64 128.83,-105.52 131.07,-112.15"/>
+<title>proc~p_z_matmul_f&#45;&gt;distribute_blacs</title>
+<path fill="none" stroke="#000000" d="M85.3,-138C93.53,-138 102.29,-138 110.92,-138"/>
+<polygon fill="#000000" stroke="#000000" points="110.94,-141.5 120.94,-138 110.94,-134.5 110.94,-141.5"/>
 </g>
 <!-- blacs_gridinfo -->
-<g id="proc~~p_z_matmul_f~~CallsGraph_node7" class="node">
+<g id="proc~~p_z_matmul_f~~CallsGraph_node6" class="node">
 <title>blacs_gridinfo</title>
-<polygon fill="#777777" stroke="#777777" points="212.5,-66 125.5,-66 125.5,-42 212.5,-42 212.5,-66"/>
-<text text-anchor="middle" x="169" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
+<polygon fill="#777777" stroke="#777777" points="212.5,-108 125.5,-108 125.5,-84 212.5,-84 212.5,-108"/>
+<text text-anchor="middle" x="169" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
 </g>
 <!-- proc~p_z_matmul_f&#45;&gt;blacs_gridinfo -->
-<g id="proc~~p_z_matmul_f~~CallsGraph_edge6" class="edge">
+<g id="proc~~p_z_matmul_f~~CallsGraph_edge5" class="edge">
 <title>proc~p_z_matmul_f&#45;&gt;blacs_gridinfo</title>
-<path fill="none" stroke="#000000" d="M56.14,-125.95C70.87,-112.36 96.33,-90.17 121,-75 123.43,-73.51 125.98,-72.06 128.58,-70.67"/>
-<polygon fill="#000000" stroke="#000000" points="130.18,-73.79 137.56,-66.19 127.05,-67.53 130.18,-73.79"/>
+<path fill="none" stroke="#000000" d="M79.18,-125.96C92.72,-121.4 108.33,-116.13 122.65,-111.3"/>
+<polygon fill="#000000" stroke="#000000" points="123.96,-114.55 132.32,-108.04 121.72,-107.92 123.96,-114.55"/>
 </g>
-<!-- numroc -->
+<!-- descinit -->
+<g id="proc~~p_z_matmul_f~~CallsGraph_node7" class="node">
+<title>descinit</title>
+<polygon fill="#777777" stroke="#777777" points="196,-66 142,-66 142,-42 196,-42 196,-66"/>
+<text text-anchor="middle" x="169" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
+</g>
+<!-- proc~p_z_matmul_f&#45;&gt;descinit -->
+<g id="proc~~p_z_matmul_f~~CallsGraph_edge6" class="edge">
+<title>proc~p_z_matmul_f&#45;&gt;descinit</title>
+<path fill="none" stroke="#000000" d="M56.14,-125.95C70.87,-112.36 96.33,-90.17 121,-75 124.6,-72.79 128.47,-70.68 132.39,-68.71"/>
+<polygon fill="#000000" stroke="#000000" points="133.98,-71.82 141.52,-64.37 130.98,-65.5 133.98,-71.82"/>
+</g>
+<!-- pzgemm -->
 <g id="proc~~p_z_matmul_f~~CallsGraph_node8" class="node">
-<title>numroc</title>
-<polygon fill="#777777" stroke="#777777" points="196,-24 142,-24 142,0 196,0 196,-24"/>
-<text text-anchor="middle" x="169" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
+<title>pzgemm</title>
+<polygon fill="#777777" stroke="#777777" points="198.5,-24 139.5,-24 139.5,0 198.5,0 198.5,-24"/>
+<text text-anchor="middle" x="169" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pzgemm</text>
 </g>
-<!-- proc~p_z_matmul_f&#45;&gt;numroc -->
+<!-- proc~p_z_matmul_f&#45;&gt;pzgemm -->
 <g id="proc~~p_z_matmul_f~~CallsGraph_edge7" class="edge">
-<title>proc~p_z_matmul_f&#45;&gt;numroc</title>
-<path fill="none" stroke="#000000" d="M49.79,-125.7C61.29,-104.28 87.64,-59.85 121,-33 124.54,-30.15 128.53,-27.6 132.65,-25.35"/>
-<polygon fill="#000000" stroke="#000000" points="134.32,-28.43 141.76,-20.89 131.24,-22.15 134.32,-28.43"/>
+<title>proc~p_z_matmul_f&#45;&gt;pzgemm</title>
+<path fill="none" stroke="#000000" d="M49.79,-125.7C61.29,-104.28 87.64,-59.85 121,-33 123.89,-30.68 127.07,-28.56 130.38,-26.63"/>
+<polygon fill="#000000" stroke="#000000" points="132.04,-29.71 139.31,-22 128.82,-23.5 132.04,-29.71"/>
 </g>
 </g>
 </svg>
