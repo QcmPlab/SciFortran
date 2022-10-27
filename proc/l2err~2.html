@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="A library of fortran modules and routines for scientific calculations (in a way just like scipy for python)">
+    <meta name="author" content="QcmP Lab members" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>l2err &ndash; SciFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">SciFortran </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../lists/files.html">Source Files</a></li>
+            <li><a href="../lists/modules.html">Modules</a></li>
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+            <li><a href="../program/testslploteread.html">Program</a></li>
+       
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/testslploteread.html">Program</a></li>
+          </ul>
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>l2err
+      <small>Subroutine</small>
+    </h1>
+    <div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for procedures.">73 statements</a>
+     </li> 
+    <li><i class="fa fa-code"></i><a href="../src/SF_INTERPOLATE.f90"> Source File</a></li>
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+     <li><a href='../sourcefile/sf_interpolate.f90.html'>SF_INTERPOLATE.f90</a></li>
+     <li class="active">l2err</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    <div id="sidebar">
+  <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading
+  text-left"><h3 class="panel-title"><a data-toggle="collapse"
+  href="#common-0">Common Blocks</a></h3></div>
+  <div id="common-0" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../proc/l2err~2.html#common-approx~6">approx</a>
+      <a class="list-group-item" href="../proc/l2err~2.html#common-i4data~4">i4data</a>
+      <a class="list-group-item" href="../proc/l2err~2.html#common-r8data~4">r8data</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>subroutine l2err(iprfun, ftau, error)</h2>
+    
+
+    <p><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*80</p>
+<p>! L2ERR computes the errors of an L2 approximation.</p>
+<p>Discussion:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">This</span><span class="w"> </span><span class="n">routine</span><span class="w"> </span><span class="n">computes</span><span class="w"> </span><span class="n">various</span><span class="w"> </span><span class="n">errors</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="n">approximation</span><span class="p">,</span><span class="w"> </span>
+<span class="n">whose</span><span class="w"> </span><span class="n">piecewise</span><span class="w"> </span><span class="n">polynomial</span><span class="w"> </span><span class="n">representation</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">contained</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">common</span><span class="w"> </span>
+<span class="n">block</span><span class="w"> </span><span class="n">APPROX</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">contained</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">common</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">DATA</span><span class="o">.</span><span class="w"></span>
+
+<span class="n">It</span><span class="w"> </span><span class="nb">prints</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">ERRL1</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">ERRL2</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"></span>
+<span class="n">maximum</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">ERRMAX</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
+
+<p>Modified:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">16</span><span class="w"> </span><span class="n">February</span><span class="w"> </span><span class="mf">2007</span><span class="w"></span>
+</code></pre></div>
+
+<p>Author:</p>
+<div class="codehilite"><pre><span></span><code>Carl DeBoor
+</code></pre></div>
+
+<p>Reference:</p>
+<div class="codehilite"><pre><span></span><code>Carl DeBoor,
+A Practical Guide to Splines,
+Springer, 2001,
+ISBN: 0387953663,
+LC: QA1.A647.v27.
+</code></pre></div>
+
+<p>Parameters: </p>
+<div class="codehilite"><pre><span></span><code><span class="nv">Input</span>, <span class="nv">integer</span> <span class="ss">(</span> <span class="nv">kind</span> <span class="o">=</span> <span class="mi">4</span> <span class="ss">)</span> <span class="nv">IPRFUN</span>.  <span class="k">If</span> <span class="nv">IPRFUN</span> <span class="o">=</span> <span class="mi">1</span>, <span class="nv">the</span> <span class="nv">routine</span> <span class="nv">prints</span> <span class="nv">out</span>
+<span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">approximation</span> <span class="nv">as</span> <span class="nv">well</span> <span class="nv">as</span> <span class="nv">its</span> <span class="nv">error</span> <span class="nv">at</span>
+<span class="nv">every</span> <span class="nv">data</span> <span class="nv">point</span>.
+
+<span class="nv">Output</span>, <span class="nv">real</span> <span class="ss">(</span> <span class="nv">kind</span> <span class="o">=</span> <span class="mi">8</span> <span class="ss">)</span> <span class="nv">FTAU</span><span class="ss">(</span><span class="nv">NTAU</span><span class="ss">)</span>, <span class="nv">contains</span> <span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">computed</span>
+<span class="nv">approximation</span> <span class="nv">at</span> <span class="nv">each</span> <span class="nv">value</span> <span class="nv">TAU</span><span class="ss">(</span><span class="mi">1</span>:<span class="nv">NTAU</span><span class="ss">)</span>.
+
+<span class="nv">Output</span>, <span class="nv">real</span> <span class="ss">(</span> <span class="nv">kind</span> <span class="o">=</span> <span class="mi">8</span> <span class="ss">)</span> <span class="nv">ERROR</span><span class="ss">(</span><span class="nv">NTAU</span><span class="ss">)</span>, <span class="nv">with</span> 
+  <span class="nv">ERROR</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">SCALE</span> <span class="o">*</span> <span class="ss">(</span> <span class="nv">G</span> <span class="o">-</span> <span class="nv">F</span> <span class="ss">)(</span><span class="nv">TAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">))</span>.  <span class="nv">Here</span>, <span class="nv">SCALE</span> <span class="nv">equals</span> <span class="mi">1</span>
+<span class="nv">in</span> <span class="nv">case</span> <span class="nv">IPRFUN</span> <span class="o">/=</span> <span class="mi">1</span>, <span class="nv">or</span> <span class="nv">the</span> <span class="nv">absolute</span> <span class="nv">error</span> <span class="nv">is</span> <span class="nv">greater</span> <span class="nv">than</span> <span class="mi">100</span> 
+<span class="nv">somewhere</span>.  <span class="nv">Otherwise</span>, <span class="nv">SCALE</span> <span class="nv">is</span> <span class="nv">such</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">maximum</span> <span class="nv">of</span> <span class="nv">the</span>
+<span class="nv">absolute</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">ERROR</span><span class="ss">(</span><span class="mi">1</span>:<span class="nv">NTAU</span><span class="ss">)</span> <span class="nv">lies</span> <span class="nv">between</span> <span class="mi">10</span> <span class="nv">and</span> <span class="mi">100</span>.  <span class="nv">This</span>
+<span class="nv">makes</span> <span class="nv">the</span> <span class="nv">printed</span> <span class="nv">output</span> <span class="nv">more</span> <span class="nv">illustrative</span>.
+</code></pre></div>
+
+    <h3>Arguments</h3>
+      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-iprfun~2"></span>integer(kind=4)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>iprfun</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-ftau~2"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>ftau</strong>(ntau)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-error~2"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>error</strong>(ntau)</td><td></td>
+</tr>
+</tbody>
+</table>
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading
+  text-left"><h3 class="panel-title"><a data-toggle="collapse"
+  href="#common-1">Common Blocks</a></h3></div>
+  <div id="common-1" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../proc/l2err~2.html#common-approx~6">approx</a>
+      <a class="list-group-item" href="../proc/l2err~2.html#common-i4data~4">i4data</a>
+      <a class="list-group-item" href="../proc/l2err~2.html#common-r8data~4">r8data</a>
+    </div>
+  </div>
+</div>
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2>Common Blocks</h2>
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-approx~6"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/colloc.html#common-approx'>colloc</a> (subroutine)<br><a href='../proc/difequ.html#common-approx~2'>difequ</a> (subroutine)<br><a href='../proc/l2err.html#common-approx~3'>l2err</a> (subroutine)<br><a href='../proc/colloc~2.html#common-approx~4'>colloc</a> (subroutine)<br><a href='../proc/difequ~2.html#common-approx~5'>difequ</a> (subroutine)<br>">common /approx/</a>
+  </h3></div>
+  <div class="panel-body">
+    
+    <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-break~20"></span>real</td>
+  <td></td><td>::</td>
+  <td><strong>break</strong>(lpkmax)</td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-coef~17"></span>real</td>
+  <td></td><td>::</td>
+  <td><strong>coef</strong>(ltkmax)</td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-l~31"></span>integer(kind=4)</td>
+  <td></td><td>::</td>
+  <td><strong>l</strong></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-k~34"></span>integer(kind=4)</td>
+  <td></td><td>::</td>
+  <td><strong>k</strong></td><td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-i4data~4"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/l2appr.html#common-i4data'>l2appr</a> (subroutine)<br><a href='../proc/l2err.html#common-i4data~2'>l2err</a> (subroutine)<br><a href='../proc/l2appr~2.html#common-i4data~3'>l2appr</a> (subroutine)<br>">common /i4data/</a>
+  </h3></div>
+  <div class="panel-body">
+    
+    <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-ntau~5"></span>integer(kind=4)</td>
+  <td></td><td>::</td>
+  <td><strong>ntau</strong></td><td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+      <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-r8data~4"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/l2appr.html#common-r8data'>l2appr</a> (subroutine)<br><a href='../proc/l2err.html#common-r8data~2'>l2err</a> (subroutine)<br><a href='../proc/l2appr~2.html#common-r8data~3'>l2appr</a> (subroutine)<br>">common /r8data/</a>
+  </h3></div>
+  <div class="panel-body">
+    
+    <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-tau~11"></span>real</td>
+  <td></td><td>::</td>
+  <td><strong>tau</strong>(ntmax)</td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-gtau~7"></span>real</td>
+  <td></td><td>::</td>
+  <td><strong>gtau</strong>(ntmax)</td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-weight~4"></span>real</td>
+  <td></td><td>::</td>
+  <td><strong>weight</strong>(ntmax)</td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-totalw~4"></span>real(kind=8)</td>
+  <td></td><td>::</td>
+  <td><strong>totalw</strong></td><td></td><td></td><td></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+    </section>
+    <br>
+    <script>
+      $(function () {
+      $('[data-toggle="popover"]').popover()
+      })
+    </script>
+
+    
+    
+
+    
+    
+
+
+    
+    
+    </div>
+  </div>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+          </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>

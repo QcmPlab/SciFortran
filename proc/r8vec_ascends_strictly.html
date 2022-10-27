@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="A library of fortran modules and routines for scientific calculations (in a way just like scipy for python)">
+    <meta name="author" content="QcmP Lab members" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>r8vec_ascends_strictly &ndash; SciFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">SciFortran </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../lists/files.html">Source Files</a></li>
+            <li><a href="../lists/modules.html">Modules</a></li>
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+            <li><a href="../program/testslploteread.html">Program</a></li>
+       
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/testslploteread.html">Program</a></li>
+          </ul>
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>r8vec_ascends_strictly
+      <small>Function</small>
+    </h1>
+    <div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.0% of total for procedures.">16 statements</a>
+     </li> 
+    <li><i class="fa fa-code"></i><a href="../src/interpolate_pack.f90"> Source File</a></li>
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+     <li><a href='../sourcefile/interpolate_pack.f90.html'>interpolate_pack.f90</a></li>
+     <li class="active">r8vec_ascends_strictly</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    <div id="sidebar">
+  <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/r8vec_ascends_strictly.html#src">r8vec_ascends_strictly</a>
+  </div>
+</div>
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>function r8vec_ascends_strictly(n, x)</h2>
+    
+
+    <p><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*80</p>
+<p>! R8VEC_ASCENDS_STRICTLY determines if an R8VEC is strictly ascending.</p>
+<p>Discussion:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">An</span> <span class="n">R8VEC</span> <span class="n">is</span> <span class="n">a</span> <span class="n">vector</span> <span class="n">of</span> <span class="n">R8</span> <span class="n">values</span><span class="p">.</span>
+
+<span class="n">Notice</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">entry</span> <span class="n">number</span> <span class="mi">6</span> <span class="n">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">results</span><span class="p">:</span>
+
+  <span class="n">X</span> <span class="o">=</span> <span class="p">(</span> <span class="o">-</span><span class="mf">8.1</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">7.4</span><span class="p">,</span> <span class="mf">9.8</span> <span class="p">)</span>
+  <span class="n">Y</span> <span class="o">=</span> <span class="p">(</span> <span class="o">-</span><span class="mf">8.1</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">9.8</span> <span class="p">)</span>
+  <span class="n">Z</span> <span class="o">=</span> <span class="p">(</span> <span class="o">-</span><span class="mf">8.1</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">9.8</span> <span class="p">)</span>
+
+  <span class="n">R8VEC_ASCENDS_STRICTLY</span> <span class="p">(</span> <span class="n">X</span> <span class="p">)</span> <span class="o">=</span> <span class="kc">FALSE</span>
+  <span class="n">R8VEC_ASCENDS_STRICTLY</span> <span class="p">(</span> <span class="n">Y</span> <span class="p">)</span> <span class="o">=</span> <span class="kc">FALSE</span>
+  <span class="n">R8VEC_ASCENDS_STRICTLY</span> <span class="p">(</span> <span class="n">Z</span> <span class="p">)</span> <span class="o">=</span> <span class="kc">TRUE</span>
+</code></pre></div>
+
+<p>Licensing:</p>
+<div class="codehilite"><pre><span></span><code>This code is distributed under the GNU LGPL license.
+</code></pre></div>
+
+<p>Modified:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">03</span><span class="w"> </span><span class="n">December</span><span class="w"> </span><span class="mf">2007</span><span class="w"></span>
+</code></pre></div>
+
+<p>Author:</p>
+<div class="codehilite"><pre><span></span><code>John Burkardt
+</code></pre></div>
+
+<p>Parameters:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Input</span><span class="p">,</span> <span class="n">integer</span> <span class="p">(</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">4</span> <span class="p">)</span> <span class="n">N</span><span class="p">,</span> <span class="n">the</span> <span class="n">size</span> <span class="n">of</span> <span class="n">the</span> <span class="n">array</span><span class="p">.</span>
+
+<span class="n">Input</span><span class="p">,</span> <span class="n">real</span> <span class="p">(</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">8</span> <span class="p">)</span> <span class="n">X</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">the</span> <span class="n">array</span> <span class="n">to</span> <span class="n">be</span> <span class="n">examined</span><span class="p">.</span>
+
+<span class="n">Output</span><span class="p">,</span> <span class="n">logical</span> <span class="n">R8VEC_ASCENDS_STRICTLY</span><span class="p">,</span> <span class="n">is</span> <span class="kc">TRUE</span> <span class="n">if</span> <span class="n">the</span> 
+<span class="n">entries</span> <span class="n">of</span> <span class="n">X</span> <span class="n">strictly</span> <span class="n">ascend</span><span class="p">.</span>
+</code></pre></div>
+
+    <h3>Arguments</h3>
+      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-n~119"></span>integer(kind=4)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-x~206"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>x</strong>(n)</td><td></td>
+</tr>
+</tbody>
+</table>
+
+   <h3>Return Value <small><span class="anchor" id="variable-r8vec_ascends_strictly"></span>logical</small></h3>
+    
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/r8vec_ascends_strictly.html#src">r8vec_ascends_strictly</a>
+  </div>
+</div>
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    
+    
+
+    
+    
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">function </span><span class="n">r8vec_ascends_strictly</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="c">!*****************************************************************************80</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!! R8VEC_ASCENDS_STRICTLY determines if an R8VEC is strictly ascending.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Discussion:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    An R8VEC is a vector of R8 values.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Notice the effect of entry number 6 in the following results:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!      X = ( -8.1, 1.3, 2.2, 3.4, 7.5, 7.4, 9.8 )</span>
+<span class="w">  </span><span class="c">!      Y = ( -8.1, 1.3, 2.2, 3.4, 7.5, 7.5, 9.8 )</span>
+<span class="w">  </span><span class="c">!      Z = ( -8.1, 1.3, 2.2, 3.4, 7.5, 7.6, 9.8 )</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!      R8VEC_ASCENDS_STRICTLY ( X ) = FALSE</span>
+<span class="w">  </span><span class="c">!      R8VEC_ASCENDS_STRICTLY ( Y ) = FALSE</span>
+<span class="w">  </span><span class="c">!      R8VEC_ASCENDS_STRICTLY ( Z ) = TRUE</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Licensing:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    This code is distributed under the GNU LGPL license. </span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Modified:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    03 December 2007</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Author:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    John Burkardt</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Parameters:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) N, the size of the array.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) X(N), the array to be examined.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Output, logical R8VEC_ASCENDS_STRICTLY, is TRUE if the </span>
+<span class="w">  </span><span class="c">!    entries of X strictly ascend.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="k">implicit none</span>
+
+<span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">r8vec_ascends_strictly</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w">    </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">r8vec_ascends_strictly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="w">        </span><span class="k">print</span><span class="o">*</span><span class="p">,</span><span class="n">i</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span>
+<span class="k">     end if</span>
+<span class="k">  end do</span>
+
+<span class="k">  </span><span class="n">r8vec_ascends_strictly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">return</span>
+<span class="k">end function </span><span class="n">r8vec_ascends_strictly</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+          </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>

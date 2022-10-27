@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="A library of fortran modules and routines for scientific calculations (in a way just like scipy for python)">
+    <meta name="author" content="QcmP Lab members" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>tautsp &ndash; SciFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">SciFortran </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../lists/files.html">Source Files</a></li>
+            <li><a href="../lists/modules.html">Modules</a></li>
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+            <li><a href="../program/testslploteread.html">Program</a></li>
+       
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/testslploteread.html">Program</a></li>
+          </ul>
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>tautsp
+      <small>Subroutine</small>
+    </h1>
+    <div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.4% of total for procedures.">248 statements</a>
+     </li> 
+    <li><i class="fa fa-code"></i><a href="../src/SF_INTERPOLATE.f90"> Source File</a></li>
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+     <li><a href='../sourcefile/sf_interpolate.f90.html'>SF_INTERPOLATE.f90</a></li>
+     <li class="active">tautsp</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    <div id="sidebar">
+  <h3>Contents</h3>
+ 
+<em>None</em>
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>subroutine tautsp(tau, gtau, ntau, gamma, s, break, coef, l, k, iflag)</h2>
+    
+
+    <p><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*80</p>
+<p>! TAUTSP constructs a cubic spline interpolant to given data.</p>
+<p>Discussion:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">If</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="nv">GAMMA</span>, <span class="nv">additional</span> <span class="nv">knots</span> <span class="nv">are</span> <span class="nv">introduced</span> <span class="nv">where</span> <span class="nv">needed</span> <span class="nv">to</span>
+<span class="nv">make</span> <span class="nv">the</span> <span class="nv">interpolant</span> <span class="nv">more</span> <span class="nv">flexible</span> <span class="nv">locally</span>.  <span class="nv">This</span> <span class="nv">avoids</span> <span class="nv">extraneous</span>
+<span class="nv">inflection</span> <span class="nv">points</span> <span class="nv">typical</span> <span class="nv">of</span> <span class="nv">cubic</span> <span class="nv">spline</span> <span class="nv">interpolation</span> <span class="nv">at</span> <span class="nv">knots</span> <span class="nv">to</span>
+<span class="nv">rapidly</span> <span class="nv">changing</span> <span class="nv">data</span>.
+</code></pre></div>
+
+<p>Method:  </p>
+<div class="codehilite"><pre><span></span><code><span class="nv">On</span> <span class="nv">the</span> <span class="nv">I</span><span class="o">-</span><span class="nv">th</span> <span class="nv">interval</span>, <span class="ss">(</span><span class="nv">TAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span>, <span class="nv">TAU</span><span class="ss">(</span><span class="nv">I</span><span class="o">+</span><span class="mi">1</span><span class="ss">))</span>, <span class="nv">the</span> <span class="nv">interpolant</span> <span class="nv">is</span> <span class="nv">of</span> <span class="nv">the</span>
+<span class="nv">form</span>:
+
+<span class="ss">(</span><span class="o">*</span><span class="ss">)</span>  <span class="nv">F</span><span class="ss">(</span><span class="nv">U</span><span class="ss">(</span><span class="nv">X</span><span class="ss">))</span> <span class="o">=</span> <span class="nv">A</span> <span class="o">+</span> <span class="nv">B</span> <span class="o">*</span> <span class="nv">U</span> <span class="o">+</span> <span class="nv">C</span> <span class="o">*</span> <span class="nv">H</span><span class="ss">(</span><span class="nv">U</span>,<span class="nv">Z</span><span class="ss">)</span> <span class="o">+</span> <span class="nv">D</span> <span class="o">*</span> <span class="nv">H</span><span class="ss">(</span><span class="mi">1</span><span class="o">-</span><span class="nv">U</span>,<span class="mi">1</span><span class="o">-</span><span class="nv">Z</span><span class="ss">)</span>,
+
+<span class="nv">with</span>
+
+  <span class="nv">U</span> <span class="o">=</span> <span class="nv">U</span><span class="ss">(</span><span class="nv">X</span><span class="ss">)</span> <span class="o">=</span> <span class="ss">(</span> <span class="nv">X</span> <span class="o">-</span> <span class="nv">TAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="ss">)</span> <span class="o">/</span> <span class="nv">DTAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span>.
+
+<span class="nv">Here</span>,
+
+  <span class="nv">Z</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">ADDG</span><span class="ss">(</span><span class="nv">I</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span> <span class="o">/</span> <span class="ss">(</span> <span class="nv">ADDG</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="o">+</span> <span class="nv">ADDG</span><span class="ss">(</span><span class="nv">I</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span> <span class="ss">)</span>
+
+<span class="nv">but</span> <span class="k">if</span> <span class="nv">the</span> <span class="nv">denominator</span> <span class="nv">vanishes</span>, <span class="nv">we</span> <span class="nv">set</span> <span class="nv">Z</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="o">=</span> <span class="mi">0</span>.<span class="mi">5</span>
+
+<span class="nv">Also</span>, <span class="nv">we</span> <span class="nv">have</span>
+
+  <span class="nv">ADDG</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">abs</span> <span class="ss">(</span> <span class="nv">DDG</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="ss">)</span>, 
+  <span class="nv">DDG</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">DG</span><span class="ss">(</span><span class="nv">J</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">DG</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span>,
+  <span class="nv">DG</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">DIVDIF</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="o">=</span> <span class="ss">(</span> <span class="nv">GTAU</span><span class="ss">(</span><span class="nv">J</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">GTAU</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="ss">)</span> <span class="o">/</span> <span class="nv">DTAU</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span>
+
+<span class="nv">and</span>
+
+  <span class="nv">H</span><span class="ss">(</span><span class="nv">U</span>,<span class="nv">Z</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">ALPHA</span> <span class="o">*</span> <span class="nv">U</span><span class="o">**</span><span class="mi">3</span> 
+         <span class="o">+</span> <span class="ss">(</span> <span class="mi">1</span> <span class="o">-</span> <span class="nv">ALPHA</span> <span class="ss">)</span> <span class="o">*</span> <span class="ss">(</span> <span class="nv">max</span> <span class="ss">(</span> <span class="ss">(</span> <span class="ss">(</span> <span class="nv">U</span> <span class="o">-</span> <span class="nv">ZETA</span> <span class="ss">)</span> <span class="o">/</span> <span class="ss">(</span> <span class="mi">1</span> <span class="o">-</span> <span class="nv">ZETA</span> <span class="ss">)</span> <span class="ss">)</span>, <span class="mi">0</span> <span class="ss">)</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="nv">with</span>
+
+  <span class="nv">ALPHA</span><span class="ss">(</span><span class="nv">Z</span><span class="ss">)</span> <span class="o">=</span> <span class="ss">(</span> <span class="mi">1</span> <span class="o">-</span> <span class="nv">GAMMA</span> <span class="o">/</span> <span class="mi">3</span> <span class="ss">)</span> <span class="o">/</span> <span class="nv">ZETA</span>
+  <span class="nv">ZETA</span><span class="ss">(</span><span class="nv">Z</span><span class="ss">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="nv">GAMMA</span> <span class="o">*</span> <span class="nv">min</span> <span class="ss">(</span> <span class="ss">(</span> <span class="mi">1</span> <span class="o">-</span> <span class="nv">Z</span> <span class="ss">)</span>, <span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="ss">)</span>
+
+<span class="nv">Thus</span>, <span class="k">for</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">&lt;=</span> <span class="nv">Z</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="o">/</span><span class="mi">3</span>, <span class="nv">F</span> <span class="nv">is</span> <span class="nv">just</span> <span class="nv">a</span> <span class="nv">cubic</span> <span class="nv">polynomial</span> <span class="nv">on</span>
+<span class="nv">the</span> <span class="nv">interval</span> <span class="nv">I</span>.  <span class="nv">Otherwise</span>, <span class="nv">it</span> <span class="nv">has</span> <span class="nv">one</span> <span class="nv">additional</span> <span class="nv">knot</span>, <span class="nv">at</span>
+
+  <span class="nv">TAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="o">+</span> <span class="nv">ZETA</span> <span class="o">*</span> <span class="nv">DTAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span>.
+
+<span class="nv">As</span> <span class="nv">Z</span> <span class="nv">approaches</span> <span class="mi">1</span>, <span class="nv">H</span><span class="ss">(</span>.,<span class="nv">Z</span><span class="ss">)</span> <span class="nv">has</span> <span class="nv">an</span> <span class="nv">increasingly</span> <span class="nv">sharp</span> <span class="nv">bend</span> <span class="nv">near</span> <span class="mi">1</span>,
+<span class="nv">thus</span> <span class="nv">allowing</span> <span class="nv">F</span> <span class="nv">to</span> <span class="nv">turn</span> <span class="nv">rapidly</span> <span class="nv">near</span> <span class="nv">the</span> <span class="nv">additional</span> <span class="nv">knot</span>.
+
+<span class="nv">In</span> <span class="nv">terms</span> <span class="nv">of</span> <span class="nv">F</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">GTAU</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="nv">and</span> <span class="nv">FSECND</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">second</span> <span class="nv">derivative</span> <span class="nv">of</span> <span class="nv">F</span> 
+<span class="nv">at</span> <span class="nv">TAU</span><span class="ss">(</span><span class="nv">J</span><span class="ss">)</span>, <span class="nv">the</span> <span class="nv">coefficients</span> <span class="k">for</span> <span class="ss">(</span><span class="o">*</span><span class="ss">)</span> <span class="nv">are</span> <span class="nv">given</span> <span class="nv">as</span>:
+
+  <span class="nv">A</span> <span class="o">=</span> <span class="nv">F</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">D</span>
+  <span class="nv">B</span> <span class="o">=</span> <span class="ss">(</span> <span class="nv">F</span><span class="ss">(</span><span class="nv">I</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">F</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="ss">)</span> <span class="o">-</span> <span class="ss">(</span> <span class="nv">C</span> <span class="o">-</span> <span class="nv">D</span> <span class="ss">)</span>
+  <span class="nv">C</span> <span class="o">=</span> <span class="nv">FSECND</span><span class="ss">(</span><span class="nv">I</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span> <span class="o">*</span> <span class="nv">DTAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="nv">HSECND</span><span class="ss">(</span><span class="mi">1</span>,<span class="nv">Z</span><span class="ss">)</span>
+  <span class="nv">D</span> <span class="o">=</span> <span class="nv">FSECND</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span> <span class="o">*</span> <span class="nv">DTAU</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="nv">HSECND</span><span class="ss">(</span><span class="mi">1</span>,<span class="mi">1</span><span class="o">-</span><span class="nv">Z</span><span class="ss">)</span>
+
+<span class="nv">Hence</span> <span class="nv">these</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">computed</span> <span class="nv">once</span> <span class="nv">FSECND</span><span class="ss">(</span><span class="mi">1</span>:<span class="nv">NTAU</span><span class="ss">)</span> <span class="nv">is</span> <span class="nv">fixed</span>.
+
+<span class="nv">F</span> <span class="nv">is</span> <span class="nv">automatically</span> <span class="nv">continuous</span> <span class="nv">and</span> <span class="nv">has</span> <span class="nv">a</span> <span class="nv">continuous</span> <span class="nv">second</span> <span class="nv">derivative</span>
+<span class="nv">except</span> <span class="nv">when</span> <span class="nv">Z</span><span class="o">=</span><span class="mi">0</span> <span class="nv">or</span> <span class="mi">1</span> <span class="k">for</span> <span class="nv">some</span> <span class="nv">I</span>.  <span class="nv">We</span> <span class="nv">determine</span> <span class="nv">FSECND</span> <span class="nv">from</span>
+<span class="nv">the</span> <span class="nv">requirement</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">first</span> <span class="nv">derivative</span> <span class="nv">of</span> <span class="nv">F</span> <span class="nv">be</span> <span class="nv">continuous</span>.
+
+<span class="nv">In</span> <span class="nv">addition</span>, <span class="nv">we</span> <span class="nv">require</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">third</span> <span class="nv">derivative</span> <span class="nv">be</span> <span class="nv">continuous</span>
+<span class="nv">across</span> <span class="nv">TAU</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span> <span class="nv">and</span> <span class="nv">across</span> <span class="nv">TAU</span><span class="ss">(</span><span class="nv">NTAU</span><span class="o">-</span><span class="mi">1</span><span class="ss">)</span>.  <span class="nv">This</span> <span class="nv">leads</span> <span class="nv">to</span> <span class="nv">a</span> <span class="nv">strictly</span>
+<span class="nv">diagonally</span> <span class="nv">dominant</span> <span class="nv">tridiagonal</span> <span class="nv">linear</span> <span class="nv">system</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">FSECND</span><span class="ss">(</span><span class="nv">I</span><span class="ss">)</span>
+<span class="nv">which</span> <span class="nv">we</span> <span class="nv">solve</span> <span class="nv">by</span> <span class="nv">Gauss</span> <span class="nv">elimination</span> <span class="nv">without</span> <span class="nv">pivoting</span>.
+</code></pre></div>
+
+<p>Modified:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">14</span><span class="w"> </span><span class="n">February</span><span class="w"> </span><span class="mf">2007</span><span class="w"></span>
+</code></pre></div>
+
+<p>Author:</p>
+<div class="codehilite"><pre><span></span><code>Carl DeBoor
+</code></pre></div>
+
+<p>Reference:</p>
+<div class="codehilite"><pre><span></span><code>Carl DeBoor,
+A Practical Guide to Splines,
+Springer, 2001,
+ISBN: 0387953663,
+LC: QA1.A647.v27.
+</code></pre></div>
+
+<p>Parameters:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">Input</span><span class="o">,</span><span class="w"> </span><span class="nt">real</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">8</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">TAU</span><span class="o">(</span><span class="nt">NTAU</span><span class="o">),</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">sequence</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">data</span><span class="w"> </span><span class="nt">points</span><span class="o">.</span><span class="w">  </span>
+<span class="nt">TAU</span><span class="w"> </span><span class="nt">must</span><span class="w"> </span><span class="nt">be</span><span class="w"> </span><span class="nt">strictly</span><span class="w"> </span><span class="nt">increasing</span><span class="o">.</span><span class="w"></span>
+
+<span class="nt">Input</span><span class="o">,</span><span class="w"> </span><span class="nt">real</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">8</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">GTAU</span><span class="o">(</span><span class="nt">NTAU</span><span class="o">),</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">corresponding</span><span class="w"> </span><span class="nt">sequence</span><span class="w"> </span><span class="nt">of</span><span class="w"></span>
+<span class="nt">function</span><span class="w"> </span><span class="nt">values</span><span class="o">.</span><span class="w"></span>
+
+<span class="nt">Input</span><span class="o">,</span><span class="w"> </span><span class="nt">integer</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">4</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">NTAU</span><span class="o">,</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">number</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">data</span><span class="w"> </span><span class="nt">points</span><span class="o">.</span><span class="w">  </span>
+<span class="nt">NTAU</span><span class="w"> </span><span class="nt">must</span><span class="w"> </span><span class="nt">be</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">least</span><span class="w"> </span><span class="nt">4</span><span class="o">.</span><span class="w"></span>
+
+<span class="nt">Input</span><span class="o">,</span><span class="w"> </span><span class="nt">real</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">8</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">GAMMA</span><span class="o">,</span><span class="w"> </span><span class="nt">indicates</span><span class="w"> </span><span class="nt">whether</span><span class="w"> </span><span class="nt">additional</span><span class="w"> </span><span class="nt">flexibility</span><span class="w"></span>
+<span class="nt">is</span><span class="w"> </span><span class="nt">desired</span><span class="o">.</span><span class="w"></span>
+<span class="nt">GAMMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">0</span><span class="o">,</span><span class="w"> </span><span class="nt">no</span><span class="w"> </span><span class="nt">additional</span><span class="w"> </span><span class="nt">knots</span><span class="o">;</span><span class="w"></span>
+<span class="nt">GAMMA</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="o">(</span><span class="nt">0</span><span class="p">.</span><span class="nc">0</span><span class="o">,</span><span class="nt">3</span><span class="p">.</span><span class="nc">0</span><span class="o">),</span><span class="w"> </span><span class="nt">under</span><span class="w"> </span><span class="nt">certain</span><span class="w"> </span><span class="nt">conditions</span><span class="w"> </span><span class="nt">on</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">given</span><span class="w"> </span><span class="nt">data</span><span class="w"> </span><span class="nt">at</span><span class="w"></span>
+<span class="nt">points</span><span class="w"> </span><span class="nt">I-1</span><span class="o">,</span><span class="w"> </span><span class="nt">I</span><span class="o">,</span><span class="w"> </span><span class="nt">I</span><span class="o">+</span><span class="nt">1</span><span class="o">,</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">I</span><span class="o">+</span><span class="nt">2</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">knot</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">added</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">I-th</span><span class="w"> </span><span class="nt">interval</span><span class="o">,</span><span class="w"> </span>
+<span class="nt">for</span><span class="w"> </span><span class="nt">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">2</span><span class="o">,...,</span><span class="nt">NTAU-2</span><span class="o">.</span><span class="w">  </span><span class="nt">See</span><span class="w"> </span><span class="nt">description</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">method</span><span class="o">.</span><span class="w">  </span><span class="nt">The</span><span class="w"> </span><span class="nt">interpolant</span><span class="w"> </span>
+<span class="nt">gets</span><span class="w"> </span><span class="nt">rounded</span><span class="w"> </span><span class="nt">with</span><span class="w"> </span><span class="nt">increasing</span><span class="w"> </span><span class="nt">gamma</span><span class="o">.</span><span class="w">  </span><span class="nt">A</span><span class="w"> </span><span class="nt">value</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">2</span><span class="p">.</span><span class="nc">5</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">GAMMA</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">typical</span><span class="o">.</span><span class="w"></span>
+<span class="nt">GAMMA</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="o">(</span><span class="nt">3</span><span class="p">.</span><span class="nc">0</span><span class="o">,</span><span class="nt">6</span><span class="p">.</span><span class="nc">0</span><span class="o">),</span><span class="w"> </span><span class="nt">same</span><span class="o">,</span><span class="w"> </span><span class="nt">except</span><span class="w"> </span><span class="nt">that</span><span class="w"> </span><span class="nt">knots</span><span class="w"> </span><span class="nt">might</span><span class="w"> </span><span class="nt">also</span><span class="w"> </span><span class="nt">be</span><span class="w"> </span><span class="nt">added</span><span class="w"> </span><span class="nt">in</span><span class="w"></span>
+<span class="nt">intervals</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">which</span><span class="w"> </span><span class="nt">an</span><span class="w"> </span><span class="nt">inflection</span><span class="w"> </span><span class="nt">point</span><span class="w"> </span><span class="nt">would</span><span class="w"> </span><span class="nt">be</span><span class="w"> </span><span class="nt">permitted</span><span class="o">.</span><span class="w">  </span><span class="nt">A</span><span class="w"> </span><span class="nt">value</span><span class="w"> </span>
+<span class="nt">of</span><span class="w"> </span><span class="nt">5</span><span class="p">.</span><span class="nc">5</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">GAMMA</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">typical</span><span class="o">.</span><span class="w"></span>
+
+<span class="nt">Output</span><span class="o">,</span><span class="w"> </span><span class="nt">real</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">8</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">BREAK</span><span class="o">(</span><span class="nt">L</span><span class="o">),</span><span class="w"> </span><span class="nt">real</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">8</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">COEF</span><span class="o">(</span><span class="nt">K</span><span class="o">,</span><span class="nt">L</span><span class="o">),</span><span class="w"> </span>
+<span class="nt">integer</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">4</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">L</span><span class="o">,</span><span class="w"> </span><span class="nt">integer</span><span class="w"> </span><span class="nt">K</span><span class="o">,</span><span class="w"> </span><span class="nt">give</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">piecewise</span><span class="w"> </span><span class="nt">polynomial</span><span class="w"> </span>
+<span class="nt">representation</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">interpolant</span><span class="o">.</span><span class="w">  </span><span class="nt">Specifically</span><span class="o">,</span><span class="w"> </span>
+<span class="nt">for</span><span class="w"> </span><span class="nt">BREAK</span><span class="o">(</span><span class="nt">i</span><span class="o">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nt">X</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nt">BREAK</span><span class="o">(</span><span class="nt">I</span><span class="o">+</span><span class="nt">1</span><span class="o">),</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">interpolant</span><span class="w"> </span><span class="nt">has</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">form</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">F</span><span class="o">(</span><span class="nt">X</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">COEF</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span><span class="nt">I</span><span class="o">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="nt">DX</span><span class="w">    </span><span class="o">*</span><span class="w"> </span><span class="o">(</span><span class="w"> </span>
+<span class="w">         </span><span class="nt">COEF</span><span class="o">(</span><span class="nt">2</span><span class="o">,</span><span class="nt">I</span><span class="o">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">DX</span><span class="o">/</span><span class="nt">2</span><span class="o">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">(</span><span class="w"></span>
+<span class="w">         </span><span class="nt">COEF</span><span class="o">(</span><span class="nt">3</span><span class="o">,</span><span class="nt">I</span><span class="o">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">DX</span><span class="o">/</span><span class="nt">3</span><span class="o">)</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="w">         </span><span class="nt">COEF</span><span class="o">(</span><span class="nt">4</span><span class="o">,</span><span class="nt">I</span><span class="o">)</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="o">)</span><span class="w"></span>
+<span class="nt">with</span><span class="w">  </span><span class="nt">DX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">X</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">BREAK</span><span class="o">(</span><span class="nt">I</span><span class="o">)</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">1</span><span class="o">,...,</span><span class="w"> </span><span class="nt">L</span><span class="o">.</span><span class="w"></span>
+
+<span class="nt">Output</span><span class="o">,</span><span class="w"> </span><span class="nt">integer</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">4</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">IFLAG</span><span class="o">,</span><span class="w"> </span><span class="nt">error</span><span class="w"> </span><span class="nt">flag</span><span class="o">.</span><span class="w"></span>
+<span class="nt">1</span><span class="o">,</span><span class="w"> </span><span class="nt">no</span><span class="w"> </span><span class="nt">error</span><span class="o">.</span><span class="w"></span>
+<span class="nt">2</span><span class="o">,</span><span class="w"> </span><span class="nt">input</span><span class="w"> </span><span class="nt">was</span><span class="w"> </span><span class="nt">incorrect</span><span class="o">.</span><span class="w"></span>
+
+<span class="nt">Output</span><span class="o">,</span><span class="w"> </span><span class="nt">real</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">8</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="nt">S</span><span class="o">(</span><span class="nt">NTAU</span><span class="o">,</span><span class="nt">6</span><span class="o">).</span><span class="w">  </span><span class="nt">The</span><span class="w"> </span><span class="nt">individual</span><span class="w"> </span><span class="nt">columns</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">this</span><span class="w"></span>
+<span class="nt">array</span><span class="w"> </span><span class="nt">contain</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">following</span><span class="w"> </span><span class="nt">quantities</span><span class="w"> </span><span class="nt">mentioned</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">write</span><span class="w"> </span><span class="nt">up</span><span class="w"></span>
+<span class="nt">and</span><span class="w"> </span><span class="nt">below</span><span class="o">.</span><span class="w"></span>
+<span class="nt">S</span><span class="o">(.,</span><span class="nt">1</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">DTAU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">TAU</span><span class="o">(.+</span><span class="nt">1</span><span class="o">)</span><span class="nt">-TAU</span><span class="o">;</span><span class="w"></span>
+<span class="nt">S</span><span class="o">(.,</span><span class="nt">2</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">DIAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">diagonal</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">linear</span><span class="w"> </span><span class="nt">system</span><span class="o">;</span><span class="w"></span>
+<span class="nt">S</span><span class="o">(.,</span><span class="nt">3</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">U</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">upper</span><span class="w"> </span><span class="nt">diagonal</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">linear</span><span class="w"> </span><span class="nt">system</span><span class="o">;</span><span class="w"></span>
+<span class="nt">S</span><span class="o">(.,</span><span class="nt">4</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">right</span><span class="w"> </span><span class="nt">hand</span><span class="w"> </span><span class="nt">side</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">linear</span><span class="w"> </span><span class="nt">system</span><span class="w"> </span><span class="o">(</span><span class="nt">initially</span><span class="o">)</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nt">FSECND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">solution</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">linear</span><span class="w"> </span><span class="nt">system</span><span class="o">,</span><span class="w"> </span><span class="nt">namely</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">second</span><span class="w"></span>
+<span class="w">         </span><span class="nt">derivatives</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">interpolant</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">TAU</span><span class="o">;</span><span class="w"></span>
+<span class="nt">S</span><span class="o">(.,</span><span class="nt">5</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">indicator</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">additional</span><span class="w"> </span><span class="nt">knots</span><span class="o">;</span><span class="w"></span>
+<span class="nt">S</span><span class="o">(.,</span><span class="nt">6</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">1</span><span class="o">/</span><span class="nt">HSECND</span><span class="o">(</span><span class="nt">1</span><span class="o">,</span><span class="nt">X</span><span class="o">)</span><span class="w"> </span><span class="nt">with</span><span class="w"> </span><span class="nt">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">Z</span><span class="w"> </span><span class="nt">or</span><span class="w"> </span><span class="nt">1-Z</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
+
+    <h3>Arguments</h3>
+      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" id="variable-tau~15"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>tau</strong>(ntau)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-gtau~10"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>gtau</strong>(ntau)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-ntau~6"></span>integer(kind=4)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>ntau</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-gamma~2"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>gamma</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-s~9"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>s</strong>(ntau,6)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-break~23"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>break</strong>(*)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-coef~19"></span>real(kind=8)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>coef</strong>(4,*)</td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-l~34"></span>integer(kind=4)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>l</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-k~41"></span>integer(kind=4)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>k</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-iflag~22"></span>integer(kind=4)</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>iflag</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      <h3>Contents</h3>
+ 
+<em>None</em>
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    
+    
+
+    
+    
+
+
+    
+    
+    </div>
+  </div>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+          </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>

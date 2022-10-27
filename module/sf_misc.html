@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="A library of fortran modules and routines for scientific calculations (in a way just like scipy for python)">
+    <meta name="author" content="QcmP Lab members" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>SF_MISC &ndash; SciFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">SciFortran </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../lists/files.html">Source Files</a></li>
+            <li><a href="../lists/modules.html">Modules</a></li>
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+            <li><a href="../program/testslploteread.html">Program</a></li>
+       
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/testslploteread.html">Program</a></li>
+          </ul>
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>SF_MISC 
+    <small>Module</small>
+    </h1>
+    <div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 3.1% of total for modules and submodules.">1246 statements</a>
+     </li> 
+    <li><i class="fa fa-code"></i><a href="../src/SF_MISC.f90"> Source File</a></li>
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+     <li><a href='../sourcefile/sf_misc.f90.html'>SF_MISC.f90</a></li>
+     <li class="active">SF_MISC</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    <div id="sidebar">
+  <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#inters-0">Interfaces</a></h3></div>
+  <div id="inters-0" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../module/sf_misc.html#interface-uniinv">uniinv</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-unista">unista</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-uniq_array">uniq_array</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-uniq">uniq</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-assert_shape">assert_shape</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-reorder_array">reorder_array</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-reorder">reorder</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_insertion">sort_insertion</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_quicksort">sort_quicksort</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_qsort">sort_qsort</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort">sort</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_array">sort_array</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<br>    
+        <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~sf_misc~~UsedByGraph Pages: 1 -->
+<svg id="modulesf_miscUsedByGraph" width="278pt" height="52pt"
+ viewBox="0.00 0.00 278.00 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~sf_misc~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 48)">
+<title>module~~sf_misc~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-48 274,-48 274,4 -4,4"/>
+<!-- module~sf_misc -->
+<g id="module~~sf_misc~~UsedByGraph_node1" class="node">
+<title>module~sf_misc</title>
+<polygon fill="none" stroke="black" points="57,-44 0,-44 0,-20 57,-20 57,-44"/>
+<text text-anchor="middle" x="28.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">SF_MISC</text>
+</g>
+<!-- module~sf_sp_linalg -->
+<g id="module~~sf_misc~~UsedByGraph_node2" class="node">
+<title>module~sf_sp_linalg</title>
+<g id="a_module~~sf_misc~~UsedByGraph_node2"><a xlink:href=".././module/sf_sp_linalg.html" xlink:title="SF_SP_LINALG">
+<polygon fill="#337ab7" stroke="#337ab7" points="180,-24 93,-24 93,0 180,0 180,-24"/>
+<text text-anchor="middle" x="136.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SF_SP_LINALG</text>
+</a>
+</g>
+</g>
+<!-- module~sf_sp_linalg&#45;&gt;module~sf_misc -->
+<g id="module~~sf_misc~~UsedByGraph_edge1" class="edge">
+<title>module~sf_sp_linalg&#45;&gt;module~sf_misc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M93,-20.02C84.4,-21.64 75.41,-23.34 67,-24.92"/>
+<polygon fill="#000000" stroke="#000000" points="66.27,-21.5 57.09,-26.79 67.56,-28.38 66.27,-21.5"/>
+</g>
+<!-- module~scifor -->
+<g id="module~~sf_misc~~UsedByGraph_node3" class="node">
+<title>module~scifor</title>
+<g id="a_module~~sf_misc~~UsedByGraph_node3"><a xlink:href=".././module/scifor.html" xlink:title="SCIFOR">
+<polygon fill="#337ab7" stroke="#337ab7" points="270,-44 216,-44 216,-20 270,-20 270,-44"/>
+<text text-anchor="middle" x="243" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SCIFOR</text>
+</a>
+</g>
+</g>
+<!-- module~scifor&#45;&gt;module~sf_misc -->
+<g id="module~~sf_misc~~UsedByGraph_edge2" class="edge">
+<title>module~scifor&#45;&gt;module~sf_misc</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M215.76,-32.52C204.72,-32.71 191.73,-32.91 180,-33 141.33,-33.31 131.67,-33.3 93,-33 84.61,-32.93 75.6,-32.82 67.08,-32.69"/>
+<polygon fill="#000000" stroke="#000000" points="67.06,-29.19 57,-32.53 66.95,-36.19 67.06,-29.19"/>
+</g>
+<!-- module~scifor&#45;&gt;module~sf_sp_linalg -->
+<g id="module~~sf_misc~~UsedByGraph_edge3" class="edge">
+<title>module~scifor&#45;&gt;module~sf_sp_linalg</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M215.9,-27C208.08,-25.51 199.21,-23.81 190.32,-22.11"/>
+<polygon fill="#000000" stroke="#000000" points="190.8,-18.64 180.32,-20.2 189.49,-25.51 190.8,-18.64"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses.
+    </p>
+    </div></div></div></div>
+  </li>
+      </ul>
+    </div>
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      <h3>Contents</h3>
+ 
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#inters-1">Interfaces</a></h3></div>
+  <div id="inters-1" class="panel-collapse collapse">
+    <div class="list-group">
+      <a class="list-group-item" href="../module/sf_misc.html#interface-uniinv">uniinv</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-unista">unista</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-uniq_array">uniq_array</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-uniq">uniq</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-assert_shape">assert_shape</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-reorder_array">reorder_array</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-reorder">reorder</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_insertion">sort_insertion</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_quicksort">sort_quicksort</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_qsort">sort_qsort</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort">sort</a>
+      <a class="list-group-item" href="../module/sf_misc.html#interface-sort_array">sort_array</a>
+    </div>
+  </div>
+</div>
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    
+    
+    <section>
+   <h2>Interfaces</h2>
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-uniinv"></span><h3>public interface <a href='../interface/uniinv.html'>uniinv</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine d_uniinv(xdont, igoest)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>xdont</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(out),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>igoest</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine r_uniinv(xdont, igoest)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>xdont</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(out),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>igoest</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_uniinv(xdont, igoest)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>xdont</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(out),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>igoest</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-unista"></span><h3>public interface <a href='../interface/unista.html'>unista</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine d_unista(xdont, nuni, mask)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>xdont</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>nuni</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td></td>
+  <td>optional</td>  <td>dimension (size(xdont))</td><td>::</td>
+  <td><strong>mask</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine r_unista(xdont, nuni, mask)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>xdont</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>nuni</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td></td>
+  <td>optional</td>  <td>dimension (size(xdont))</td><td>::</td>
+  <td><strong>mask</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_unista(xdont, nuni, mask)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension (:)</td><td>::</td>
+  <td><strong>xdont</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
+  <td><strong>nuni</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td></td>
+  <td>optional</td>  <td>dimension (size(xdont))</td><td>::</td>
+  <td><strong>mask</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-uniq_array"></span><h3>public interface <a href='../interface/uniq_array.html'>uniq_array</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine i_uniq(AIN, AOUT, MASK)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>AIN</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(out),</td>
+  <td></td>  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>AOUT</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td>intent(out),</td>
+  <td>optional</td>  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>MASK</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_uniq(AIN, AOUT, MASK)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>AIN</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(out),</td>
+  <td></td>  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>AOUT</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td>intent(out),</td>
+  <td>optional</td>  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>MASK</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-uniq"></span><h3>public interface <a href='../interface/uniq.html'>uniq</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private function f_i_uniq(AIN, MASK) result(AOUT)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>AIN</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td>intent(out),</td>
+  <td>optional</td>  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>MASK</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Return Value <small>integer,dimension(:), allocatable</small></h4>  
+
+    </li>
+    <li class="list-group-item">
+    <h3>private function f_d_uniq(AIN, MASK) result(AOUT)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>AIN</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td>intent(out),</td>
+  <td>optional</td>  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>MASK</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Return Value <small>real(kind=8),dimension(:), allocatable</small></h4>  
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-assert_shape"></span><h3>public interface <a href='../interface/assert_shape.html'>assert_shape</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N1(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N2(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N3(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N4(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N5(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N6(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N7(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine i_assert_shape_N8(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N1(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N2(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N3(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N4(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N5(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N6(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N7(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine d_assert_shape_N8(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N1(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N2(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N3(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N4(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N5(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N6(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N7(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine z_assert_shape_N8(A, Ndim, routine, matname)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:,:,:,:,:,:,:,:)</td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ndim</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>routine</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>character(len=*),</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>matname</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-reorder_array"></span><h3>public interface <a href='../interface/reorder_array.html'>reorder_array</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine I_reshuffle(Ain, Index)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine D_reshuffle(Ain, Index)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine Z_reshuffle(Ain, Index)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine L_reshuffle(Ain, Index)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-reorder"></span><h3>public interface <a href='../interface/reorder.html'>reorder</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private function f_I_reshuffle(Ain, Index) result(Aout)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Return Value <small>integer,dimension(size(Ain))</small></h4>  
+
+    </li>
+    <li class="list-group-item">
+    <h3>private function f_D_reshuffle(Ain, Index) result(Aout)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Return Value <small>real(kind=8),dimension(size(Ain))</small></h4>  
+
+    </li>
+    <li class="list-group-item">
+    <h3>private function f_Z_reshuffle(Ain, Index) result(Aout)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>complex(kind=8),</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Return Value <small>complex(kind=8),dimension(size(Ain))</small></h4>  
+
+    </li>
+    <li class="list-group-item">
+    <h3>private function f_L_reshuffle(Ain, Index) result(Aout)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>logical,</td>
+<td></td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>Ain</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td></td>  <td>dimension(size(Ain))</td><td>::</td>
+  <td><strong>Index</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Return Value <small>logical,dimension(size(Ain))</small></h4>  
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-sort_insertion"></span><h3>public interface <a href='../interface/sort_insertion.html'>sort_insertion</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine sort_insertion_i(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine sort_insertion_d(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-sort_quicksort"></span><h3>public interface <a href='../interface/sort_quicksort.html'>sort_quicksort</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine sort_quicksort_i(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine sort_quicksort_d(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-sort_qsort"></span><h3>public interface <a href='../interface/sort_qsort.html'>sort_qsort</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine sort_array_i(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine sort_array_d(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-sort"></span><h3>public interface <a href='../interface/sort.html'>sort</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine sort_quicksort_i(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine sort_quicksort_d(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+     <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-sort_array"></span><h3>public interface <a href='../interface/sort_array.html'>sort_array</a>  </h3></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+    <h3>private subroutine sort_quicksort_i(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+    <li class="list-group-item">
+    <h3>private subroutine sort_quicksort_d(a, indx_a)</h3>    
+<h4>Arguments</h4>      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
+<tbody>
+<tr>
+  <td><span class="anchor" ></span>real(kind=8),</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(size(a))</td><td>::</td>
+  <td><strong>indx_a</strong></td><td></td>
+</tr>
+</tbody>
+</table>
+
+
+    </li>
+  </ul>
+</div>
+
+    </section>
+  <br>
+
+    
+    
+
+    
+    </div>
+  </div>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+          </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>
