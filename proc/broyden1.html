@@ -212,44 +212,41 @@
 <polygon fill="none" stroke="black" points="63,-255 0,-255 0,-231 63,-231 63,-255"/>
 <text text-anchor="middle" x="31.5" y="-240.6" font-family="Helvetica,sans-Serif" font-size="10.50">broyden1</text>
 </g>
-<!-- proc~fmin_ -->
+<!-- fdjac -->
 <g id="proc~~broyden1~~CallsGraph_node2" class="node">
-<title>proc~fmin_</title>
-<g id="a_proc~~broyden1~~CallsGraph_node2"><a xlink:href=".././proc/fmin_.html" xlink:title="fmin_">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="170,-486 116,-486 116,-462 170,-462 170,-486"/>
-<text text-anchor="middle" x="143" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fmin_</text>
-</a>
+<title>fdjac</title>
+<polygon fill="#777777" stroke="#777777" points="170,-486 116,-486 116,-462 170,-462 170,-486"/>
+<text text-anchor="middle" x="143" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fdjac</text>
 </g>
-</g>
-<!-- proc~broyden1&#45;&gt;proc~fmin_ -->
+<!-- proc~broyden1&#45;&gt;fdjac -->
 <g id="proc~~broyden1~~CallsGraph_edge1" class="edge">
-<title>proc~broyden1&#45;&gt;proc~fmin_</title>
+<title>proc~broyden1&#45;&gt;fdjac</title>
 <path fill="none" stroke="#000000" d="M33.09,-255.01C35.4,-289.83 46.56,-392.18 99,-453 101.29,-455.66 104,-458.01 106.93,-460.09"/>
 <polygon fill="#000000" stroke="#000000" points="105.19,-463.13 115.57,-465.23 108.77,-457.11 105.19,-463.13"/>
 </g>
-<!-- vabs -->
+<!-- qrupdt -->
 <g id="proc~~broyden1~~CallsGraph_node3" class="node">
-<title>vabs</title>
+<title>qrupdt</title>
 <polygon fill="#777777" stroke="#777777" points="170,-444 116,-444 116,-420 170,-420 170,-444"/>
-<text text-anchor="middle" x="143" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">vabs</text>
+<text text-anchor="middle" x="143" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">qrupdt</text>
 </g>
-<!-- proc~broyden1&#45;&gt;vabs -->
-<g id="proc~~broyden1~~CallsGraph_edge3" class="edge">
-<title>proc~broyden1&#45;&gt;vabs</title>
+<!-- proc~broyden1&#45;&gt;qrupdt -->
+<g id="proc~~broyden1~~CallsGraph_edge4" class="edge">
+<title>proc~broyden1&#45;&gt;qrupdt</title>
 <path fill="none" stroke="#000000" d="M34.24,-255.17C39.11,-285.24 55.54,-364.03 99,-411 101.39,-413.58 104.16,-415.88 107.12,-417.92"/>
 <polygon fill="#000000" stroke="#000000" points="105.42,-420.98 115.82,-423.01 108.96,-414.94 105.42,-420.98"/>
 </g>
-<!-- lower_triangle -->
+<!-- rsolv -->
 <g id="proc~~broyden1~~CallsGraph_node4" class="node">
-<title>lower_triangle</title>
-<polygon fill="#777777" stroke="#777777" points="187,-402 99,-402 99,-378 187,-378 187,-402"/>
-<text text-anchor="middle" x="143" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lower_triangle</text>
+<title>rsolv</title>
+<polygon fill="#777777" stroke="#777777" points="170,-402 116,-402 116,-378 170,-378 170,-402"/>
+<text text-anchor="middle" x="143" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rsolv</text>
 </g>
-<!-- proc~broyden1&#45;&gt;lower_triangle -->
+<!-- proc~broyden1&#45;&gt;rsolv -->
 <g id="proc~~broyden1~~CallsGraph_edge5" class="edge">
-<title>proc~broyden1&#45;&gt;lower_triangle</title>
-<path fill="none" stroke="#000000" d="M36.13,-255.34C43.91,-279.9 64.36,-335.43 99,-369 100.08,-370.05 101.23,-371.05 102.42,-372.02"/>
-<polygon fill="#000000" stroke="#000000" points="100.6,-375.01 110.83,-377.76 104.55,-369.23 100.6,-375.01"/>
+<title>proc~broyden1&#45;&gt;rsolv</title>
+<path fill="none" stroke="#000000" d="M36.13,-255.34C43.91,-279.9 64.36,-335.43 99,-369 101.39,-371.31 104.08,-373.42 106.92,-375.32"/>
+<polygon fill="#000000" stroke="#000000" points="105.33,-378.44 115.74,-380.43 108.84,-372.39 105.33,-378.44"/>
 </g>
 <!-- unit_matrix -->
 <g id="proc~~broyden1~~CallsGraph_node5" class="node">
@@ -263,39 +260,42 @@
 <path fill="none" stroke="#000000" d="M39.71,-255.26C50.64,-273.01 72.92,-306.01 99,-327 100.55,-328.25 102.19,-329.45 103.89,-330.6"/>
 <polygon fill="#000000" stroke="#000000" points="102.34,-333.75 112.71,-335.91 105.95,-327.75 102.34,-333.75"/>
 </g>
-<!-- fdjac -->
+<!-- lower_triangle -->
 <g id="proc~~broyden1~~CallsGraph_node6" class="node">
-<title>fdjac</title>
-<polygon fill="#777777" stroke="#777777" points="170,-318 116,-318 116,-294 170,-294 170,-318"/>
-<text text-anchor="middle" x="143" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fdjac</text>
+<title>lower_triangle</title>
+<polygon fill="#777777" stroke="#777777" points="187,-318 99,-318 99,-294 187,-294 187,-318"/>
+<text text-anchor="middle" x="143" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lower_triangle</text>
 </g>
-<!-- proc~broyden1&#45;&gt;fdjac -->
-<g id="proc~~broyden1~~CallsGraph_edge4" class="edge">
-<title>proc~broyden1&#45;&gt;fdjac</title>
+<!-- proc~broyden1&#45;&gt;lower_triangle -->
+<g id="proc~~broyden1~~CallsGraph_edge3" class="edge">
+<title>proc~broyden1&#45;&gt;lower_triangle</title>
 <path fill="none" stroke="#000000" d="M50.52,-255.13C63.72,-263.83 82.19,-275.62 99,-285 101.52,-286.4 104.14,-287.81 106.8,-289.2"/>
 <polygon fill="#000000" stroke="#000000" points="105.34,-292.39 115.84,-293.79 108.51,-286.14 105.34,-292.39"/>
 </g>
-<!-- qrupdt -->
+<!-- proc~fmin_ -->
 <g id="proc~~broyden1~~CallsGraph_node7" class="node">
-<title>qrupdt</title>
-<polygon fill="#777777" stroke="#777777" points="170,-276 116,-276 116,-252 170,-252 170,-276"/>
-<text text-anchor="middle" x="143" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">qrupdt</text>
+<title>proc~fmin_</title>
+<g id="a_proc~~broyden1~~CallsGraph_node7"><a xlink:href=".././proc/fmin_.html" xlink:title="fmin_">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="170,-276 116,-276 116,-252 170,-252 170,-276"/>
+<text text-anchor="middle" x="143" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fmin_</text>
+</a>
 </g>
-<!-- proc~broyden1&#45;&gt;qrupdt -->
+</g>
+<!-- proc~broyden1&#45;&gt;proc~fmin_ -->
 <g id="proc~~broyden1~~CallsGraph_edge6" class="edge">
-<title>proc~broyden1&#45;&gt;qrupdt</title>
+<title>proc~broyden1&#45;&gt;proc~fmin_</title>
 <path fill="none" stroke="#000000" d="M63,-248.85C76.21,-251.38 91.79,-254.37 105.6,-257.02"/>
 <polygon fill="#000000" stroke="#000000" points="105.27,-260.52 115.75,-258.97 106.59,-253.64 105.27,-260.52"/>
 </g>
-<!-- rsolv -->
+<!-- vabs -->
 <g id="proc~~broyden1~~CallsGraph_node8" class="node">
-<title>rsolv</title>
+<title>vabs</title>
 <polygon fill="#777777" stroke="#777777" points="170,-234 116,-234 116,-210 170,-210 170,-234"/>
-<text text-anchor="middle" x="143" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rsolv</text>
+<text text-anchor="middle" x="143" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">vabs</text>
 </g>
-<!-- proc~broyden1&#45;&gt;rsolv -->
+<!-- proc~broyden1&#45;&gt;vabs -->
 <g id="proc~~broyden1~~CallsGraph_edge7" class="edge">
-<title>proc~broyden1&#45;&gt;rsolv</title>
+<title>proc~broyden1&#45;&gt;vabs</title>
 <path fill="none" stroke="#000000" d="M63,-237.15C76.21,-234.62 91.79,-231.63 105.6,-228.98"/>
 <polygon fill="#000000" stroke="#000000" points="106.59,-232.36 115.75,-227.03 105.27,-225.48 106.59,-232.36"/>
 </g>
@@ -362,14 +362,14 @@
 <!-- funcv -->
 <g id="proc~~broyden1~~CallsGraph_node14" class="node">
 <title>funcv</title>
-<polygon fill="#777777" stroke="#777777" points="277,-486 223,-486 223,-462 277,-462 277,-486"/>
-<text text-anchor="middle" x="250" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">funcv</text>
+<polygon fill="#777777" stroke="#777777" points="277,-276 223,-276 223,-252 277,-252 277,-276"/>
+<text text-anchor="middle" x="250" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">funcv</text>
 </g>
 <!-- proc~fmin_&#45;&gt;funcv -->
 <g id="proc~~broyden1~~CallsGraph_edge13" class="edge">
 <title>proc~fmin_&#45;&gt;funcv</title>
-<path fill="none" stroke="#000000" d="M170.23,-474C183,-474 198.58,-474 212.5,-474"/>
-<polygon fill="#000000" stroke="#000000" points="212.75,-477.5 222.75,-474 212.75,-470.5 212.75,-477.5"/>
+<path fill="none" stroke="#000000" d="M170.23,-264C183,-264 198.58,-264 212.5,-264"/>
+<polygon fill="#000000" stroke="#000000" points="212.75,-267.5 222.75,-264 212.75,-260.5 212.75,-267.5"/>
 </g>
 </g>
 </svg>
