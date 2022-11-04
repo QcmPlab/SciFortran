@@ -118,7 +118,7 @@
   href="#common-0">Common Blocks</a></h3></div>
   <div id="common-0" class="panel-collapse collapse">
     <div class="list-group">
-      <a class="list-group-item" href="../proc/lanczos_parpack_c.html#common-debug~6">debug</a>
+      <a class="list-group-item" href="../proc/lanczos_parpack_c.html#common-debug">debug</a>
     </div>
   </div>
 </div>
@@ -143,7 +143,7 @@
 <thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
 <tbody>
 <tr>
-  <td><span class="anchor" id="variable-mpicomm~4"></span>integer</td>
+  <td><span class="anchor" id="variable-mpicomm"></span>integer</td>
 <td></td>
   <td></td>  <td></td><td>::</td>
   <td><strong>MpiComm</strong></td><td></td>
@@ -179,49 +179,49 @@
   </td> 
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-eval~3"></span>real(kind=8)</td>
+  <td><span class="anchor" id="variable-eval"></span>real(kind=8)</td>
 <td></td>
   <td></td>  <td></td><td>::</td>
   <td><strong>eval</strong>(:)</td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-evec~3"></span>complex(kind=8)</td>
+  <td><span class="anchor" id="variable-evec"></span>complex(kind=8)</td>
 <td></td>
   <td></td>  <td></td><td>::</td>
   <td><strong>evec</strong>(:,:)</td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-nblock~15"></span>integer,</td>
+  <td><span class="anchor" id="variable-nblock~13"></span>integer,</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>Nblock</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-nitermax~6"></span>integer,</td>
+  <td><span class="anchor" id="variable-nitermax"></span>integer,</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>Nitermax</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-v0~2"></span>complex(kind=8),</td>
+  <td><span class="anchor" id="variable-v0"></span>complex(kind=8),</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>v0</strong>(size(evec,1))</td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-tol~6"></span>real(kind=8),</td>
+  <td><span class="anchor" id="variable-tol~5"></span>real(kind=8),</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>tol</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-iverbose~5"></span>logical,</td>
+  <td><span class="anchor" id="variable-iverbose"></span>logical,</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>iverbose</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-vrandom~4"></span>logical,</td>
+  <td><span class="anchor" id="variable-vrandom"></span>logical,</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>vrandom</strong></td><td></td>
@@ -276,29 +276,29 @@
 <path fill="none" stroke="#000000" d="M72.51,-150.12C90.15,-163.58 120.15,-185.46 148,-201 150.86,-202.6 153.86,-204.16 156.92,-205.66"/>
 <polygon fill="#000000" stroke="#000000" points="155.58,-208.9 166.12,-209.99 158.56,-202.57 155.58,-208.9"/>
 </g>
-<!-- mpi_allreduce -->
+<!-- pznaupd -->
 <g id="proc~~lanczos_parpack_c~~CallsGraph_node4" class="node">
+<title>pznaupd</title>
+<polygon fill="#777777" stroke="#777777" points="226,-192 168,-192 168,-168 226,-168 226,-192"/>
+<text text-anchor="middle" x="197" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pznaupd</text>
+</g>
+<!-- proc~lanczos_parpack_c&#45;&gt;pznaupd -->
+<g id="proc~~lanczos_parpack_c~~CallsGraph_edge4" class="edge">
+<title>proc~lanczos_parpack_c&#45;&gt;pznaupd</title>
+<path fill="none" stroke="#000000" d="M96.83,-150.04C116.01,-155.83 138.89,-162.75 157.85,-168.47"/>
+<polygon fill="#000000" stroke="#000000" points="157.05,-171.89 167.64,-171.43 159.08,-165.19 157.05,-171.89"/>
+</g>
+<!-- mpi_allreduce -->
+<g id="proc~~lanczos_parpack_c~~CallsGraph_node5" class="node">
 <title>mpi_allreduce</title>
-<polygon fill="#777777" stroke="#777777" points="241,-192 153,-192 153,-168 241,-168 241,-192"/>
-<text text-anchor="middle" x="197" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
+<polygon fill="#777777" stroke="#777777" points="241,-150 153,-150 153,-126 241,-126 241,-150"/>
+<text text-anchor="middle" x="197" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
 </g>
 <!-- proc~lanczos_parpack_c&#45;&gt;mpi_allreduce -->
 <g id="proc~~lanczos_parpack_c~~CallsGraph_edge3" class="edge">
 <title>proc~lanczos_parpack_c&#45;&gt;mpi_allreduce</title>
-<path fill="none" stroke="#000000" d="M96.83,-150.04C112.24,-154.69 130.05,-160.07 146.29,-164.98"/>
-<polygon fill="#000000" stroke="#000000" points="145.58,-168.42 156.16,-167.96 147.6,-161.72 145.58,-168.42"/>
-</g>
-<!-- pzneupd -->
-<g id="proc~~lanczos_parpack_c~~CallsGraph_node5" class="node">
-<title>pzneupd</title>
-<polygon fill="#777777" stroke="#777777" points="226,-150 168,-150 168,-126 226,-126 226,-150"/>
-<text text-anchor="middle" x="197" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pzneupd</text>
-</g>
-<!-- proc~lanczos_parpack_c&#45;&gt;pzneupd -->
-<g id="proc~~lanczos_parpack_c~~CallsGraph_edge4" class="edge">
-<title>proc~lanczos_parpack_c&#45;&gt;pzneupd</title>
-<path fill="none" stroke="#000000" d="M112.34,-138C127.54,-138 143.69,-138 157.7,-138"/>
-<polygon fill="#000000" stroke="#000000" points="157.95,-141.5 167.95,-138 157.95,-134.5 157.95,-141.5"/>
+<path fill="none" stroke="#000000" d="M112.34,-138C122.34,-138 132.75,-138 142.69,-138"/>
+<polygon fill="#000000" stroke="#000000" points="142.85,-141.5 152.85,-138 142.85,-134.5 142.85,-141.5"/>
 </g>
 <!-- allreduce_mpi -->
 <g id="proc~~lanczos_parpack_c~~CallsGraph_node6" class="node">
@@ -324,15 +324,15 @@
 <path fill="none" stroke="#000000" d="M72.51,-125.88C90.15,-112.42 120.15,-90.54 148,-75 150.86,-73.4 153.86,-71.84 156.92,-70.34"/>
 <polygon fill="#000000" stroke="#000000" points="158.56,-73.43 166.12,-66.01 155.58,-67.1 158.56,-73.43"/>
 </g>
-<!-- pznaupd -->
+<!-- pzneupd -->
 <g id="proc~~lanczos_parpack_c~~CallsGraph_node8" class="node">
-<title>pznaupd</title>
+<title>pzneupd</title>
 <polygon fill="#777777" stroke="#777777" points="226,-24 168,-24 168,0 226,0 226,-24"/>
-<text text-anchor="middle" x="197" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pznaupd</text>
+<text text-anchor="middle" x="197" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pzneupd</text>
 </g>
-<!-- proc~lanczos_parpack_c&#45;&gt;pznaupd -->
+<!-- proc~lanczos_parpack_c&#45;&gt;pzneupd -->
 <g id="proc~~lanczos_parpack_c~~CallsGraph_edge7" class="edge">
-<title>proc~lanczos_parpack_c&#45;&gt;pznaupd</title>
+<title>proc~lanczos_parpack_c&#45;&gt;pzneupd</title>
 <path fill="none" stroke="#000000" d="M64.89,-125.74C79.18,-104.38 111.28,-60.03 148,-33 151.38,-30.51 155.1,-28.24 158.93,-26.19"/>
 <polygon fill="#000000" stroke="#000000" points="160.49,-29.32 167.94,-21.79 157.42,-23.02 160.49,-29.32"/>
 </g>
@@ -410,7 +410,7 @@
   href="#common-1">Common Blocks</a></h3></div>
   <div id="common-1" class="panel-collapse collapse">
     <div class="list-group">
-      <a class="list-group-item" href="../proc/lanczos_parpack_c.html#common-debug~6">debug</a>
+      <a class="list-group-item" href="../proc/lanczos_parpack_c.html#common-debug">debug</a>
     </div>
   </div>
 </div>
@@ -427,10 +427,10 @@
     <section>
       <h2>Common Blocks</h2>
       <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="common-debug~6"></span><h3>
+  <div class="panel-heading codesum"><span class="anchor" id="common-debug"></span><h3>
       <a data-toggle="popover" data-html="true" tabindex="0" 
      data-trigger="focus"
-   data-content="<h4>Used Elsewhere:</h4><a href='../proc/lanczos_arpack_d~2.html#common-debug~2'>lanczos_arpack_d</a> (subroutine)<br><a href='../proc/lanczos_arpack_c~2.html#common-debug~3'>lanczos_arpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_d~2.html#common-debug~4'>lanczos_parpack_d</a> (subroutine)<br><a href='../proc/lanczos_parpack_c~2.html#common-debug~5'>lanczos_parpack_c</a> (subroutine)<br><a href='../proc/lanczos_arpack_d.html#common-debug'>lanczos_arpack_d</a> (subroutine)<br><a href='../proc/lanczos_arpack_c.html#common-debug~7'>lanczos_arpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_d.html#common-debug~8'>lanczos_parpack_d</a> (subroutine)<br>">common /debug/</a>
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/lanczos_arpack_d~2.html#common-debug~2'>lanczos_arpack_d</a> (subroutine)<br><a href='../proc/lanczos_arpack_c~2.html#common-debug~3'>lanczos_arpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_d~2.html#common-debug~4'>lanczos_parpack_d</a> (subroutine)<br><a href='../proc/lanczos_parpack_c~2.html#common-debug~5'>lanczos_parpack_c</a> (subroutine)<br><a href='../proc/lanczos_arpack_d.html#common-debug~6'>lanczos_arpack_d</a> (subroutine)<br><a href='../proc/lanczos_arpack_c.html#common-debug~7'>lanczos_arpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_d.html#common-debug~8'>lanczos_parpack_d</a> (subroutine)<br>">common /debug/</a>
   </h3></div>
   <div class="panel-body">
     
@@ -438,122 +438,122 @@
 <thead><tr><th>Type</th><th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
 <tbody>
 <tr>
-  <td><span class="anchor" id="variable-logfil~2"></span>integer</td>
+  <td><span class="anchor" id="variable-logfil"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>logfil</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-ndigit~2"></span>integer</td>
+  <td><span class="anchor" id="variable-ndigit"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>ndigit</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mgetv0~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mgetv0"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mgetv0</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-msaupd~2"></span>integer</td>
+  <td><span class="anchor" id="variable-msaupd"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>msaupd</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-msaup2~2"></span>integer</td>
+  <td><span class="anchor" id="variable-msaup2"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>msaup2</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-msaitr~2"></span>integer</td>
+  <td><span class="anchor" id="variable-msaitr"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>msaitr</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mseigt~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mseigt"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mseigt</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-msapps~2"></span>integer</td>
+  <td><span class="anchor" id="variable-msapps"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>msapps</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-msgets~2"></span>integer</td>
+  <td><span class="anchor" id="variable-msgets"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>msgets</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mseupd~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mseupd"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mseupd</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mnaupd~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mnaupd"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mnaupd</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mnaup2~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mnaup2"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mnaup2</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mnaitr~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mnaitr"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mnaitr</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mneigh~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mneigh"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mneigh</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mnapps~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mnapps"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mnapps</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mngets~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mngets"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mngets</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mneupd~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mneupd"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mneupd</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mcaupd~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mcaupd"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mcaupd</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mcaup2~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mcaup2"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mcaup2</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mcaitr~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mcaitr"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mcaitr</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mceigh~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mceigh"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mceigh</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mcapps~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mcapps"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mcapps</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mcgets~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mcgets"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mcgets</strong></td><td></td><td></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-mceupd~2"></span>integer</td>
+  <td><span class="anchor" id="variable-mceupd"></span>integer</td>
   <td></td><td>::</td>
   <td><strong>mceupd</strong></td><td></td><td></td><td></td>
 </tr>

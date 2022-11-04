@@ -90,10 +90,10 @@
     data-placement="bottom" data-html="true"
     title=" 0.1% of total for procedures.">58 statements</a>
      </li> 
-    <li><i class="fa fa-code"></i><a href="../src/interpolate_pppack.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/SF_INTERPOLATE.f90"> Source File</a></li>
   </ul>
   <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/interpolate_pppack.f90.html'>interpolate_pppack.f90</a></li>
+     <li><a href='../sourcefile/sf_interpolate.f90.html'>SF_INTERPOLATE.f90</a></li>
      <li class="active">l2appr</li>
   </ol>
 </div>
@@ -121,12 +121,6 @@
       <a class="list-group-item" href="../proc/l2appr.html#common-i4data">i4data</a>
       <a class="list-group-item" href="../proc/l2appr.html#common-r8data">r8data</a>
     </div>
-  </div>
-</div>
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/l2appr.html#src">l2appr</a>
   </div>
 </div>
 
@@ -240,7 +234,7 @@ the L2 approximation to the data.
   <td><strong>t</strong>(n+k)</td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-n~113"></span>integer(kind=4)</td>
+  <td><span class="anchor" id="variable-n~78"></span>integer(kind=4)</td>
 <td></td>
   <td></td>  <td></td><td>::</td>
   <td><strong>n</strong></td><td></td>
@@ -252,7 +246,7 @@ the L2 approximation to the data.
   <td><strong>k</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-q~12"></span>real(kind=8)</td>
+  <td><span class="anchor" id="variable-q"></span>real(kind=8)</td>
 <td></td>
   <td></td>  <td></td><td>::</td>
   <td><strong>q</strong>(k,n)</td><td></td>
@@ -419,12 +413,6 @@ the L2 approximation to the data.
     </div>
   </div>
 </div>
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/l2appr.html#src">l2appr</a>
-  </div>
-</div>
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -506,206 +494,6 @@ the L2 approximation to the data.
 
 
     
-    <section>
-    <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">l2appr</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">diag</span><span class="p">,</span><span class="w"> </span><span class="n">bcoef</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="c">!*****************************************************************************80</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!! L2APPR constructs a weighted L2 spline approximation to given data.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Discussion:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    The routine constructs the weighted discrete L2-approximation by </span>
-<span class="w">  </span><span class="c">!    splines of order K with knot sequence T(1:N+K) to </span>
-<span class="w">  </span><span class="c">!    given data points ( TAU(1:NTAU), GTAU(1:NTAU) ).  </span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    The B-spline coefficients BCOEF of the approximating spline are </span>
-<span class="w">  </span><span class="c">!    determined from the normal equations using Cholesky&#39;s method.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Method:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    The B-spline coefficients of the L2-approximation are determined as the </span>
-<span class="w">  </span><span class="c">!    solution of the normal equations, for 1 &lt;= I &lt;= N:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!      sum ( 1 &lt;= J &lt;= N ) ( B(I), B(J) ) * BCOEF(J) = ( B(I), G ).</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Here, B(I) denotes the I-th B-spline, G denotes the function to</span>
-<span class="w">  </span><span class="c">!    be approximated, and the inner product of two functions F and G </span>
-<span class="w">  </span><span class="c">!    is given by</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!      ( F, G ) = sum ( 1 &lt;= I &lt;= NTAU ) WEIGHT(I) * F(TAU(I)) * G(TAU(I)).</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    The arrays TAU and WEIGHT are given in common block DATA, as is the </span>
-<span class="w">  </span><span class="c">!    array GTAU(1:NTAU) = G(TAU(1:NTAU)).</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    The values of the B-splines B(1:N) are supplied by BSPLVB.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    The coefficient matrix C, with</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!       C(I,J) = ( B(I), B(J) )</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    of the normal equations is symmetric and (2*K-1)-banded, therefore</span>
-<span class="w">  </span><span class="c">!    can be specified by giving its K bands at or below the diagonal. </span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    For I = 1:N and J = I:min(I+K-1,N), we store</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!      ( B(I), B(J) ) = C(I,J) </span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    in</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!      Q(I-J+1,J), </span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    and the right hand side</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!      ( B(I), G )  </span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    in</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!      BCOEF(I).</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Since B-spline values are most efficiently generated by finding</span>
-<span class="w">  </span><span class="c">!    simultaneously the value of every nonzero B-spline at one point,</span>
-<span class="w">  </span><span class="c">!    the entries of C (that is, of Q), are generated by computing, for</span>
-<span class="w">  </span><span class="c">!    each LL, all the terms involving TAU(LL) simultaneously and adding</span>
-<span class="w">  </span><span class="c">!    them to all relevant entries.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Modified:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    14 February 2007</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Author:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Carl DeBoor</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Reference:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Carl DeBoor,</span>
-<span class="w">  </span><span class="c">!    A Practical Guide to Splines,</span>
-<span class="w">  </span><span class="c">!    Springer, 2001,</span>
-<span class="w">  </span><span class="c">!    ISBN: 0387953663,</span>
-<span class="w">  </span><span class="c">!    LC: QA1.A647.v27.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Parameters:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) T(N+K), the knot sequence.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) N, the dimension of the space of splines </span>
-<span class="w">  </span><span class="c">!    of order K with knots T.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) K, the order of the splines.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Workspace, real ( kind = 8 ) Q(K,N), used to store the K lower </span>
-<span class="w">  </span><span class="c">!    diagonals of the Gramian matrix C.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Workspace, real ( kind = 8 ) DIAG(N), used in BCHFAC.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Output, real ( kind = 8 ) BCOEF(N), the B-spline coefficients of</span>
-<span class="w">  </span><span class="c">!    the L2 approximation to the data.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="k">implicit none</span>
-
-<span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ntmax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
-
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">bcoef</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">biatx</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">diag</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">dw</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">gtau</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">j</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">jj</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">left</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">leftmk</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ll</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">mm</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ntau</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">q</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">tau</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">totalw</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">weight</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">save</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i4data</span><span class="w"> </span><span class="o">/</span><span class="w"></span>
-<span class="w">  </span><span class="k">save</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">r8data</span><span class="w"> </span><span class="o">/</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">common</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i4data</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ntau</span><span class="w"></span>
-<span class="w">  </span><span class="k">common</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">r8data</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">tau</span><span class="p">(</span><span class="n">ntmax</span><span class="p">),</span><span class="w"> </span><span class="n">gtau</span><span class="p">(</span><span class="n">ntmax</span><span class="p">),</span><span class="w"> </span><span class="n">weight</span><span class="p">(</span><span class="n">ntmax</span><span class="p">),</span><span class="w"> </span><span class="n">totalw</span><span class="w"></span>
-
-<span class="w">  </span><span class="n">bcoef</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-<span class="w">  </span><span class="n">q</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">k</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-
-<span class="w">  </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">  </span><span class="n">leftmk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">do </span><span class="n">ll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ntau</span><span class="w"></span>
-<span class="w">     </span><span class="c">!</span>
-<span class="w">     </span><span class="c">!  Locate LEFT such that TAU(LL) is in ( T(LEFT), T(LEFT+1) ).</span>
-<span class="w">     </span><span class="c">!</span>
-<span class="w">     </span><span class="k">do</span>
-
-<span class="k">        if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">           exit</span>
-<span class="k">        end if</span>
-
-<span class="k">        if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tau</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">           exit</span>
-<span class="k">        end if</span>
-
-<span class="k">        </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">        </span><span class="n">leftmk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftmk</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">end do</span>
-
-<span class="k">     call </span><span class="n">bsplvb</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">tau</span><span class="p">(</span><span class="n">ll</span><span class="p">),</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">biatx</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="c">!</span>
-<span class="w">     </span><span class="c">!  BIATX(MM) contains the value of B(LEFT-K+MM) at TAU(LL).</span>
-<span class="w">     </span><span class="c">!</span>
-<span class="w">     </span><span class="c">!  Hence, with DW = BIATX(MM) * WEIGHT(LL), the number DW * GTAU(LL)</span>
-<span class="w">     </span><span class="c">!  is a summand in the inner product</span>
-<span class="w">     </span><span class="c">!</span>
-<span class="w">     </span><span class="c">!    ( B(LEFT-K+MM), G)</span>
-<span class="w">     </span><span class="c">!</span>
-<span class="w">     </span><span class="c">!  which goes into  BCOEF(LEFT-K+MM)</span>
-<span class="w">     </span><span class="c">!  and the number BIATX(JJ)*DW is a summand in the inner product</span>
-<span class="w">     </span><span class="c">!    (B(LEFT-K+JJ), B(LEFT-K+MM)), into  Q(JJ-MM+1,LEFT-K+MM)</span>
-<span class="w">     </span><span class="c">!  since  (LEFT-K+JJ)-(LEFT-K+MM)+1 = JJ - MM + 1.</span>
-<span class="w">     </span><span class="c">!</span>
-<span class="w">     </span><span class="k">do </span><span class="n">mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">dw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">biatx</span><span class="p">(</span><span class="n">mm</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">weight</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftmk</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mm</span><span class="w"></span>
-<span class="w">        </span><span class="n">bcoef</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dw</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gtau</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bcoef</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">do </span><span class="n">jj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">           </span><span class="n">q</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">biatx</span><span class="p">(</span><span class="n">jj</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dw</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">q</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">        </span><span class="k">end do</span>
-
-<span class="k">     end do</span>
-
-<span class="k">  end do</span><span class="w"></span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Construct the Cholesky factorization for C in Q, then </span>
-<span class="w">  </span><span class="c">!  use it to solve the normal equations</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    C * X = BCOEF</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  for X, and store X in BCOEF.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="k">call </span><span class="n">bchfac</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">diag</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">call </span><span class="n">bchslv</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">bcoef</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">return</span>
-<span class="k">end subroutine </span><span class="n">l2appr</span><span class="w"></span>
-</pre></div>
-
-    </section>
-    <br>
     
     </div>
   </div>

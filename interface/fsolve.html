@@ -88,7 +88,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="<p> 0.0% of total for procedures.</p>Including implementation: 272 statements,  0.4% of total for procedures.">6 statements</a>
+    title="<p> 0.0% of total for procedures.</p>Including implementation: 280 statements,  0.5% of total for procedures.">6 statements</a>
      </li> 
     <li><i class="fa fa-code"></i><a href="../src/SF_OPTIMIZE.f90"> Source File</a></li>
   </ul>
@@ -155,7 +155,7 @@
 
    <h2>Module Procedures</h2>
       <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="proc-fsolve_hybrd_func~2"></span><h3>private subroutine fsolve_hybrd_func(func, x, tol, info, check)</h3></div>
+  <div class="panel-heading codesum"><span class="anchor" id="proc-fsolve_hybrd_func~2"></span><h3>private subroutine fsolve_hybrd_func(func, x, tol, info, check, maxfev)</h3></div>
   <div class="panel-body">
            
 <h4>Arguments</h4>      <table class="table table-striped varlist">
@@ -204,6 +204,12 @@
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>check</strong></td><td></td>
 </tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>maxfev</strong></td><td></td>
+</tr>
 </tbody>
 </table>
 
@@ -212,7 +218,7 @@
   </div>
 
       <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="proc-fsolve_hybrd_sub~2"></span><h3>private subroutine fsolve_hybrd_sub(func, x, tol, info, check)</h3></div>
+  <div class="panel-heading codesum"><span class="anchor" id="proc-fsolve_hybrd_sub~2"></span><h3>private subroutine fsolve_hybrd_sub(func, x, tol, info, check, maxfev)</h3></div>
   <div class="panel-body">
            
 <h4>Arguments</h4>      <table class="table table-striped varlist">
@@ -265,6 +271,12 @@
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>check</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" ></span>integer,</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>maxfev</strong></td><td></td>
 </tr>
 </tbody>
 </table>

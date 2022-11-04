@@ -88,7 +88,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">61 statements</a>
+    title=" 0.1% of total for procedures.">65 statements</a>
      </li> 
     <li><i class="fa fa-code"></i><a href="../src/fsolve.f90"> Source File</a></li>
   </ul>
@@ -124,7 +124,7 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine fsolve_hybrd_sub(func, x, tol, info, check)</h2>
+    <h2>subroutine fsolve_hybrd_sub(func, x, tol, info, check, maxfev)</h2>
     
 
 
@@ -157,19 +157,19 @@
   </td> 
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-x~151"></span>real(kind=8),</td>
+  <td><span class="anchor" id="variable-x~60"></span>real(kind=8),</td>
 <td></td>
   <td></td>  <td>dimension(:)</td><td>::</td>
   <td><strong>x</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-tol~10"></span>real(kind=8),</td>
+  <td><span class="anchor" id="variable-tol~17"></span>real(kind=8),</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>tol</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-info~2"></span>integer,</td>
+  <td><span class="anchor" id="variable-info~4"></span>integer,</td>
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>info</strong></td><td></td>
@@ -179,6 +179,12 @@
 <td></td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>check</strong></td><td></td>
+</tr>
+<tr>
+  <td><span class="anchor" id="variable-maxfev~2"></span>integer,</td>
+<td></td>
+  <td>optional</td>  <td></td><td>::</td>
+  <td><strong>maxfev</strong></td><td></td>
 </tr>
 </tbody>
 </table>
@@ -307,7 +313,7 @@
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">fsolve_hybrd_sub</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">tol</span><span class="p">,</span><span class="n">info</span><span class="p">,</span><span class="n">check</span><span class="p">)</span><span class="w"></span>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">fsolve_hybrd_sub</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">tol</span><span class="p">,</span><span class="n">info</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">maxfev</span><span class="p">)</span><span class="w"></span>
 <span class="w">  </span><span class="k">interface</span>
 <span class="k">     subroutine </span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ff</span><span class="p">)</span><span class="w"></span>
 <span class="w">       </span><span class="kt">real</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
@@ -319,14 +325,17 @@
 <span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="k">optional</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">info</span><span class="w"></span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">                    </span><span class="kd">::</span><span class="w"> </span><span class="n">tol_</span><span class="w"></span>
 <span class="w">  </span><span class="kt">integer</span><span class="w">                    </span><span class="kd">::</span><span class="w"> </span><span class="n">info_</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="k">optional</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">maxfev</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w">                    </span><span class="kd">::</span><span class="w"> </span><span class="n">maxfev_</span><span class="w"></span>
 <span class="w">  </span><span class="kt">logical</span><span class="p">,</span><span class="k">optional</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">check</span><span class="w"></span>
 <span class="w">  </span><span class="kt">logical</span><span class="w">                    </span><span class="kd">::</span><span class="w"> </span><span class="n">check_</span><span class="w"></span>
 <span class="w">  </span><span class="kt">integer</span><span class="w">                    </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
 <span class="w">  </span><span class="kt">real</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fvec</span><span class="w"></span>
 <span class="w">  </span><span class="n">tol_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.d-15</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">tol</span><span class="p">))</span><span class="n">tol_</span><span class="o">=</span><span class="n">tol</span><span class="w"></span>
 <span class="w">  </span><span class="n">check_</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.;</span><span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">check</span><span class="p">))</span><span class="n">check_</span><span class="o">=</span><span class="n">check</span><span class="w"></span>
+<span class="w">  </span><span class="n">maxfev_</span><span class="o">=</span><span class="mi">200</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">maxfev</span><span class="p">))</span><span class="n">maxfev_</span><span class="o">=</span><span class="n">maxfev</span><span class="w"></span>
 <span class="w">  </span><span class="n">n</span><span class="o">=</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="k">call </span><span class="n">hybrd1</span><span class="p">(</span><span class="n">fsolve_hybrd1_sub2sub</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">fvec</span><span class="p">,</span><span class="n">tol_</span><span class="p">,</span><span class="n">info_</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">call </span><span class="n">hybrd1</span><span class="p">(</span><span class="n">fsolve_hybrd1_sub2sub</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">fvec</span><span class="p">,</span><span class="n">tol_</span><span class="p">,</span><span class="n">info_</span><span class="p">,</span><span class="n">maxfev_</span><span class="p">)</span><span class="w"></span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">info</span><span class="p">))</span><span class="n">info</span><span class="o">=</span><span class="n">info_</span><span class="w"></span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">check_</span><span class="p">)</span><span class="k">then</span>
 <span class="k">     include</span><span class="w"> </span><span class="s2">&quot;fsolve_error.h90&quot;</span><span class="w"></span>
