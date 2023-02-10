@@ -80,97 +80,184 @@
   <div class="row">
     <h1>get_moments
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">37 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/SF_STAT.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/sf_stat.f90.html'>SF_STAT.f90</a></li>
-     <li><a href='../module/sf_stat.html'>SF_STAT</a></li>
-     <li class="active">get_moments</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">37 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/SF_STAT.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/sf_stat.f90.html'>SF_STAT.f90</a></li>
+              <li><a href='../module/sf_stat.html'>SF_STAT</a></li>
+          <li class="active">get_moments</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/get_moments.html#src">get_moments</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/get_moments.html#src">get_moments</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>public subroutine get_moments(data, ave, sdev, var, skew, curt)</h2>
+    <h2>public  subroutine get_moments(data, ave, sdev, var, skew, curt)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-data~44"></span>real(kind=8),</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data~152"></span>
+              real(kind=8),
+            </td>
 <td>intent(in),</td>
-  <td></td>  <td>dimension(:)</td><td>::</td>
-  <td><strong>data</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-ave"></span>real(kind=8),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>data</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ave"></span>
+              real(kind=8),
+            </td>
 <td>intent(out),</td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>ave</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-sdev~4"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ave</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sdev~4"></span>
+              real(kind=8),
+            </td>
 <td>intent(out),</td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>sdev</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-var~3"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sdev</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-var~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(out),</td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>var</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-skew~3"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>var</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-skew~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(out),</td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>skew</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-curt~3"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>skew</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-curt~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(out),</td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>curt</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>curt</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -240,33 +327,33 @@
 <path fill="none" stroke="#000000" d="M60.23,-96C69.63,-96 80.58,-96 91.39,-96"/>
 <polygon fill="#000000" stroke="#000000" points="91.67,-99.5 101.67,-96 91.67,-92.5 91.67,-99.5"/>
 </g>
-<!-- proc~get_curt -->
-<g id="proc~~get_moments~~CalledByGraph_node5" class="node">
-<title>proc~get_curt</title>
-<g id="a_proc~~get_moments~~CalledByGraph_node5"><a xlink:href=".././proc/get_curt.html" xlink:title="get_curt">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="61,-66 5,-66 5,-42 61,-42 61,-66"/>
-<text text-anchor="middle" x="33" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_curt</text>
-</a>
-</g>
-</g>
-<!-- proc~get_curt&#45;&gt;proc~get_moments -->
-<g id="proc~~get_moments~~CalledByGraph_edge4" class="edge">
-<title>proc~get_curt&#45;&gt;proc~get_moments</title>
-<path fill="none" stroke="#000000" d="M61.07,-64.38C73.62,-69.2 88.81,-75.02 102.72,-80.36"/>
-<polygon fill="#000000" stroke="#000000" points="101.5,-83.64 112.09,-83.95 104.01,-77.1 101.5,-83.64"/>
-</g>
 <!-- proc~get_var -->
-<g id="proc~~get_moments~~CalledByGraph_node6" class="node">
+<g id="proc~~get_moments~~CalledByGraph_node5" class="node">
 <title>proc~get_var</title>
-<g id="a_proc~~get_moments~~CalledByGraph_node6"><a xlink:href=".././proc/get_var.html" xlink:title="get_var">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="60,-24 6,-24 6,0 60,0 60,-24"/>
-<text text-anchor="middle" x="33" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_var</text>
+<g id="a_proc~~get_moments~~CalledByGraph_node5"><a xlink:href=".././proc/get_var.html" xlink:title="get_var">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="60,-66 6,-66 6,-42 60,-42 60,-66"/>
+<text text-anchor="middle" x="33" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_var</text>
 </a>
 </g>
 </g>
 <!-- proc~get_var&#45;&gt;proc~get_moments -->
-<g id="proc~~get_moments~~CalledByGraph_edge5" class="edge">
+<g id="proc~~get_moments~~CalledByGraph_edge4" class="edge">
 <title>proc~get_var&#45;&gt;proc~get_moments</title>
+<path fill="none" stroke="#000000" d="M60.23,-64.06C72.87,-68.91 88.34,-74.84 102.49,-80.27"/>
+<polygon fill="#000000" stroke="#000000" points="101.44,-83.62 112.03,-83.93 103.95,-77.08 101.44,-83.62"/>
+</g>
+<!-- proc~get_curt -->
+<g id="proc~~get_moments~~CalledByGraph_node6" class="node">
+<title>proc~get_curt</title>
+<g id="a_proc~~get_moments~~CalledByGraph_node6"><a xlink:href=".././proc/get_curt.html" xlink:title="get_curt">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="61,-24 5,-24 5,0 61,0 61,-24"/>
+<text text-anchor="middle" x="33" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_curt</text>
+</a>
+</g>
+</g>
+<!-- proc~get_curt&#45;&gt;proc~get_moments -->
+<g id="proc~~get_moments~~CalledByGraph_edge5" class="edge">
+<title>proc~get_curt&#45;&gt;proc~get_moments</title>
 <path fill="none" stroke="#000000" d="M53.17,-24.12C57.45,-26.96 61.92,-30.02 66,-33 85.36,-47.17 106.44,-64.43 121.72,-77.29"/>
 <polygon fill="#000000" stroke="#000000" points="119.67,-80.15 129.56,-83.94 124.19,-74.81 119.67,-80.15"/>
 </g>
@@ -336,14 +423,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/get_moments.html#src">get_moments</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/get_moments.html#src">get_moments</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -409,7 +515,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

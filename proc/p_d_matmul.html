@@ -80,96 +80,183 @@
   <div class="row">
     <h1>p_d_matmul
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">65 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/linalg_p_blas.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/linalg_p_blas.f90.html'>linalg_p_blas.f90</a></li>
-     <li class="active">p_d_matmul</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">65 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/linalg_p_blas.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/linalg_p_blas.f90.html'>linalg_p_blas.f90</a></li>
+          <li class="active">p_d_matmul</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/p_d_matmul.html#src">p_d_matmul</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/p_d_matmul.html#src">p_d_matmul</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine p_d_matmul(A, B, C, Nblock, alfa, beta)</h2>
+    <h2> subroutine p_d_matmul(A, B, C, Nblock, alfa, beta)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-a~27"></span>real(kind=8),</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~57"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(:,:)</td><td>::</td>
-  <td><strong>A</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-b~10"></span>real(kind=8),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~6"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(:,:)</td><td>::</td>
-  <td><strong>B</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-c~7"></span>real(kind=8),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>B</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(:,:)</td><td>::</td>
-  <td><strong>C</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nblock~7"></span>integer</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>C</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nblock~9"></span>
+              integer
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>Nblock</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-alfa~3"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nblock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-alfa~3"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>alfa</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-beta~3"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>alfa</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta~3"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>beta</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>beta</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -194,65 +281,65 @@
 <polygon fill="none" stroke="black" points="78,-150 0,-150 0,-126 78,-126 78,-150"/>
 <text text-anchor="middle" x="39" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">p_d_matmul</text>
 </g>
-<!-- free_unit -->
-<g id="proc~~p_d_matmul~~CallsGraph_node2" class="node">
-<title>free_unit</title>
-<polygon fill="#777777" stroke="#777777" points="191.5,-276 132.5,-276 132.5,-252 191.5,-252 191.5,-276"/>
-<text text-anchor="middle" x="162" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">free_unit</text>
-</g>
-<!-- proc~p_d_matmul&#45;&gt;free_unit -->
-<g id="proc~~p_d_matmul~~CallsGraph_edge1" class="edge">
-<title>proc~p_d_matmul&#45;&gt;free_unit</title>
-<path fill="none" stroke="#000000" d="M45.87,-150.31C56.63,-171.75 81.45,-216.22 114,-243 116.86,-245.35 120.02,-247.49 123.32,-249.43"/>
-<polygon fill="#000000" stroke="#000000" points="121.75,-252.56 132.24,-254.08 124.99,-246.36 121.75,-252.56"/>
-</g>
-<!-- gather_blacs -->
-<g id="proc~~p_d_matmul~~CallsGraph_node3" class="node">
-<title>gather_blacs</title>
-<polygon fill="#777777" stroke="#777777" points="202.5,-234 121.5,-234 121.5,-210 202.5,-210 202.5,-234"/>
-<text text-anchor="middle" x="162" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
-</g>
-<!-- proc~p_d_matmul&#45;&gt;gather_blacs -->
-<g id="proc~~p_d_matmul~~CallsGraph_edge2" class="edge">
-<title>proc~p_d_matmul&#45;&gt;gather_blacs</title>
-<path fill="none" stroke="#000000" d="M51.97,-150.1C65.94,-163.74 90.17,-185.97 114,-201 116.41,-202.52 118.95,-203.99 121.54,-205.39"/>
-<polygon fill="#000000" stroke="#000000" points="120,-208.53 130.5,-209.9 123.15,-202.28 120,-208.53"/>
-</g>
-<!-- descinit -->
-<g id="proc~~p_d_matmul~~CallsGraph_node4" class="node">
-<title>descinit</title>
-<polygon fill="#777777" stroke="#777777" points="189,-192 135,-192 135,-168 189,-168 189,-192"/>
-<text text-anchor="middle" x="162" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
-</g>
-<!-- proc~p_d_matmul&#45;&gt;descinit -->
-<g id="proc~~p_d_matmul~~CallsGraph_edge4" class="edge">
-<title>proc~p_d_matmul&#45;&gt;descinit</title>
-<path fill="none" stroke="#000000" d="M74.67,-150.04C90.52,-155.54 109.28,-162.05 125.25,-167.59"/>
-<polygon fill="#000000" stroke="#000000" points="124.19,-170.93 134.79,-170.9 126.49,-164.32 124.19,-170.93"/>
-</g>
-<!-- blacs_gridinfo -->
-<g id="proc~~p_d_matmul~~CallsGraph_node5" class="node">
-<title>blacs_gridinfo</title>
-<polygon fill="#777777" stroke="#777777" points="205.5,-150 118.5,-150 118.5,-126 205.5,-126 205.5,-150"/>
-<text text-anchor="middle" x="162" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
-</g>
-<!-- proc~p_d_matmul&#45;&gt;blacs_gridinfo -->
-<g id="proc~~p_d_matmul~~CallsGraph_edge3" class="edge">
-<title>proc~p_d_matmul&#45;&gt;blacs_gridinfo</title>
-<path fill="none" stroke="#000000" d="M78.29,-138C87.74,-138 98.04,-138 108.05,-138"/>
-<polygon fill="#000000" stroke="#000000" points="108.34,-141.5 118.34,-138 108.34,-134.5 108.34,-141.5"/>
-</g>
 <!-- numroc -->
-<g id="proc~~p_d_matmul~~CallsGraph_node6" class="node">
+<g id="proc~~p_d_matmul~~CallsGraph_node2" class="node">
 <title>numroc</title>
-<polygon fill="#777777" stroke="#777777" points="189,-108 135,-108 135,-84 189,-84 189,-108"/>
-<text text-anchor="middle" x="162" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
+<polygon fill="#777777" stroke="#777777" points="189,-276 135,-276 135,-252 189,-252 189,-276"/>
+<text text-anchor="middle" x="162" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
 </g>
 <!-- proc~p_d_matmul&#45;&gt;numroc -->
-<g id="proc~~p_d_matmul~~CallsGraph_edge5" class="edge">
+<g id="proc~~p_d_matmul~~CallsGraph_edge1" class="edge">
 <title>proc~p_d_matmul&#45;&gt;numroc</title>
-<path fill="none" stroke="#000000" d="M74.67,-125.96C90.52,-120.46 109.28,-113.95 125.25,-108.41"/>
-<polygon fill="#000000" stroke="#000000" points="126.49,-111.68 134.79,-105.1 124.19,-105.07 126.49,-111.68"/>
+<path fill="none" stroke="#000000" d="M45.87,-150.31C56.63,-171.75 81.45,-216.22 114,-243 117.51,-245.89 121.48,-248.46 125.59,-250.72"/>
+<polygon fill="#000000" stroke="#000000" points="124.17,-253.92 134.69,-255.19 127.26,-247.64 124.17,-253.92"/>
+</g>
+<!-- descinit -->
+<g id="proc~~p_d_matmul~~CallsGraph_node3" class="node">
+<title>descinit</title>
+<polygon fill="#777777" stroke="#777777" points="189,-234 135,-234 135,-210 189,-210 189,-234"/>
+<text text-anchor="middle" x="162" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
+</g>
+<!-- proc~p_d_matmul&#45;&gt;descinit -->
+<g id="proc~~p_d_matmul~~CallsGraph_edge2" class="edge">
+<title>proc~p_d_matmul&#45;&gt;descinit</title>
+<path fill="none" stroke="#000000" d="M51.97,-150.1C65.94,-163.74 90.17,-185.97 114,-201 117.66,-203.31 121.61,-205.49 125.62,-207.52"/>
+<polygon fill="#000000" stroke="#000000" points="124.41,-210.82 134.95,-211.94 127.41,-204.5 124.41,-210.82"/>
+</g>
+<!-- pdgemm -->
+<g id="proc~~p_d_matmul~~CallsGraph_node4" class="node">
+<title>pdgemm</title>
+<polygon fill="#777777" stroke="#777777" points="192.5,-192 131.5,-192 131.5,-168 192.5,-168 192.5,-192"/>
+<text text-anchor="middle" x="162" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdgemm</text>
+</g>
+<!-- proc~p_d_matmul&#45;&gt;pdgemm -->
+<g id="proc~~p_d_matmul~~CallsGraph_edge3" class="edge">
+<title>proc~p_d_matmul&#45;&gt;pdgemm</title>
+<path fill="none" stroke="#000000" d="M74.67,-150.04C89.34,-155.13 106.5,-161.08 121.64,-166.34"/>
+<polygon fill="#000000" stroke="#000000" points="120.65,-169.7 131.25,-169.67 122.95,-163.09 120.65,-169.7"/>
+</g>
+<!-- free_unit -->
+<g id="proc~~p_d_matmul~~CallsGraph_node5" class="node">
+<title>free_unit</title>
+<polygon fill="#777777" stroke="#777777" points="191.5,-150 132.5,-150 132.5,-126 191.5,-126 191.5,-150"/>
+<text text-anchor="middle" x="162" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">free_unit</text>
+</g>
+<!-- proc~p_d_matmul&#45;&gt;free_unit -->
+<g id="proc~~p_d_matmul~~CallsGraph_edge5" class="edge">
+<title>proc~p_d_matmul&#45;&gt;free_unit</title>
+<path fill="none" stroke="#000000" d="M78.29,-138C92.19,-138 107.91,-138 121.88,-138"/>
+<polygon fill="#000000" stroke="#000000" points="122.17,-141.5 132.17,-138 122.17,-134.5 122.17,-141.5"/>
+</g>
+<!-- blacs_gridinfo -->
+<g id="proc~~p_d_matmul~~CallsGraph_node6" class="node">
+<title>blacs_gridinfo</title>
+<polygon fill="#777777" stroke="#777777" points="205.5,-108 118.5,-108 118.5,-84 205.5,-84 205.5,-108"/>
+<text text-anchor="middle" x="162" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
+</g>
+<!-- proc~p_d_matmul&#45;&gt;blacs_gridinfo -->
+<g id="proc~~p_d_matmul~~CallsGraph_edge4" class="edge">
+<title>proc~p_d_matmul&#45;&gt;blacs_gridinfo</title>
+<path fill="none" stroke="#000000" d="M74.67,-125.96C87.71,-121.44 102.72,-116.23 116.52,-111.44"/>
+<polygon fill="#000000" stroke="#000000" points="118.02,-114.62 126.32,-108.04 115.73,-108.01 118.02,-114.62"/>
 </g>
 <!-- distribute_blacs -->
 <g id="proc~~p_d_matmul~~CallsGraph_node7" class="node">
@@ -266,17 +353,17 @@
 <path fill="none" stroke="#000000" d="M51.97,-125.9C65.94,-112.26 90.17,-90.03 114,-75 116.41,-73.48 118.95,-72.01 121.54,-70.61"/>
 <polygon fill="#000000" stroke="#000000" points="123.15,-73.72 130.5,-66.1 120,-67.47 123.15,-73.72"/>
 </g>
-<!-- pdgemm -->
+<!-- gather_blacs -->
 <g id="proc~~p_d_matmul~~CallsGraph_node8" class="node">
-<title>pdgemm</title>
-<polygon fill="#777777" stroke="#777777" points="192.5,-24 131.5,-24 131.5,0 192.5,0 192.5,-24"/>
-<text text-anchor="middle" x="162" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdgemm</text>
+<title>gather_blacs</title>
+<polygon fill="#777777" stroke="#777777" points="202.5,-24 121.5,-24 121.5,0 202.5,0 202.5,-24"/>
+<text text-anchor="middle" x="162" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
 </g>
-<!-- proc~p_d_matmul&#45;&gt;pdgemm -->
+<!-- proc~p_d_matmul&#45;&gt;gather_blacs -->
 <g id="proc~~p_d_matmul~~CallsGraph_edge7" class="edge">
-<title>proc~p_d_matmul&#45;&gt;pdgemm</title>
-<path fill="none" stroke="#000000" d="M45.87,-125.69C56.63,-104.25 81.45,-59.78 114,-33 116.55,-30.9 119.35,-28.97 122.27,-27.2"/>
-<polygon fill="#000000" stroke="#000000" points="124.1,-30.19 131.25,-22.38 120.79,-24.02 124.1,-30.19"/>
+<title>proc~p_d_matmul&#45;&gt;gather_blacs</title>
+<path fill="none" stroke="#000000" d="M45.87,-125.69C56.63,-104.25 81.45,-59.78 114,-33 115.55,-31.72 117.2,-30.51 118.9,-29.35"/>
+<polygon fill="#000000" stroke="#000000" points="120.99,-32.19 127.82,-24.09 117.43,-26.16 120.99,-32.19"/>
 </g>
 </g>
 </svg>
@@ -344,14 +431,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/p_d_matmul.html#src">p_d_matmul</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/p_d_matmul.html#src">p_d_matmul</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -473,7 +579,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

@@ -80,51 +80,72 @@
   <div class="row">
     <h1>cerzo
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">61 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/special_functions.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/special_functions.f90.html'>special_functions.f90</a></li>
-     <li class="active">cerzo</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">61 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/SF_SPECIAL.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/sf_special.f90.html'>SF_SPECIAL.f90</a></li>
+              <li><a href='../module/sf_special.html'>SF_SPECIAL</a></li>
+          <li class="active">cerzo</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/cerzo.html#src">cerzo</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine cerzo(nt, zo)</h2>
+    <h2>public  subroutine cerzo(nt, zo)  
+</h2>
     
 
     <p><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*80</p>
@@ -162,23 +183,48 @@ Output, complex ( kind = 8 ) ZO(NT), the zeros.
 </code></pre></div>
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-nt~2"></span>integer(kind=4)</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nt~9"></span>
+              integer(kind=4)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>nt</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-zo"></span>complex(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nt</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-zo~6"></span>
+              complex(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>zo</strong>(nt)</td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>zo</strong>(nt)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -284,14 +330,27 @@ Output, complex ( kind = 8 ) ZO(NT), the zeros.
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/cerzo.html#src">cerzo</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -305,124 +364,6 @@ Output, complex ( kind = 8 ) ZO(NT), the zeros.
 
 
     
-    <section>
-    <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">cerzo</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nt</span><span class="p">,</span><span class="w"> </span><span class="n">zo</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="c">!*****************************************************************************80</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!! CERZO evaluates the complex zeros of the error function.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Discussion:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    The modified Newton method is used.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Licensing:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    This routine is copyrighted by Shanjie Zhang and Jianming Jin.  However, </span>
-<span class="w">  </span><span class="c">!    they give permission to incorporate this routine into a user program </span>
-<span class="w">  </span><span class="c">!    provided that the copyright is acknowledged.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Modified:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    15 July 2012</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Author:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Reference:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin,</span>
-<span class="w">  </span><span class="c">!    Computation of Special Functions,</span>
-<span class="w">  </span><span class="c">!    Wiley, 1996,</span>
-<span class="w">  </span><span class="c">!    ISBN: 0-471-11963-6,</span>
-<span class="w">  </span><span class="c">!    LC: QA351.C45.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Parameters:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) NT, the number of zeros.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Output, complex ( kind = 8 ) ZO(NT), the zeros.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="k">implicit none</span>
-
-<span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">nt</span><span class="w"></span>
-
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">j</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">nr</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">pi</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">pu</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">pv</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">px</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">py</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">w</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">w0</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">z</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zd</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zf</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zfd</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zgd</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zo</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zp</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zq</span><span class="w"></span>
-<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">zw</span><span class="w"></span>
-
-<span class="w">  </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592653589793D+00</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">do </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nt</span><span class="w"></span>
-
-<span class="w">     </span><span class="n">pu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.25D+00</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="n">px</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pu</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pu</span><span class="w"></span>
-<span class="w">     </span><span class="n">py</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pu</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pu</span><span class="w"></span>
-<span class="w">     </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="n">py</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">do</span>
-
-<span class="k">        </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">        </span><span class="k">call </span><span class="n">cerf</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">zf</span><span class="p">,</span><span class="w"> </span><span class="n">zd</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">zp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">           </span><span class="n">zp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zo</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">end do</span>
-<span class="k">        </span><span class="n">zfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zf</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">zp</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">zq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">           </span><span class="n">zw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">                 </span><span class="n">zw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zw</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zo</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">              </span><span class="k">end if</span>
-<span class="k">           end do</span>
-<span class="k">           </span><span class="n">zq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zq</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zw</span><span class="w"></span>
-<span class="w">        </span><span class="k">end do</span>
-
-<span class="k">        </span><span class="n">zgd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">zd</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zq</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">zfd</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">zp</span><span class="w"></span>
-<span class="w">        </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zfd</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">zgd</span><span class="w"></span>
-<span class="w">        </span><span class="n">w0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="w"></span>
-<span class="w">        </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">w0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">1.0D-11</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">           exit</span>
-<span class="k">        end if</span>
-
-<span class="k">     end do</span>
-
-<span class="k">     </span><span class="n">zo</span><span class="p">(</span><span class="n">nr</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">end do</span>
-
-<span class="k">  return</span>
-<span class="k">end subroutine </span><span class="n">cerzo</span><span class="w"></span>
-</pre></div>
-
-    </section>
-    <br>
     
     </div>
   </div>
@@ -432,7 +373,7 @@ Output, complex ( kind = 8 ) ZO(NT), the zeros.
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

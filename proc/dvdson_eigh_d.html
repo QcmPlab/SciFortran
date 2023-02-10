@@ -80,120 +80,238 @@
   <div class="row">
     <h1>dvdson_eigh_d
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.2% of total for procedures.">106 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/dvdson_serial.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/dvdson_serial.f90.html'>dvdson_serial.f90</a></li>
-     <li class="active">dvdson_eigh_d</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.2% of total for procedures.">106 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/dvdson_serial.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/dvdson_serial.f90.html'>dvdson_serial.f90</a></li>
+          <li class="active">dvdson_eigh_d</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/dvdson_eigh_d.html#src">dvdson_eigh_d</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/dvdson_eigh_d.html#src">dvdson_eigh_d</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine dvdson_eigh_d(MatVec, eval, evec, Nblock, Nitermax, Tol)</h2>
+    <h2> subroutine dvdson_eigh_d(MatVec, eval, evec, Nblock, Nitermax, Tol)  
+</h2>
     
 
 
     <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+     subroutine MatVec(Nloc, vin, vout)  
+
+    </h5>
+  
+
+  <h6>Arguments</h6>
       <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td colspan="7">
-      <small><h5>subroutine MatVec(Nloc, vin, vout)</h5>    
-<h6>Arguments</h6>      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" ></span>integer</td>
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>Nloc</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" ></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nloc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(Nloc)</td><td>::</td>
-  <td><strong>vin</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" ></span>real(kind=8),</td>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(Nloc)</td><td>::</td>
-  <td><strong>vout</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
 </small>
-  </td> 
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-eval~5"></span>real(kind=8),</td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-eval~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>eval</strong>(:)</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-evec~5"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>eval</strong>(:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-evec~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>evec</strong>(:,:)</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nblock~17"></span>integer,</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>evec</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nblock~15"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>Nblock</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nitermax~6"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nblock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nitermax~5"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>Nitermax</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-tol"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nitermax</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>Tol</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Tol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -207,316 +325,316 @@
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: proc~~dvdson_eigh_d~~CallsGraph Pages: 1 -->
-<svg id="procdvdson_eigh_dCallsGraph" width="576pt" height="370pt"
- viewBox="0.00 0.00 576.00 369.95" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~dvdson_eigh_d~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 365.95)">
+<svg id="procdvdson_eigh_dCallsGraph" width="576pt" height="394pt"
+ viewBox="0.00 0.00 576.00 393.97" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~dvdson_eigh_d~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 389.97)">
 <title>proc~~dvdson_eigh_d~~CallsGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-365.95 572,-365.95 572,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-389.97 572,-389.97 572,4 -4,4"/>
 <!-- proc~dvdson_eigh_d -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_node1" class="node">
 <title>proc~dvdson_eigh_d</title>
-<polygon fill="none" stroke="black" points="91,-245 0,-245 0,-221 91,-221 91,-245"/>
-<text text-anchor="middle" x="45.5" y="-230.6" font-family="Helvetica,sans-Serif" font-size="10.50">dvdson_eigh_d</text>
+<polygon fill="none" stroke="black" points="91,-292.66 0,-292.66 0,-268.66 91,-268.66 91,-292.66"/>
+<text text-anchor="middle" x="45.5" y="-278.26" font-family="Helvetica,sans-Serif" font-size="10.50">dvdson_eigh_d</text>
 </g>
 <!-- proc~dvdson -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_node2" class="node">
 <title>proc~dvdson</title>
 <g id="a_proc~~dvdson_eigh_d~~CallsGraph_node2"><a xlink:href=".././proc/dvdson.html" xlink:title="DVDSON">
-<polygon fill="#d9534f" stroke="#d9534f" points="186,-245 127,-245 127,-221 186,-221 186,-245"/>
-<text text-anchor="middle" x="156.5" y="-230.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DVDSON</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="186,-292.66 127,-292.66 127,-268.66 186,-268.66 186,-292.66"/>
+<text text-anchor="middle" x="156.5" y="-278.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DVDSON</text>
 </a>
 </g>
 </g>
 <!-- proc~dvdson_eigh_d&#45;&gt;proc~dvdson -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge1" class="edge">
 <title>proc~dvdson_eigh_d&#45;&gt;proc~dvdson</title>
-<path fill="none" stroke="#000000" d="M91.15,-233C99.66,-233 108.51,-233 116.82,-233"/>
-<polygon fill="#000000" stroke="#000000" points="117,-236.5 127,-233 117,-229.5 117,-236.5"/>
+<path fill="none" stroke="#000000" d="M91.15,-280.66C99.66,-280.66 108.51,-280.66 116.82,-280.66"/>
+<polygon fill="#000000" stroke="#000000" points="117,-284.16 127,-280.66 117,-277.16 117,-284.16"/>
 </g>
 <!-- proc~dscal -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_node3" class="node">
 <title>proc~dscal</title>
 <g id="a_proc~~dvdson_eigh_d~~CallsGraph_node3"><a xlink:href=".././proc/dscal.html" xlink:title="dscal">
-<polygon fill="#d9534f" stroke="#d9534f" points="568,-327 514,-327 514,-303 568,-303 568,-327"/>
-<text text-anchor="middle" x="541" y="-312.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="568,-352.66 514,-352.66 514,-328.66 568,-328.66 568,-352.66"/>
+<text text-anchor="middle" x="541" y="-338.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
 </a>
 </g>
 </g>
 <!-- proc~dvdson&#45;&gt;proc~dscal -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge2" class="edge">
 <title>proc~dvdson&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M167.8,-245.24C190.97,-271.64 250.31,-333.24 316,-354 381.22,-374.61 460.78,-349.45 505.38,-331.04"/>
-<polygon fill="#000000" stroke="#000000" points="506.78,-334.25 514.62,-327.12 504.05,-327.8 506.78,-334.25"/>
-</g>
-<!-- proc~dcopy -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node4" class="node">
-<title>proc~dcopy</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node4"><a xlink:href=".././proc/dcopy.html" xlink:title="dcopy">
-<polygon fill="#d9534f" stroke="#d9534f" points="568,-24 514,-24 514,0 568,0 568,-24"/>
-<text text-anchor="middle" x="541" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
-</a>
-</g>
-</g>
-<!-- proc~dvdson&#45;&gt;proc~dcopy -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge3" class="edge">
-<title>proc~dvdson&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M163.26,-220.96C180.76,-185.71 237.01,-82.11 316,-32 373.47,4.46 456.53,0.54 503.69,-5.67"/>
-<polygon fill="#000000" stroke="#000000" points="503.35,-9.16 513.75,-7.11 504.34,-2.23 503.35,-9.16"/>
+<path fill="none" stroke="#000000" d="M170.59,-292.72C196.17,-315.33 255.56,-363.28 316,-379.66 381.35,-397.38 459.69,-373.85 504.27,-356.39"/>
+<polygon fill="#000000" stroke="#000000" points="505.82,-359.54 513.79,-352.55 503.21,-353.04 505.82,-359.54"/>
 </g>
 <!-- proc~setup -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node5" class="node">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node4" class="node">
 <title>proc~setup</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node5"><a xlink:href=".././proc/setup.html" xlink:title="SETUP">
-<polygon fill="#d9534f" stroke="#d9534f" points="372.5,-327 318.5,-327 318.5,-303 372.5,-303 372.5,-327"/>
-<text text-anchor="middle" x="345.5" y="-312.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SETUP</text>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node4"><a xlink:href=".././proc/setup.html" xlink:title="SETUP">
+<polygon fill="#d9534f" stroke="#d9534f" points="372.5,-352.66 318.5,-352.66 318.5,-328.66 372.5,-328.66 372.5,-352.66"/>
+<text text-anchor="middle" x="345.5" y="-338.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SETUP</text>
 </a>
 </g>
 </g>
 <!-- proc~dvdson&#45;&gt;proc~setup -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge4" class="edge">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge5" class="edge">
 <title>proc~dvdson&#45;&gt;proc~setup</title>
-<path fill="none" stroke="#000000" d="M185.09,-245.1C218.01,-259.54 273.12,-283.7 309.13,-299.49"/>
-<polygon fill="#000000" stroke="#000000" points="307.74,-302.7 318.3,-303.51 310.55,-296.29 307.74,-302.7"/>
+<path fill="none" stroke="#000000" d="M186.31,-289.91C219.13,-300.44 272.82,-317.66 308.4,-329.08"/>
+<polygon fill="#000000" stroke="#000000" points="307.78,-332.56 318.38,-332.28 309.92,-325.89 307.78,-332.56"/>
 </g>
 <!-- proc~dvdrvr -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node6" class="node">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node5" class="node">
 <title>proc~dvdrvr</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node6"><a xlink:href=".././proc/dvdrvr.html" xlink:title="DVDRVR">
-<polygon fill="#d9534f" stroke="#d9534f" points="280,-205 222,-205 222,-181 280,-181 280,-205"/>
-<text text-anchor="middle" x="251" y="-190.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DVDRVR</text>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node5"><a xlink:href=".././proc/dvdrvr.html" xlink:title="DVDRVR">
+<polygon fill="#d9534f" stroke="#d9534f" points="280,-232.66 222,-232.66 222,-208.66 280,-208.66 280,-232.66"/>
+<text text-anchor="middle" x="251" y="-218.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DVDRVR</text>
 </a>
 </g>
 </g>
 <!-- proc~dvdson&#45;&gt;proc~dvdrvr -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge5" class="edge">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge3" class="edge">
 <title>proc~dvdson&#45;&gt;proc~dvdrvr</title>
-<path fill="none" stroke="#000000" d="M185.25,-221C193.86,-217.28 203.5,-213.11 212.65,-209.15"/>
-<polygon fill="#000000" stroke="#000000" points="214.16,-212.31 221.95,-205.13 211.38,-205.89 214.16,-212.31"/>
+<path fill="none" stroke="#000000" d="M176.22,-268.52C189.63,-259.82 207.91,-247.97 222.91,-238.23"/>
+<polygon fill="#000000" stroke="#000000" points="224.82,-241.17 231.31,-232.79 221.01,-235.29 224.82,-241.17"/>
 </g>
-<!-- proc~dinit -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node7" class="node">
-<title>proc~dinit</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node7"><a xlink:href=".././proc/dinit.html" xlink:title="DINIT">
-<polygon fill="#d9534f" stroke="#d9534f" points="471.5,-285 417.5,-285 417.5,-261 471.5,-261 471.5,-285"/>
-<text text-anchor="middle" x="444.5" y="-270.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DINIT</text>
+<!-- proc~dcopy -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node6" class="node">
+<title>proc~dcopy</title>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node6"><a xlink:href=".././proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="568,-49.66 514,-49.66 514,-25.66 568,-25.66 568,-49.66"/>
+<text text-anchor="middle" x="541" y="-35.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
 </a>
 </g>
 </g>
-<!-- proc~setup&#45;&gt;proc~dinit -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge6" class="edge">
-<title>proc~setup&#45;&gt;proc~dinit</title>
-<path fill="none" stroke="#000000" d="M372.75,-303.63C383.53,-298.97 396.19,-293.49 407.79,-288.46"/>
-<polygon fill="#000000" stroke="#000000" points="409.44,-291.56 417.23,-284.37 406.66,-285.14 409.44,-291.56"/>
+<!-- proc~dvdson&#45;&gt;proc~dcopy -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge4" class="edge">
+<title>proc~dvdson&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M160.5,-268.37C171.87,-224.82 216.72,-77.42 316,-18.66 374.79,16.13 457.92,-5.54 504.61,-22.73"/>
+<polygon fill="#000000" stroke="#000000" points="503.4,-26.02 514,-26.31 505.9,-19.47 503.4,-26.02"/>
 </g>
 <!-- proc~addabs -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node11" class="node">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node8" class="node">
 <title>proc~addabs</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node11"><a xlink:href=".././proc/addabs.html" xlink:title="ADDABS">
-<polygon fill="#d9534f" stroke="#d9534f" points="473.5,-327 415.5,-327 415.5,-303 473.5,-303 473.5,-327"/>
-<text text-anchor="middle" x="444.5" y="-312.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ADDABS</text>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node8"><a xlink:href=".././proc/addabs.html" xlink:title="ADDABS">
+<polygon fill="#d9534f" stroke="#d9534f" points="473.5,-352.66 415.5,-352.66 415.5,-328.66 473.5,-328.66 473.5,-352.66"/>
+<text text-anchor="middle" x="444.5" y="-338.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ADDABS</text>
 </a>
 </g>
 </g>
 <!-- proc~setup&#45;&gt;proc~addabs -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge7" class="edge">
 <title>proc~setup&#45;&gt;proc~addabs</title>
-<path fill="none" stroke="#000000" d="M372.75,-315C382.7,-315 394.24,-315 405.08,-315"/>
-<polygon fill="#000000" stroke="#000000" points="405.19,-318.5 415.19,-315 405.19,-311.5 405.19,-318.5"/>
+<path fill="none" stroke="#000000" d="M372.75,-340.66C382.7,-340.66 394.24,-340.66 405.08,-340.66"/>
+<polygon fill="#000000" stroke="#000000" points="405.19,-344.16 415.19,-340.66 405.19,-337.16 405.19,-344.16"/>
+</g>
+<!-- proc~dinit -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node12" class="node">
+<title>proc~dinit</title>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node12"><a xlink:href=".././proc/dinit.html" xlink:title="DINIT">
+<polygon fill="#d9534f" stroke="#d9534f" points="471.5,-310.66 417.5,-310.66 417.5,-286.66 471.5,-286.66 471.5,-310.66"/>
+<text text-anchor="middle" x="444.5" y="-296.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DINIT</text>
+</a>
+</g>
+</g>
+<!-- proc~setup&#45;&gt;proc~dinit -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge6" class="edge">
+<title>proc~setup&#45;&gt;proc~dinit</title>
+<path fill="none" stroke="#000000" d="M372.75,-329.3C383.53,-324.63 396.19,-319.15 407.79,-314.13"/>
+<polygon fill="#000000" stroke="#000000" points="409.44,-317.22 417.23,-310.04 406.66,-310.8 409.44,-317.22"/>
 </g>
 <!-- proc~dvdrvr&#45;&gt;proc~dcopy -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge11" class="edge">
-<title>proc~dvdrvr&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M254.72,-181C260.99,-156.07 278.87,-98.47 316,-68 370.3,-23.43 455.23,-13.64 503.4,-11.9"/>
-<polygon fill="#000000" stroke="#000000" points="503.77,-15.39 513.68,-11.63 503.59,-8.39 503.77,-15.39"/>
-</g>
-<!-- proc~ddot -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node8" class="node">
-<title>proc~ddot</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node8"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="568,-245 514,-245 514,-221 568,-221 568,-245"/>
-<text text-anchor="middle" x="541" y="-230.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
-</a>
-</g>
-</g>
-<!-- proc~dvdrvr&#45;&gt;proc~ddot -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge10" class="edge">
-<title>proc~dvdrvr&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M280.29,-203.85C291.29,-207.65 304.08,-211.57 316,-214 381.32,-227.3 459.2,-231.31 503.79,-232.51"/>
-<polygon fill="#000000" stroke="#000000" points="503.77,-236.01 513.85,-232.74 503.94,-229.01 503.77,-236.01"/>
-</g>
-<!-- proc~daxpy -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node9" class="node">
-<title>proc~daxpy</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node9"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="568,-122 514,-122 514,-98 568,-98 568,-122"/>
-<text text-anchor="middle" x="541" y="-107.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
-</a>
-</g>
-</g>
-<!-- proc~dvdrvr&#45;&gt;proc~daxpy -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge9" class="edge">
-<title>proc~dvdrvr&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M255.19,-180.72C261.94,-157.61 280.07,-108.18 316,-88 375.48,-54.6 458.01,-76.98 504.49,-94.6"/>
-<polygon fill="#000000" stroke="#000000" points="503.25,-97.88 513.84,-98.27 505.81,-91.36 503.25,-97.88"/>
-</g>
-<!-- dspevx -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node10" class="node">
-<title>dspevx</title>
-<polygon fill="#777777" stroke="#777777" points="372.5,-121 318.5,-121 318.5,-97 372.5,-97 372.5,-121"/>
-<text text-anchor="middle" x="345.5" y="-106.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dspevx</text>
-</g>
-<!-- proc~dvdrvr&#45;&gt;dspevx -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge8" class="edge">
-<title>proc~dvdrvr&#45;&gt;dspevx</title>
-<path fill="none" stroke="#000000" d="M263.32,-180.87C275.75,-167.78 296.55,-146.59 316,-130 317,-129.15 318.03,-128.29 319.08,-127.44"/>
-<polygon fill="#000000" stroke="#000000" points="321.56,-129.94 327.31,-121.05 317.27,-124.41 321.56,-129.94"/>
-</g>
-<!-- proc~dvdrvr&#45;&gt;proc~addabs -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge15" class="edge">
-<title>proc~dvdrvr&#45;&gt;proc~addabs</title>
-<path fill="none" stroke="#000000" d="M253.19,-205.42C256.7,-234.36 269.89,-306.12 316,-336 344.97,-354.77 385.17,-343.39 412.64,-331.33"/>
-<polygon fill="#000000" stroke="#000000" points="414.19,-334.46 421.79,-327.08 411.24,-328.12 414.19,-334.46"/>
+<title>proc~dvdrvr&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M252.25,-208.37C253.66,-175.74 262.46,-86.75 316,-47.66 371.22,-7.36 456.09,-17.65 503.94,-28.08"/>
+<polygon fill="#000000" stroke="#000000" points="503.32,-31.53 513.85,-30.36 504.89,-24.71 503.32,-31.53"/>
 </g>
 <!-- proc~ovflow -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node12" class="node">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node7" class="node">
 <title>proc~ovflow</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node12"><a xlink:href=".././proc/ovflow.html" xlink:title="OVFLOW">
-<polygon fill="#d9534f" stroke="#d9534f" points="374.5,-285 316.5,-285 316.5,-261 374.5,-261 374.5,-285"/>
-<text text-anchor="middle" x="345.5" y="-270.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">OVFLOW</text>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node7"><a xlink:href=".././proc/ovflow.html" xlink:title="OVFLOW">
+<polygon fill="#d9534f" stroke="#d9534f" points="374.5,-310.66 316.5,-310.66 316.5,-286.66 374.5,-286.66 374.5,-310.66"/>
+<text text-anchor="middle" x="345.5" y="-296.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">OVFLOW</text>
 </a>
 </g>
 </g>
 <!-- proc~dvdrvr&#45;&gt;proc~ovflow -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge12" class="edge">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge10" class="edge">
 <title>proc~dvdrvr&#45;&gt;proc~ovflow</title>
-<path fill="none" stroke="#000000" d="M266.05,-205.15C281.08,-218.15 305.11,-238.93 322.62,-254.08"/>
-<polygon fill="#000000" stroke="#000000" points="320.77,-257.1 330.62,-261 325.35,-251.81 320.77,-257.1"/>
+<path fill="none" stroke="#000000" d="M266.45,-232.85C281.39,-245.44 304.89,-265.27 322.21,-279.87"/>
+<polygon fill="#000000" stroke="#000000" points="320.25,-282.79 330.15,-286.56 324.76,-277.44 320.25,-282.79"/>
+</g>
+<!-- proc~dvdrvr&#45;&gt;proc~addabs -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge12" class="edge">
+<title>proc~dvdrvr&#45;&gt;proc~addabs</title>
+<path fill="none" stroke="#000000" d="M253.25,-232.91C256.89,-261.47 270.35,-332.25 316,-361.66 345.02,-380.36 385.21,-369 412.66,-356.95"/>
+<polygon fill="#000000" stroke="#000000" points="414.2,-360.1 421.8,-352.71 411.26,-353.75 414.2,-360.1"/>
 </g>
 <!-- proc~newvec -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node13" class="node">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node9" class="node">
 <title>proc~newvec</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node13"><a xlink:href=".././proc/newvec.html" xlink:title="NEWVEC">
-<polygon fill="#d9534f" stroke="#d9534f" points="375,-205 316,-205 316,-181 375,-181 375,-205"/>
-<text text-anchor="middle" x="345.5" y="-190.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NEWVEC</text>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node9"><a xlink:href=".././proc/newvec.html" xlink:title="NEWVEC">
+<polygon fill="#d9534f" stroke="#d9534f" points="375,-173.66 316,-173.66 316,-149.66 375,-149.66 375,-173.66"/>
+<text text-anchor="middle" x="345.5" y="-159.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NEWVEC</text>
 </a>
 </g>
 </g>
 <!-- proc~dvdrvr&#45;&gt;proc~newvec -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge13" class="edge">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge9" class="edge">
 <title>proc~dvdrvr&#45;&gt;proc~newvec</title>
-<path fill="none" stroke="#000000" d="M280,-193C288.09,-193 297.07,-193 305.69,-193"/>
-<polygon fill="#000000" stroke="#000000" points="305.95,-196.5 315.95,-193 305.95,-189.5 305.95,-196.5"/>
+<path fill="none" stroke="#000000" d="M271.17,-208.44C284.4,-200 302.2,-188.64 316.95,-179.23"/>
+<polygon fill="#000000" stroke="#000000" points="319.13,-182 325.67,-173.67 315.36,-176.1 319.13,-182"/>
 </g>
 <!-- proc~multbc -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_node14" class="node">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node10" class="node">
 <title>proc~multbc</title>
-<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node14"><a xlink:href=".././proc/multbc.html" xlink:title="MULTBC">
-<polygon fill="#d9534f" stroke="#d9534f" points="373,-163 318,-163 318,-139 373,-139 373,-163"/>
-<text text-anchor="middle" x="345.5" y="-148.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MULTBC</text>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node10"><a xlink:href=".././proc/multbc.html" xlink:title="MULTBC">
+<polygon fill="#d9534f" stroke="#d9534f" points="373,-122.66 318,-122.66 318,-98.66 373,-98.66 373,-122.66"/>
+<text text-anchor="middle" x="345.5" y="-108.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MULTBC</text>
 </a>
 </g>
 </g>
 <!-- proc~dvdrvr&#45;&gt;proc~multbc -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge14" class="edge">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge11" class="edge">
 <title>proc~dvdrvr&#45;&gt;proc~multbc</title>
-<path fill="none" stroke="#000000" d="M278.75,-180.85C288.05,-176.63 298.64,-171.82 308.56,-167.32"/>
-<polygon fill="#000000" stroke="#000000" points="310.15,-170.44 317.81,-163.12 307.25,-164.07 310.15,-170.44"/>
+<path fill="none" stroke="#000000" d="M261.23,-208.48C273.4,-192.56 295.66,-163.99 316,-140.66 319.06,-137.16 322.39,-133.51 325.67,-130.01"/>
+<polygon fill="#000000" stroke="#000000" points="328.26,-132.36 332.61,-122.71 323.18,-127.54 328.26,-132.36"/>
 </g>
-<!-- proc~addabs&#45;&gt;proc~dscal -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge16" class="edge">
-<title>proc~addabs&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M473.6,-315C483.05,-315 493.73,-315 503.71,-315"/>
-<polygon fill="#000000" stroke="#000000" points="503.79,-318.5 513.79,-315 503.79,-311.5 503.79,-318.5"/>
+<!-- proc~daxpy -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node11" class="node">
+<title>proc~daxpy</title>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node11"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="568,-210.66 514,-210.66 514,-186.66 568,-186.66 568,-210.66"/>
+<text text-anchor="middle" x="541" y="-196.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
 </g>
-<!-- proc~addabs&#45;&gt;proc~ddot -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge17" class="edge">
-<title>proc~addabs&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M465.54,-302.96C469.77,-300.17 474.12,-297.11 478,-294 493.66,-281.45 509.77,-265.49 521.64,-253.05"/>
-<polygon fill="#000000" stroke="#000000" points="524.49,-255.13 528.78,-245.45 519.38,-250.34 524.49,-255.13"/>
+</g>
+<!-- proc~dvdrvr&#45;&gt;proc~daxpy -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge13" class="edge">
+<title>proc~dvdrvr&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M280.14,-218.52C332.64,-214.5 445.45,-205.89 503.64,-201.44"/>
+<polygon fill="#000000" stroke="#000000" points="504.14,-204.91 513.84,-200.66 503.6,-197.93 504.14,-204.91"/>
+</g>
+<!-- dspevx -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node13" class="node">
+<title>dspevx</title>
+<polygon fill="#777777" stroke="#777777" points="372.5,-80.66 318.5,-80.66 318.5,-56.66 372.5,-56.66 372.5,-80.66"/>
+<text text-anchor="middle" x="345.5" y="-66.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dspevx</text>
+</g>
+<!-- proc~dvdrvr&#45;&gt;dspevx -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge14" class="edge">
+<title>proc~dvdrvr&#45;&gt;dspevx</title>
+<path fill="none" stroke="#000000" d="M255.78,-208.35C263.8,-183.74 284.39,-127.57 316,-89.66 316.59,-88.96 317.2,-88.27 317.84,-87.59"/>
+<polygon fill="#000000" stroke="#000000" points="320.25,-90.13 325.3,-80.81 315.54,-84.95 320.25,-90.13"/>
+</g>
+<!-- proc~ddot -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_node14" class="node">
+<title>proc~ddot</title>
+<g id="a_proc~~dvdson_eigh_d~~CallsGraph_node14"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="568,-270.66 514,-270.66 514,-246.66 568,-246.66 568,-270.66"/>
+<text text-anchor="middle" x="541" y="-256.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+</a>
+</g>
+</g>
+<!-- proc~dvdrvr&#45;&gt;proc~ddot -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge15" class="edge">
+<title>proc~dvdrvr&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M280.14,-224.38C332.64,-231.3 445.45,-246.19 503.64,-253.87"/>
+<polygon fill="#000000" stroke="#000000" points="503.47,-257.37 513.84,-255.21 504.38,-250.43 503.47,-257.37"/>
 </g>
 <!-- proc~ovflow&#45;&gt;proc~dinit -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge18" class="edge">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge16" class="edge">
 <title>proc~ovflow&#45;&gt;proc~dinit</title>
-<path fill="none" stroke="#000000" d="M374.56,-273C384.82,-273 396.57,-273 407.44,-273"/>
-<polygon fill="#000000" stroke="#000000" points="407.5,-276.5 417.5,-273 407.5,-269.5 407.5,-276.5"/>
+<path fill="none" stroke="#000000" d="M374.56,-298.66C384.82,-298.66 396.57,-298.66 407.44,-298.66"/>
+<polygon fill="#000000" stroke="#000000" points="407.5,-302.16 417.5,-298.66 407.5,-295.16 407.5,-302.16"/>
+</g>
+<!-- proc~addabs&#45;&gt;proc~dscal -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge17" class="edge">
+<title>proc~addabs&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="#000000" d="M473.6,-340.66C483.05,-340.66 493.73,-340.66 503.71,-340.66"/>
+<polygon fill="#000000" stroke="#000000" points="503.79,-344.16 513.79,-340.66 503.79,-337.16 503.79,-344.16"/>
+</g>
+<!-- proc~addabs&#45;&gt;proc~ddot -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge18" class="edge">
+<title>proc~addabs&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M465.54,-328.63C469.77,-325.84 474.12,-322.77 478,-319.66 493.66,-307.12 509.77,-291.16 521.64,-278.71"/>
+<polygon fill="#000000" stroke="#000000" points="524.49,-280.8 528.78,-271.11 519.38,-276 524.49,-280.8"/>
 </g>
 <!-- dgemv -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_node15" class="node">
 <title>dgemv</title>
-<polygon fill="#777777" stroke="#777777" points="471.5,-121 417.5,-121 417.5,-97 471.5,-97 471.5,-121"/>
-<text text-anchor="middle" x="444.5" y="-106.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dgemv</text>
+<polygon fill="#777777" stroke="#777777" points="471.5,-108.66 417.5,-108.66 417.5,-84.66 471.5,-84.66 471.5,-108.66"/>
+<text text-anchor="middle" x="444.5" y="-94.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dgemv</text>
 </g>
 <!-- proc~newvec&#45;&gt;dgemv -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge19" class="edge">
 <title>proc~newvec&#45;&gt;dgemv</title>
-<path fill="none" stroke="#000000" d="M364.18,-180.94C367.88,-178.16 371.67,-175.1 375,-172 393.01,-155.27 392.48,-146.17 411,-130 412.14,-129.01 413.33,-128.02 414.55,-127.06"/>
-<polygon fill="#000000" stroke="#000000" points="416.86,-129.71 422.91,-121.02 412.76,-124.04 416.86,-129.71"/>
+<path fill="none" stroke="#000000" d="M363.94,-149.59C376.87,-140.69 394.96,-128.31 411,-117.66 412.64,-116.58 414.32,-115.46 416.03,-114.35"/>
+<polygon fill="#000000" stroke="#000000" points="418.07,-117.19 424.54,-108.8 414.25,-111.33 418.07,-117.19"/>
 </g>
 <!-- proc~orthnrm -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_node16" class="node">
 <title>proc~orthnrm</title>
 <g id="a_proc~~dvdson_eigh_d~~CallsGraph_node16"><a xlink:href=".././proc/orthnrm.html" xlink:title="ORTHNRM">
-<polygon fill="#d9534f" stroke="#d9534f" points="478,-163 411,-163 411,-139 478,-139 478,-163"/>
-<text text-anchor="middle" x="444.5" y="-148.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ORTHNRM</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="478,-192.66 411,-192.66 411,-168.66 478,-168.66 478,-192.66"/>
+<text text-anchor="middle" x="444.5" y="-178.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ORTHNRM</text>
 </a>
 </g>
 </g>
 <!-- proc~newvec&#45;&gt;proc~orthnrm -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge20" class="edge">
 <title>proc~newvec&#45;&gt;proc~orthnrm</title>
-<path fill="none" stroke="#000000" d="M374.3,-180.96C384.24,-176.66 395.61,-171.73 406.23,-167.14"/>
-<polygon fill="#000000" stroke="#000000" points="407.91,-170.22 415.7,-163.04 405.13,-163.8 407.91,-170.22"/>
+<path fill="none" stroke="#000000" d="M375.08,-167.26C383.11,-168.84 392.03,-170.58 400.7,-172.28"/>
+<polygon fill="#000000" stroke="#000000" points="400.21,-175.75 410.69,-174.24 401.55,-168.88 400.21,-175.75"/>
 </g>
 <!-- proc~dnrm2 -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_node17" class="node">
 <title>proc~dnrm2</title>
 <g id="a_proc~~dvdson_eigh_d~~CallsGraph_node17"><a xlink:href=".././proc/dnrm2.html" xlink:title="DNRM2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="471.5,-205 417.5,-205 417.5,-181 471.5,-181 471.5,-205"/>
-<text text-anchor="middle" x="444.5" y="-190.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DNRM2</text>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="471.5,-150.66 417.5,-150.66 417.5,-126.66 471.5,-126.66 471.5,-150.66"/>
+<text text-anchor="middle" x="444.5" y="-136.26" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DNRM2</text>
 </a>
 </g>
 </g>
 <!-- proc~newvec&#45;&gt;proc~dnrm2 -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge21" class="edge">
 <title>proc~newvec&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M375.08,-193C385.14,-193 396.58,-193 407.19,-193"/>
-<polygon fill="#000000" stroke="#000000" points="407.44,-196.5 417.44,-193 407.44,-189.5 407.44,-196.5"/>
+<path fill="none" stroke="#000000" d="M375.08,-154.89C385.24,-152.48 396.82,-149.73 407.52,-147.2"/>
+<polygon fill="#000000" stroke="#000000" points="408.52,-150.56 417.44,-144.84 406.9,-143.74 408.52,-150.56"/>
 </g>
 <!-- proc~multbc&#45;&gt;proc~dcopy -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge23" class="edge">
 <title>proc~multbc&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M364.18,-138.94C367.88,-136.16 371.67,-133.1 375,-130 393.01,-113.27 392.15,-103.79 411,-88 440.05,-63.66 477.86,-42.39 505.02,-28.59"/>
-<polygon fill="#000000" stroke="#000000" points="506.77,-31.63 514.16,-24.03 503.65,-25.37 506.77,-31.63"/>
+<path fill="none" stroke="#000000" d="M366.3,-98.5C378.79,-91.19 395.46,-82.09 411,-75.66 441.48,-63.07 477.6,-52.81 503.85,-46.13"/>
+<polygon fill="#000000" stroke="#000000" points="504.89,-49.48 513.75,-43.67 503.2,-42.69 504.89,-49.48"/>
 </g>
 <!-- proc~multbc&#45;&gt;dgemv -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge22" class="edge">
 <title>proc~multbc&#45;&gt;dgemv</title>
-<path fill="none" stroke="#000000" d="M373.01,-139.52C383.79,-134.86 396.41,-129.39 407.97,-124.39"/>
-<polygon fill="#000000" stroke="#000000" points="409.58,-127.5 417.36,-120.32 406.79,-121.08 409.58,-127.5"/>
+<path fill="none" stroke="#000000" d="M373.01,-106.84C383.57,-105.31 395.9,-103.53 407.27,-101.89"/>
+<polygon fill="#000000" stroke="#000000" points="407.96,-105.33 417.36,-100.44 406.96,-98.4 407.96,-105.33"/>
 </g>
 <!-- proc~orthnrm&#45;&gt;proc~dscal -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge25" class="edge">
 <title>proc~orthnrm&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M468.23,-163.18C471.8,-165.77 475.22,-168.72 478,-172 479.06,-173.25 513.82,-254.04 530.82,-293.62"/>
-<polygon fill="#000000" stroke="#000000" points="527.66,-295.13 534.83,-302.94 534.1,-292.37 527.66,-295.13"/>
+<path fill="none" stroke="#000000" d="M452.6,-192.69C468.61,-219.79 507.67,-285.92 527.7,-319.84"/>
+<polygon fill="#000000" stroke="#000000" points="524.72,-321.67 532.81,-328.5 530.74,-318.11 524.72,-321.67"/>
 </g>
 <!-- proc~orthnrm&#45;&gt;proc~dcopy -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge26" class="edge">
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge27" class="edge">
 <title>proc~orthnrm&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M467.69,-138.88C471.4,-136.25 475.01,-133.27 478,-130 504.35,-101.17 522.9,-59.08 532.48,-33.73"/>
-<polygon fill="#000000" stroke="#000000" points="535.79,-34.88 535.93,-24.29 529.21,-32.48 535.79,-34.88"/>
+<path fill="none" stroke="#000000" d="M467.73,-168.57C471.43,-165.95 475.03,-162.96 478,-159.66 504.99,-129.73 523.43,-85.9 532.81,-59.73"/>
+<polygon fill="#000000" stroke="#000000" points="536.21,-60.6 536.16,-50.01 529.59,-58.32 536.21,-60.6"/>
+</g>
+<!-- proc~orthnrm&#45;&gt;proc~daxpy -->
+<g id="proc~~dvdson_eigh_d~~CallsGraph_edge26" class="edge">
+<title>proc~orthnrm&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M478.02,-186.86C486.37,-188.45 495.4,-190.17 503.92,-191.79"/>
+<polygon fill="#000000" stroke="#000000" points="503.5,-195.28 513.98,-193.71 504.81,-188.4 503.5,-195.28"/>
 </g>
 <!-- proc~orthnrm&#45;&gt;proc~ddot -->
 <g id="proc~~dvdson_eigh_d~~CallsGraph_edge24" class="edge">
 <title>proc~orthnrm&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M465.54,-163.04C469.77,-165.83 474.12,-168.89 478,-172 493.66,-184.55 509.77,-200.51 521.64,-212.95"/>
-<polygon fill="#000000" stroke="#000000" points="519.38,-215.66 528.78,-220.55 524.49,-210.87 519.38,-215.66"/>
-</g>
-<!-- proc~orthnrm&#45;&gt;proc~daxpy -->
-<g id="proc~~dvdson_eigh_d~~CallsGraph_edge27" class="edge">
-<title>proc~orthnrm&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M473.34,-138.92C483.18,-134.65 494.38,-129.79 504.75,-125.3"/>
-<polygon fill="#000000" stroke="#000000" points="506.19,-128.48 513.97,-121.29 503.41,-122.06 506.19,-128.48"/>
+<path fill="none" stroke="#000000" d="M460.27,-192.85C475.52,-205.44 499.54,-225.27 517.23,-239.87"/>
+<polygon fill="#000000" stroke="#000000" points="515.4,-242.9 525.34,-246.56 519.85,-237.5 515.4,-242.9"/>
 </g>
 </g>
 </svg>
@@ -584,14 +702,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/dvdson_eigh_d.html#src">dvdson_eigh_d</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/dvdson_eigh_d.html#src">dvdson_eigh_d</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -764,7 +901,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

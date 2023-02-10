@@ -80,114 +80,228 @@
   <div class="row">
     <h1>fmin_cg_f
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">88 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/fmin_cg.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/fmin_cg.f90.html'>fmin_cg.f90</a></li>
-     <li class="active">fmin_cg_f</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">88 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/fmin_cg.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/fmin_cg.f90.html'>fmin_cg.f90</a></li>
+          <li class="active">fmin_cg_f</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/fmin_cg_f.html#src">fmin_cg_f</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/fmin_cg_f.html#src">fmin_cg_f</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine fmin_cg_f(p, f, iter, fret, ftol, itmax, istop, deps, iverbose)</h2>
+    <h2> subroutine fmin_cg_f(p, f, iter, fret, ftol, itmax, istop, deps, iverbose)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-p~5"></span>real(kind=8),</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-p~12"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(:)</td><td>::</td>
-  <td><strong>p</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-f~15"></span>procedure(cgfit_func)</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>p</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-f~10"></span>
+              procedure(cgfit_func)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>f</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-iter~8"></span>integer,</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>f</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iter~14"></span>
+              integer,
+            </td>
 <td>intent(out)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>iter</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-fret~4"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iter</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fret~6"></span>
+              real(kind=8),
+            </td>
 <td>intent(out)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>fret</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-ftol~4"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fret</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ftol~7"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>ftol</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-itmax~4"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ftol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-itmax~8"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>itmax</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-istop~2"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>itmax</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-istop~2"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>istop</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-deps"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>istop</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-deps~2"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>deps</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-iverbose~12"></span>logical,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>deps</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iverbose~4"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>iverbose</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iverbose</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -224,27 +338,27 @@
 <path fill="none" stroke="#000000" d="M59.9,-66.15C69.41,-70.44 80.26,-75.35 90.39,-79.92"/>
 <polygon fill="#000000" stroke="#000000" points="89.25,-83.24 99.8,-84.17 92.13,-76.86 89.25,-83.24"/>
 </g>
-<!-- dlinmin -->
+<!-- fjac -->
 <g id="proc~~fmin_cg_f~~CallsGraph_node3" class="node">
-<title>dlinmin</title>
+<title>fjac</title>
 <polygon fill="#777777" stroke="#777777" points="154,-66 100,-66 100,-42 154,-42 154,-66"/>
-<text text-anchor="middle" x="127" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dlinmin</text>
+<text text-anchor="middle" x="127" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fjac</text>
 </g>
-<!-- proc~fmin_cg_f&#45;&gt;dlinmin -->
+<!-- proc~fmin_cg_f&#45;&gt;fjac -->
 <g id="proc~~fmin_cg_f~~CallsGraph_edge2" class="edge">
-<title>proc~fmin_cg_f&#45;&gt;dlinmin</title>
+<title>proc~fmin_cg_f&#45;&gt;fjac</title>
 <path fill="none" stroke="#000000" d="M64.23,-54C72.48,-54 81.46,-54 89.94,-54"/>
 <polygon fill="#000000" stroke="#000000" points="89.97,-57.5 99.97,-54 89.97,-50.5 89.97,-57.5"/>
 </g>
-<!-- fjac -->
+<!-- dlinmin -->
 <g id="proc~~fmin_cg_f~~CallsGraph_node4" class="node">
-<title>fjac</title>
+<title>dlinmin</title>
 <polygon fill="#777777" stroke="#777777" points="154,-24 100,-24 100,0 154,0 154,-24"/>
-<text text-anchor="middle" x="127" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fjac</text>
+<text text-anchor="middle" x="127" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dlinmin</text>
 </g>
-<!-- proc~fmin_cg_f&#45;&gt;fjac -->
+<!-- proc~fmin_cg_f&#45;&gt;dlinmin -->
 <g id="proc~~fmin_cg_f~~CallsGraph_edge3" class="edge">
-<title>proc~fmin_cg_f&#45;&gt;fjac</title>
+<title>proc~fmin_cg_f&#45;&gt;dlinmin</title>
 <path fill="none" stroke="#000000" d="M59.9,-41.85C69.41,-37.56 80.26,-32.65 90.39,-28.08"/>
 <polygon fill="#000000" stroke="#000000" points="92.13,-31.14 99.8,-23.83 89.25,-24.76 92.13,-31.14"/>
 </g>
@@ -314,14 +428,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/fmin_cg_f.html#src">fmin_cg_f</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/fmin_cg_f.html#src">fmin_cg_f</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -440,7 +573,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

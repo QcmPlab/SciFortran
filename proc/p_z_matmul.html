@@ -80,96 +80,183 @@
   <div class="row">
     <h1>p_z_matmul
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">68 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/linalg_p_blas.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/linalg_p_blas.f90.html'>linalg_p_blas.f90</a></li>
-     <li class="active">p_z_matmul</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">68 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/linalg_p_blas.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/linalg_p_blas.f90.html'>linalg_p_blas.f90</a></li>
+          <li class="active">p_z_matmul</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/p_z_matmul.html#src">p_z_matmul</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/p_z_matmul.html#src">p_z_matmul</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine p_z_matmul(A, B, C, Nblock, alfa, beta)</h2>
+    <h2> subroutine p_z_matmul(A, B, C, Nblock, alfa, beta)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-a~28"></span>complex(kind=8),</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~58"></span>
+              complex(kind=8),
+            </td>
 <td>intent(in),</td>
-  <td></td>  <td>dimension(:,:)</td><td>::</td>
-  <td><strong>A</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-b~11"></span>complex(kind=8),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~7"></span>
+              complex(kind=8),
+            </td>
 <td>intent(in),</td>
-  <td></td>  <td>dimension(:,:)</td><td>::</td>
-  <td><strong>B</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-c~8"></span>complex(kind=8),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>B</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c~4"></span>
+              complex(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(size(A,1),size(B,2))</td><td>::</td>
-  <td><strong>C</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nblock~8"></span>integer</td>
+              <td></td>            <td>
+              dimension(size(A,1),size(B,2))
+            </td>
+            <td>::</td>
+            <td><strong>C</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nblock~10"></span>
+              integer
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>Nblock</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-alfa~4"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nblock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-alfa~4"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>alfa</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-beta~4"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>alfa</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta~4"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>beta</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>beta</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -194,65 +281,65 @@
 <polygon fill="none" stroke="black" points="76,-150 0,-150 0,-126 76,-126 76,-150"/>
 <text text-anchor="middle" x="38" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">p_z_matmul</text>
 </g>
-<!-- free_unit -->
-<g id="proc~~p_z_matmul~~CallsGraph_node2" class="node">
-<title>free_unit</title>
-<polygon fill="#777777" stroke="#777777" points="189.5,-276 130.5,-276 130.5,-252 189.5,-252 189.5,-276"/>
-<text text-anchor="middle" x="160" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">free_unit</text>
-</g>
-<!-- proc~p_z_matmul&#45;&gt;free_unit -->
-<g id="proc~~p_z_matmul~~CallsGraph_edge1" class="edge">
-<title>proc~p_z_matmul&#45;&gt;free_unit</title>
-<path fill="none" stroke="#000000" d="M44.74,-150.31C55.3,-171.76 79.68,-216.23 112,-243 114.85,-245.36 118.01,-247.51 121.31,-249.45"/>
-<polygon fill="#000000" stroke="#000000" points="119.73,-252.58 130.22,-254.11 122.98,-246.37 119.73,-252.58"/>
-</g>
-<!-- gather_blacs -->
-<g id="proc~~p_z_matmul~~CallsGraph_node3" class="node">
-<title>gather_blacs</title>
-<polygon fill="#777777" stroke="#777777" points="200.5,-234 119.5,-234 119.5,-210 200.5,-210 200.5,-234"/>
-<text text-anchor="middle" x="160" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
-</g>
-<!-- proc~p_z_matmul&#45;&gt;gather_blacs -->
-<g id="proc~~p_z_matmul~~CallsGraph_edge2" class="edge">
-<title>proc~p_z_matmul&#45;&gt;gather_blacs</title>
-<path fill="none" stroke="#000000" d="M50.78,-150.11C64.53,-163.76 88.4,-186.01 112,-201 114.4,-202.53 116.94,-204 119.53,-205.41"/>
-<polygon fill="#000000" stroke="#000000" points="117.98,-208.55 128.49,-209.93 121.14,-202.3 117.98,-208.55"/>
-</g>
-<!-- descinit -->
-<g id="proc~~p_z_matmul~~CallsGraph_node4" class="node">
-<title>descinit</title>
-<polygon fill="#777777" stroke="#777777" points="187,-192 133,-192 133,-168 187,-168 187,-192"/>
-<text text-anchor="middle" x="160" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
-</g>
-<!-- proc~p_z_matmul&#45;&gt;descinit -->
-<g id="proc~~p_z_matmul~~CallsGraph_edge4" class="edge">
-<title>proc~p_z_matmul&#45;&gt;descinit</title>
-<path fill="none" stroke="#000000" d="M73.39,-150.04C88.84,-155.44 107.08,-161.83 122.75,-167.31"/>
-<polygon fill="#000000" stroke="#000000" points="122.02,-170.77 132.62,-170.77 124.34,-164.16 122.02,-170.77"/>
-</g>
-<!-- blacs_gridinfo -->
-<g id="proc~~p_z_matmul~~CallsGraph_node5" class="node">
-<title>blacs_gridinfo</title>
-<polygon fill="#777777" stroke="#777777" points="203.5,-150 116.5,-150 116.5,-126 203.5,-126 203.5,-150"/>
-<text text-anchor="middle" x="160" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
-</g>
-<!-- proc~p_z_matmul&#45;&gt;blacs_gridinfo -->
-<g id="proc~~p_z_matmul~~CallsGraph_edge3" class="edge">
-<title>proc~p_z_matmul&#45;&gt;blacs_gridinfo</title>
-<path fill="none" stroke="#000000" d="M76.31,-138C85.71,-138 95.97,-138 105.98,-138"/>
-<polygon fill="#000000" stroke="#000000" points="106.26,-141.5 116.26,-138 106.26,-134.5 106.26,-141.5"/>
-</g>
 <!-- numroc -->
-<g id="proc~~p_z_matmul~~CallsGraph_node6" class="node">
+<g id="proc~~p_z_matmul~~CallsGraph_node2" class="node">
 <title>numroc</title>
-<polygon fill="#777777" stroke="#777777" points="187,-108 133,-108 133,-84 187,-84 187,-108"/>
-<text text-anchor="middle" x="160" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
+<polygon fill="#777777" stroke="#777777" points="187,-276 133,-276 133,-252 187,-252 187,-276"/>
+<text text-anchor="middle" x="160" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
 </g>
 <!-- proc~p_z_matmul&#45;&gt;numroc -->
-<g id="proc~~p_z_matmul~~CallsGraph_edge5" class="edge">
+<g id="proc~~p_z_matmul~~CallsGraph_edge1" class="edge">
 <title>proc~p_z_matmul&#45;&gt;numroc</title>
-<path fill="none" stroke="#000000" d="M73.39,-125.96C88.84,-120.56 107.08,-114.17 122.75,-108.69"/>
-<polygon fill="#000000" stroke="#000000" points="124.34,-111.84 132.62,-105.23 122.02,-105.23 124.34,-111.84"/>
+<path fill="none" stroke="#000000" d="M44.74,-150.31C55.3,-171.76 79.68,-216.23 112,-243 115.5,-245.9 119.47,-248.48 123.58,-250.74"/>
+<polygon fill="#000000" stroke="#000000" points="122.15,-253.94 132.67,-255.22 125.24,-247.66 122.15,-253.94"/>
+</g>
+<!-- descinit -->
+<g id="proc~~p_z_matmul~~CallsGraph_node3" class="node">
+<title>descinit</title>
+<polygon fill="#777777" stroke="#777777" points="187,-234 133,-234 133,-210 187,-210 187,-234"/>
+<text text-anchor="middle" x="160" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
+</g>
+<!-- proc~p_z_matmul&#45;&gt;descinit -->
+<g id="proc~~p_z_matmul~~CallsGraph_edge2" class="edge">
+<title>proc~p_z_matmul&#45;&gt;descinit</title>
+<path fill="none" stroke="#000000" d="M50.78,-150.11C64.53,-163.76 88.4,-186.01 112,-201 115.65,-203.32 119.6,-205.51 123.6,-207.54"/>
+<polygon fill="#000000" stroke="#000000" points="122.4,-210.84 132.93,-211.97 125.4,-204.52 122.4,-210.84"/>
+</g>
+<!-- pzgemm -->
+<g id="proc~~p_z_matmul~~CallsGraph_node4" class="node">
+<title>pzgemm</title>
+<polygon fill="#777777" stroke="#777777" points="189.5,-192 130.5,-192 130.5,-168 189.5,-168 189.5,-192"/>
+<text text-anchor="middle" x="160" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pzgemm</text>
+</g>
+<!-- proc~p_z_matmul&#45;&gt;pzgemm -->
+<g id="proc~~p_z_matmul~~CallsGraph_edge3" class="edge">
+<title>proc~p_z_matmul&#45;&gt;pzgemm</title>
+<path fill="none" stroke="#000000" d="M73.39,-150.04C88.16,-155.21 105.48,-161.27 120.66,-166.58"/>
+<polygon fill="#000000" stroke="#000000" points="119.69,-169.95 130.28,-169.95 122,-163.34 119.69,-169.95"/>
+</g>
+<!-- free_unit -->
+<g id="proc~~p_z_matmul~~CallsGraph_node5" class="node">
+<title>free_unit</title>
+<polygon fill="#777777" stroke="#777777" points="189.5,-150 130.5,-150 130.5,-126 189.5,-126 189.5,-150"/>
+<text text-anchor="middle" x="160" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">free_unit</text>
+</g>
+<!-- proc~p_z_matmul&#45;&gt;free_unit -->
+<g id="proc~~p_z_matmul~~CallsGraph_edge5" class="edge">
+<title>proc~p_z_matmul&#45;&gt;free_unit</title>
+<path fill="none" stroke="#000000" d="M76.31,-138C90.24,-138 106.07,-138 120.14,-138"/>
+<polygon fill="#000000" stroke="#000000" points="120.48,-141.5 130.48,-138 120.48,-134.5 120.48,-141.5"/>
+</g>
+<!-- blacs_gridinfo -->
+<g id="proc~~p_z_matmul~~CallsGraph_node6" class="node">
+<title>blacs_gridinfo</title>
+<polygon fill="#777777" stroke="#777777" points="203.5,-108 116.5,-108 116.5,-84 203.5,-84 203.5,-108"/>
+<text text-anchor="middle" x="160" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
+</g>
+<!-- proc~p_z_matmul&#45;&gt;blacs_gridinfo -->
+<g id="proc~~p_z_matmul~~CallsGraph_edge4" class="edge">
+<title>proc~p_z_matmul&#45;&gt;blacs_gridinfo</title>
+<path fill="none" stroke="#000000" d="M73.39,-125.96C86.32,-121.44 101.2,-116.23 114.89,-111.44"/>
+<polygon fill="#000000" stroke="#000000" points="116.33,-114.64 124.61,-108.04 114.01,-108.04 116.33,-114.64"/>
 </g>
 <!-- distribute_blacs -->
 <g id="proc~~p_z_matmul~~CallsGraph_node7" class="node">
@@ -266,17 +353,17 @@
 <path fill="none" stroke="#000000" d="M50.78,-125.89C64.53,-112.24 88.4,-89.99 112,-75 114.4,-73.47 116.94,-72 119.53,-70.59"/>
 <polygon fill="#000000" stroke="#000000" points="121.14,-73.7 128.49,-66.07 117.98,-67.45 121.14,-73.7"/>
 </g>
-<!-- pzgemm -->
+<!-- gather_blacs -->
 <g id="proc~~p_z_matmul~~CallsGraph_node8" class="node">
-<title>pzgemm</title>
-<polygon fill="#777777" stroke="#777777" points="189.5,-24 130.5,-24 130.5,0 189.5,0 189.5,-24"/>
-<text text-anchor="middle" x="160" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pzgemm</text>
+<title>gather_blacs</title>
+<polygon fill="#777777" stroke="#777777" points="200.5,-24 119.5,-24 119.5,0 200.5,0 200.5,-24"/>
+<text text-anchor="middle" x="160" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
 </g>
-<!-- proc~p_z_matmul&#45;&gt;pzgemm -->
+<!-- proc~p_z_matmul&#45;&gt;gather_blacs -->
 <g id="proc~~p_z_matmul~~CallsGraph_edge7" class="edge">
-<title>proc~p_z_matmul&#45;&gt;pzgemm</title>
-<path fill="none" stroke="#000000" d="M44.74,-125.69C55.3,-104.24 79.68,-59.77 112,-33 114.85,-30.64 118.01,-28.49 121.31,-26.55"/>
-<polygon fill="#000000" stroke="#000000" points="122.98,-29.63 130.22,-21.89 119.73,-23.42 122.98,-29.63"/>
+<title>proc~p_z_matmul&#45;&gt;gather_blacs</title>
+<path fill="none" stroke="#000000" d="M44.74,-125.69C55.3,-104.24 79.68,-59.77 112,-33 113.55,-31.72 115.19,-30.5 116.89,-29.34"/>
+<polygon fill="#000000" stroke="#000000" points="118.98,-32.17 125.8,-24.06 115.41,-26.15 118.98,-32.17"/>
 </g>
 </g>
 </svg>
@@ -344,14 +431,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/p_z_matmul.html#src">p_z_matmul</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/p_z_matmul.html#src">p_z_matmul</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -474,7 +580,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

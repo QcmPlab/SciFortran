@@ -80,73 +80,124 @@
   <div class="row">
     <h1>Init_MPI
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.0% of total for procedures.">10 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/SF_MPI.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/sf_mpi.f90.html'>SF_MPI.f90</a></li>
-     <li><a href='../module/sf_mpi.html'>SF_MPI</a></li>
-     <li class="active">Init_MPI</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.0% of total for procedures.">10 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/SF_MPI.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/sf_mpi.f90.html'>SF_MPI.f90</a></li>
+              <li><a href='../module/sf_mpi.html'>SF_MPI</a></li>
+          <li class="active">Init_MPI</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/init_mpi.html#src">Init_MPI</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/init_mpi.html#src">Init_MPI</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>public subroutine Init_MPI(comm, msg)</h2>
+    <h2>public  subroutine Init_MPI(comm, msg)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-comm~37"></span>integer,</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-comm~37"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>comm</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-msg~2"></span>logical,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>comm</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msg"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>msg</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>msg</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -193,7 +244,7 @@
 </g>
 </g>
 <!-- proc~init_mpi&#45;&gt;proc~error_mpi -->
-<g id="proc~~init_mpi~~CallsGraph_edge2" class="edge">
+<g id="proc~~init_mpi~~CallsGraph_edge3" class="edge">
 <title>proc~init_mpi&#45;&gt;proc~error_mpi</title>
 <path fill="none" stroke="#000000" d="M54.27,-136C114.94,-136 265.15,-136 337.41,-136"/>
 <polygon fill="#000000" stroke="#000000" points="337.49,-139.5 347.49,-136 337.49,-132.5 337.49,-139.5"/>
@@ -208,7 +259,7 @@
 </g>
 </g>
 <!-- proc~init_mpi&#45;&gt;proc~startmsg_mpi -->
-<g id="proc~~init_mpi~~CallsGraph_edge3" class="edge">
+<g id="proc~~init_mpi~~CallsGraph_edge2" class="edge">
 <title>proc~init_mpi&#45;&gt;proc~startmsg_mpi</title>
 <path fill="none" stroke="#000000" d="M48.15,-123.95C63.24,-114.93 84.1,-102.45 100.98,-92.35"/>
 <polygon fill="#000000" stroke="#000000" points="103.1,-95.16 109.89,-87.03 99.51,-89.16 103.1,-95.16"/>
@@ -228,32 +279,32 @@
 <path fill="none" stroke="#000000" d="M172.26,-82.23C180.53,-83.71 189.34,-85.29 197.93,-86.83"/>
 <polygon fill="#000000" stroke="#000000" points="197.4,-90.3 207.87,-88.62 198.64,-83.41 197.4,-90.3"/>
 </g>
-<!-- mpi_barrier -->
-<g id="proc~~init_mpi~~CallsGraph_node6" class="node">
-<title>mpi_barrier</title>
-<polygon fill="#777777" stroke="#777777" points="287.5,-24 212.5,-24 212.5,0 287.5,0 287.5,-24"/>
-<text text-anchor="middle" x="250" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_barrier</text>
-</g>
-<!-- proc~startmsg_mpi&#45;&gt;mpi_barrier -->
-<g id="proc~~init_mpi~~CallsGraph_edge5" class="edge">
-<title>proc~startmsg_mpi&#45;&gt;mpi_barrier</title>
-<path fill="none" stroke="#000000" d="M153.52,-62.87C168.69,-54.38 189.5,-42.85 208,-33 210.58,-31.63 213.26,-30.22 215.96,-28.81"/>
-<polygon fill="#000000" stroke="#000000" points="217.81,-31.79 225.09,-24.09 214.6,-25.57 217.81,-31.79"/>
-</g>
 <!-- proc~get_size_mpi -->
-<g id="proc~~init_mpi~~CallsGraph_node7" class="node">
+<g id="proc~~init_mpi~~CallsGraph_node6" class="node">
 <title>proc~get_size_mpi</title>
-<g id="a_proc~~init_mpi~~CallsGraph_node7"><a xlink:href=".././proc/get_size_mpi.html" xlink:title="get_size_MPI">
+<g id="a_proc~~init_mpi~~CallsGraph_node6"><a xlink:href=".././proc/get_size_mpi.html" xlink:title="get_size_MPI">
 <polygon fill="#d94e8f" stroke="#d94e8f" points="289.5,-66 210.5,-66 210.5,-42 289.5,-42 289.5,-66"/>
 <text text-anchor="middle" x="250" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_size_MPI</text>
 </a>
 </g>
 </g>
 <!-- proc~startmsg_mpi&#45;&gt;proc~get_size_mpi -->
-<g id="proc~~init_mpi~~CallsGraph_edge6" class="edge">
+<g id="proc~~init_mpi~~CallsGraph_edge5" class="edge">
 <title>proc~startmsg_mpi&#45;&gt;proc~get_size_mpi</title>
 <path fill="none" stroke="#000000" d="M172.26,-67.77C181.29,-66.15 190.97,-64.42 200.3,-62.74"/>
 <polygon fill="#000000" stroke="#000000" points="201.02,-66.17 210.24,-60.96 199.78,-59.28 201.02,-66.17"/>
+</g>
+<!-- mpi_barrier -->
+<g id="proc~~init_mpi~~CallsGraph_node7" class="node">
+<title>mpi_barrier</title>
+<polygon fill="#777777" stroke="#777777" points="287.5,-24 212.5,-24 212.5,0 287.5,0 287.5,-24"/>
+<text text-anchor="middle" x="250" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_barrier</text>
+</g>
+<!-- proc~startmsg_mpi&#45;&gt;mpi_barrier -->
+<g id="proc~~init_mpi~~CallsGraph_edge6" class="edge">
+<title>proc~startmsg_mpi&#45;&gt;mpi_barrier</title>
+<path fill="none" stroke="#000000" d="M153.52,-62.87C168.69,-54.38 189.5,-42.85 208,-33 210.58,-31.63 213.26,-30.22 215.96,-28.81"/>
+<polygon fill="#000000" stroke="#000000" points="217.81,-31.79 225.09,-24.09 214.6,-25.57 217.81,-31.79"/>
 </g>
 <!-- proc~get_rank_mpi&#45;&gt;proc~error_mpi -->
 <g id="proc~~init_mpi~~CallsGraph_edge8" class="edge">
@@ -357,14 +408,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/init_mpi.html#src">Init_MPI</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/init_mpi.html#src">Init_MPI</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -403,7 +473,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

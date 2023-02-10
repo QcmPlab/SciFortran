@@ -80,47 +80,77 @@
   <div class="row">
     <h1>chgu
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">80 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/SF_SPECIAL.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/sf_special.f90.html'>SF_SPECIAL.f90</a></li>
-     <li><a href='../module/sf_special.html'>SF_SPECIAL</a></li>
-     <li class="active">chgu</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">80 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/special_functions.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/special_functions.f90.html'>special_functions.f90</a></li>
+          <li class="active">chgu</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<em>None</em>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/chgu~2.html#src">chgu</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>public subroutine chgu(a, b, x, hu, md)</h2>
+    <h2> subroutine chgu(a, b, x, hu, md)  
+</h2>
     
 
     <p><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*80</p>
@@ -158,41 +188,93 @@ Output, integer ( kind = 4 ) MD, the method code.
 </code></pre></div>
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-a~97"></span>real(kind=8)</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~61"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>a</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-b~84"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>a</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~63"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>b</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-x~282"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>b</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~127"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>x</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-hu~6"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hu"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>hu</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-md~2"></span>integer(kind=4)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hu</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-md"></span>
+              integer(kind=4)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>md</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>md</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -236,36 +318,21 @@ Output, integer ( kind = 4 ) MD, the method code.
 <g id="proc~~chgu~2~~CallsGraph_node3" class="node">
 <title>proc~chgubi~2</title>
 <g id="a_proc~~chgu~2~~CallsGraph_node3"><a xlink:href=".././proc/chgubi~2.html" xlink:title="chgubi">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
-<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">chgubi</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
+<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">chgubi</text>
 </a>
 </g>
 </g>
 <!-- proc~chgu~2&#45;&gt;proc~chgubi~2 -->
 <g id="proc~~chgu~2~~CallsGraph_edge2" class="edge">
 <title>proc~chgu~2&#45;&gt;proc~chgubi~2</title>
-<path fill="none" stroke="#000000" d="M44.97,-62.85C57.99,-53.53 76.18,-40.51 90.89,-29.98"/>
-<polygon fill="#000000" stroke="#000000" points="92.99,-32.78 99.08,-24.11 88.92,-27.09 92.99,-32.78"/>
-</g>
-<!-- proc~chgul~2 -->
-<g id="proc~~chgu~2~~CallsGraph_node4" class="node">
-<title>proc~chgul~2</title>
-<g id="a_proc~~chgu~2~~CallsGraph_node4"><a xlink:href=".././proc/chgul~2.html" xlink:title="chgul">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
-<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">chgul</text>
-</a>
-</g>
-</g>
-<!-- proc~chgu~2&#45;&gt;proc~chgul~2 -->
-<g id="proc~~chgu~2~~CallsGraph_edge4" class="edge">
-<title>proc~chgu~2&#45;&gt;proc~chgul~2</title>
 <path fill="none" stroke="#000000" d="M54.4,-68.7C62.48,-66.77 71.51,-64.62 80.1,-62.57"/>
 <polygon fill="#000000" stroke="#000000" points="81,-65.95 89.92,-60.22 79.38,-59.14 81,-65.95"/>
 </g>
 <!-- proc~chguit~2 -->
-<g id="proc~~chgu~2~~CallsGraph_node5" class="node">
+<g id="proc~~chgu~2~~CallsGraph_node4" class="node">
 <title>proc~chguit~2</title>
-<g id="a_proc~~chgu~2~~CallsGraph_node5"><a xlink:href=".././proc/chguit~2.html" xlink:title="chguit">
+<g id="a_proc~~chgu~2~~CallsGraph_node4"><a xlink:href=".././proc/chguit~2.html" xlink:title="chguit">
 <polygon fill="#d9534f" stroke="#d9534f" points="144,-108 90,-108 90,-84 144,-84 144,-108"/>
 <text text-anchor="middle" x="117" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">chguit</text>
 </a>
@@ -276,6 +343,21 @@ Output, integer ( kind = 4 ) MD, the method code.
 <title>proc~chgu~2&#45;&gt;proc~chguit~2</title>
 <path fill="none" stroke="#000000" d="M54.4,-81.3C62.48,-83.23 71.51,-85.38 80.1,-87.43"/>
 <polygon fill="#000000" stroke="#000000" points="79.38,-90.86 89.92,-89.78 81,-84.05 79.38,-90.86"/>
+</g>
+<!-- proc~chgul~2 -->
+<g id="proc~~chgu~2~~CallsGraph_node5" class="node">
+<title>proc~chgul~2</title>
+<g id="a_proc~~chgu~2~~CallsGraph_node5"><a xlink:href=".././proc/chgul~2.html" xlink:title="chgul">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">chgul</text>
+</a>
+</g>
+</g>
+<!-- proc~chgu~2&#45;&gt;proc~chgul~2 -->
+<g id="proc~~chgu~2~~CallsGraph_edge4" class="edge">
+<title>proc~chgu~2&#45;&gt;proc~chgul~2</title>
+<path fill="none" stroke="#000000" d="M44.97,-62.85C57.99,-53.53 76.18,-40.51 90.89,-29.98"/>
+<polygon fill="#000000" stroke="#000000" points="92.99,-32.78 99.08,-24.11 88.92,-27.09 92.99,-32.78"/>
 </g>
 <!-- proc~gammaf~2 -->
 <g id="proc~~chgu~2~~CallsGraph_node6" class="node">
@@ -295,23 +377,23 @@ Output, integer ( kind = 4 ) MD, the method code.
 <!-- proc~chgubi~2&#45;&gt;proc~gammaf~2 -->
 <g id="proc~~chgu~2~~CallsGraph_edge7" class="edge">
 <title>proc~chgubi~2&#45;&gt;proc~gammaf~2</title>
-<path fill="none" stroke="#000000" d="M133.61,-24.19C137.08,-27.02 140.71,-30.06 144,-33 159.61,-46.92 176.43,-63.56 188.91,-76.23"/>
-<polygon fill="#000000" stroke="#000000" points="186.58,-78.85 196.07,-83.56 191.59,-73.96 186.58,-78.85"/>
+<path fill="none" stroke="#000000" d="M144.03,-66.15C152.99,-70.33 163.17,-75.08 172.73,-79.54"/>
+<polygon fill="#000000" stroke="#000000" points="171.48,-82.82 182.03,-83.88 174.45,-76.48 171.48,-82.82"/>
 </g>
 <!-- proc~psi~2 -->
 <g id="proc~~chgu~2~~CallsGraph_node7" class="node">
 <title>proc~psi~2</title>
 <g id="a_proc~~chgu~2~~CallsGraph_node7"><a xlink:href=".././proc/psi~2.html" xlink:title="psi">
-<polygon fill="#d9534f" stroke="#d9534f" points="236,-24 182,-24 182,0 236,0 236,-24"/>
-<text text-anchor="middle" x="209" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">psi</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="236,-66 182,-66 182,-42 236,-42 236,-66"/>
+<text text-anchor="middle" x="209" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">psi</text>
 </a>
 </g>
 </g>
 <!-- proc~chgubi~2&#45;&gt;proc~psi~2 -->
 <g id="proc~~chgu~2~~CallsGraph_edge6" class="edge">
 <title>proc~chgubi~2&#45;&gt;proc~psi~2</title>
-<path fill="none" stroke="#000000" d="M144.03,-12C152.63,-12 162.36,-12 171.59,-12"/>
-<polygon fill="#000000" stroke="#000000" points="171.72,-15.5 181.71,-12 171.71,-8.5 171.72,-15.5"/>
+<path fill="none" stroke="#000000" d="M144.03,-54C152.63,-54 162.36,-54 171.59,-54"/>
+<polygon fill="#000000" stroke="#000000" points="171.72,-57.5 181.71,-54 171.71,-50.5 171.72,-57.5"/>
 </g>
 <!-- proc~chguit~2&#45;&gt;proc~gammaf~2 -->
 <g id="proc~~chgu~2~~CallsGraph_edge8" class="edge">
@@ -385,9 +467,33 @@ Output, integer ( kind = 4 ) MD, the method code.
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<em>None</em>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/chgu~2.html#src">chgu</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -401,6 +507,137 @@ Output, integer ( kind = 4 ) MD, the method code.
 
 
     
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">chgu</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">hu</span><span class="p">,</span><span class="w"> </span><span class="n">md</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="c">!*****************************************************************************80</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!! CHGU computes the confluent hypergeometric function U(a,b,x).</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Licensing:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    This routine is copyrighted by Shanjie Zhang and Jianming Jin.  However, </span>
+<span class="w">  </span><span class="c">!    they give permission to incorporate this routine into a user program </span>
+<span class="w">  </span><span class="c">!    provided that the copyright is acknowledged.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Modified:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    27 July 2012</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Author:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Reference:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin,</span>
+<span class="w">  </span><span class="c">!    Computation of Special Functions,</span>
+<span class="w">  </span><span class="c">!    Wiley, 1996,</span>
+<span class="w">  </span><span class="c">!    ISBN: 0-471-11963-6,</span>
+<span class="w">  </span><span class="c">!    LC: QA351.C45.</span>
+<span class="w">  </span><span class="c">! </span>
+<span class="w">  </span><span class="c">!  Parameters:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) A, B, parameters.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) X, the argument.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Output, real ( kind = 8 ) HU, U(a,b,x).</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Output, integer ( kind = 4 ) MD, the method code.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="k">implicit none</span>
+
+<span class="k">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">a00</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">aa</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">b00</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">bl1</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">bl2</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">bl3</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">bn</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">hu</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">hu1</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">id</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">id1</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">il1</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">il2</span><span class="w"></span>
+<span class="w">  </span><span class="kt">logical </span><span class="n">il3</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">md</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">aa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"></span>
+<span class="w">  </span><span class="n">il1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
+<span class="w">  </span><span class="n">il2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aa</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">aa</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">aa</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
+<span class="w">  </span><span class="n">il3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"></span>
+<span class="w">  </span><span class="n">bl1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5.0D+00</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.0D+00</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">bl2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">5.0D+00</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="mf">2.5D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">       </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">bl3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">2.5D+00</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="mf">5.0D+00</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">5.0D+00</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<span class="w">  </span><span class="n">bn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
+<span class="w">  </span><span class="n">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">     call </span><span class="n">chgus</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">hu</span><span class="p">,</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        return</span>
+<span class="k">     end if</span>
+<span class="k">     </span><span class="n">hu1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hu</span><span class="w"></span>
+<span class="w">  </span><span class="k">end if</span>
+
+<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">il1</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">il2</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">il3</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">     call </span><span class="n">chgul</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">hu</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        return</span>
+<span class="k">     end if</span>
+<span class="k">     if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id1</span><span class="w"></span>
+<span class="w">        </span><span class="n">hu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hu1</span><span class="w"></span>
+<span class="w">     </span><span class="k">end if</span>
+<span class="k">  end if</span>
+
+<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">     if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">bn</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">bl1</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">bl2</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">bl3</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        call </span><span class="n">chgubi</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">hu</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">     </span><span class="k">else</span>
+<span class="k">        call </span><span class="n">chguit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">hu</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="w">     </span><span class="k">end if</span>
+<span class="k">  else</span>
+<span class="k">     if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">a00</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="w">        </span><span class="n">b00</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"></span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<span class="w">        </span><span class="k">call </span><span class="n">chguit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">hu</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">hu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hu</span><span class="w"></span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a00</span><span class="w"></span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b00</span><span class="w"></span>
+<span class="w">        </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="w">     </span><span class="k">else if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">bn</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">.</span><span class="nb">not</span><span class="p">.</span><span class="w"> </span><span class="n">il1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        call </span><span class="n">chgubi</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">hu</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">     </span><span class="k">end if</span>
+<span class="k">  end if</span>
+
+<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">     write</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"></span>
+<span class="w">     </span><span class="k">write</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;CHGU - Warning!&#39;</span><span class="w"></span>
+<span class="w">     </span><span class="k">write</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;  Accurate results were not obtained.&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="k">end if</span>
+
+<span class="k">  return</span>
+<span class="k">end subroutine </span><span class="n">chgu</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
     
     </div>
   </div>
@@ -410,7 +647,7 @@ Output, integer ( kind = 4 ) MD, the method code.
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

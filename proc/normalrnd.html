@@ -80,75 +80,131 @@
   <div class="row">
     <h1>normalrnd
       <small>Function</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.0% of total for procedures.">11 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/random_mt.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/random_mt.f90.html'>random_mt.f90</a></li>
-     <li class="active">normalrnd</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.0% of total for procedures.">11 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/random_mt.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/random_mt.f90.html'>random_mt.f90</a></li>
+          <li class="active">normalrnd</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/normalrnd.html#src">normalrnd</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/normalrnd.html#src">normalrnd</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>function normalrnd(mean, stdev) result(c)</h2>
+    <h2> function normalrnd(mean, stdev) result(c)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-mean~4"></span>real(kind=8)</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mean~3"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>mean</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-stdev"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mean</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-stdev"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>stdev</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>stdev</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
-   <h3>Return Value <small><span class="anchor" id="variable-c~35"></span>real(kind=8)</small></h3>
-    
+      <h3>Return Value
+        <small>
+          <span class="anchor" id="variable-c~37"></span>
+          real(kind=8)
+        </small>
+      </h3>
+      
     <br>
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -290,86 +346,86 @@
 <path fill="none" stroke="#000000" d="M293.32,-125.01C286.62,-133.97 293.02,-143 312.5,-143 324.37,-143 331.39,-139.65 333.54,-135"/>
 <polygon fill="#000000" stroke="#000000" points="336.95,-134.21 331.68,-125.01 330.07,-135.49 336.95,-134.21"/>
 </g>
-<!-- proc~student_trnd -->
-<g id="proc~~normalrnd~~CalledByGraph_node3" class="node">
-<title>proc~student_trnd</title>
-<g id="a_proc~~normalrnd~~CalledByGraph_node3"><a xlink:href=".././proc/student_trnd.html" xlink:title="student_trnd">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="79,-105 0,-105 0,-81 79,-81 79,-105"/>
-<text text-anchor="middle" x="39.5" y="-90.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">student_trnd</text>
-</a>
-</g>
-</g>
-<!-- proc~student_trnd&#45;&gt;proc~normalrnd -->
-<g id="proc~~normalrnd~~CalledByGraph_edge2" class="edge">
-<title>proc~student_trnd&#45;&gt;proc~normalrnd</title>
-<path fill="none" stroke="#000000" d="M75.36,-80.93C87.73,-77.12 101.85,-73.31 115,-71 209.69,-54.36 322.72,-51.65 383.54,-51.56"/>
-<polygon fill="#000000" stroke="#000000" points="383.91,-55.06 393.91,-51.56 383.91,-48.06 383.91,-55.06"/>
-</g>
-<!-- proc~chi_squarernd -->
-<g id="proc~~normalrnd~~CalledByGraph_node6" class="node">
-<title>proc~chi_squarernd</title>
-<g id="a_proc~~normalrnd~~CalledByGraph_node6"><a xlink:href=".././proc/chi_squarernd.html" xlink:title="chi_squarernd">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="217,-146 129,-146 129,-122 217,-122 217,-146"/>
-<text text-anchor="middle" x="173" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">chi_squarernd</text>
-</a>
-</g>
-</g>
-<!-- proc~student_trnd&#45;&gt;proc~chi_squarernd -->
-<g id="proc~~normalrnd~~CalledByGraph_edge8" class="edge">
-<title>proc~student_trnd&#45;&gt;proc~chi_squarernd</title>
-<path fill="none" stroke="#000000" d="M79.24,-105.08C93.03,-109.38 108.74,-114.28 123.26,-118.8"/>
-<polygon fill="#000000" stroke="#000000" points="122.49,-122.23 133.08,-121.87 124.57,-115.55 122.49,-122.23"/>
-</g>
 <!-- proc~log_normalrnd -->
-<g id="proc~~normalrnd~~CalledByGraph_node4" class="node">
+<g id="proc~~normalrnd~~CalledByGraph_node3" class="node">
 <title>proc~log_normalrnd</title>
-<g id="a_proc~~normalrnd~~CalledByGraph_node4"><a xlink:href=".././proc/log_normalrnd.html" xlink:title="log_normalrnd">
+<g id="a_proc~~normalrnd~~CalledByGraph_node3"><a xlink:href=".././proc/log_normalrnd.html" xlink:title="log_normalrnd">
 <polygon fill="#d94e8f" stroke="#d94e8f" points="358,-24 267,-24 267,0 358,0 358,-24"/>
 <text text-anchor="middle" x="312.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">log_normalrnd</text>
 </a>
 </g>
 </g>
 <!-- proc~log_normalrnd&#45;&gt;proc~normalrnd -->
-<g id="proc~~normalrnd~~CalledByGraph_edge3" class="edge">
+<g id="proc~~normalrnd~~CalledByGraph_edge2" class="edge">
 <title>proc~log_normalrnd&#45;&gt;proc~normalrnd</title>
 <path fill="none" stroke="#000000" d="M347.7,-24C359.19,-28.03 372.16,-32.58 384.25,-36.82"/>
 <polygon fill="#000000" stroke="#000000" points="383.12,-40.14 393.71,-40.14 385.44,-33.53 383.12,-40.14"/>
 </g>
-<!-- proc~betarnd -->
-<g id="proc~~normalrnd~~CalledByGraph_node5" class="node">
-<title>proc~betarnd</title>
-<g id="a_proc~~normalrnd~~CalledByGraph_node5"><a xlink:href=".././proc/betarnd.html" xlink:title="betarnd">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="200.5,-188 145.5,-188 145.5,-164 200.5,-164 200.5,-188"/>
-<text text-anchor="middle" x="173" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">betarnd</text>
+<!-- proc~student_trnd -->
+<g id="proc~~normalrnd~~CalledByGraph_node4" class="node">
+<title>proc~student_trnd</title>
+<g id="a_proc~~normalrnd~~CalledByGraph_node4"><a xlink:href=".././proc/student_trnd.html" xlink:title="student_trnd">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="79,-84 0,-84 0,-60 79,-60 79,-84"/>
+<text text-anchor="middle" x="39.5" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">student_trnd</text>
 </a>
 </g>
 </g>
-<!-- proc~betarnd&#45;&gt;proc~gammarnd -->
-<g id="proc~~normalrnd~~CalledByGraph_edge5" class="edge">
-<title>proc~betarnd&#45;&gt;proc~gammarnd</title>
-<path fill="none" stroke="#000000" d="M200.67,-166.97C210.33,-163.49 221.26,-159.31 231,-155 247.95,-147.49 266.31,-138.02 281.21,-129.97"/>
-<polygon fill="#000000" stroke="#000000" points="282.9,-133.04 290,-125.18 279.55,-126.89 282.9,-133.04"/>
+<!-- proc~student_trnd&#45;&gt;proc~normalrnd -->
+<g id="proc~~normalrnd~~CalledByGraph_edge3" class="edge">
+<title>proc~student_trnd&#45;&gt;proc~normalrnd</title>
+<path fill="none" stroke="#000000" d="M79.02,-70.01C151.42,-66.27 307.36,-58.21 383.65,-54.27"/>
+<polygon fill="#000000" stroke="#000000" points="384.07,-57.75 393.87,-53.74 383.71,-50.76 384.07,-57.75"/>
 </g>
-<!-- proc~chi_squarernd&#45;&gt;proc~gammarnd -->
-<g id="proc~~normalrnd~~CalledByGraph_edge6" class="edge">
-<title>proc~chi_squarernd&#45;&gt;proc~gammarnd</title>
-<path fill="none" stroke="#000000" d="M217.13,-127.41C232.76,-125.03 250.46,-122.32 266.27,-119.91"/>
-<polygon fill="#000000" stroke="#000000" points="266.99,-123.34 276.35,-118.37 265.93,-116.42 266.99,-123.34"/>
+<!-- proc~chi_squarernd -->
+<g id="proc~~normalrnd~~CalledByGraph_node7" class="node">
+<title>proc~chi_squarernd</title>
+<g id="a_proc~~normalrnd~~CalledByGraph_node7"><a xlink:href=".././proc/chi_squarernd.html" xlink:title="chi_squarernd">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="217,-104 129,-104 129,-80 217,-80 217,-104"/>
+<text text-anchor="middle" x="173" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">chi_squarernd</text>
+</a>
+</g>
+</g>
+<!-- proc~student_trnd&#45;&gt;proc~chi_squarernd -->
+<g id="proc~~normalrnd~~CalledByGraph_edge8" class="edge">
+<title>proc~student_trnd&#45;&gt;proc~chi_squarernd</title>
+<path fill="none" stroke="#000000" d="M79.24,-77.89C91.68,-79.78 105.68,-81.91 118.95,-83.93"/>
+<polygon fill="#000000" stroke="#000000" points="118.52,-87.41 128.93,-85.45 119.57,-80.49 118.52,-87.41"/>
 </g>
 <!-- proc~inverse_gammarnd -->
-<g id="proc~~normalrnd~~CalledByGraph_node7" class="node">
+<g id="proc~~normalrnd~~CalledByGraph_node5" class="node">
 <title>proc~inverse_gammarnd</title>
-<g id="a_proc~~normalrnd~~CalledByGraph_node7"><a xlink:href=".././proc/inverse_gammarnd.html" xlink:title="inverse_gammarnd">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="231,-104 115,-104 115,-80 231,-80 231,-104"/>
-<text text-anchor="middle" x="173" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">inverse_gammarnd</text>
+<g id="a_proc~~normalrnd~~CalledByGraph_node5"><a xlink:href=".././proc/inverse_gammarnd.html" xlink:title="inverse_gammarnd">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="231,-188 115,-188 115,-164 231,-164 231,-188"/>
+<text text-anchor="middle" x="173" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">inverse_gammarnd</text>
 </a>
 </g>
 </g>
 <!-- proc~inverse_gammarnd&#45;&gt;proc~gammarnd -->
-<g id="proc~~normalrnd~~CalledByGraph_edge7" class="edge">
+<g id="proc~~normalrnd~~CalledByGraph_edge5" class="edge">
 <title>proc~inverse_gammarnd&#45;&gt;proc~gammarnd</title>
-<path fill="none" stroke="#000000" d="M231.12,-100.72C242.87,-102.52 255.09,-104.38 266.34,-106.1"/>
-<polygon fill="#000000" stroke="#000000" points="265.96,-109.58 276.37,-107.63 267.01,-102.66 265.96,-109.58"/>
+<path fill="none" stroke="#000000" d="M208.95,-163.93C216.3,-161.16 223.96,-158.12 231,-155 247.95,-147.49 266.31,-138.02 281.21,-129.97"/>
+<polygon fill="#000000" stroke="#000000" points="282.9,-133.04 290,-125.18 279.55,-126.89 282.9,-133.04"/>
+</g>
+<!-- proc~betarnd -->
+<g id="proc~~normalrnd~~CalledByGraph_node6" class="node">
+<title>proc~betarnd</title>
+<g id="a_proc~~normalrnd~~CalledByGraph_node6"><a xlink:href=".././proc/betarnd.html" xlink:title="betarnd">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="200.5,-146 145.5,-146 145.5,-122 200.5,-122 200.5,-146"/>
+<text text-anchor="middle" x="173" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">betarnd</text>
+</a>
+</g>
+</g>
+<!-- proc~betarnd&#45;&gt;proc~gammarnd -->
+<g id="proc~~normalrnd~~CalledByGraph_edge6" class="edge">
+<title>proc~betarnd&#45;&gt;proc~gammarnd</title>
+<path fill="none" stroke="#000000" d="M200.51,-129.95C219.17,-127.1 244.61,-123.22 266.43,-119.88"/>
+<polygon fill="#000000" stroke="#000000" points="267.12,-123.32 276.48,-118.35 266.07,-116.4 267.12,-123.32"/>
+</g>
+<!-- proc~chi_squarernd&#45;&gt;proc~gammarnd -->
+<g id="proc~~normalrnd~~CalledByGraph_edge7" class="edge">
+<title>proc~chi_squarernd&#45;&gt;proc~gammarnd</title>
+<path fill="none" stroke="#000000" d="M217.13,-98.59C232.76,-100.97 250.46,-103.68 266.27,-106.09"/>
+<polygon fill="#000000" stroke="#000000" points="265.93,-109.58 276.35,-107.63 266.99,-102.66 265.93,-109.58"/>
 </g>
 </g>
 </svg>
@@ -437,14 +493,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/normalrnd.html#src">normalrnd</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/normalrnd.html#src">normalrnd</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -484,7 +559,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

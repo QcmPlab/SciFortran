@@ -80,115 +80,228 @@
   <div class="row">
     <h1>bracket
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">75 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/brent.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/brent.f90.html'>brent.f90</a></li>
-     <li class="active">bracket</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">75 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/brent.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/brent.f90.html'>brent.f90</a></li>
+          <li class="active">bracket</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/bracket.html#src">bracket</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/bracket.html#src">bracket</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine bracket(ax, bx, cx, fa, fb, fc, func)</h2>
+    <h2> subroutine bracket(ax, bx, cx, fa, fb, fc, func)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-ax~3"></span>real(kind=8),</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ax~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>ax</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-bx~3"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ax</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bx~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>bx</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-cx~3"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bx</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cx~3"></span>
+              real(kind=8),
+            </td>
 <td>intent(out)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>cx</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-fa"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cx</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fa"></span>
+              real(kind=8),
+            </td>
 <td>intent(out)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>fa</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-fb"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fa</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fb"></span>
+              real(kind=8),
+            </td>
 <td>intent(out)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>fb</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-fc"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fb</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fc"></span>
+              real(kind=8),
+            </td>
 <td>intent(out)</td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>fc</strong></td><td></td>
-</tr>
-<tr>
-  <td colspan="7">
-      <small><h5>function func(x)</h5>    
-<h6>Arguments</h6>      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" ></span>real(kind=8)</td>
-<td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>x</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+     function func(x)  
 
-<h6>Return Value <small>real(kind=8)</small></h6>  
+    </h5>
+  
+
+  <h6>Arguments</h6>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h6>
+    Return Value
+    <small>real(kind=8)</small>
+    </h6>
+    
 </small>
-  </td> 
-</tr>
-</tbody>
-</table>
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -228,33 +341,33 @@
 <path fill="none" stroke="#000000" d="M72.55,-85.73C86.09,-80.39 102.83,-73.78 117.54,-67.99"/>
 <polygon fill="#000000" stroke="#000000" points="118.83,-71.24 126.85,-64.31 116.26,-64.73 118.83,-71.24"/>
 </g>
-<!-- proc~dbrent_wgrad -->
-<g id="proc~~bracket~~CalledByGraph_node3" class="node">
-<title>proc~dbrent_wgrad</title>
-<g id="a_proc~~bracket~~CalledByGraph_node3"><a xlink:href=".././proc/dbrent_wgrad.html" xlink:title="dbrent_wgrad">
-<polygon fill="#d9534f" stroke="#d9534f" points="88,-66 3,-66 3,-42 88,-42 88,-66"/>
-<text text-anchor="middle" x="45.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dbrent_wgrad</text>
-</a>
-</g>
-</g>
-<!-- proc~dbrent_wgrad&#45;&gt;proc~bracket -->
-<g id="proc~~bracket~~CalledByGraph_edge2" class="edge">
-<title>proc~dbrent_wgrad&#45;&gt;proc~bracket</title>
-<path fill="none" stroke="#000000" d="M88.29,-54C97.77,-54 107.76,-54 116.98,-54"/>
-<polygon fill="#000000" stroke="#000000" points="117,-57.5 127,-54 117,-50.5 117,-57.5"/>
-</g>
 <!-- proc~dbrent_nograd -->
-<g id="proc~~bracket~~CalledByGraph_node4" class="node">
+<g id="proc~~bracket~~CalledByGraph_node3" class="node">
 <title>proc~dbrent_nograd</title>
-<g id="a_proc~~bracket~~CalledByGraph_node4"><a xlink:href=".././proc/dbrent_nograd.html" xlink:title="dbrent_nograd">
-<polygon fill="#d9534f" stroke="#d9534f" points="91,-24 0,-24 0,0 91,0 91,-24"/>
-<text text-anchor="middle" x="45.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dbrent_nograd</text>
+<g id="a_proc~~bracket~~CalledByGraph_node3"><a xlink:href=".././proc/dbrent_nograd.html" xlink:title="dbrent_nograd">
+<polygon fill="#d9534f" stroke="#d9534f" points="91,-66 0,-66 0,-42 91,-42 91,-66"/>
+<text text-anchor="middle" x="45.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dbrent_nograd</text>
 </a>
 </g>
 </g>
 <!-- proc~dbrent_nograd&#45;&gt;proc~bracket -->
-<g id="proc~~bracket~~CalledByGraph_edge3" class="edge">
+<g id="proc~~bracket~~CalledByGraph_edge2" class="edge">
 <title>proc~dbrent_nograd&#45;&gt;proc~bracket</title>
+<path fill="none" stroke="#000000" d="M91.05,-54C99.63,-54 108.51,-54 116.78,-54"/>
+<polygon fill="#000000" stroke="#000000" points="116.87,-57.5 126.87,-54 116.87,-50.5 116.87,-57.5"/>
+</g>
+<!-- proc~dbrent_wgrad -->
+<g id="proc~~bracket~~CalledByGraph_node4" class="node">
+<title>proc~dbrent_wgrad</title>
+<g id="a_proc~~bracket~~CalledByGraph_node4"><a xlink:href=".././proc/dbrent_wgrad.html" xlink:title="dbrent_wgrad">
+<polygon fill="#d9534f" stroke="#d9534f" points="88,-24 3,-24 3,0 88,0 88,-24"/>
+<text text-anchor="middle" x="45.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dbrent_wgrad</text>
+</a>
+</g>
+</g>
+<!-- proc~dbrent_wgrad&#45;&gt;proc~bracket -->
+<g id="proc~~bracket~~CalledByGraph_edge3" class="edge">
+<title>proc~dbrent_wgrad&#45;&gt;proc~bracket</title>
 <path fill="none" stroke="#000000" d="M77.02,-24.04C89.56,-28.98 104.17,-34.74 117.21,-39.88"/>
 <polygon fill="#000000" stroke="#000000" points="116.22,-43.26 126.81,-43.67 118.79,-36.75 116.22,-43.26"/>
 </g>
@@ -324,14 +437,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/bracket.html#src">bracket</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/bracket.html#src">bracket</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -439,7 +571,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

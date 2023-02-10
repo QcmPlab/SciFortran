@@ -80,120 +80,243 @@
   <div class="row">
     <h1>zeigh_simple
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.2% of total for procedures.">93 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/linalg_eigh.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/linalg_eigh.f90.html'>linalg_eigh.f90</a></li>
-     <li class="active">zeigh_simple</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.2% of total for procedures.">93 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/linalg_eigh.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/linalg_eigh.f90.html'>linalg_eigh.f90</a></li>
+          <li class="active">zeigh_simple</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/zeigh_simple.html#src">zeigh_simple</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/zeigh_simple.html#src">zeigh_simple</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine zeigh_simple(A, E, method, jobz, uplo, vl, vu, il, iu, tol)</h2>
+    <h2> subroutine zeigh_simple(A, E, method, jobz, uplo, vl, vu, il, iu, tol)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-a~2"></span>complex(kind=8),</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~14"></span>
+              complex(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(:,:)</td><td>::</td>
-  <td><strong>A</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-e~2"></span>real(kind=8),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>A</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-e~2"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(size(A,2))</td><td>::</td>
-  <td><strong>E</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-method~2"></span>character(len=*),</td>
+              <td></td>            <td>
+              dimension(size(A,2))
+            </td>
+            <td>::</td>
+            <td><strong>E</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-method~4"></span>
+              character(len=*),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>method</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-jobz~2"></span>character(len=1),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>method</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jobz~4"></span>
+              character(len=1),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>jobz</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-uplo~2"></span>character(len=1),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>jobz</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-uplo~6"></span>
+              character(len=1),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>uplo</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-vl~2"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>uplo</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vl~4"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>vl</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-vu~2"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>vl</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vu~4"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>vu</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-il~2"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>vu</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-il~4"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>il</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-iu~2"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>il</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iu~4"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>iu</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-tol~2"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iu</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol~25"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>tol</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -230,39 +353,39 @@
 <path fill="none" stroke="#000000" d="M61.67,-87.15C77.05,-96.65 98.64,-109.98 115.85,-120.61"/>
 <polygon fill="#000000" stroke="#000000" points="114.05,-123.61 124.39,-125.89 117.72,-117.66 114.05,-123.61"/>
 </g>
-<!-- zheevx -->
+<!-- zheevd -->
 <g id="proc~~zeigh_simple~~CallsGraph_node3" class="node">
-<title>zheevx</title>
+<title>zheevd</title>
 <polygon fill="#777777" stroke="#777777" points="172,-108 118,-108 118,-84 172,-84 172,-108"/>
-<text text-anchor="middle" x="145" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">zheevx</text>
+<text text-anchor="middle" x="145" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">zheevd</text>
 </g>
-<!-- proc~zeigh_simple&#45;&gt;zheevx -->
+<!-- proc~zeigh_simple&#45;&gt;zheevd -->
 <g id="proc~~zeigh_simple~~CallsGraph_edge2" class="edge">
-<title>proc~zeigh_simple&#45;&gt;zheevx</title>
+<title>proc~zeigh_simple&#45;&gt;zheevd</title>
 <path fill="none" stroke="#000000" d="M82.02,-83.24C90.59,-85 99.6,-86.86 108,-88.59"/>
 <polygon fill="#000000" stroke="#000000" points="107.39,-92.04 117.89,-90.63 108.81,-85.18 107.39,-92.04"/>
 </g>
-<!-- zheev -->
+<!-- zheevx -->
 <g id="proc~~zeigh_simple~~CallsGraph_node4" class="node">
-<title>zheev</title>
+<title>zheevx</title>
 <polygon fill="#777777" stroke="#777777" points="172,-66 118,-66 118,-42 172,-42 172,-66"/>
-<text text-anchor="middle" x="145" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">zheev</text>
+<text text-anchor="middle" x="145" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">zheevx</text>
 </g>
-<!-- proc~zeigh_simple&#45;&gt;zheev -->
+<!-- proc~zeigh_simple&#45;&gt;zheevx -->
 <g id="proc~~zeigh_simple~~CallsGraph_edge3" class="edge">
-<title>proc~zeigh_simple&#45;&gt;zheev</title>
+<title>proc~zeigh_simple&#45;&gt;zheevx</title>
 <path fill="none" stroke="#000000" d="M82.02,-66.76C90.59,-65 99.6,-63.14 108,-61.41"/>
 <polygon fill="#000000" stroke="#000000" points="108.81,-64.82 117.89,-59.37 107.39,-57.96 108.81,-64.82"/>
 </g>
-<!-- zheevd -->
+<!-- zheev -->
 <g id="proc~~zeigh_simple~~CallsGraph_node5" class="node">
-<title>zheevd</title>
+<title>zheev</title>
 <polygon fill="#777777" stroke="#777777" points="172,-24 118,-24 118,0 172,0 172,-24"/>
-<text text-anchor="middle" x="145" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">zheevd</text>
+<text text-anchor="middle" x="145" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">zheev</text>
 </g>
-<!-- proc~zeigh_simple&#45;&gt;zheevd -->
+<!-- proc~zeigh_simple&#45;&gt;zheev -->
 <g id="proc~~zeigh_simple~~CallsGraph_edge4" class="edge">
-<title>proc~zeigh_simple&#45;&gt;zheevd</title>
+<title>proc~zeigh_simple&#45;&gt;zheev</title>
 <path fill="none" stroke="#000000" d="M61.67,-62.85C77.05,-53.35 98.64,-40.02 115.85,-29.39"/>
 <polygon fill="#000000" stroke="#000000" points="117.72,-32.34 124.39,-24.11 114.05,-26.39 117.72,-32.34"/>
 </g>
@@ -332,14 +455,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/zeigh_simple.html#src">zeigh_simple</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/zeigh_simple.html#src">zeigh_simple</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -472,7 +614,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

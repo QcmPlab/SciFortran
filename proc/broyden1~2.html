@@ -80,110 +80,223 @@
   <div class="row">
     <h1>broyden1
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.2% of total for procedures.">121 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/SF_OPTIMIZE.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/sf_optimize.f90.html'>SF_OPTIMIZE.f90</a></li>
-     <li><a href='../module/sf_optimize.html'>SF_OPTIMIZE</a></li>
-     <li class="active">broyden1</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.2% of total for procedures.">121 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/SF_OPTIMIZE.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/sf_optimize.f90.html'>SF_OPTIMIZE.f90</a></li>
+              <li><a href='../module/sf_optimize.html'>SF_OPTIMIZE</a></li>
+          <li class="active">broyden1</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<em>None</em>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>public subroutine broyden1(ff, x, check, maxits, tol, tol1, tolmin, stpmx, noexit)</h2>
+    <h2>public  subroutine broyden1(ff, x, check, maxits, tol, tol1, tolmin, stpmx, noexit)  
+</h2>
     
 
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-ff~2"></span>procedure(<a href='../interface/broydn_func.html'>broydn_func</a>)</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ff~2"></span>
+              procedure(<a href='../interface/broydn_func.html'>broydn_func</a>)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>ff</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-x~257"></span>real(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ff</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~257"></span>
+              real(kind=8),
+            </td>
 <td>intent(inout),</td>
-  <td></td>  <td>dimension(:)</td><td>::</td>
-  <td><strong>x</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-check~7"></span>logical,</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-check~7"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>check</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-maxits~2"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>check</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maxits~2"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>maxits</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-tol~35"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maxits</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol~35"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>tol</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-tol1~2"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol1~2"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>tol1</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-tolmin~2"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tol1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tolmin~2"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>tolmin</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-stpmx~3"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tolmin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-stpmx~3"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>stpmx</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-noexit~2"></span>logical,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>stpmx</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-noexit~2"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>noexit</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>noexit</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -197,121 +310,121 @@
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: proc~~broyden1~2~~CallsGraph Pages: 1 -->
-<svg id="procbroyden12CallsGraph" width="301pt" height="444pt"
- viewBox="0.00 0.00 301.00 444.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~broyden1~2~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 440)">
+<svg id="procbroyden12CallsGraph" width="301pt" height="433pt"
+ viewBox="0.00 0.00 301.00 433.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~broyden1~2~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 429.25)">
 <title>proc~~broyden1~2~~CallsGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-440 297,-440 297,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-429.25 297,-429.25 297,4 -4,4"/>
 <!-- proc~broyden1~2 -->
 <g id="proc~~broyden1~2~~CallsGraph_node1" class="node">
 <title>proc~broyden1~2</title>
 <polygon fill="none" stroke="black" points="63,-234 0,-234 0,-210 63,-210 63,-234"/>
 <text text-anchor="middle" x="31.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50">broyden1</text>
 </g>
-<!-- proc~lower_triangle -->
-<g id="proc~~broyden1~2~~CallsGraph_node2" class="node">
-<title>proc~lower_triangle</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node2"><a xlink:href=".././proc/lower_triangle.html" xlink:title="lower_triangle">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="187,-436 99,-436 99,-412 187,-412 187,-436"/>
-<text text-anchor="middle" x="143" y="-421.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lower_triangle</text>
-</a>
-</g>
-</g>
-<!-- proc~broyden1~2&#45;&gt;proc~lower_triangle -->
-<g id="proc~~broyden1~2~~CallsGraph_edge1" class="edge">
-<title>proc~broyden1~2&#45;&gt;proc~lower_triangle</title>
-<path fill="none" stroke="#000000" d="M33.83,-234.16C37.89,-265.8 52.79,-351.81 99,-403 99.88,-403.97 100.81,-404.9 101.78,-405.8"/>
-<polygon fill="#000000" stroke="#000000" points="99.87,-408.73 109.98,-411.9 104.05,-403.12 99.87,-408.73"/>
-</g>
-<!-- proc~put_diag -->
-<g id="proc~~broyden1~2~~CallsGraph_node3" class="node">
-<title>proc~put_diag</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node3"><a xlink:href=".././proc/put_diag.html" xlink:title="put_diag">
-<polygon fill="#d9534f" stroke="#d9534f" points="172,-352 114,-352 114,-328 172,-328 172,-352"/>
-<text text-anchor="middle" x="143" y="-337.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">put_diag</text>
-</a>
-</g>
-</g>
-<!-- proc~broyden1~2&#45;&gt;proc~put_diag -->
-<g id="proc~~broyden1~2~~CallsGraph_edge2" class="edge">
-<title>proc~broyden1~2&#45;&gt;proc~put_diag</title>
-<path fill="none" stroke="#000000" d="M39.17,-234.22C49.89,-253.05 72.47,-289.57 99,-314 102.18,-316.93 105.73,-319.69 109.4,-322.25"/>
-<polygon fill="#000000" stroke="#000000" points="107.74,-325.35 118.05,-327.82 111.54,-319.46 107.74,-325.35"/>
-</g>
-<!-- proc~get_diag -->
-<g id="proc~~broyden1~2~~CallsGraph_node4" class="node">
-<title>proc~get_diag</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node4"><a xlink:href=".././proc/get_diag.html" xlink:title="get_diag">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="172,-394 114,-394 114,-370 172,-370 172,-394"/>
-<text text-anchor="middle" x="143" y="-379.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_diag</text>
-</a>
-</g>
-</g>
-<!-- proc~broyden1~2&#45;&gt;proc~get_diag -->
-<g id="proc~~broyden1~2~~CallsGraph_edge4" class="edge">
-<title>proc~broyden1~2&#45;&gt;proc~get_diag</title>
-<path fill="none" stroke="#000000" d="M35.45,-234.38C42.32,-260.81 61.7,-323.4 99,-361 100.84,-362.86 102.88,-364.58 105.05,-366.16"/>
-<polygon fill="#000000" stroke="#000000" points="103.48,-369.31 113.82,-371.63 107.18,-363.37 103.48,-369.31"/>
-</g>
-<!-- proc~lnsrch -->
-<g id="proc~~broyden1~2~~CallsGraph_node5" class="node">
-<title>proc~lnsrch</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node5"><a xlink:href=".././proc/lnsrch.html" xlink:title="lnsrch">
-<polygon fill="#d9534f" stroke="#d9534f" points="170,-192 116,-192 116,-168 170,-168 170,-192"/>
-<text text-anchor="middle" x="143" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lnsrch</text>
-</a>
-</g>
-</g>
-<!-- proc~broyden1~2&#45;&gt;proc~lnsrch -->
-<g id="proc~~broyden1~2~~CallsGraph_edge5" class="edge">
-<title>proc~broyden1~2&#45;&gt;proc~lnsrch</title>
-<path fill="none" stroke="#000000" d="M63,-210.3C76.47,-205.13 92.4,-199.03 106.41,-193.65"/>
-<polygon fill="#000000" stroke="#000000" points="107.66,-196.92 115.75,-190.07 105.16,-190.38 107.66,-196.92"/>
-</g>
-<!-- proc~qrupdt -->
-<g id="proc~~broyden1~2~~CallsGraph_node6" class="node">
-<title>proc~qrupdt</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node6"><a xlink:href=".././proc/qrupdt.html" xlink:title="qrupdt">
-<polygon fill="#d9534f" stroke="#d9534f" points="170,-66 116,-66 116,-42 170,-42 170,-66"/>
-<text text-anchor="middle" x="143" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">qrupdt</text>
-</a>
-</g>
-</g>
-<!-- proc~broyden1~2&#45;&gt;proc~qrupdt -->
-<g id="proc~~broyden1~2~~CallsGraph_edge3" class="edge">
-<title>proc~broyden1~2&#45;&gt;proc~qrupdt</title>
-<path fill="none" stroke="#000000" d="M35.05,-209.74C41.34,-182.31 59.97,-115.19 99,-75 101.45,-72.48 104.26,-70.22 107.25,-68.2"/>
-<polygon fill="#000000" stroke="#000000" points="109.09,-71.18 115.99,-63.14 105.58,-65.12 109.09,-71.18"/>
-</g>
 <!-- proc~vabs -->
-<g id="proc~~broyden1~2~~CallsGraph_node7" class="node">
+<g id="proc~~broyden1~2~~CallsGraph_node2" class="node">
 <title>proc~vabs</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node7"><a xlink:href=".././proc/vabs.html" xlink:title="vabs">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="285,-234 231,-234 231,-210 285,-210 285,-234"/>
-<text text-anchor="middle" x="258" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">vabs</text>
+<g id="a_proc~~broyden1~2~~CallsGraph_node2"><a xlink:href=".././proc/vabs.html" xlink:title="vabs">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="285,-358 231,-358 231,-334 285,-334 285,-358"/>
+<text text-anchor="middle" x="258" y="-343.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">vabs</text>
 </a>
 </g>
 </g>
 <!-- proc~broyden1~2&#45;&gt;proc~vabs -->
-<g id="proc~~broyden1~2~~CallsGraph_edge6" class="edge">
+<g id="proc~~broyden1~2~~CallsGraph_edge1" class="edge">
 <title>proc~broyden1~2&#45;&gt;proc~vabs</title>
-<path fill="none" stroke="#000000" d="M63.16,-233.84C74.27,-237.55 87.03,-241.16 99,-243 137.65,-248.96 148.3,-248.68 187,-243 198.34,-241.34 210.4,-238.23 221.25,-234.91"/>
-<polygon fill="#000000" stroke="#000000" points="222.37,-238.22 230.82,-231.83 220.23,-231.56 222.37,-238.22"/>
+<path fill="none" stroke="#000000" d="M36.32,-234.26C44.08,-256.88 63.96,-304.89 99,-327 135.74,-350.18 186.95,-352.06 221,-350.05"/>
+<polygon fill="#000000" stroke="#000000" points="221.26,-353.54 230.98,-349.32 220.75,-346.56 221.26,-353.54"/>
+</g>
+<!-- proc~lower_triangle -->
+<g id="proc~~broyden1~2~~CallsGraph_node3" class="node">
+<title>proc~lower_triangle</title>
+<g id="a_proc~~broyden1~2~~CallsGraph_node3"><a xlink:href=".././proc/lower_triangle.html" xlink:title="lower_triangle">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="187,-192 99,-192 99,-168 187,-168 187,-192"/>
+<text text-anchor="middle" x="143" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lower_triangle</text>
+</a>
+</g>
+</g>
+<!-- proc~broyden1~2&#45;&gt;proc~lower_triangle -->
+<g id="proc~~broyden1~2~~CallsGraph_edge4" class="edge">
+<title>proc~broyden1~2&#45;&gt;proc~lower_triangle</title>
+<path fill="none" stroke="#000000" d="M63,-210.3C74.8,-205.77 88.49,-200.53 101.11,-195.68"/>
+<polygon fill="#000000" stroke="#000000" points="102.44,-198.92 110.52,-192.08 99.93,-192.39 102.44,-198.92"/>
+</g>
+<!-- proc~qrdcmp -->
+<g id="proc~~broyden1~2~~CallsGraph_node4" class="node">
+<title>proc~qrdcmp</title>
+<g id="a_proc~~broyden1~2~~CallsGraph_node4"><a xlink:href=".././proc/qrdcmp.html" xlink:title="qrdcmp">
+<polygon fill="#d9534f" stroke="#d9534f" points="170,-398 116,-398 116,-374 170,-374 170,-398"/>
+<text text-anchor="middle" x="143" y="-383.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">qrdcmp</text>
+</a>
+</g>
+</g>
+<!-- proc~broyden1~2&#45;&gt;proc~qrdcmp -->
+<g id="proc~~broyden1~2~~CallsGraph_edge3" class="edge">
+<title>proc~broyden1~2&#45;&gt;proc~qrdcmp</title>
+<path fill="none" stroke="#000000" d="M35.74,-234.04C43.17,-259.8 63.57,-321.04 99,-360 101.7,-362.96 104.81,-365.7 108.1,-368.2"/>
+<polygon fill="#000000" stroke="#000000" points="106.28,-371.2 116.53,-373.9 110.21,-365.4 106.28,-371.2"/>
+</g>
+<!-- proc~qrupdt -->
+<g id="proc~~broyden1~2~~CallsGraph_node5" class="node">
+<title>proc~qrupdt</title>
+<g id="a_proc~~broyden1~2~~CallsGraph_node5"><a xlink:href=".././proc/qrupdt.html" xlink:title="qrupdt">
+<polygon fill="#d9534f" stroke="#d9534f" points="170,-150 116,-150 116,-126 170,-126 170,-150"/>
+<text text-anchor="middle" x="143" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">qrupdt</text>
+</a>
+</g>
+</g>
+<!-- proc~broyden1~2&#45;&gt;proc~qrupdt -->
+<g id="proc~~broyden1~2~~CallsGraph_edge5" class="edge">
+<title>proc~broyden1~2&#45;&gt;proc~qrupdt</title>
+<path fill="none" stroke="#000000" d="M43.33,-209.69C55.79,-196.07 77.31,-174.04 99,-159 101.51,-157.26 104.19,-155.58 106.94,-153.99"/>
+<polygon fill="#000000" stroke="#000000" points="108.67,-157.03 115.81,-149.21 105.35,-150.87 108.67,-157.03"/>
 </g>
 <!-- proc~outerprod -->
-<g id="proc~~broyden1~2~~CallsGraph_node8" class="node">
+<g id="proc~~broyden1~2~~CallsGraph_node6" class="node">
 <title>proc~outerprod</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node8"><a xlink:href=".././proc/outerprod.html" xlink:title="outerprod">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="290.5,-294 225.5,-294 225.5,-270 290.5,-270 290.5,-294"/>
-<text text-anchor="middle" x="258" y="-279.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">outerprod</text>
+<g id="a_proc~~broyden1~2~~CallsGraph_node6"><a xlink:href=".././proc/outerprod.html" xlink:title="outerprod">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290.5,-419 225.5,-419 225.5,-395 290.5,-395 290.5,-419"/>
+<text text-anchor="middle" x="258" y="-404.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">outerprod</text>
 </a>
 </g>
 </g>
 <!-- proc~broyden1~2&#45;&gt;proc~outerprod -->
-<g id="proc~~broyden1~2~~CallsGraph_edge7" class="edge">
+<g id="proc~~broyden1~2~~CallsGraph_edge2" class="edge">
 <title>proc~broyden1~2&#45;&gt;proc~outerprod</title>
-<path fill="none" stroke="#000000" d="M50.02,-234.08C62.97,-242.41 81.35,-253.03 99,-259 137.15,-271.9 182.88,-277.57 215.31,-280.06"/>
-<polygon fill="#000000" stroke="#000000" points="215.12,-283.55 225.34,-280.76 215.61,-276.57 215.12,-283.55"/>
+<path fill="none" stroke="#000000" d="M32.5,-234.27C33.25,-268.63 40.65,-365.97 99,-407 132.55,-430.59 180.81,-426.62 215.16,-419.24"/>
+<polygon fill="#000000" stroke="#000000" points="216.39,-422.55 225.33,-416.87 214.8,-415.73 216.39,-422.55"/>
+</g>
+<!-- proc~get_diag -->
+<g id="proc~~broyden1~2~~CallsGraph_node7" class="node">
+<title>proc~get_diag</title>
+<g id="a_proc~~broyden1~2~~CallsGraph_node7"><a xlink:href=".././proc/get_diag.html" xlink:title="get_diag">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="172,-66 114,-66 114,-42 172,-42 172,-66"/>
+<text text-anchor="middle" x="143" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_diag</text>
+</a>
+</g>
+</g>
+<!-- proc~broyden1~2&#45;&gt;proc~get_diag -->
+<g id="proc~~broyden1~2~~CallsGraph_edge6" class="edge">
+<title>proc~broyden1~2&#45;&gt;proc~get_diag</title>
+<path fill="none" stroke="#000000" d="M35.05,-209.74C41.34,-182.31 59.97,-115.19 99,-75 100.82,-73.12 102.85,-71.39 105,-69.79"/>
+<polygon fill="#000000" stroke="#000000" points="107.14,-72.58 113.75,-64.3 103.42,-66.65 107.14,-72.58"/>
+</g>
+<!-- proc~lnsrch -->
+<g id="proc~~broyden1~2~~CallsGraph_node8" class="node">
+<title>proc~lnsrch</title>
+<g id="a_proc~~broyden1~2~~CallsGraph_node8"><a xlink:href=".././proc/lnsrch.html" xlink:title="lnsrch">
+<polygon fill="#d9534f" stroke="#d9534f" points="170,-318 116,-318 116,-294 170,-294 170,-318"/>
+<text text-anchor="middle" x="143" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lnsrch</text>
+</a>
+</g>
+</g>
+<!-- proc~broyden1~2&#45;&gt;proc~lnsrch -->
+<g id="proc~~broyden1~2~~CallsGraph_edge7" class="edge">
+<title>proc~broyden1~2&#45;&gt;proc~lnsrch</title>
+<path fill="none" stroke="#000000" d="M43.33,-234.31C55.79,-247.93 77.31,-269.96 99,-285 101.51,-286.74 104.19,-288.42 106.94,-290.01"/>
+<polygon fill="#000000" stroke="#000000" points="105.35,-293.13 115.81,-294.79 108.67,-286.97 105.35,-293.13"/>
 </g>
 <!-- proc~unit_matrix -->
 <g id="proc~~broyden1~2~~CallsGraph_node9" class="node">
@@ -328,167 +441,167 @@
 <path fill="none" stroke="#000000" d="M33.61,-209.79C37.19,-177.16 51.12,-86.78 99,-33 99.87,-32.02 100.8,-31.09 101.77,-30.19"/>
 <polygon fill="#000000" stroke="#000000" points="104.04,-32.86 109.94,-24.06 99.84,-27.26 104.04,-32.86"/>
 </g>
-<!-- proc~qrdcmp -->
-<g id="proc~~broyden1~2~~CallsGraph_node10" class="node">
-<title>proc~qrdcmp</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node10"><a xlink:href=".././proc/qrdcmp.html" xlink:title="qrdcmp">
-<polygon fill="#d9534f" stroke="#d9534f" points="170,-234 116,-234 116,-210 170,-210 170,-234"/>
-<text text-anchor="middle" x="143" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">qrdcmp</text>
-</a>
-</g>
-</g>
-<!-- proc~broyden1~2&#45;&gt;proc~qrdcmp -->
-<g id="proc~~broyden1~2~~CallsGraph_edge9" class="edge">
-<title>proc~broyden1~2&#45;&gt;proc~qrdcmp</title>
-<path fill="none" stroke="#000000" d="M63,-222C76.21,-222 91.79,-222 105.6,-222"/>
-<polygon fill="#000000" stroke="#000000" points="105.75,-225.5 115.75,-222 105.75,-218.5 105.75,-225.5"/>
-</g>
 <!-- proc~fdjac -->
-<g id="proc~~broyden1~2~~CallsGraph_node11" class="node">
+<g id="proc~~broyden1~2~~CallsGraph_node10" class="node">
 <title>proc~fdjac</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node11"><a xlink:href=".././proc/fdjac.html" xlink:title="fdjac">
-<polygon fill="#d9534f" stroke="#d9534f" points="170,-108 116,-108 116,-84 170,-84 170,-108"/>
-<text text-anchor="middle" x="143" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fdjac</text>
+<g id="a_proc~~broyden1~2~~CallsGraph_node10"><a xlink:href=".././proc/fdjac.html" xlink:title="fdjac">
+<polygon fill="#d9534f" stroke="#d9534f" points="170,-234 116,-234 116,-210 170,-210 170,-234"/>
+<text text-anchor="middle" x="143" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fdjac</text>
 </a>
 </g>
 </g>
 <!-- proc~broyden1~2&#45;&gt;proc~fdjac -->
-<g id="proc~~broyden1~2~~CallsGraph_edge10" class="edge">
+<g id="proc~~broyden1~2~~CallsGraph_edge9" class="edge">
 <title>proc~broyden1~2&#45;&gt;proc~fdjac</title>
-<path fill="none" stroke="#000000" d="M37.54,-209.78C46.85,-188.47 68.62,-144.2 99,-117 101.48,-114.78 104.23,-112.75 107.11,-110.89"/>
-<polygon fill="#000000" stroke="#000000" points="109.03,-113.82 115.99,-105.84 105.57,-107.74 109.03,-113.82"/>
+<path fill="none" stroke="#000000" d="M63,-222C76.21,-222 91.79,-222 105.6,-222"/>
+<polygon fill="#000000" stroke="#000000" points="105.75,-225.5 115.75,-222 105.75,-218.5 105.75,-225.5"/>
+</g>
+<!-- proc~put_diag -->
+<g id="proc~~broyden1~2~~CallsGraph_node11" class="node">
+<title>proc~put_diag</title>
+<g id="a_proc~~broyden1~2~~CallsGraph_node11"><a xlink:href=".././proc/put_diag.html" xlink:title="put_diag">
+<polygon fill="#d9534f" stroke="#d9534f" points="172,-108 114,-108 114,-84 172,-84 172,-108"/>
+<text text-anchor="middle" x="143" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">put_diag</text>
+</a>
+</g>
+</g>
+<!-- proc~broyden1~2&#45;&gt;proc~put_diag -->
+<g id="proc~~broyden1~2~~CallsGraph_edge10" class="edge">
+<title>proc~broyden1~2&#45;&gt;proc~put_diag</title>
+<path fill="none" stroke="#000000" d="M37.54,-209.78C46.85,-188.47 68.62,-144.2 99,-117 100.9,-115.3 102.95,-113.71 105.11,-112.22"/>
+<polygon fill="#000000" stroke="#000000" points="107,-115.17 113.75,-107 103.38,-109.18 107,-115.17"/>
 </g>
 <!-- proc~rsolv -->
 <g id="proc~~broyden1~2~~CallsGraph_node12" class="node">
 <title>proc~rsolv</title>
 <g id="a_proc~~broyden1~2~~CallsGraph_node12"><a xlink:href=".././proc/rsolv.html" xlink:title="rsolv">
-<polygon fill="#d9534f" stroke="#d9534f" points="170,-150 116,-150 116,-126 170,-126 170,-150"/>
-<text text-anchor="middle" x="143" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rsolv</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="170,-276 116,-276 116,-252 170,-252 170,-276"/>
+<text text-anchor="middle" x="143" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rsolv</text>
 </a>
 </g>
 </g>
 <!-- proc~broyden1~2&#45;&gt;proc~rsolv -->
 <g id="proc~~broyden1~2~~CallsGraph_edge11" class="edge">
 <title>proc~broyden1~2&#45;&gt;proc~rsolv</title>
-<path fill="none" stroke="#000000" d="M43.33,-209.69C55.79,-196.07 77.31,-174.04 99,-159 101.51,-157.26 104.19,-155.58 106.94,-153.99"/>
-<polygon fill="#000000" stroke="#000000" points="108.67,-157.03 115.81,-149.21 105.35,-150.87 108.67,-157.03"/>
+<path fill="none" stroke="#000000" d="M63,-233.7C76.47,-238.87 92.4,-244.97 106.41,-250.35"/>
+<polygon fill="#000000" stroke="#000000" points="105.16,-253.62 115.75,-253.93 107.66,-247.08 105.16,-253.62"/>
 </g>
 <!-- proc~outerdiff -->
 <g id="proc~~broyden1~2~~CallsGraph_node13" class="node">
 <title>proc~outerdiff</title>
 <g id="a_proc~~broyden1~2~~CallsGraph_node13"><a xlink:href=".././proc/outerdiff.html" xlink:title="outerdiff">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="287,-436 229,-436 229,-412 287,-412 287,-436"/>
-<text text-anchor="middle" x="258" y="-421.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">outerdiff</text>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="287,-192 229,-192 229,-168 287,-168 287,-192"/>
+<text text-anchor="middle" x="258" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">outerdiff</text>
 </a>
 </g>
 </g>
 <!-- proc~lower_triangle&#45;&gt;proc~outerdiff -->
 <g id="proc~~broyden1~2~~CallsGraph_edge12" class="edge">
 <title>proc~lower_triangle&#45;&gt;proc~outerdiff</title>
-<path fill="none" stroke="#000000" d="M187.04,-424C197.41,-424 208.42,-424 218.57,-424"/>
-<polygon fill="#000000" stroke="#000000" points="218.76,-427.5 228.76,-424 218.76,-420.5 218.76,-427.5"/>
+<path fill="none" stroke="#000000" d="M187.04,-180C197.41,-180 208.42,-180 218.57,-180"/>
+<polygon fill="#000000" stroke="#000000" points="218.76,-183.5 228.76,-180 218.76,-176.5 218.76,-183.5"/>
 </g>
-<!-- proc~assert_eq2 -->
-<g id="proc~~broyden1~2~~CallsGraph_node15" class="node">
-<title>proc~assert_eq2</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node15"><a xlink:href=".././proc/assert_eq2.html" xlink:title="assert_eq2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="293,-373 223,-373 223,-349 293,-349 293,-373"/>
-<text text-anchor="middle" x="258" y="-358.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_eq2</text>
-</a>
-</g>
-</g>
-<!-- proc~put_diag&#45;&gt;proc~assert_eq2 -->
-<g id="proc~~broyden1~2~~CallsGraph_edge13" class="edge">
-<title>proc~put_diag&#45;&gt;proc~assert_eq2</title>
-<path fill="none" stroke="#000000" d="M172.22,-345.25C184.41,-347.51 198.97,-350.22 212.55,-352.74"/>
-<polygon fill="#000000" stroke="#000000" points="212.22,-356.24 222.69,-354.62 213.5,-349.36 212.22,-356.24"/>
-</g>
-<!-- proc~get_diag&#45;&gt;proc~assert_eq2 -->
+<!-- proc~qrdcmp&#45;&gt;proc~vabs -->
 <g id="proc~~broyden1~2~~CallsGraph_edge14" class="edge">
-<title>proc~get_diag&#45;&gt;proc~assert_eq2</title>
-<path fill="none" stroke="#000000" d="M172.22,-376.75C184.41,-374.49 198.97,-371.78 212.55,-369.26"/>
-<polygon fill="#000000" stroke="#000000" points="213.5,-372.64 222.69,-367.38 212.22,-365.76 213.5,-372.64"/>
+<title>proc~qrdcmp&#45;&gt;proc~vabs</title>
+<path fill="none" stroke="#000000" d="M170.21,-376.72C185.33,-371.37 204.55,-364.57 221.06,-358.72"/>
+<polygon fill="#000000" stroke="#000000" points="222.67,-361.86 230.93,-355.23 220.34,-355.26 222.67,-361.86"/>
 </g>
-<!-- proc~lnsrch&#45;&gt;proc~vabs -->
-<g id="proc~~broyden1~2~~CallsGraph_edge16" class="edge">
-<title>proc~lnsrch&#45;&gt;proc~vabs</title>
-<path fill="none" stroke="#000000" d="M170.21,-189.74C185.47,-195.41 204.92,-202.64 221.53,-208.82"/>
-<polygon fill="#000000" stroke="#000000" points="220.34,-212.11 230.93,-212.31 222.78,-205.55 220.34,-212.11"/>
+<!-- proc~qrdcmp&#45;&gt;proc~outerprod -->
+<g id="proc~~broyden1~2~~CallsGraph_edge15" class="edge">
+<title>proc~qrdcmp&#45;&gt;proc~outerprod</title>
+<path fill="none" stroke="#000000" d="M170.21,-390.87C183.56,-393.35 200.11,-396.43 215.17,-399.23"/>
+<polygon fill="#000000" stroke="#000000" points="214.83,-402.72 225.3,-401.11 216.11,-395.84 214.83,-402.72"/>
 </g>
 <!-- proc~assert_eq4 -->
-<g id="proc~~broyden1~2~~CallsGraph_node16" class="node">
+<g id="proc~~broyden1~2~~CallsGraph_node14" class="node">
 <title>proc~assert_eq4</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node16"><a xlink:href=".././proc/assert_eq4.html" xlink:title="assert_eq4">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="293,-171 223,-171 223,-147 293,-147 293,-171"/>
-<text text-anchor="middle" x="258" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_eq4</text>
+<g id="a_proc~~broyden1~2~~CallsGraph_node14"><a xlink:href=".././proc/assert_eq4.html" xlink:title="assert_eq4">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="293,-296 223,-296 223,-272 293,-272 293,-296"/>
+<text text-anchor="middle" x="258" y="-281.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_eq4</text>
 </a>
 </g>
 </g>
-<!-- proc~lnsrch&#45;&gt;proc~assert_eq4 -->
-<g id="proc~~broyden1~2~~CallsGraph_edge15" class="edge">
-<title>proc~lnsrch&#45;&gt;proc~assert_eq4</title>
-<path fill="none" stroke="#000000" d="M170.21,-175.13C182.8,-172.79 198.24,-169.92 212.59,-167.25"/>
-<polygon fill="#000000" stroke="#000000" points="213.6,-170.63 222.79,-165.36 212.32,-163.74 213.6,-170.63"/>
+<!-- proc~qrdcmp&#45;&gt;proc~assert_eq4 -->
+<g id="proc~~broyden1~2~~CallsGraph_edge13" class="edge">
+<title>proc~qrdcmp&#45;&gt;proc~assert_eq4</title>
+<path fill="none" stroke="#000000" d="M157.41,-373.9C176.86,-356.34 213.1,-323.63 236.08,-302.88"/>
+<polygon fill="#000000" stroke="#000000" points="238.53,-305.38 243.61,-296.09 233.84,-300.19 238.53,-305.38"/>
 </g>
 <!-- proc~ifirstloc -->
-<g id="proc~~broyden1~2~~CallsGraph_node14" class="node">
+<g id="proc~~broyden1~2~~CallsGraph_node15" class="node">
 <title>proc~ifirstloc</title>
-<g id="a_proc~~broyden1~2~~CallsGraph_node14"><a xlink:href=".././proc/ifirstloc.html" xlink:title="ifirstloc">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="285,-87 231,-87 231,-63 285,-63 285,-87"/>
-<text text-anchor="middle" x="258" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ifirstloc</text>
+<g id="a_proc~~broyden1~2~~CallsGraph_node15"><a xlink:href=".././proc/ifirstloc.html" xlink:title="ifirstloc">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="285,-108 231,-108 231,-84 285,-84 285,-108"/>
+<text text-anchor="middle" x="258" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ifirstloc</text>
 </a>
 </g>
 </g>
 <!-- proc~qrupdt&#45;&gt;proc~ifirstloc -->
-<g id="proc~~broyden1~2~~CallsGraph_edge18" class="edge">
+<g id="proc~~broyden1~2~~CallsGraph_edge17" class="edge">
 <title>proc~qrupdt&#45;&gt;proc~ifirstloc</title>
-<path fill="none" stroke="#000000" d="M170.21,-58.87C185.33,-61.68 204.55,-65.25 221.06,-68.32"/>
-<polygon fill="#000000" stroke="#000000" points="220.46,-71.77 230.93,-70.16 221.74,-64.89 220.46,-71.77"/>
+<path fill="none" stroke="#000000" d="M170.21,-128.26C185.47,-122.59 204.92,-115.36 221.53,-109.18"/>
+<polygon fill="#000000" stroke="#000000" points="222.78,-112.45 230.93,-105.69 220.34,-105.89 222.78,-112.45"/>
 </g>
 <!-- proc~assert_eqn -->
 <g id="proc~~broyden1~2~~CallsGraph_node17" class="node">
 <title>proc~assert_eqn</title>
 <g id="a_proc~~broyden1~2~~CallsGraph_node17"><a xlink:href=".././proc/assert_eqn.html" xlink:title="assert_eqn">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="293,-45 223,-45 223,-21 293,-21 293,-45"/>
-<text text-anchor="middle" x="258" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_eqn</text>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="293,-150 223,-150 223,-126 293,-126 293,-150"/>
+<text text-anchor="middle" x="258" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_eqn</text>
 </a>
 </g>
 </g>
 <!-- proc~qrupdt&#45;&gt;proc~assert_eqn -->
-<g id="proc~~broyden1~2~~CallsGraph_edge17" class="edge">
+<g id="proc~~broyden1~2~~CallsGraph_edge16" class="edge">
 <title>proc~qrupdt&#45;&gt;proc~assert_eqn</title>
-<path fill="none" stroke="#000000" d="M170.21,-49.13C182.8,-46.79 198.24,-43.92 212.59,-41.25"/>
-<polygon fill="#000000" stroke="#000000" points="213.6,-44.63 222.79,-39.36 212.32,-37.74 213.6,-44.63"/>
+<path fill="none" stroke="#000000" d="M170.21,-138C182.8,-138 198.24,-138 212.59,-138"/>
+<polygon fill="#000000" stroke="#000000" points="212.79,-141.5 222.79,-138 212.79,-134.5 212.79,-141.5"/>
 </g>
-<!-- proc~qrdcmp&#45;&gt;proc~vabs -->
-<g id="proc~~broyden1~2~~CallsGraph_edge21" class="edge">
-<title>proc~qrdcmp&#45;&gt;proc~vabs</title>
-<path fill="none" stroke="#000000" d="M170.21,-222C185.18,-222 204.19,-222 220.6,-222"/>
-<polygon fill="#000000" stroke="#000000" points="220.93,-225.5 230.93,-222 220.93,-218.5 220.93,-225.5"/>
+<!-- proc~assert_eq2 -->
+<g id="proc~~broyden1~2~~CallsGraph_node16" class="node">
+<title>proc~assert_eq2</title>
+<g id="a_proc~~broyden1~2~~CallsGraph_node16"><a xlink:href=".././proc/assert_eq2.html" xlink:title="assert_eq2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="293,-66 223,-66 223,-42 293,-42 293,-66"/>
+<text text-anchor="middle" x="258" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_eq2</text>
+</a>
 </g>
-<!-- proc~qrdcmp&#45;&gt;proc~outerprod -->
+</g>
+<!-- proc~get_diag&#45;&gt;proc~assert_eq2 -->
+<g id="proc~~broyden1~2~~CallsGraph_edge18" class="edge">
+<title>proc~get_diag&#45;&gt;proc~assert_eq2</title>
+<path fill="none" stroke="#000000" d="M172.22,-54C184.41,-54 198.97,-54 212.55,-54"/>
+<polygon fill="#000000" stroke="#000000" points="212.69,-57.5 222.69,-54 212.69,-50.5 212.69,-57.5"/>
+</g>
+<!-- proc~lnsrch&#45;&gt;proc~vabs -->
 <g id="proc~~broyden1~2~~CallsGraph_edge20" class="edge">
-<title>proc~qrdcmp&#45;&gt;proc~outerprod</title>
-<path fill="none" stroke="#000000" d="M166.87,-234.14C183.64,-243.05 206.63,-255.25 225.19,-265.11"/>
-<polygon fill="#000000" stroke="#000000" points="223.69,-268.28 234.17,-269.88 226.98,-262.1 223.69,-268.28"/>
+<title>proc~lnsrch&#45;&gt;proc~vabs</title>
+<path fill="none" stroke="#000000" d="M170.21,-315.28C185.33,-320.63 204.55,-327.43 221.06,-333.28"/>
+<polygon fill="#000000" stroke="#000000" points="220.34,-336.74 230.93,-336.77 222.67,-330.14 220.34,-336.74"/>
 </g>
-<!-- proc~qrdcmp&#45;&gt;proc~assert_eq4 -->
+<!-- proc~lnsrch&#45;&gt;proc~assert_eq4 -->
 <g id="proc~~broyden1~2~~CallsGraph_edge19" class="edge">
-<title>proc~qrdcmp&#45;&gt;proc~assert_eq4</title>
-<path fill="none" stroke="#000000" d="M169.65,-209.92C175.41,-207.09 181.45,-204.01 187,-201 201.13,-193.33 216.49,-184.21 229.21,-176.43"/>
-<polygon fill="#000000" stroke="#000000" points="231.27,-179.27 237.95,-171.04 227.6,-173.31 231.27,-179.27"/>
+<title>proc~lnsrch&#45;&gt;proc~assert_eq4</title>
+<path fill="none" stroke="#000000" d="M170.21,-300.9C182.8,-298.45 198.24,-295.44 212.59,-292.65"/>
+<polygon fill="#000000" stroke="#000000" points="213.64,-296.01 222.79,-290.66 212.31,-289.14 213.64,-296.01"/>
 </g>
 <!-- proc~fdjac&#45;&gt;proc~assert_eq4 -->
-<g id="proc~~broyden1~2~~CallsGraph_edge22" class="edge">
+<g id="proc~~broyden1~2~~CallsGraph_edge21" class="edge">
 <title>proc~fdjac&#45;&gt;proc~assert_eq4</title>
-<path fill="none" stroke="#000000" d="M169.65,-108.08C175.41,-110.91 181.45,-113.99 187,-117 201.13,-124.67 216.49,-133.79 229.21,-141.57"/>
-<polygon fill="#000000" stroke="#000000" points="227.6,-144.69 237.95,-146.96 231.27,-138.73 227.6,-144.69"/>
+<path fill="none" stroke="#000000" d="M169.63,-234.12C175.38,-236.95 181.44,-240.02 187,-243 200.88,-250.44 216,-259.21 228.62,-266.72"/>
+<polygon fill="#000000" stroke="#000000" points="226.94,-269.79 237.31,-271.93 230.53,-263.79 226.94,-269.79"/>
+</g>
+<!-- proc~put_diag&#45;&gt;proc~assert_eq2 -->
+<g id="proc~~broyden1~2~~CallsGraph_edge22" class="edge">
+<title>proc~put_diag&#45;&gt;proc~assert_eq2</title>
+<path fill="none" stroke="#000000" d="M172.22,-85.51C185.08,-80.73 200.56,-74.98 214.76,-69.7"/>
+<polygon fill="#000000" stroke="#000000" points="216.18,-72.91 224.34,-66.14 213.74,-66.34 216.18,-72.91"/>
 </g>
 <!-- proc~rsolv&#45;&gt;proc~assert_eq4 -->
 <g id="proc~~broyden1~2~~CallsGraph_edge23" class="edge">
 <title>proc~rsolv&#45;&gt;proc~assert_eq4</title>
-<path fill="none" stroke="#000000" d="M170.21,-142.87C182.8,-145.21 198.24,-148.08 212.59,-150.75"/>
-<polygon fill="#000000" stroke="#000000" points="212.32,-154.26 222.79,-152.64 213.6,-147.37 212.32,-154.26"/>
+<path fill="none" stroke="#000000" d="M170.21,-268.64C182.8,-270.87 198.24,-273.6 212.59,-276.14"/>
+<polygon fill="#000000" stroke="#000000" points="212.33,-279.65 222.79,-277.95 213.55,-272.76 212.33,-279.65"/>
 </g>
 </g>
 </svg>
@@ -556,9 +669,27 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<em>None</em>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -581,7 +712,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

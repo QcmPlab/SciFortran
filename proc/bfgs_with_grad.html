@@ -80,146 +80,303 @@
   <div class="row">
     <h1>bfgs_with_grad
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">58 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/fmin_bfgs.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/fmin_bfgs.f90.html'>fmin_bfgs.f90</a></li>
-     <li class="active">bfgs_with_grad</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">58 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/fmin_bfgs.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/fmin_bfgs.f90.html'>fmin_bfgs.f90</a></li>
+          <li class="active">bfgs_with_grad</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/bfgs_with_grad.html#src">bfgs_with_grad</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/bfgs_with_grad.html#src">bfgs_with_grad</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine bfgs_with_grad(func, grad, x, l, u, nbd, factr, pgtol, iprint, nloop)</h2>
+    <h2> subroutine bfgs_with_grad(func, grad, x, l, u, nbd, factr, pgtol, iprint, nloop)  
+</h2>
     
 
 
     <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+     function func(x)  
+
+    </h5>
+  
+
+  <h6>Arguments</h6>
       <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td colspan="7">
-      <small><h5>function func(x)</h5>    
-<h6>Arguments</h6>      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" ></span>real(kind=8),</td>
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(:)</td><td>::</td>
-  <td><strong>x</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
-<h6>Return Value <small>real(kind=8)</small></h6>  
+    <h6>
+    Return Value
+    <small>real(kind=8)</small>
+    </h6>
+    
 </small>
-  </td> 
-</tr>
-<tr>
-  <td colspan="7">
-      <small><h5>function grad(x)</h5>    
-<h6>Arguments</h6>      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" ></span>real(kind=8),</td>
-<td></td>
-  <td></td>  <td>dimension(:)</td><td>::</td>
-  <td><strong>x</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+     function grad(x)  
 
-<h6>Return Value <small>real(kind=8),dimension(size(x))</small></h6>  
+    </h5>
+  
+
+  <h6>Arguments</h6>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h6>
+    Return Value
+    <small>real(kind=8), dimension(size(x))</small>
+    </h6>
+    
 </small>
-  </td> 
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-x~78"></span>real(kind=8),</td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~21"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(:), allocatable</td><td>::</td>
-  <td><strong>x</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-l~10"></span>real(kind=8),</td>
+              <td></td>            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td>dimension(:), allocatable</td><td>::</td>
-  <td><strong>l</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-u~11"></span>real(kind=8),</td>
+              <td>optional,</td>            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>l</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td>dimension(:), allocatable</td><td>::</td>
-  <td><strong>u</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nbd~9"></span>integer,</td>
+              <td>optional,</td>            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>u</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nbd"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td>dimension(:), allocatable</td><td>::</td>
-  <td><strong>nbd</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-factr~4"></span>real(kind=8),</td>
+              <td>optional,</td>            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>nbd</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-factr"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>factr</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-pgtol~3"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>factr</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pgtol"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>pgtol</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-iprint~11"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pgtol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iprint~2"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>iprint</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nloop"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iprint</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nloop"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>nloop</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nloop</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -274,467 +431,467 @@
 <path fill="none" stroke="#000000" d="M182.4,-348C190.39,-348 199.31,-348 207.82,-348"/>
 <polygon fill="#000000" stroke="#000000" points="207.92,-351.5 217.92,-348 207.92,-344.5 207.92,-351.5"/>
 </g>
-<!-- proc~active -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node4" class="node">
-<title>proc~active</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node4"><a xlink:href=".././proc/active.html" xlink:title="active">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-688 308,-688 308,-664 362,-664 362,-688"/>
-<text text-anchor="middle" x="335" y="-673.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">active</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~active -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge3" class="edge">
-<title>proc~mainlb&#45;&gt;proc~active</title>
-<path fill="none" stroke="#000000" d="M245.62,-360.18C244.8,-403.68 246.8,-554.12 308,-655 308.25,-655.41 308.51,-655.81 308.78,-656.21"/>
-<polygon fill="#000000" stroke="#000000" points="306.32,-658.72 315.58,-663.88 311.56,-654.07 306.32,-658.72"/>
-</g>
-<!-- proc~subsm -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node5" class="node">
-<title>proc~subsm</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node5"><a xlink:href=".././proc/subsm.html" xlink:title="subsm">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-524 308,-524 308,-500 362,-500 362,-524"/>
-<text text-anchor="middle" x="335" y="-509.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">subsm</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~subsm -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge7" class="edge">
-<title>proc~mainlb&#45;&gt;proc~subsm</title>
-<path fill="none" stroke="#000000" d="M249.11,-360.13C256.21,-386.13 275.57,-448.36 308,-491 308.46,-491.61 308.94,-492.21 309.44,-492.8"/>
-<polygon fill="#000000" stroke="#000000" points="307.1,-495.41 316.66,-499.97 312.04,-490.44 307.1,-495.41"/>
-</g>
-<!-- proc~formk -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node6" class="node">
-<title>proc~formk</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node6"><a xlink:href=".././proc/formk.html" xlink:title="formk">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-360 308,-360 308,-336 362,-336 362,-360"/>
-<text text-anchor="middle" x="335" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">formk</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~formk -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge6" class="edge">
-<title>proc~mainlb&#45;&gt;proc~formk</title>
-<path fill="none" stroke="#000000" d="M272.4,-348C280.39,-348 289.31,-348 297.82,-348"/>
-<polygon fill="#000000" stroke="#000000" points="297.92,-351.5 307.92,-348 297.92,-344.5 297.92,-351.5"/>
-</g>
-<!-- proc~projgr -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node7" class="node">
-<title>proc~projgr</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node7"><a xlink:href=".././proc/projgr.html" xlink:title="projgr">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-276 308,-276 308,-252 362,-252 362,-276"/>
-<text text-anchor="middle" x="335" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">projgr</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~projgr -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge5" class="edge">
-<title>proc~mainlb&#45;&gt;proc~projgr</title>
-<path fill="none" stroke="#000000" d="M257.04,-335.99C269.15,-323 289.35,-301.9 308,-285 308.82,-284.26 309.66,-283.51 310.51,-282.77"/>
-<polygon fill="#000000" stroke="#000000" points="312.97,-285.27 318.36,-276.15 308.46,-279.92 312.97,-285.27"/>
-</g>
-<!-- proc~errclb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node8" class="node">
-<title>proc~errclb</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node8"><a xlink:href=".././proc/errclb.html" xlink:title="errclb">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-234 308,-234 308,-210 362,-210 362,-234"/>
-<text text-anchor="middle" x="335" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">errclb</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~errclb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge4" class="edge">
-<title>proc~mainlb&#45;&gt;proc~errclb</title>
-<path fill="none" stroke="#000000" d="M251.44,-335.76C260.97,-315.18 282.12,-272.96 308,-243 308.6,-242.31 309.22,-241.62 309.86,-240.94"/>
-<polygon fill="#000000" stroke="#000000" points="312.32,-243.43 317.25,-234.05 307.55,-238.32 312.32,-243.43"/>
-</g>
-<!-- proc~lnsrlb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node9" class="node">
-<title>proc~lnsrlb</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node9"><a xlink:href=".././proc/lnsrlb.html" xlink:title="lnsrlb">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-402 308,-402 308,-378 362,-378 362,-402"/>
-<text text-anchor="middle" x="335" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lnsrlb</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~lnsrlb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge8" class="edge">
-<title>proc~mainlb&#45;&gt;proc~lnsrlb</title>
-<path fill="none" stroke="#000000" d="M271.45,-360.15C280.21,-364.33 290.17,-369.08 299.52,-373.54"/>
-<polygon fill="#000000" stroke="#000000" points="298.07,-376.73 308.6,-377.88 301.09,-370.41 298.07,-376.73"/>
-</g>
-<!-- proc~matupd -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node10" class="node">
-<title>proc~matupd</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node10"><a xlink:href=".././proc/matupd.html" xlink:title="matupd">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-482 308,-482 308,-458 362,-458 362,-482"/>
-<text text-anchor="middle" x="335" y="-467.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">matupd</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~matupd -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge19" class="edge">
-<title>proc~mainlb&#45;&gt;proc~matupd</title>
-<path fill="none" stroke="#000000" d="M252.68,-360.08C263.31,-378.84 285.19,-415.75 308,-444 309.68,-446.09 311.52,-448.19 313.4,-450.24"/>
-<polygon fill="#000000" stroke="#000000" points="311.27,-453.07 320.74,-457.81 316.29,-448.2 311.27,-453.07"/>
-</g>
-<!-- proc~formt -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node11" class="node">
-<title>proc~formt</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node11"><a xlink:href=".././proc/formt.html" xlink:title="formt">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-318 308,-318 308,-294 362,-294 362,-318"/>
-<text text-anchor="middle" x="335" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">formt</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~formt -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge9" class="edge">
-<title>proc~mainlb&#45;&gt;proc~formt</title>
-<path fill="none" stroke="#000000" d="M271.45,-335.85C280.21,-331.67 290.17,-326.92 299.52,-322.46"/>
-<polygon fill="#000000" stroke="#000000" points="301.09,-325.59 308.6,-318.12 298.07,-319.27 301.09,-325.59"/>
-</g>
 <!-- proc~timer -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node12" class="node">
+<g id="proc~~bfgs_with_grad~~CallsGraph_node4" class="node">
 <title>proc~timer</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node12"><a xlink:href=".././proc/timer.html" xlink:title="timer">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-192 308,-192 308,-168 362,-168 362,-192"/>
-<text text-anchor="middle" x="335" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">timer</text>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node4"><a xlink:href=".././proc/timer.html" xlink:title="timer">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-688 308,-688 308,-664 362,-664 362,-688"/>
+<text text-anchor="middle" x="335" y="-673.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">timer</text>
 </a>
 </g>
 </g>
 <!-- proc~mainlb&#45;&gt;proc~timer -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge10" class="edge">
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge3" class="edge">
 <title>proc~mainlb&#45;&gt;proc~timer</title>
-<path fill="none" stroke="#000000" d="M248.92,-335.93C255.77,-309.44 274.85,-245.04 308,-201 308.46,-200.39 308.94,-199.79 309.43,-199.2"/>
-<polygon fill="#000000" stroke="#000000" points="312.03,-201.55 316.64,-192.01 307.09,-196.6 312.03,-201.55"/>
-</g>
-<!-- proc~prn3lb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node13" class="node">
-<title>proc~prn3lb</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node13"><a xlink:href=".././proc/prn3lb.html" xlink:title="prn3lb">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-108 308,-108 308,-84 362,-84 362,-108"/>
-<text text-anchor="middle" x="335" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prn3lb</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~prn3lb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge11" class="edge">
-<title>proc~mainlb&#45;&gt;proc~prn3lb</title>
-<path fill="none" stroke="#000000" d="M246.64,-335.9C249.08,-299.75 260.22,-190.44 308,-117 308.26,-116.6 308.53,-116.2 308.81,-115.81"/>
-<polygon fill="#000000" stroke="#000000" points="311.58,-117.97 315.74,-108.23 306.41,-113.25 311.58,-117.97"/>
+<path fill="none" stroke="#000000" d="M245.62,-360.18C244.8,-403.68 246.8,-554.12 308,-655 308.25,-655.41 308.51,-655.81 308.78,-656.21"/>
+<polygon fill="#000000" stroke="#000000" points="306.32,-658.72 315.58,-663.88 311.56,-654.07 306.32,-658.72"/>
 </g>
 <!-- proc~prn1lb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node14" class="node">
+<g id="proc~~bfgs_with_grad~~CallsGraph_node5" class="node">
 <title>proc~prn1lb</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node14"><a xlink:href=".././proc/prn1lb.html" xlink:title="prn1lb">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-66 308,-66 308,-42 362,-42 362,-66"/>
-<text text-anchor="middle" x="335" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prn1lb</text>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node5"><a xlink:href=".././proc/prn1lb.html" xlink:title="prn1lb">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-646 308,-646 308,-622 362,-622 362,-646"/>
+<text text-anchor="middle" x="335" y="-631.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prn1lb</text>
 </a>
 </g>
 </g>
 <!-- proc~mainlb&#45;&gt;proc~prn1lb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge12" class="edge">
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge4" class="edge">
 <title>proc~mainlb&#45;&gt;proc~prn1lb</title>
-<path fill="none" stroke="#000000" d="M246.01,-335.78C246.59,-295.35 252.86,-163.48 308,-75 308.25,-74.59 308.52,-74.19 308.79,-73.79"/>
-<polygon fill="#000000" stroke="#000000" points="311.57,-75.94 315.64,-66.16 306.36,-71.27 311.57,-75.94"/>
-</g>
-<!-- proc~dcopy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node15" class="node">
-<title>proc~dcopy</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node15"><a xlink:href=".././proc/dcopy.html" xlink:title="dcopy">
-<polygon fill="#d9534f" stroke="#d9534f" points="452,-482 398,-482 398,-458 452,-458 452,-482"/>
-<text text-anchor="middle" x="425" y="-467.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~dcopy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge13" class="edge">
-<title>proc~mainlb&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M255.98,-360.31C267.48,-373.93 287.45,-395.95 308,-411 333,-429.3 364.49,-444.92 388.35,-455.48"/>
-<polygon fill="#000000" stroke="#000000" points="387.18,-458.79 397.75,-459.56 389.96,-452.37 387.18,-458.79"/>
+<path fill="none" stroke="#000000" d="M246.12,-360.14C247.03,-399.72 254.24,-527.36 308,-613 308.25,-613.41 308.52,-613.81 308.79,-614.2"/>
+<polygon fill="#000000" stroke="#000000" points="306.37,-616.74 315.66,-621.83 311.57,-612.05 306.37,-616.74"/>
 </g>
 <!-- proc~cauchy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node16" class="node">
+<g id="proc~~bfgs_with_grad~~CallsGraph_node6" class="node">
 <title>proc~cauchy</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node16"><a xlink:href=".././proc/cauchy.html" xlink:title="cauchy">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-604 308,-604 308,-580 362,-580 362,-604"/>
-<text text-anchor="middle" x="335" y="-589.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cauchy</text>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node6"><a xlink:href=".././proc/cauchy.html" xlink:title="cauchy">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-360 308,-360 308,-336 362,-336 362,-360"/>
+<text text-anchor="middle" x="335" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cauchy</text>
 </a>
 </g>
 </g>
 <!-- proc~mainlb&#45;&gt;proc~cauchy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge14" class="edge">
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge6" class="edge">
 <title>proc~mainlb&#45;&gt;proc~cauchy</title>
-<path fill="none" stroke="#000000" d="M247.29,-360.18C251.38,-394.66 266.34,-495.1 308,-566 309.3,-568.22 310.84,-570.38 312.5,-572.45"/>
-<polygon fill="#000000" stroke="#000000" points="309.99,-574.89 319.32,-579.89 315.15,-570.16 309.99,-574.89"/>
+<path fill="none" stroke="#000000" d="M272.4,-348C280.39,-348 289.31,-348 297.82,-348"/>
+<polygon fill="#000000" stroke="#000000" points="297.92,-351.5 307.92,-348 297.92,-344.5 297.92,-351.5"/>
+</g>
+<!-- proc~lnsrlb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node7" class="node">
+<title>proc~lnsrlb</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node7"><a xlink:href=".././proc/lnsrlb.html" xlink:title="lnsrlb">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-276 308,-276 308,-252 362,-252 362,-276"/>
+<text text-anchor="middle" x="335" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lnsrlb</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~lnsrlb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge7" class="edge">
+<title>proc~mainlb&#45;&gt;proc~lnsrlb</title>
+<path fill="none" stroke="#000000" d="M257.04,-335.99C269.15,-323 289.35,-301.9 308,-285 308.82,-284.26 309.66,-283.51 310.51,-282.77"/>
+<polygon fill="#000000" stroke="#000000" points="312.97,-285.27 318.36,-276.15 308.46,-279.92 312.97,-285.27"/>
+</g>
+<!-- proc~dcopy -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node8" class="node">
+<title>proc~dcopy</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node8"><a xlink:href=".././proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="452,-480 398,-480 398,-456 452,-456 452,-480"/>
+<text text-anchor="middle" x="425" y="-465.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~dcopy -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge5" class="edge">
+<title>proc~mainlb&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M249.77,-360.33C257.11,-382.13 275.54,-427.21 308,-449 331.32,-464.66 363.09,-468.97 387.49,-469.61"/>
+<polygon fill="#000000" stroke="#000000" points="387.76,-473.11 397.79,-469.68 387.81,-466.11 387.76,-473.11"/>
+</g>
+<!-- proc~prn2lb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node9" class="node">
+<title>proc~prn2lb</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node9"><a xlink:href=".././proc/prn2lb.html" xlink:title="prn2lb">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-24 308,-24 308,0 362,0 362,-24"/>
+<text text-anchor="middle" x="335" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prn2lb</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~prn2lb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge8" class="edge">
+<title>proc~mainlb&#45;&gt;proc~prn2lb</title>
+<path fill="none" stroke="#000000" d="M245.54,-335.81C244.41,-291.6 245.38,-136.8 308,-33 308.25,-32.59 308.51,-32.18 308.77,-31.78"/>
+<polygon fill="#000000" stroke="#000000" points="311.56,-33.92 315.56,-24.11 306.31,-29.28 311.56,-33.92"/>
+</g>
+<!-- proc~dscal -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node10" class="node">
+<title>proc~dscal</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node10"><a xlink:href=".././proc/dscal.html" xlink:title="dscal">
+<polygon fill="#d9534f" stroke="#d9534f" points="452,-400 398,-400 398,-376 452,-376 452,-400"/>
+<text text-anchor="middle" x="425" y="-385.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~dscal -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge9" class="edge">
+<title>proc~mainlb&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="#000000" d="M272.27,-357.96C283.2,-361.83 296.09,-366.03 308,-369 334.44,-375.6 364.86,-380.48 387.92,-383.64"/>
+<polygon fill="#000000" stroke="#000000" points="387.58,-387.13 397.95,-384.98 388.5,-380.19 387.58,-387.13"/>
+</g>
+<!-- proc~matupd -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node11" class="node">
+<title>proc~matupd</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node11"><a xlink:href=".././proc/matupd.html" xlink:title="matupd">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-520 308,-520 308,-496 362,-496 362,-520"/>
+<text text-anchor="middle" x="335" y="-505.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">matupd</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~matupd -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge10" class="edge">
+<title>proc~mainlb&#45;&gt;proc~matupd</title>
+<path fill="none" stroke="#000000" d="M250.01,-360.22C258.39,-384.72 279.39,-441.01 308,-482 309.5,-484.15 311.19,-486.28 312.97,-488.35"/>
+<polygon fill="#000000" stroke="#000000" points="310.66,-490.99 320.07,-495.85 315.74,-486.18 310.66,-490.99"/>
+</g>
+<!-- proc~formt -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node12" class="node">
+<title>proc~formt</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node12"><a xlink:href=".././proc/formt.html" xlink:title="formt">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-604 308,-604 308,-580 362,-580 362,-604"/>
+<text text-anchor="middle" x="335" y="-589.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">formt</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~formt -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge11" class="edge">
+<title>proc~mainlb&#45;&gt;proc~formt</title>
+<path fill="none" stroke="#000000" d="M246.8,-360.18C249.63,-395.6 261.66,-500.47 308,-571 308.34,-571.52 308.69,-572.02 309.06,-572.53"/>
+<polygon fill="#000000" stroke="#000000" points="306.65,-575.07 316.03,-579.99 311.77,-570.29 306.65,-575.07"/>
+</g>
+<!-- proc~errclb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node13" class="node">
+<title>proc~errclb</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node13"><a xlink:href=".././proc/errclb.html" xlink:title="errclb">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-318 308,-318 308,-294 362,-294 362,-318"/>
+<text text-anchor="middle" x="335" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">errclb</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~errclb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge12" class="edge">
+<title>proc~mainlb&#45;&gt;proc~errclb</title>
+<path fill="none" stroke="#000000" d="M271.45,-335.85C280.21,-331.67 290.17,-326.92 299.52,-322.46"/>
+<polygon fill="#000000" stroke="#000000" points="301.09,-325.59 308.6,-318.12 298.07,-319.27 301.09,-325.59"/>
+</g>
+<!-- proc~prn3lb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node14" class="node">
+<title>proc~prn3lb</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node14"><a xlink:href=".././proc/prn3lb.html" xlink:title="prn3lb">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-66 308,-66 308,-42 362,-42 362,-66"/>
+<text text-anchor="middle" x="335" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prn3lb</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~prn3lb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge13" class="edge">
+<title>proc~mainlb&#45;&gt;proc~prn3lb</title>
+<path fill="none" stroke="#000000" d="M246.01,-335.78C246.59,-295.35 252.86,-163.48 308,-75 308.25,-74.59 308.52,-74.19 308.79,-73.79"/>
+<polygon fill="#000000" stroke="#000000" points="311.57,-75.94 315.64,-66.16 306.36,-71.27 311.57,-75.94"/>
+</g>
+<!-- proc~active -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node15" class="node">
+<title>proc~active</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node15"><a xlink:href=".././proc/active.html" xlink:title="active">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-234 308,-234 308,-210 362,-210 362,-234"/>
+<text text-anchor="middle" x="335" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">active</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~active -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge14" class="edge">
+<title>proc~mainlb&#45;&gt;proc~active</title>
+<path fill="none" stroke="#000000" d="M251.44,-335.76C260.97,-315.18 282.12,-272.96 308,-243 308.6,-242.31 309.22,-241.62 309.86,-240.94"/>
+<polygon fill="#000000" stroke="#000000" points="312.32,-243.43 317.25,-234.05 307.55,-238.32 312.32,-243.43"/>
+</g>
+<!-- proc~projgr -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node16" class="node">
+<title>proc~projgr</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node16"><a xlink:href=".././proc/projgr.html" xlink:title="projgr">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-192 308,-192 308,-168 362,-168 362,-192"/>
+<text text-anchor="middle" x="335" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">projgr</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~projgr -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge15" class="edge">
+<title>proc~mainlb&#45;&gt;proc~projgr</title>
+<path fill="none" stroke="#000000" d="M248.92,-335.93C255.77,-309.44 274.85,-245.04 308,-201 308.46,-200.39 308.94,-199.79 309.43,-199.2"/>
+<polygon fill="#000000" stroke="#000000" points="312.03,-201.55 316.64,-192.01 307.09,-196.6 312.03,-201.55"/>
 </g>
 <!-- proc~freev -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_node17" class="node">
 <title>proc~freev</title>
 <g id="a_proc~~bfgs_with_grad~~CallsGraph_node17"><a xlink:href=".././proc/freev.html" xlink:title="freev">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-24 308,-24 308,0 362,0 362,-24"/>
-<text text-anchor="middle" x="335" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">freev</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-150 308,-150 308,-126 362,-126 362,-150"/>
+<text text-anchor="middle" x="335" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">freev</text>
 </a>
 </g>
 </g>
 <!-- proc~mainlb&#45;&gt;proc~freev -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge15" class="edge">
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge16" class="edge">
 <title>proc~mainlb&#45;&gt;proc~freev</title>
-<path fill="none" stroke="#000000" d="M245.54,-335.81C244.41,-291.6 245.38,-136.8 308,-33 308.25,-32.59 308.51,-32.18 308.77,-31.78"/>
-<polygon fill="#000000" stroke="#000000" points="311.56,-33.92 315.56,-24.11 306.31,-29.28 311.56,-33.92"/>
+<path fill="none" stroke="#000000" d="M247.55,-335.89C252.07,-304.25 267.59,-217.54 308,-159 308.35,-158.49 308.72,-157.99 309.1,-157.5"/>
+<polygon fill="#000000" stroke="#000000" points="311.79,-159.74 316.16,-150.09 306.72,-154.91 311.79,-159.74"/>
+</g>
+<!-- proc~formk -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node18" class="node">
+<title>proc~formk</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node18"><a xlink:href=".././proc/formk.html" xlink:title="formk">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-562 308,-562 308,-538 362,-538 362,-562"/>
+<text text-anchor="middle" x="335" y="-547.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">formk</text>
+</a>
+</g>
+</g>
+<!-- proc~mainlb&#45;&gt;proc~formk -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge17" class="edge">
+<title>proc~mainlb&#45;&gt;proc~formk</title>
+<path fill="none" stroke="#000000" d="M247.75,-360.05C252.68,-390.71 268.95,-473.22 308,-529 308.35,-529.51 308.72,-530 309.11,-530.5"/>
+<polygon fill="#000000" stroke="#000000" points="306.74,-533.09 316.19,-537.89 311.8,-528.25 306.74,-533.09"/>
 </g>
 <!-- proc~cmprlb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node18" class="node">
+<g id="proc~~bfgs_with_grad~~CallsGraph_node19" class="node">
 <title>proc~cmprlb</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node18"><a xlink:href=".././proc/cmprlb.html" xlink:title="cmprlb">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-646 308,-646 308,-622 362,-622 362,-646"/>
-<text text-anchor="middle" x="335" y="-631.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cmprlb</text>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node19"><a xlink:href=".././proc/cmprlb.html" xlink:title="cmprlb">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-108 308,-108 308,-84 362,-84 362,-108"/>
+<text text-anchor="middle" x="335" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cmprlb</text>
 </a>
 </g>
 </g>
 <!-- proc~mainlb&#45;&gt;proc~cmprlb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge16" class="edge">
-<title>proc~mainlb&#45;&gt;proc~cmprlb</title>
-<path fill="none" stroke="#000000" d="M246.12,-360.14C247.03,-399.72 254.24,-527.36 308,-613 308.25,-613.41 308.52,-613.81 308.79,-614.2"/>
-<polygon fill="#000000" stroke="#000000" points="306.37,-616.74 315.66,-621.83 311.57,-612.05 306.37,-616.74"/>
-</g>
-<!-- proc~prn2lb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node19" class="node">
-<title>proc~prn2lb</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node19"><a xlink:href=".././proc/prn2lb.html" xlink:title="prn2lb">
-<polygon fill="#d9534f" stroke="#d9534f" points="362,-150 308,-150 308,-126 362,-126 362,-150"/>
-<text text-anchor="middle" x="335" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prn2lb</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~prn2lb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge17" class="edge">
-<title>proc~mainlb&#45;&gt;proc~prn2lb</title>
-<path fill="none" stroke="#000000" d="M247.55,-335.89C252.07,-304.25 267.59,-217.54 308,-159 308.35,-158.49 308.72,-157.99 309.1,-157.5"/>
-<polygon fill="#000000" stroke="#000000" points="311.79,-159.74 316.16,-150.09 306.72,-154.91 311.79,-159.74"/>
-</g>
-<!-- proc~dscal -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node20" class="node">
-<title>proc~dscal</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node20"><a xlink:href=".././proc/dscal.html" xlink:title="dscal">
-<polygon fill="#d9534f" stroke="#d9534f" points="452,-562 398,-562 398,-538 452,-538 452,-562"/>
-<text text-anchor="middle" x="425" y="-547.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
-</a>
-</g>
-</g>
-<!-- proc~mainlb&#45;&gt;proc~dscal -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge18" class="edge">
-<title>proc~mainlb&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M246.02,-360.31C246.8,-393.92 253.95,-487.8 308,-533 329.86,-551.28 362.5,-554.65 387.6,-553.95"/>
-<polygon fill="#000000" stroke="#000000" points="388.03,-557.43 397.84,-553.43 387.67,-550.44 388.03,-557.43"/>
+<title>proc~mainlb&#45;&gt;proc~cmprlb</title>
+<path fill="none" stroke="#000000" d="M246.64,-335.9C249.08,-299.75 260.22,-190.44 308,-117 308.26,-116.6 308.53,-116.2 308.81,-115.81"/>
+<polygon fill="#000000" stroke="#000000" points="311.58,-117.97 315.74,-108.23 306.41,-113.25 311.58,-117.97"/>
 </g>
-<!-- proc~subsm&#45;&gt;proc~dcopy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge22" class="edge">
-<title>proc~subsm&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M361.45,-499.85C370.21,-495.67 380.17,-490.92 389.52,-486.46"/>
-<polygon fill="#000000" stroke="#000000" points="391.09,-489.59 398.6,-482.12 388.07,-483.27 391.09,-489.59"/>
+<!-- proc~subsm -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node20" class="node">
+<title>proc~subsm</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node20"><a xlink:href=".././proc/subsm.html" xlink:title="subsm">
+<polygon fill="#d9534f" stroke="#d9534f" points="362,-440 308,-440 308,-416 362,-416 362,-440"/>
+<text text-anchor="middle" x="335" y="-425.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">subsm</text>
+</a>
 </g>
-<!-- proc~subsm&#45;&gt;proc~dscal -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge21" class="edge">
-<title>proc~subsm&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M362.4,-523.4C370.66,-526.97 379.9,-530.96 388.66,-534.74"/>
-<polygon fill="#000000" stroke="#000000" points="387.35,-537.99 397.92,-538.74 390.13,-531.56 387.35,-537.99"/>
 </g>
-<!-- proc~dtrsl -->
+<!-- proc~mainlb&#45;&gt;proc~subsm -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge19" class="edge">
+<title>proc~mainlb&#45;&gt;proc~subsm</title>
+<path fill="none" stroke="#000000" d="M259.37,-360.15C273.66,-373.15 296.53,-393.93 313.18,-409.08"/>
+<polygon fill="#000000" stroke="#000000" points="311.04,-411.86 320.8,-416 315.75,-406.68 311.04,-411.86"/>
+</g>
+<!-- sngl -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_node21" class="node">
-<title>proc~dtrsl</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node21"><a xlink:href=".././proc/dtrsl.html" xlink:title="dtrsl">
-<polygon fill="#d9534f" stroke="#d9534f" points="542,-584 488,-584 488,-560 542,-560 542,-584"/>
-<text text-anchor="middle" x="515" y="-569.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dtrsl</text>
-</a>
+<title>sngl</title>
+<polygon fill="#777777" stroke="#777777" points="452,-688 398,-688 398,-664 452,-664 452,-688"/>
+<text text-anchor="middle" x="425" y="-673.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sngl</text>
 </g>
-</g>
-<!-- proc~subsm&#45;&gt;proc~dtrsl -->
+<!-- proc~timer&#45;&gt;sngl -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge20" class="edge">
-<title>proc~subsm&#45;&gt;proc~dtrsl</title>
-<path fill="none" stroke="#000000" d="M362.22,-512.44C386.32,-513.63 422.65,-517.42 452,-529 466.56,-534.75 481.04,-544.5 492.34,-553.27"/>
-<polygon fill="#000000" stroke="#000000" points="490.33,-556.14 500.31,-559.7 494.73,-550.7 490.33,-556.14"/>
+<title>proc~timer&#45;&gt;sngl</title>
+<path fill="none" stroke="#000000" d="M362.4,-676C370.39,-676 379.31,-676 387.82,-676"/>
+<polygon fill="#000000" stroke="#000000" points="387.92,-679.5 397.92,-676 387.92,-672.5 387.92,-679.5"/>
 </g>
-<!-- proc~formk&#45;&gt;proc~dcopy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge23" class="edge">
-<title>proc~formk&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M353.24,-360.1C356.39,-362.8 359.48,-365.82 362,-369 384.94,-397.99 376.62,-413.83 398,-444 399.52,-446.14 401.22,-448.27 403.01,-450.32"/>
-<polygon fill="#000000" stroke="#000000" points="400.69,-452.97 410.11,-457.82 405.77,-448.16 400.69,-452.97"/>
+<!-- proc~cauchy&#45;&gt;proc~dcopy -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge21" class="edge">
+<title>proc~cauchy&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M345.09,-360.39C360.25,-381.07 390.85,-422.8 409.17,-447.78"/>
+<polygon fill="#000000" stroke="#000000" points="406.36,-449.86 415.09,-455.86 412,-445.72 406.36,-449.86"/>
 </g>
-<!-- proc~formk&#45;&gt;proc~dtrsl -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge25" class="edge">
-<title>proc~formk&#45;&gt;proc~dtrsl</title>
-<path fill="none" stroke="#000000" d="M352.07,-360.21C355.45,-362.99 358.92,-366.01 362,-369 379.64,-386.13 379.81,-394.46 398,-411 419.72,-430.74 432.82,-426.79 452,-449 478.51,-479.7 497.11,-523.72 506.64,-549.93"/>
-<polygon fill="#000000" stroke="#000000" points="503.45,-551.39 510.06,-559.67 510.05,-549.07 503.45,-551.39"/>
+<!-- proc~cauchy&#45;&gt;proc~dscal -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge22" class="edge">
+<title>proc~cauchy&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="#000000" d="M362.4,-360C370.66,-363.75 379.9,-367.95 388.66,-371.94"/>
+<polygon fill="#000000" stroke="#000000" points="387.37,-375.19 397.92,-376.14 390.26,-368.82 387.37,-375.19"/>
 </g>
-<!-- proc~dpofa -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node27" class="node">
-<title>proc~dpofa</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node27"><a xlink:href=".././proc/dpofa.html" xlink:title="dpofa">
-<polygon fill="#d9534f" stroke="#d9534f" points="452,-339 398,-339 398,-315 452,-315 452,-339"/>
-<text text-anchor="middle" x="425" y="-324.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dpofa</text>
+<!-- proc~daxpy -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node22" class="node">
+<title>proc~daxpy</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node22"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="632,-390 578,-390 578,-366 632,-366 632,-390"/>
+<text text-anchor="middle" x="605" y="-375.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
 </a>
 </g>
 </g>
-<!-- proc~formk&#45;&gt;proc~dpofa -->
+<!-- proc~cauchy&#45;&gt;proc~daxpy -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge23" class="edge">
+<title>proc~cauchy&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M362.18,-350.93C410.32,-356.32 512.93,-367.81 567.74,-373.94"/>
+<polygon fill="#000000" stroke="#000000" points="567.38,-377.42 577.71,-375.06 568.16,-370.47 567.38,-377.42"/>
+</g>
+<!-- proc~bmv -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node23" class="node">
+<title>proc~bmv</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node23"><a xlink:href=".././proc/bmv.html" xlink:title="bmv">
+<polygon fill="#d9534f" stroke="#d9534f" points="452,-278 398,-278 398,-254 452,-254 452,-278"/>
+<text text-anchor="middle" x="425" y="-263.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bmv</text>
+</a>
+</g>
+</g>
+<!-- proc~cauchy&#45;&gt;proc~bmv -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge24" class="edge">
-<title>proc~formk&#45;&gt;proc~dpofa</title>
-<path fill="none" stroke="#000000" d="M362.4,-341.7C370.48,-339.77 379.51,-337.62 388.1,-335.57"/>
-<polygon fill="#000000" stroke="#000000" points="389,-338.95 397.92,-333.22 387.38,-332.14 389,-338.95"/>
+<title>proc~cauchy&#45;&gt;proc~bmv</title>
+<path fill="none" stroke="#000000" d="M351.74,-335.95C355.21,-333.12 358.8,-330.03 362,-327 379.36,-310.55 380.64,-303.45 398,-287 398.8,-286.24 399.62,-285.48 400.47,-284.72"/>
+<polygon fill="#000000" stroke="#000000" points="402.94,-287.21 408.26,-278.05 398.39,-281.89 402.94,-287.21"/>
+</g>
+<!-- proc~hpsolb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node27" class="node">
+<title>proc~hpsolb</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node27"><a xlink:href=".././proc/hpsolb.html" xlink:title="hpsolb">
+<polygon fill="#d9534f" stroke="#d9534f" points="452,-320 398,-320 398,-296 452,-296 452,-320"/>
+<text text-anchor="middle" x="425" y="-305.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hpsolb</text>
+</a>
+</g>
+</g>
+<!-- proc~cauchy&#45;&gt;proc~hpsolb -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge25" class="edge">
+<title>proc~cauchy&#45;&gt;proc~hpsolb</title>
+<path fill="none" stroke="#000000" d="M362.4,-336C370.66,-332.25 379.9,-328.05 388.66,-324.06"/>
+<polygon fill="#000000" stroke="#000000" points="390.26,-327.18 397.92,-319.86 387.37,-320.81 390.26,-327.18"/>
 </g>
 <!-- proc~lnsrlb&#45;&gt;proc~dcopy -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge26" class="edge">
 <title>proc~lnsrlb&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M349.37,-402.15C363.66,-415.15 386.53,-435.93 403.18,-451.08"/>
-<polygon fill="#000000" stroke="#000000" points="401.04,-453.86 410.8,-458 405.75,-448.68 401.04,-453.86"/>
+<path fill="none" stroke="#000000" d="M353.94,-276.03C356.96,-278.69 359.81,-281.71 362,-285 393.78,-332.78 378.39,-355.07 398,-409 402.63,-421.73 408.69,-435.6 413.79,-446.69"/>
+<polygon fill="#000000" stroke="#000000" points="410.73,-448.42 418.14,-455.99 417.07,-445.45 410.73,-448.42"/>
 </g>
 <!-- proc~dcsrch -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node24" class="node">
+<g id="proc~~bfgs_with_grad~~CallsGraph_node26" class="node">
 <title>proc~dcsrch</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node24"><a xlink:href=".././proc/dcsrch.html" xlink:title="dcsrch">
-<polygon fill="#d9534f" stroke="#d9534f" points="452,-402 398,-402 398,-378 452,-378 452,-402"/>
-<text text-anchor="middle" x="425" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcsrch</text>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node26"><a xlink:href=".././proc/dcsrch.html" xlink:title="dcsrch">
+<polygon fill="#d9534f" stroke="#d9534f" points="452,-236 398,-236 398,-212 452,-212 452,-236"/>
+<text text-anchor="middle" x="425" y="-221.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcsrch</text>
 </a>
 </g>
 </g>
 <!-- proc~lnsrlb&#45;&gt;proc~dcsrch -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge27" class="edge">
 <title>proc~lnsrlb&#45;&gt;proc~dcsrch</title>
-<path fill="none" stroke="#000000" d="M362.4,-390C370.39,-390 379.31,-390 387.82,-390"/>
-<polygon fill="#000000" stroke="#000000" points="387.92,-393.5 397.92,-390 387.92,-386.5 387.92,-393.5"/>
-</g>
-<!-- proc~matupd&#45;&gt;proc~dcopy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge28" class="edge">
-<title>proc~matupd&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M362.4,-470C370.39,-470 379.31,-470 387.82,-470"/>
-<polygon fill="#000000" stroke="#000000" points="387.92,-473.5 397.92,-470 387.92,-466.5 387.92,-473.5"/>
-</g>
-<!-- proc~formt&#45;&gt;proc~dpofa -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge29" class="edge">
-<title>proc~formt&#45;&gt;proc~dpofa</title>
-<path fill="none" stroke="#000000" d="M362.4,-312.3C370.48,-314.23 379.51,-316.38 388.1,-318.43"/>
-<polygon fill="#000000" stroke="#000000" points="387.38,-321.86 397.92,-320.78 389,-315.05 387.38,-321.86"/>
-</g>
-<!-- sngl -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node22" class="node">
-<title>sngl</title>
-<polygon fill="#777777" stroke="#777777" points="452,-192 398,-192 398,-168 452,-168 452,-192"/>
-<text text-anchor="middle" x="425" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sngl</text>
-</g>
-<!-- proc~timer&#45;&gt;sngl -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge30" class="edge">
-<title>proc~timer&#45;&gt;sngl</title>
-<path fill="none" stroke="#000000" d="M362.4,-180C370.39,-180 379.31,-180 387.82,-180"/>
-<polygon fill="#000000" stroke="#000000" points="387.92,-183.5 397.92,-180 387.92,-176.5 387.92,-183.5"/>
+<path fill="none" stroke="#000000" d="M362.4,-252C370.66,-248.25 379.9,-244.05 388.66,-240.06"/>
+<polygon fill="#000000" stroke="#000000" points="390.26,-243.18 397.92,-235.86 387.37,-236.81 390.26,-243.18"/>
 </g>
 <!-- 2 -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node23" class="node">
+<g id="proc~~bfgs_with_grad~~CallsGraph_node28" class="node">
 <title>2</title>
-<polygon fill="#777777" stroke="#777777" points="452,-129 398,-129 398,-105 452,-105 452,-129"/>
-<text text-anchor="middle" x="425" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">2</text>
+<polygon fill="#777777" stroke="#777777" points="452,-45 398,-45 398,-21 452,-21 452,-45"/>
+<text text-anchor="middle" x="425" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">2</text>
+</g>
+<!-- proc~prn2lb&#45;&gt;2 -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge28" class="edge">
+<title>proc~prn2lb&#45;&gt;2</title>
+<path fill="none" stroke="#000000" d="M362.4,-18.3C370.48,-20.23 379.51,-22.38 388.1,-24.43"/>
+<polygon fill="#000000" stroke="#000000" points="387.38,-27.86 397.92,-26.78 389,-21.05 387.38,-27.86"/>
+</g>
+<!-- proc~matupd&#45;&gt;proc~dcopy -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge29" class="edge">
+<title>proc~matupd&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M362.4,-496C370.66,-492.25 379.9,-488.05 388.66,-484.06"/>
+<polygon fill="#000000" stroke="#000000" points="390.26,-487.18 397.92,-479.86 387.37,-480.81 390.26,-487.18"/>
+</g>
+<!-- proc~dpofa -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node24" class="node">
+<title>proc~dpofa</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node24"><a xlink:href=".././proc/dpofa.html" xlink:title="dpofa">
+<polygon fill="#d9534f" stroke="#d9534f" points="452,-603 398,-603 398,-579 452,-579 452,-603"/>
+<text text-anchor="middle" x="425" y="-588.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dpofa</text>
+</a>
+</g>
+</g>
+<!-- proc~formt&#45;&gt;proc~dpofa -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge30" class="edge">
+<title>proc~formt&#45;&gt;proc~dpofa</title>
+<path fill="none" stroke="#000000" d="M362.4,-591.7C370.39,-591.61 379.31,-591.51 387.82,-591.41"/>
+<polygon fill="#000000" stroke="#000000" points="387.96,-594.91 397.92,-591.3 387.88,-587.91 387.96,-594.91"/>
 </g>
 <!-- proc~prn3lb&#45;&gt;2 -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge31" class="edge">
 <title>proc~prn3lb&#45;&gt;2</title>
-<path fill="none" stroke="#000000" d="M362.4,-102.3C370.48,-104.23 379.51,-106.38 388.1,-108.43"/>
-<polygon fill="#000000" stroke="#000000" points="387.38,-111.86 397.92,-110.78 389,-105.05 387.38,-111.86"/>
+<path fill="none" stroke="#000000" d="M362.4,-47.7C370.48,-45.77 379.51,-43.62 388.1,-41.57"/>
+<polygon fill="#000000" stroke="#000000" points="389,-44.95 397.92,-39.22 387.38,-38.14 389,-44.95"/>
 </g>
-<!-- proc~cauchy&#45;&gt;proc~dcopy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge34" class="edge">
-<title>proc~cauchy&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M344.76,-579.86C359.85,-558.94 390.89,-515.9 409.33,-490.34"/>
-<polygon fill="#000000" stroke="#000000" points="412.26,-492.25 415.28,-482.09 406.59,-488.16 412.26,-492.25"/>
-</g>
-<!-- proc~cauchy&#45;&gt;proc~dscal -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge35" class="edge">
-<title>proc~cauchy&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M361.45,-579.85C370.21,-575.67 380.17,-570.92 389.52,-566.46"/>
-<polygon fill="#000000" stroke="#000000" points="391.09,-569.59 398.6,-562.12 388.07,-563.27 391.09,-569.59"/>
-</g>
-<!-- proc~bmv -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node25" class="node">
-<title>proc~bmv</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node25"><a xlink:href=".././proc/bmv.html" xlink:title="bmv">
-<polygon fill="#d9534f" stroke="#d9534f" points="452,-646 398,-646 398,-622 452,-622 452,-646"/>
-<text text-anchor="middle" x="425" y="-631.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bmv</text>
-</a>
-</g>
-</g>
-<!-- proc~cauchy&#45;&gt;proc~bmv -->
+<!-- proc~formk&#45;&gt;proc~dcopy -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge32" class="edge">
-<title>proc~cauchy&#45;&gt;proc~bmv</title>
-<path fill="none" stroke="#000000" d="M361.45,-604.15C370.21,-608.33 380.17,-613.08 389.52,-617.54"/>
-<polygon fill="#000000" stroke="#000000" points="388.07,-620.73 398.6,-621.88 391.09,-614.41 388.07,-620.73"/>
+<title>proc~formk&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M351.61,-537.81C355.08,-534.98 358.71,-531.94 362,-529 376.98,-515.64 393.11,-499.72 405.17,-487.49"/>
+<polygon fill="#000000" stroke="#000000" points="407.95,-489.64 412.45,-480.05 402.95,-484.75 407.95,-489.64"/>
 </g>
-<!-- proc~daxpy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node26" class="node">
-<title>proc~daxpy</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node26"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="632,-635 578,-635 578,-611 632,-611 632,-635"/>
-<text text-anchor="middle" x="605" y="-620.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+<!-- proc~formk&#45;&gt;proc~dpofa -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge34" class="edge">
+<title>proc~formk&#45;&gt;proc~dpofa</title>
+<path fill="none" stroke="#000000" d="M361.93,-562.08C370.36,-566.01 379.86,-570.43 388.84,-574.62"/>
+<polygon fill="#000000" stroke="#000000" points="387.41,-577.81 397.95,-578.87 390.37,-571.47 387.41,-577.81"/>
+</g>
+<!-- proc~dtrsl -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_node25" class="node">
+<title>proc~dtrsl</title>
+<g id="a_proc~~bfgs_with_grad~~CallsGraph_node25"><a xlink:href=".././proc/dtrsl.html" xlink:title="dtrsl">
+<polygon fill="#d9534f" stroke="#d9534f" points="542,-420 488,-420 488,-396 542,-396 542,-420"/>
+<text text-anchor="middle" x="515" y="-405.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dtrsl</text>
 </a>
 </g>
 </g>
-<!-- proc~cauchy&#45;&gt;proc~daxpy -->
+<!-- proc~formk&#45;&gt;proc~dtrsl -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge33" class="edge">
-<title>proc~cauchy&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M352.07,-604.21C355.45,-606.99 358.92,-610.01 362,-613 379.64,-630.13 375.66,-644.73 398,-655 454.89,-681.17 528.98,-657.35 571.03,-639.15"/>
-<polygon fill="#000000" stroke="#000000" points="572.55,-642.31 580.25,-635.03 569.7,-635.92 572.55,-642.31"/>
-</g>
-<!-- proc~hpsolb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_node28" class="node">
-<title>proc~hpsolb</title>
-<g id="a_proc~~bfgs_with_grad~~CallsGraph_node28"><a xlink:href=".././proc/hpsolb.html" xlink:title="hpsolb">
-<polygon fill="#d9534f" stroke="#d9534f" points="452,-604 398,-604 398,-580 452,-580 452,-604"/>
-<text text-anchor="middle" x="425" y="-589.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hpsolb</text>
-</a>
-</g>
-</g>
-<!-- proc~cauchy&#45;&gt;proc~hpsolb -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge36" class="edge">
-<title>proc~cauchy&#45;&gt;proc~hpsolb</title>
-<path fill="none" stroke="#000000" d="M362.4,-592C370.39,-592 379.31,-592 387.82,-592"/>
-<polygon fill="#000000" stroke="#000000" points="387.92,-595.5 397.92,-592 387.92,-588.5 387.92,-595.5"/>
+<title>proc~formk&#45;&gt;proc~dtrsl</title>
+<path fill="none" stroke="#000000" d="M362.38,-540.02C387.25,-529.76 424.7,-512.04 452,-489 472.44,-471.75 490.34,-446.66 501.59,-428.99"/>
+<polygon fill="#000000" stroke="#000000" points="504.84,-430.38 507.12,-420.03 498.89,-426.7 504.84,-430.38"/>
 </g>
 <!-- proc~cmprlb&#45;&gt;proc~bmv -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge37" class="edge">
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge35" class="edge">
 <title>proc~cmprlb&#45;&gt;proc~bmv</title>
-<path fill="none" stroke="#000000" d="M362.4,-634C370.39,-634 379.31,-634 387.82,-634"/>
-<polygon fill="#000000" stroke="#000000" points="387.92,-637.5 397.92,-634 387.92,-630.5 387.92,-637.5"/>
+<path fill="none" stroke="#000000" d="M353.96,-108.01C356.98,-110.68 359.83,-113.71 362,-117 394.52,-166.34 365.48,-195.66 398,-245 398.34,-245.51 398.7,-246.02 399.07,-246.52"/>
+<polygon fill="#000000" stroke="#000000" points="396.66,-249.07 406.04,-253.99 401.77,-244.29 396.66,-249.07"/>
 </g>
-<!-- proc~prn2lb&#45;&gt;2 -->
+<!-- proc~subsm&#45;&gt;proc~dcopy -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge38" class="edge">
-<title>proc~prn2lb&#45;&gt;2</title>
-<path fill="none" stroke="#000000" d="M362.4,-131.7C370.48,-129.77 379.51,-127.62 388.1,-125.57"/>
-<polygon fill="#000000" stroke="#000000" points="389,-128.95 397.92,-123.22 387.38,-122.14 389,-128.95"/>
+<title>proc~subsm&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M362.4,-440C370.66,-443.75 379.9,-447.95 388.66,-451.94"/>
+<polygon fill="#000000" stroke="#000000" points="387.37,-455.19 397.92,-456.14 390.26,-448.82 387.37,-455.19"/>
+</g>
+<!-- proc~subsm&#45;&gt;proc~dscal -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge37" class="edge">
+<title>proc~subsm&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="#000000" d="M362.4,-416C370.66,-412.25 379.9,-408.05 388.66,-404.06"/>
+<polygon fill="#000000" stroke="#000000" points="390.26,-407.18 397.92,-399.86 387.37,-400.81 390.26,-407.18"/>
+</g>
+<!-- proc~subsm&#45;&gt;proc~dtrsl -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge36" class="edge">
+<title>proc~subsm&#45;&gt;proc~dtrsl</title>
+<path fill="none" stroke="#000000" d="M362.26,-425.05C392.85,-421.61 443.55,-415.92 477.84,-412.06"/>
+<polygon fill="#000000" stroke="#000000" points="478.37,-415.53 487.92,-410.93 477.59,-408.57 478.37,-415.53"/>
+</g>
+<!-- proc~bmv&#45;&gt;proc~dtrsl -->
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge39" class="edge">
+<title>proc~bmv&#45;&gt;proc~dtrsl</title>
+<path fill="none" stroke="#000000" d="M443.17,-278.16C446.33,-280.85 449.44,-283.85 452,-287 477.12,-317.91 496.06,-360.65 506.06,-386.19"/>
+<polygon fill="#000000" stroke="#000000" points="502.85,-387.59 509.67,-395.69 509.39,-385.1 502.85,-387.59"/>
 </g>
 <!-- proc~dtrsl&#45;&gt;proc~daxpy -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge39" class="edge">
+<g id="proc~~bfgs_with_grad~~CallsGraph_edge40" class="edge">
 <title>proc~dtrsl&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M536.85,-584.09C547.95,-590.52 561.8,-598.54 574.03,-605.63"/>
-<polygon fill="#000000" stroke="#000000" points="572.58,-608.84 582.99,-610.82 576.09,-602.78 572.58,-608.84"/>
+<path fill="none" stroke="#000000" d="M542.4,-399C550.57,-396.22 559.7,-393.1 568.38,-390.14"/>
+<polygon fill="#000000" stroke="#000000" points="569.58,-393.43 577.92,-386.89 567.32,-386.81 569.58,-393.43"/>
 </g>
 <!-- proc~dcstep -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_node29" class="node">
 <title>proc~dcstep</title>
 <g id="a_proc~~bfgs_with_grad~~CallsGraph_node29"><a xlink:href=".././proc/dcstep.html" xlink:title="dcstep">
-<polygon fill="#d9534f" stroke="#d9534f" points="542,-402 488,-402 488,-378 542,-378 542,-402"/>
-<text text-anchor="middle" x="515" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcstep</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="542,-236 488,-236 488,-212 542,-212 542,-236"/>
+<text text-anchor="middle" x="515" y="-221.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcstep</text>
 </a>
 </g>
 </g>
 <!-- proc~dcsrch&#45;&gt;proc~dcstep -->
-<g id="proc~~bfgs_with_grad~~CallsGraph_edge40" class="edge">
-<title>proc~dcsrch&#45;&gt;proc~dcstep</title>
-<path fill="none" stroke="#000000" d="M452.4,-390C460.39,-390 469.31,-390 477.82,-390"/>
-<polygon fill="#000000" stroke="#000000" points="477.92,-393.5 487.92,-390 477.92,-386.5 477.92,-393.5"/>
-</g>
-<!-- proc~bmv&#45;&gt;proc~dtrsl -->
 <g id="proc~~bfgs_with_grad~~CallsGraph_edge41" class="edge">
-<title>proc~bmv&#45;&gt;proc~dtrsl</title>
-<path fill="none" stroke="#000000" d="M443.39,-621.75C456.24,-612.69 473.96,-600.21 488.43,-590.01"/>
-<polygon fill="#000000" stroke="#000000" points="490.79,-592.63 496.95,-584.01 486.76,-586.91 490.79,-592.63"/>
+<title>proc~dcsrch&#45;&gt;proc~dcstep</title>
+<path fill="none" stroke="#000000" d="M452.4,-224C460.39,-224 469.31,-224 477.82,-224"/>
+<polygon fill="#000000" stroke="#000000" points="477.92,-227.5 487.92,-224 477.92,-220.5 477.92,-227.5"/>
 </g>
 </g>
 </svg>
@@ -802,14 +959,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/bfgs_with_grad.html#src">bfgs_with_grad</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/bfgs_with_grad.html#src">bfgs_with_grad</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -903,7 +1079,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

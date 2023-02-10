@@ -80,51 +80,72 @@
   <div class="row">
     <h1>jyzo
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.2% of total for procedures.">104 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/special_functions.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/special_functions.f90.html'>special_functions.f90</a></li>
-     <li class="active">jyzo</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.2% of total for procedures.">104 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/SF_SPECIAL.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/sf_special.f90.html'>SF_SPECIAL.f90</a></li>
+              <li><a href='../module/sf_special.html'>SF_SPECIAL</a></li>
+          <li class="active">jyzo</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/jyzo.html#src">jyzo</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine jyzo(n, nt, rj0, rj1, ry0, ry1)</h2>
+    <h2>public  subroutine jyzo(n, nt, rj0, rj1, ry0, ry1)  
+</h2>
     
 
     <p><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*80</p>
@@ -161,47 +182,108 @@ of Jn(x), Jn&#39;(x), Yn(x), Yn&#39;(x).
 </code></pre></div>
 
     <h3>Arguments</h3>
-      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-n~130"></span>integer(kind=4)</td>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~206"></span>
+              integer(kind=4)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>n</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nt~6"></span>integer(kind=4)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nt~13"></span>
+              integer(kind=4)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>nt</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-rj0"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nt</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rj0~2"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>rj0</strong>(nt)</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-rj1"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rj0</strong>(nt)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rj1~2"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>rj1</strong>(nt)</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-ry0"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rj1</strong>(nt)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ry0~2"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>ry0</strong>(nt)</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-ry1"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ry0</strong>(nt)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ry1~2"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>ry1</strong>(nt)</td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ry1</strong>(nt)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -307,14 +389,27 @@ of Jn(x), Jn&#39;(x), Yn(x), Yn&#39;(x).
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/jyzo.html#src">jyzo</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -328,195 +423,6 @@ of Jn(x), Jn&#39;(x), Yn(x), Yn&#39;(x).
 
 
     
-    <section>
-    <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">jyzo</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">nt</span><span class="p">,</span><span class="w"> </span><span class="n">rj0</span><span class="p">,</span><span class="w"> </span><span class="n">rj1</span><span class="p">,</span><span class="w"> </span><span class="n">ry0</span><span class="p">,</span><span class="w"> </span><span class="n">ry1</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="c">!*****************************************************************************80</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!! JYZO computes the zeros of Bessel functions Jn(x), Yn(x) and derivatives.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Licensing:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    This routine is copyrighted by Shanjie Zhang and Jianming Jin.  However, </span>
-<span class="w">  </span><span class="c">!    they give permission to incorporate this routine into a user program </span>
-<span class="w">  </span><span class="c">!    provided that the copyright is acknowledged.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Modified:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    28 July 2012</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Author:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Reference:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin,</span>
-<span class="w">  </span><span class="c">!    Computation of Special Functions,</span>
-<span class="w">  </span><span class="c">!    Wiley, 1996,</span>
-<span class="w">  </span><span class="c">!    ISBN: 0-471-11963-6,</span>
-<span class="w">  </span><span class="c">!    LC: QA351.C45.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Parameters:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) N, the order of the Bessel functions.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) NT, the number of zeros.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Output, real ( kind = 8 ) RJ0(NT), RJ1(NT), RY0(NT), RY1(NT), the zeros </span>
-<span class="w">  </span><span class="c">!    of Jn(x), Jn&#39;(x), Yn(x), Yn&#39;(x).</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="k">implicit none</span>
-
-<span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">nt</span><span class="w"></span>
-
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">bjn</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">byn</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">djn</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">dyn</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fjn</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fyn</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">n_r8</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">rj0</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">rj1</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ry0</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ry1</span><span class="p">(</span><span class="n">nt</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">x0</span><span class="w"></span>
-
-<span class="w">  </span><span class="n">n_r8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.82141D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.15859D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span>
-<span class="w">  </span><span class="k">else</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.85576D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">+</span><span class="w"> </span><span class="mf">1.03315D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"></span>
-<span class="w">  </span><span class="k">end if</span>
-
-<span class="k">  </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">do</span>
-
-<span class="k">     </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">     </span><span class="k">call </span><span class="n">jyndd</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bjn</span><span class="p">,</span><span class="w"> </span><span class="n">djn</span><span class="p">,</span><span class="w"> </span><span class="n">fjn</span><span class="p">,</span><span class="w"> </span><span class="n">byn</span><span class="p">,</span><span class="w"> </span><span class="n">dyn</span><span class="p">,</span><span class="w"> </span><span class="n">fyn</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bjn</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">djn</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D-09</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        cycle</span>
-<span class="k">     end if</span>
-
-<span class="k">     </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">     </span><span class="n">rj0</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3.1416D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">0.0972D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.0679D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="mf">0.000354D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nt</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        exit</span>
-<span class="k">     end if</span>
-
-<span class="k">  end do</span>
-
-<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.961587D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.07703D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span>
-<span class="w">  </span><span class="k">else</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.80861D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">+</span><span class="w"> </span><span class="mf">0.07249D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"></span>
-<span class="w">  </span><span class="k">end if</span>
-
-<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.8317D+00</span><span class="w"></span>
-<span class="w">  </span><span class="k">end if</span>
-
-<span class="k">  </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">do</span>
-
-<span class="k">     </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">     </span><span class="k">call </span><span class="n">jyndd</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bjn</span><span class="p">,</span><span class="w"> </span><span class="n">djn</span><span class="p">,</span><span class="w"> </span><span class="n">fjn</span><span class="p">,</span><span class="w"> </span><span class="n">byn</span><span class="p">,</span><span class="w"> </span><span class="n">dyn</span><span class="p">,</span><span class="w"> </span><span class="n">fyn</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">djn</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">fjn</span><span class="w"></span>
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D-09</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        cycle</span>
-<span class="k">     end if</span>
-<span class="k">     </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">     </span><span class="n">rj1</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3.1416D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">0.4955D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.0915D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="mf">0.000435D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nt</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        exit</span>
-<span class="k">     end if</span>
-
-<span class="k">  end do</span>
-
-<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.19477D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.08933D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span>
-<span class="w">  </span><span class="k">else</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.93158D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">+</span><span class="w"> </span><span class="mf">0.26035D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"></span>
-<span class="w">  </span><span class="k">end if</span>
-
-<span class="k">  </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">do</span>
-
-<span class="k">     </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">     </span><span class="k">call </span><span class="n">jyndd</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bjn</span><span class="p">,</span><span class="w"> </span><span class="n">djn</span><span class="p">,</span><span class="w"> </span><span class="n">fjn</span><span class="p">,</span><span class="w"> </span><span class="n">byn</span><span class="p">,</span><span class="w"> </span><span class="n">dyn</span><span class="p">,</span><span class="w"> </span><span class="n">fyn</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">byn</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dyn</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D-09</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        cycle</span>
-<span class="k">     end if</span>
-
-<span class="k">     </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">     </span><span class="n">ry0</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3.1416D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">0.312D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.0852D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="mf">0.000403D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nt</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        exit</span>
-<span class="k">     end if</span>
-
-<span class="k">  end do</span>
-
-<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.67257D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.16099D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span>
-<span class="w">  </span><span class="k">else</span>
-<span class="k">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.8211D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">+</span><span class="w"> </span><span class="mf">0.94001D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">0.33333D+00</span><span class="w"></span>
-<span class="w">  </span><span class="k">end if</span>
-
-<span class="k">  </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">do</span>
-
-<span class="k">     </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">     </span><span class="k">call </span><span class="n">jyndd</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">bjn</span><span class="p">,</span><span class="w"> </span><span class="n">djn</span><span class="p">,</span><span class="w"> </span><span class="n">fjn</span><span class="p">,</span><span class="w"> </span><span class="n">byn</span><span class="p">,</span><span class="w"> </span><span class="n">dyn</span><span class="p">,</span><span class="w"> </span><span class="n">fyn</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dyn</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">fyn</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D-09</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        cycle</span>
-<span class="k">     end if</span>
-
-<span class="k">     </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">     </span><span class="n">ry1</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3.1416D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">0.197D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.0643D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">-</span><span class="mf">0.000286D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_r8</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">l</span><span class="w"> </span>
-
-<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nt</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        exit</span>
-<span class="k">     end if</span>
-
-<span class="k">  end do</span>
-
-<span class="k">  return</span>
-<span class="k">end subroutine </span><span class="n">jyzo</span><span class="w"></span>
-</pre></div>
-
-    </section>
-    <br>
     
     </div>
   </div>
@@ -526,7 +432,7 @@ of Jn(x), Jn&#39;(x), Yn(x), Yn&#39;(x).
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

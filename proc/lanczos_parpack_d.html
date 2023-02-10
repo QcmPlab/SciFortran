@@ -80,154 +80,310 @@
   <div class="row">
     <h1>lanczos_parpack_d
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.4% of total for procedures.">220 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/parpack_d.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/parpack_d.f90.html'>parpack_d.f90</a></li>
-     <li class="active">lanczos_parpack_d</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.4% of total for procedures.">220 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/parpack_d.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/parpack_d.f90.html'>parpack_d.f90</a></li>
+          <li class="active">lanczos_parpack_d</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading
-  text-left"><h3 class="panel-title"><a data-toggle="collapse"
-  href="#common-0">Common Blocks</a></h3></div>
-  <div id="common-0" class="panel-collapse collapse">
-    <div class="list-group">
-      <a class="list-group-item" href="../proc/lanczos_parpack_d.html#common-debug~8">debug</a>
+      <div id="sidebar">
+      <h3>Contents</h3>
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#common-0">Common Blocks</a>
+        </h3>
+      </div>
+      <div id="common-0" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../proc/lanczos_parpack_d.html#common-debug">debug</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/lanczos_parpack_d.html#src">lanczos_parpack_d</a>
-  </div>
-</div>
 
-</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/lanczos_parpack_d.html#src">lanczos_parpack_d</a>
+      </div>
+    </div>
+
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine lanczos_parpack_d(MpiComm, MatVec, eval, evec, Nblock, Nitermax, v0, tol, iverbose, vrandom)</h2>
+    <h2> subroutine lanczos_parpack_d(MpiComm, MatVec, eval, evec, Nblock, Nitermax, v0, tol, iverbose, vrandom)  
+</h2>
     
 
 
     <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mpicomm~7"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MpiComm</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+     subroutine MatVec(nchunk, vin, vout)  
+
+    </h5>
+  
+
+  <h6>Arguments</h6>
       <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-mpicomm~2"></span>integer</td>
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>MpiComm</strong></td><td></td>
-</tr>
-<tr>
-  <td colspan="7">
-      <small><h5>subroutine MatVec(nchunk, vin, vout)</h5>    
-<h6>Arguments</h6>      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" ></span>integer</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nchunk</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>nchunk</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" ></span>real(kind=8),</td>
+              <td></td>            <td>
+              dimension(nchunk)
+            </td>
+            <td>::</td>
+            <td><strong>vin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(nchunk)</td><td>::</td>
-  <td><strong>vin</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" ></span>real(kind=8),</td>
-<td></td>
-  <td></td>  <td>dimension(nchunk)</td><td>::</td>
-  <td><strong>vout</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              dimension(nchunk)
+            </td>
+            <td>::</td>
+            <td><strong>vout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
 </small>
-  </td> 
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-eval~4"></span>real(kind=8)</td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-eval"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>eval</strong>(:)</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-evec~4"></span>real(kind=8)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>eval</strong>(:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-evec"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>evec</strong>(:,:)</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nblock~16"></span>integer,</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>evec</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nblock~13"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>Nblock</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nitermax~4"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nblock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nitermax~3"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>Nitermax</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-v0~4"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nitermax</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v0"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>v0</strong>(size(evec,1))</td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-tol~8"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v0</strong>(size(evec,1))</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol~26"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>tol</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-iverbose~4"></span>logical,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iverbose~7"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>iverbose</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-vrandom~2"></span>logical,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iverbose</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vrandom~3"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>vrandom</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>vrandom</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -252,75 +408,75 @@
 <polygon fill="none" stroke="black" points="113,-150 0,-150 0,-126 113,-126 113,-150"/>
 <text text-anchor="middle" x="56.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">lanczos_parpack_d</text>
 </g>
-<!-- get_master_mpi -->
+<!-- mt_random -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node2" class="node">
-<title>get_master_mpi</title>
-<polygon fill="#777777" stroke="#777777" points="247,-276 149,-276 149,-252 247,-252 247,-276"/>
-<text text-anchor="middle" x="198" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_master_mpi</text>
+<title>mt_random</title>
+<polygon fill="#777777" stroke="#777777" points="235,-276 161,-276 161,-252 235,-252 235,-276"/>
+<text text-anchor="middle" x="198" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mt_random</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;get_master_mpi -->
+<!-- proc~lanczos_parpack_d&#45;&gt;mt_random -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_edge1" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;get_master_mpi</title>
+<title>proc~lanczos_parpack_d&#45;&gt;mt_random</title>
 <path fill="none" stroke="#000000" d="M65.45,-150.26C79.84,-171.61 112.16,-215.96 149,-243 150.88,-244.38 152.86,-245.69 154.9,-246.94"/>
 <polygon fill="#000000" stroke="#000000" points="153.71,-250.27 164.17,-251.97 157.05,-244.12 153.71,-250.27"/>
 </g>
-<!-- mt_random -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_node3" class="node">
-<title>mt_random</title>
-<polygon fill="#777777" stroke="#777777" points="235,-234 161,-234 161,-210 235,-210 235,-234"/>
-<text text-anchor="middle" x="198" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mt_random</text>
-</g>
-<!-- proc~lanczos_parpack_d&#45;&gt;mt_random -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_edge2" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;mt_random</title>
-<path fill="none" stroke="#000000" d="M73.1,-150.11C90.86,-163.57 121.02,-185.43 149,-201 151.86,-202.59 154.87,-204.15 157.92,-205.66"/>
-<polygon fill="#000000" stroke="#000000" points="156.59,-208.9 167.12,-209.98 159.56,-202.56 156.59,-208.9"/>
-</g>
 <!-- pdseupd -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_node4" class="node">
+<g id="proc~~lanczos_parpack_d~~CallsGraph_node3" class="node">
 <title>pdseupd</title>
-<polygon fill="#777777" stroke="#777777" points="227,-192 169,-192 169,-168 227,-168 227,-192"/>
-<text text-anchor="middle" x="198" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdseupd</text>
+<polygon fill="#777777" stroke="#777777" points="227,-234 169,-234 169,-210 227,-210 227,-234"/>
+<text text-anchor="middle" x="198" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdseupd</text>
 </g>
 <!-- proc~lanczos_parpack_d&#45;&gt;pdseupd -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_edge4" class="edge">
+<g id="proc~~lanczos_parpack_d~~CallsGraph_edge3" class="edge">
 <title>proc~lanczos_parpack_d&#45;&gt;pdseupd</title>
-<path fill="none" stroke="#000000" d="M97.48,-150.04C116.95,-155.9 140.23,-162.91 159.38,-168.67"/>
-<polygon fill="#000000" stroke="#000000" points="158.39,-172.03 168.97,-171.56 160.41,-165.33 158.39,-172.03"/>
+<path fill="none" stroke="#000000" d="M73.1,-150.11C90.86,-163.57 121.02,-185.43 149,-201 152.43,-202.91 156.08,-204.77 159.76,-206.55"/>
+<polygon fill="#000000" stroke="#000000" points="158.35,-209.76 168.9,-210.78 161.29,-203.4 158.35,-209.76"/>
 </g>
 <!-- mpi_allreduce -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_node5" class="node">
+<g id="proc~~lanczos_parpack_d~~CallsGraph_node4" class="node">
 <title>mpi_allreduce</title>
-<polygon fill="#777777" stroke="#777777" points="242,-150 154,-150 154,-126 242,-126 242,-150"/>
-<text text-anchor="middle" x="198" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
+<polygon fill="#777777" stroke="#777777" points="242,-192 154,-192 154,-168 242,-168 242,-192"/>
+<text text-anchor="middle" x="198" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
 </g>
 <!-- proc~lanczos_parpack_d&#45;&gt;mpi_allreduce -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_edge3" class="edge">
+<g id="proc~~lanczos_parpack_d~~CallsGraph_edge2" class="edge">
 <title>proc~lanczos_parpack_d&#45;&gt;mpi_allreduce</title>
-<path fill="none" stroke="#000000" d="M113.03,-138C123.07,-138 133.52,-138 143.5,-138"/>
-<polygon fill="#000000" stroke="#000000" points="143.69,-141.5 153.69,-138 143.69,-134.5 143.69,-141.5"/>
+<path fill="none" stroke="#000000" d="M97.48,-150.04C112.94,-154.69 130.82,-160.07 147.11,-164.98"/>
+<polygon fill="#000000" stroke="#000000" points="146.43,-168.43 157.02,-167.96 148.45,-161.73 146.43,-168.43"/>
 </g>
-<!-- allreduce_mpi -->
+<!-- get_master_mpi -->
+<g id="proc~~lanczos_parpack_d~~CallsGraph_node5" class="node">
+<title>get_master_mpi</title>
+<polygon fill="#777777" stroke="#777777" points="247,-150 149,-150 149,-126 247,-126 247,-150"/>
+<text text-anchor="middle" x="198" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_master_mpi</text>
+</g>
+<!-- proc~lanczos_parpack_d&#45;&gt;get_master_mpi -->
+<g id="proc~~lanczos_parpack_d~~CallsGraph_edge4" class="edge">
+<title>proc~lanczos_parpack_d&#45;&gt;get_master_mpi</title>
+<path fill="none" stroke="#000000" d="M113.03,-138C121.46,-138 130.18,-138 138.66,-138"/>
+<polygon fill="#000000" stroke="#000000" points="138.86,-141.5 148.86,-138 138.86,-134.5 138.86,-141.5"/>
+</g>
+<!-- assert_shape -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node6" class="node">
-<title>allreduce_mpi</title>
-<polygon fill="#777777" stroke="#777777" points="242,-108 154,-108 154,-84 242,-84 242,-108"/>
-<text text-anchor="middle" x="198" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">allreduce_mpi</text>
+<title>assert_shape</title>
+<polygon fill="#777777" stroke="#777777" points="239,-108 157,-108 157,-84 239,-84 239,-108"/>
+<text text-anchor="middle" x="198" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_shape</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;allreduce_mpi -->
+<!-- proc~lanczos_parpack_d&#45;&gt;assert_shape -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_edge5" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;allreduce_mpi</title>
+<title>proc~lanczos_parpack_d&#45;&gt;assert_shape</title>
 <path fill="none" stroke="#000000" d="M97.48,-125.96C112.94,-121.31 130.82,-115.93 147.11,-111.02"/>
 <polygon fill="#000000" stroke="#000000" points="148.45,-114.27 157.02,-108.04 146.43,-107.57 148.45,-114.27"/>
 </g>
-<!-- assert_shape -->
+<!-- allreduce_mpi -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node7" class="node">
-<title>assert_shape</title>
-<polygon fill="#777777" stroke="#777777" points="239,-66 157,-66 157,-42 239,-42 239,-66"/>
-<text text-anchor="middle" x="198" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_shape</text>
+<title>allreduce_mpi</title>
+<polygon fill="#777777" stroke="#777777" points="242,-66 154,-66 154,-42 242,-42 242,-66"/>
+<text text-anchor="middle" x="198" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">allreduce_mpi</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;assert_shape -->
+<!-- proc~lanczos_parpack_d&#45;&gt;allreduce_mpi -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_edge6" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;assert_shape</title>
+<title>proc~lanczos_parpack_d&#45;&gt;allreduce_mpi</title>
 <path fill="none" stroke="#000000" d="M73.1,-125.89C90.86,-112.43 121.02,-90.57 149,-75 151.86,-73.41 154.87,-71.85 157.92,-70.34"/>
 <polygon fill="#000000" stroke="#000000" points="159.56,-73.44 167.12,-66.02 156.59,-67.1 159.56,-73.44"/>
 </g>
@@ -402,166 +558,459 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading
-  text-left"><h3 class="panel-title"><a data-toggle="collapse"
-  href="#common-1">Common Blocks</a></h3></div>
-  <div id="common-1" class="panel-collapse collapse">
-    <div class="list-group">
-      <a class="list-group-item" href="../proc/lanczos_parpack_d.html#common-debug~8">debug</a>
+        <h3>Contents</h3>
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#common-1">Common Blocks</a>
+        </h3>
+      </div>
+      <div id="common-1" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../proc/lanczos_parpack_d.html#common-debug">debug</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/lanczos_parpack_d.html#src">lanczos_parpack_d</a>
-  </div>
-</div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/lanczos_parpack_d.html#src">lanczos_parpack_d</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
 
     <section>
       <h2>Common Blocks</h2>
-      <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="common-debug~8"></span><h3>
-      <a data-toggle="popover" data-html="true" tabindex="0" 
-     data-trigger="focus"
-   data-content="<h4>Used Elsewhere:</h4><a href='../proc/lanczos_arpack_d~2.html#common-debug~2'>lanczos_arpack_d</a> (subroutine)<br><a href='../proc/lanczos_arpack_c~2.html#common-debug~3'>lanczos_arpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_d~2.html#common-debug~4'>lanczos_parpack_d</a> (subroutine)<br><a href='../proc/lanczos_parpack_c~2.html#common-debug~5'>lanczos_parpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_c.html#common-debug'>lanczos_parpack_c</a> (subroutine)<br><a href='../proc/lanczos_arpack_d.html#common-debug~6'>lanczos_arpack_d</a> (subroutine)<br><a href='../proc/lanczos_arpack_c.html#common-debug~7'>lanczos_arpack_c</a> (subroutine)<br>">common /debug/</a>
-  </h3></div>
-  <div class="panel-body">
-    
-    <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" id="variable-logfil~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>logfil</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-ndigit~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>ndigit</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mgetv0~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mgetv0</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-msaupd~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>msaupd</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-msaup2~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>msaup2</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-msaitr~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>msaitr</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mseigt~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mseigt</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-msapps~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>msapps</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-msgets~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>msgets</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mseupd~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mseupd</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mnaupd~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mnaupd</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mnaup2~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mnaup2</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mnaitr~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mnaitr</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mneigh~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mneigh</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mnapps~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mnapps</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mngets~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mngets</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mneupd~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mneupd</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mcaupd~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mcaupd</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mcaup2~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mcaup2</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mcaitr~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mcaitr</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mceigh~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mceigh</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mcapps~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mcapps</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mcgets~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mcgets</strong></td><td></td><td></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-mceupd~4"></span>integer</td>
-  <td></td><td>::</td>
-  <td><strong>mceupd</strong></td><td></td><td></td><td></td>
-</tr>
-</tbody>
-</table>
+        <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="common-debug"></span><h3>
+        <a data-toggle="popover" data-html="true" tabindex="0"
+           data-trigger="focus"
+           data-content="<h4>Used Elsewhere:</h4><a href='../proc/lanczos_arpack_d~2.html#common-debug~2'>lanczos_arpack_d</a> (subroutine)<br><a href='../proc/lanczos_arpack_c~2.html#common-debug~3'>lanczos_arpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_d~2.html#common-debug~4'>lanczos_parpack_d</a> (subroutine)<br><a href='../proc/lanczos_parpack_c~2.html#common-debug~5'>lanczos_parpack_c</a> (subroutine)<br><a href='../proc/lanczos_arpack_c.html#common-debug~6'>lanczos_arpack_c</a> (subroutine)<br><a href='../proc/lanczos_parpack_c.html#common-debug~7'>lanczos_parpack_c</a> (subroutine)<br><a href='../proc/lanczos_arpack_d.html#common-debug~8'>lanczos_arpack_d</a> (subroutine)<br>">common /debug/</a>
+           
+    </h3></div>
+    <div class="panel-body">
+      
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+<th></th><th>Initial</th>        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-logfil"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>logfil</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ndigit"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ndigit</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mgetv0"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mgetv0</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msaupd"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>msaupd</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msaup2"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>msaup2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msaitr"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>msaitr</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mseigt"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mseigt</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msapps"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>msapps</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-msgets"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>msgets</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mseupd"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mseupd</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mnaupd"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mnaupd</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mnaup2"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mnaup2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mnaitr"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mnaitr</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mneigh"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mneigh</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mnapps"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mnapps</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mngets"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mngets</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mneupd"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mneupd</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mcaupd"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mcaupd</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mcaup2"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mcaup2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mcaitr"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mcaitr</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mceigh"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mceigh</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mcapps"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mcapps</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mcgets"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mcgets</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mceupd"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mceupd</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
-</div>
-</div>
+    </div>
+  </div>
 
     </section>
     <br>
@@ -794,7 +1243,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">

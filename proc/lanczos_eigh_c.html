@@ -80,132 +80,268 @@
   <div class="row">
     <h1>lanczos_eigh_c
       <small>Subroutine</small>
+      
     </h1>
-    <div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">82 statements</a>
-     </li> 
-    <li><i class="fa fa-code"></i><a href="../src/lanczos_c.f90"> Source File</a></li>
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-     <li><a href='../sourcefile/lanczos_c.f90.html'>lanczos_c.f90</a></li>
-     <li class="active">lanczos_eigh_c</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">82 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/lanczos_c.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/lanczos_c.f90.html'>lanczos_c.f90</a></li>
+          <li class="active">lanczos_eigh_c</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    <div id="sidebar">
-  <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/lanczos_eigh_c.html#src">lanczos_eigh_c</a>
-  </div>
-</div>
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/lanczos_eigh_c.html#src">lanczos_eigh_c</a>
+      </div>
+    </div>
 
-</div>
+
+  </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>subroutine lanczos_eigh_c(MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)</h2>
+    <h2> subroutine lanczos_eigh_c(MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)  
+</h2>
     
 
 
     <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+     subroutine MatVec(Nloc, vin, vout)  
+
+    </h5>
+  
+
+  <h6>Arguments</h6>
       <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td colspan="7">
-      <small><h5>subroutine MatVec(Nloc, vin, vout)</h5>    
-<h6>Arguments</h6>      <table class="table table-striped varlist">
-<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
-<tbody>
-<tr>
-  <td><span class="anchor" ></span>integer</td>
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              integer
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>Nloc</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" ></span>complex(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nloc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(Nloc)</td><td>::</td>
-  <td><strong>vin</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" ></span>complex(kind=8),</td>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(Nloc)</td><td>::</td>
-  <td><strong>vout</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
 </small>
-  </td> 
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-egs"></span>real(kind=8)</td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-egs~3"></span>
+              real(kind=8)
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>egs</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-vect"></span>complex(kind=8),</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>egs</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vect~3"></span>
+              complex(kind=8),
+            </td>
 <td></td>
-  <td></td>  <td>dimension(:)</td><td>::</td>
-  <td><strong>vect</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-nitermax~5"></span>integer</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>vect</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nitermax~6"></span>
+              integer
+            </td>
 <td></td>
-  <td></td>  <td></td><td>::</td>
-  <td><strong>Nitermax</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-iverbose~5"></span>logical,</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nitermax</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iverbose~9"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>iverbose</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-threshold"></span>real(kind=8),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iverbose</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-threshold~9"></span>
+              real(kind=8),
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>threshold</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-ncheck"></span>integer,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>threshold</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ncheck~3"></span>
+              integer,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>ncheck</strong></td><td></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-vrandom~3"></span>logical,</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ncheck</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vrandom~4"></span>
+              logical,
+            </td>
 <td></td>
-  <td>optional</td>  <td></td><td>::</td>
-  <td><strong>vrandom</strong></td><td></td>
-</tr>
-</tbody>
-</table>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>vrandom</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
 
     <br>
     <div class="panel panel-default">
@@ -242,32 +378,32 @@
 <path fill="none" stroke="#000000" d="M86.26,-66.04C102.39,-70.98 121.18,-76.74 137.95,-81.88"/>
 <polygon fill="#000000" stroke="#000000" points="136.97,-85.24 147.55,-84.83 139.02,-78.55 136.97,-85.24"/>
 </g>
-<!-- eigh -->
-<g id="proc~~lanczos_eigh_c~~CallsGraph_node3" class="node">
-<title>eigh</title>
-<polygon fill="#777777" stroke="#777777" points="212,-66 158,-66 158,-42 212,-42 212,-66"/>
-<text text-anchor="middle" x="185" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">eigh</text>
-</g>
-<!-- proc~lanczos_eigh_c&#45;&gt;eigh -->
-<g id="proc~~lanczos_eigh_c~~CallsGraph_edge2" class="edge">
-<title>proc~lanczos_eigh_c&#45;&gt;eigh</title>
-<path fill="none" stroke="#000000" d="M92.24,-54C110.31,-54 130.83,-54 147.88,-54"/>
-<polygon fill="#000000" stroke="#000000" points="147.99,-57.5 157.99,-54 147.99,-50.5 147.99,-57.5"/>
-</g>
 <!-- proc~lanczos_iteration_c -->
-<g id="proc~~lanczos_eigh_c~~CallsGraph_node4" class="node">
+<g id="proc~~lanczos_eigh_c~~CallsGraph_node3" class="node">
 <title>proc~lanczos_iteration_c</title>
-<g id="a_proc~~lanczos_eigh_c~~CallsGraph_node4"><a xlink:href=".././proc/lanczos_iteration_c.html" xlink:title="lanczos_iteration_c">
-<polygon fill="#d9534f" stroke="#d9534f" points="242,-24 128,-24 128,0 242,0 242,-24"/>
-<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lanczos_iteration_c</text>
+<g id="a_proc~~lanczos_eigh_c~~CallsGraph_node3"><a xlink:href=".././proc/lanczos_iteration_c.html" xlink:title="lanczos_iteration_c">
+<polygon fill="#d9534f" stroke="#d9534f" points="242,-66 128,-66 128,-42 242,-42 242,-66"/>
+<text text-anchor="middle" x="185" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lanczos_iteration_c</text>
 </a>
 </g>
 </g>
 <!-- proc~lanczos_eigh_c&#45;&gt;proc~lanczos_iteration_c -->
 <g id="proc~~lanczos_eigh_c~~CallsGraph_edge3" class="edge">
 <title>proc~lanczos_eigh_c&#45;&gt;proc~lanczos_iteration_c</title>
-<path fill="none" stroke="#000000" d="M86.26,-41.96C101.45,-37.31 119,-31.93 135.01,-27.02"/>
-<polygon fill="#000000" stroke="#000000" points="136.2,-30.31 144.74,-24.04 134.15,-23.62 136.2,-30.31"/>
+<path fill="none" stroke="#000000" d="M92.24,-54C100.42,-54 109.1,-54 117.73,-54"/>
+<polygon fill="#000000" stroke="#000000" points="117.81,-57.5 127.81,-54 117.81,-50.5 117.81,-57.5"/>
+</g>
+<!-- eigh -->
+<g id="proc~~lanczos_eigh_c~~CallsGraph_node4" class="node">
+<title>eigh</title>
+<polygon fill="#777777" stroke="#777777" points="212,-24 158,-24 158,0 212,0 212,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">eigh</text>
+</g>
+<!-- proc~lanczos_eigh_c&#45;&gt;eigh -->
+<g id="proc~~lanczos_eigh_c~~CallsGraph_edge2" class="edge">
+<title>proc~lanczos_eigh_c&#45;&gt;eigh</title>
+<path fill="none" stroke="#000000" d="M86.26,-41.96C105.7,-36.01 129,-28.86 147.98,-23.04"/>
+<polygon fill="#000000" stroke="#000000" points="149.21,-26.33 157.74,-20.05 147.15,-19.64 149.21,-26.33"/>
 </g>
 </g>
 </svg>
@@ -335,14 +471,33 @@
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      <h3>Contents</h3>
- 
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/lanczos_eigh_c.html#src">lanczos_eigh_c</a>
-  </div>
-</div>
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/lanczos_eigh_c.html#src">lanczos_eigh_c</a>
+      </div>
+    </div>
+
 
     </section>
     <br class="visible-xs visible-sm hidden-md">
@@ -483,7 +638,7 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">
