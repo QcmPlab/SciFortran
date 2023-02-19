@@ -95,11 +95,11 @@
 
             <li id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/interpolate_pack.f90"> Source File</a>
+              <a href="../src/SF_INTERPOLATE.f90"> Source File</a>
             </li>
         </ul>
         <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/interpolate_pack.f90.html'>interpolate_pack.f90</a></li>
+              <li><a href='../sourcefile/sf_interpolate.f90.html'>SF_INTERPOLATE.f90</a></li>
           <li class="active">r8vec_expand_linear</li>
         </ol>
       </div>
@@ -136,12 +136,6 @@
   
   
   
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-      <div class="list-group">
-        <a class="list-group-item" href="../proc/r8vec_expand_linear~2.html#src">r8vec_expand_linear</a>
-      </div>
-    </div>
 
 
   </div>
@@ -208,7 +202,7 @@ Output, real ( kind = 8 ) XFAT((N-1)*(FAT+1)+1), the &quot;fattened&quot; data.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~82"></span>
+              <span class="anchor" id="variable-n~44"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -223,7 +217,7 @@ Output, real ( kind = 8 ) XFAT((N-1)*(FAT+1)+1), the &quot;fattened&quot; data.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~107"></span>
+              <span class="anchor" id="variable-x~51"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -292,12 +286,6 @@ Output, real ( kind = 8 ) XFAT((N-1)*(FAT+1)+1), the &quot;fattened&quot; data.
   
   
   
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-      <div class="list-group">
-        <a class="list-group-item" href="../proc/r8vec_expand_linear~2.html#src">r8vec_expand_linear</a>
-      </div>
-    </div>
 
 
     </section>
@@ -312,90 +300,6 @@ Output, real ( kind = 8 ) XFAT((N-1)*(FAT+1)+1), the &quot;fattened&quot; data.
 
 
     
-    <section>
-    <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">r8vec_expand_linear</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">fat</span><span class="p">,</span><span class="w"> </span><span class="n">xfat</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="c">!*****************************************************************************80</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!! R8VEC_EXPAND_LINEAR linearly interpolates new data into an R8VEC.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Discussion:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    This routine copies the old data, and inserts NFAT new values</span>
-<span class="w">  </span><span class="c">!    between each pair of old data values.  This would be one way to</span>
-<span class="w">  </span><span class="c">!    determine places to evenly sample a curve, given the (unevenly</span>
-<span class="w">  </span><span class="c">!    spaced) points at which it was interpolated.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    An R8VEC is an array of double precision real values.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Example:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    N = 3</span>
-<span class="w">  </span><span class="c">!    NFAT = 2</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    X(1:N)        = (/ 0.0,           6.0,             7.0 /)</span>
-<span class="w">  </span><span class="c">!    XFAT(1:2*3+1) = (/ 0.0, 2.0, 4.0, 6.0, 6.33, 6.66, 7.0 /)</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Licensing:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    This code is distributed under the GNU LGPL license. </span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Modified:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    10 October 2001</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Author:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    John Burkardt</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Parameters:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) N, the number of input data values.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) X(N), the original data.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) FAT, the number of data values to interpolate</span>
-<span class="w">  </span><span class="c">!    between each pair of original data values.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Output, real ( kind = 8 ) XFAT((N-1)*(FAT+1)+1), the &quot;fattened&quot; data.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="k">implicit none</span>
-
-<span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fat</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">j</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w">    </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w">    </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">xfat</span><span class="p">((</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fat</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-
-<span class="w">     </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">     </span><span class="n">xfat</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">fat</span><span class="w"></span>
-<span class="w">        </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">        </span><span class="n">xfat</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fat</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w">     </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">             </span><span class="o">+</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w">       </span><span class="n">j</span><span class="p">,</span><span class="w">     </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">             </span><span class="o">/</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fat</span><span class="w">     </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="k">end do</span>
-
-<span class="k">  end do</span>
-
-<span class="k">  </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">  </span><span class="n">xfat</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">return</span>
-<span class="k">end subroutine </span><span class="n">r8vec_expand_linear</span><span class="w"></span>
-</pre></div>
-
-    </section>
-    <br>
     
     </div>
   </div>

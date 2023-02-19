@@ -167,7 +167,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~65"></span>
+              <span class="anchor" id="variable-a~68"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -182,7 +182,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nblock~11"></span>
+              <span class="anchor" id="variable-nblock~16"></span>
               integer
             </td>
 <td></td>
@@ -221,17 +221,17 @@
 <polygon fill="none" stroke="black" points="54,-171 0,-171 0,-147 54,-147 54,-171"/>
 <text text-anchor="middle" x="27" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50">p_Dinv</text>
 </g>
-<!-- numroc -->
+<!-- blacs_gridinfo -->
 <g id="proc~~p_dinv~~CallsGraph_node2" class="node">
-<title>numroc</title>
-<polygon fill="#777777" stroke="#777777" points="165,-318 111,-318 111,-294 165,-294 165,-318"/>
-<text text-anchor="middle" x="138" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
+<title>blacs_gridinfo</title>
+<polygon fill="#777777" stroke="#777777" points="181.5,-318 94.5,-318 94.5,-294 181.5,-294 181.5,-318"/>
+<text text-anchor="middle" x="138" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
 </g>
-<!-- proc~p_dinv&#45;&gt;numroc -->
+<!-- proc~p_dinv&#45;&gt;blacs_gridinfo -->
 <g id="proc~~p_dinv~~CallsGraph_edge1" class="edge">
-<title>proc~p_dinv&#45;&gt;numroc</title>
-<path fill="none" stroke="#000000" d="M30.95,-171.06C37.53,-195.6 55.59,-251.84 90,-285 93.35,-288.23 97.28,-291.01 101.41,-293.39"/>
-<polygon fill="#000000" stroke="#000000" points="100.14,-296.67 110.65,-298 103.26,-290.41 100.14,-296.67"/>
+<title>proc~p_dinv&#45;&gt;blacs_gridinfo</title>
+<path fill="none" stroke="#000000" d="M30.95,-171.06C37.53,-195.6 55.59,-251.84 90,-285 91.24,-286.19 92.56,-287.33 93.94,-288.4"/>
+<polygon fill="#000000" stroke="#000000" points="92.08,-291.37 102.36,-293.93 95.92,-285.52 92.08,-291.37"/>
 </g>
 <!-- descinit -->
 <g id="proc~~p_dinv~~CallsGraph_node3" class="node">
@@ -245,29 +245,29 @@
 <path fill="none" stroke="#000000" d="M34.26,-171.11C44.03,-188.96 64.44,-222.43 90,-243 93.54,-245.85 97.53,-248.4 101.65,-250.65"/>
 <polygon fill="#000000" stroke="#000000" points="100.24,-253.85 110.76,-255.11 103.32,-247.57 100.24,-253.85"/>
 </g>
-<!-- pdgetrf -->
+<!-- pdgetri -->
 <g id="proc~~p_dinv~~CallsGraph_node4" class="node">
-<title>pdgetrf</title>
+<title>pdgetri</title>
 <polygon fill="#777777" stroke="#777777" points="165,-234 111,-234 111,-210 165,-210 165,-234"/>
-<text text-anchor="middle" x="138" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdgetrf</text>
+<text text-anchor="middle" x="138" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdgetri</text>
+</g>
+<!-- proc~p_dinv&#45;&gt;pdgetri -->
+<g id="proc~~p_dinv~~CallsGraph_edge4" class="edge">
+<title>proc~p_dinv&#45;&gt;pdgetri</title>
+<path fill="none" stroke="#000000" d="M44.08,-171.04C56.31,-179.91 73.75,-191.96 90,-201 93.69,-203.05 97.62,-205.06 101.57,-206.98"/>
+<polygon fill="#000000" stroke="#000000" points="100.2,-210.2 110.74,-211.24 103.15,-203.85 100.2,-210.2"/>
+</g>
+<!-- pdgetrf -->
+<g id="proc~~p_dinv~~CallsGraph_node5" class="node">
+<title>pdgetrf</title>
+<polygon fill="#777777" stroke="#777777" points="165,-192 111,-192 111,-168 165,-168 165,-192"/>
+<text text-anchor="middle" x="138" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdgetrf</text>
 </g>
 <!-- proc~p_dinv&#45;&gt;pdgetrf -->
 <g id="proc~~p_dinv~~CallsGraph_edge3" class="edge">
 <title>proc~p_dinv&#45;&gt;pdgetrf</title>
-<path fill="none" stroke="#000000" d="M44.08,-171.04C56.31,-179.91 73.75,-191.96 90,-201 93.69,-203.05 97.62,-205.06 101.57,-206.98"/>
-<polygon fill="#000000" stroke="#000000" points="100.2,-210.2 110.74,-211.24 103.15,-203.85 100.2,-210.2"/>
-</g>
-<!-- blacs_gridinfo -->
-<g id="proc~~p_dinv~~CallsGraph_node5" class="node">
-<title>blacs_gridinfo</title>
-<polygon fill="#777777" stroke="#777777" points="181.5,-192 94.5,-192 94.5,-168 181.5,-168 181.5,-192"/>
-<text text-anchor="middle" x="138" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
-</g>
-<!-- proc~p_dinv&#45;&gt;blacs_gridinfo -->
-<g id="proc~~p_dinv~~CallsGraph_edge4" class="edge">
-<title>proc~p_dinv&#45;&gt;blacs_gridinfo</title>
-<path fill="none" stroke="#000000" d="M54.11,-164.03C63.18,-165.78 73.7,-167.8 84.14,-169.82"/>
-<polygon fill="#000000" stroke="#000000" points="83.6,-173.28 94.08,-171.73 84.92,-166.4 83.6,-173.28"/>
+<path fill="none" stroke="#000000" d="M54.11,-164.03C68.03,-166.71 85.37,-170.05 100.6,-172.99"/>
+<polygon fill="#000000" stroke="#000000" points="100.25,-176.48 110.73,-174.94 101.57,-169.61 100.25,-176.48"/>
 </g>
 <!-- free_unit -->
 <g id="proc~~p_dinv~~CallsGraph_node6" class="node">
@@ -293,15 +293,15 @@
 <path fill="none" stroke="#000000" d="M44.08,-146.96C56.31,-138.09 73.75,-126.04 90,-117 92.72,-115.48 95.58,-113.99 98.48,-112.54"/>
 <polygon fill="#000000" stroke="#000000" points="100.26,-115.57 107.78,-108.1 97.24,-109.25 100.26,-115.57"/>
 </g>
-<!-- pdgetri -->
+<!-- numroc -->
 <g id="proc~~p_dinv~~CallsGraph_node8" class="node">
-<title>pdgetri</title>
+<title>numroc</title>
 <polygon fill="#777777" stroke="#777777" points="165,-66 111,-66 111,-42 165,-42 165,-66"/>
-<text text-anchor="middle" x="138" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdgetri</text>
+<text text-anchor="middle" x="138" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
 </g>
-<!-- proc~p_dinv&#45;&gt;pdgetri -->
+<!-- proc~p_dinv&#45;&gt;numroc -->
 <g id="proc~~p_dinv~~CallsGraph_edge7" class="edge">
-<title>proc~p_dinv&#45;&gt;pdgetri</title>
+<title>proc~p_dinv&#45;&gt;numroc</title>
 <path fill="none" stroke="#000000" d="M34.26,-146.89C44.03,-129.04 64.44,-95.57 90,-75 93.54,-72.15 97.53,-69.6 101.65,-67.35"/>
 <polygon fill="#000000" stroke="#000000" points="103.32,-70.43 110.76,-62.89 100.24,-64.15 103.32,-70.43"/>
 </g>

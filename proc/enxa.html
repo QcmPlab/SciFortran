@@ -95,12 +95,11 @@
 
             <li id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/SF_SPECIAL.f90"> Source File</a>
+              <a href="../src/special_functions.f90"> Source File</a>
             </li>
         </ul>
         <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/sf_special.f90.html'>SF_SPECIAL.f90</a></li>
-              <li><a href='../module/sf_special.html'>SF_SPECIAL</a></li>
+              <li><a href='../sourcefile/special_functions.f90.html'>special_functions.f90</a></li>
           <li class="active">enxa</li>
         </ol>
       </div>
@@ -137,6 +136,12 @@
   
   
   
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/enxa.html#src">enxa</a>
+      </div>
+    </div>
 
 
   </div>
@@ -144,7 +149,7 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>public  subroutine enxa(n, x, en)  
+    <h2> subroutine enxa(n, x, en)  
 </h2>
     
 
@@ -193,7 +198,7 @@ Output, real ( kind = 8 ) EN(0:N), the function values.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~194"></span>
+              <span class="anchor" id="variable-n~79"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -208,7 +213,7 @@ Output, real ( kind = 8 ) EN(0:N), the function values.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~332"></span>
+              <span class="anchor" id="variable-x~92"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -223,7 +228,7 @@ Output, real ( kind = 8 ) EN(0:N), the function values.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-en~5"></span>
+              <span class="anchor" id="variable-en"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -363,6 +368,12 @@ Output, real ( kind = 8 ) EN(0:N), the function values.
   
   
   
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/enxa.html#src">enxa</a>
+      </div>
+    </div>
 
 
     </section>
@@ -377,6 +388,70 @@ Output, real ( kind = 8 ) EN(0:N), the function values.
 
 
     
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">enxa</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="c">!*****************************************************************************80</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!! ENXA computes the exponential integral En(x).</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Licensing:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    This routine is copyrighted by Shanjie Zhang and Jianming Jin.  However, </span>
+<span class="w">  </span><span class="c">!    they give permission to incorporate this routine into a user program </span>
+<span class="w">  </span><span class="c">!    provided that the copyright is acknowledged.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Modified:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    07 July 2012</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Author:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Reference:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin,</span>
+<span class="w">  </span><span class="c">!    Computation of Special Functions,</span>
+<span class="w">  </span><span class="c">!    Wiley, 1996,</span>
+<span class="w">  </span><span class="c">!    ISBN: 0-471-11963-6,</span>
+<span class="w">  </span><span class="c">!    LC: QA351.C45.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Parameters:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) N, the order.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) X, the argument.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Output, real ( kind = 8 ) EN(0:N), the function values.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="k">implicit none</span>
+
+<span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">e1</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ek</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">en</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">en</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">exp</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">x</span><span class="w"> </span>
+<span class="w">  </span><span class="k">call </span><span class="n">e1xb</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">e1</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">en</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e1</span><span class="w"></span>
+<span class="w">  </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="w">     </span><span class="n">ek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">exp</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">e1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="n">en</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ek</span><span class="w"></span>
+<span class="w">     </span><span class="n">e1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ek</span><span class="w"></span>
+<span class="w">  </span><span class="k">end do</span>
+
+<span class="k">  return</span>
+<span class="k">end subroutine </span><span class="n">enxa</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
     
     </div>
   </div>

@@ -95,11 +95,12 @@
 
             <li id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/special_functions.f90"> Source File</a>
+              <a href="../src/SF_SPECIAL.f90"> Source File</a>
             </li>
         </ul>
         <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/special_functions.f90.html'>special_functions.f90</a></li>
+              <li><a href='../sourcefile/sf_special.f90.html'>SF_SPECIAL.f90</a></li>
+              <li><a href='../module/sf_special.html'>SF_SPECIAL</a></li>
           <li class="active">fcoef</li>
         </ol>
       </div>
@@ -136,12 +137,6 @@
   
   
   
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-      <div class="list-group">
-        <a class="list-group-item" href="../proc/fcoef~2.html#src">fcoef</a>
-      </div>
-    </div>
 
 
   </div>
@@ -149,7 +144,7 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2> subroutine fcoef(kd, m, q, a, fc)  
+    <h2>public  subroutine fcoef(kd, m, q, a, fc)  
 </h2>
     
 
@@ -212,7 +207,7 @@ LC: QA351.C45.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-kd~8"></span>
+              <span class="anchor" id="variable-kd~26"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -227,7 +222,7 @@ LC: QA351.C45.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~43"></span>
+              <span class="anchor" id="variable-m~85"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -242,7 +237,7 @@ LC: QA351.C45.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-q~18"></span>
+              <span class="anchor" id="variable-q~29"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -257,7 +252,7 @@ LC: QA351.C45.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~69"></span>
+              <span class="anchor" id="variable-a~92"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -272,7 +267,7 @@ LC: QA351.C45.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fc~2"></span>
+              <span class="anchor" id="variable-fc~3"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -427,12 +422,6 @@ LC: QA351.C45.
   
   
   
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-      <div class="list-group">
-        <a class="list-group-item" href="../proc/fcoef~2.html#src">fcoef</a>
-      </div>
-    </div>
 
 
     </section>
@@ -447,321 +436,6 @@ LC: QA351.C45.
 
 
     
-    <section>
-    <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">fcoef</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">kd</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">fc</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="c">!*****************************************************************************80</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!! FCOEF: expansion coefficients for Mathieu and modified Mathieu functions.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Licensing:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    This routine is copyrighted by Shanjie Zhang and Jianming Jin.  However, </span>
-<span class="w">  </span><span class="c">!    they give permission to incorporate this routine into a user program </span>
-<span class="w">  </span><span class="c">!    provided that the copyright is acknowledged.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Modified:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    01 August 2012</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Author:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Reference:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin,</span>
-<span class="w">  </span><span class="c">!    Computation of Special Functions,</span>
-<span class="w">  </span><span class="c">!    Wiley, 1996,</span>
-<span class="w">  </span><span class="c">!    ISBN: 0-471-11963-6,</span>
-<span class="w">  </span><span class="c">!    LC: QA351.C45.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!  Parameters:</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) KD, the case code.</span>
-<span class="w">  </span><span class="c">!    1, for cem(x,q)  ( m = 0,2,4,...)</span>
-<span class="w">  </span><span class="c">!    2, for cem(x,q)  ( m = 1,3,5,...)</span>
-<span class="w">  </span><span class="c">!    3, for sem(x,q)  ( m = 1,3,5,...)</span>
-<span class="w">  </span><span class="c">!    4, for sem(x,q)  ( m = 2,4,6,...)</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) M, the order of the Mathieu function.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) Q, the parameter of the Mathieu functions.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) A, the characteristic value of the Mathieu</span>
-<span class="w">  </span><span class="c">!    functions for given m and q.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="c">!    Output, real ( kind = 8 ) FC(*), the expansion coefficients of Mathieu</span>
-<span class="w">  </span><span class="c">!    functions ( k =  1,2,...,KM ).  FC(1),FC(2),FC(3),... correspond to</span>
-<span class="w">  </span><span class="c">!    A0,A2,A4,... for KD = 1 case, </span>
-<span class="w">  </span><span class="c">!    A1,A3,A5,... for KD = 2 case,</span>
-<span class="w">  </span><span class="c">!    B1,B3,B5,... for KD = 3 case,</span>
-<span class="w">  </span><span class="c">!    B2,B4,B6,... for KD = 4 case.</span>
-<span class="w">  </span><span class="c">!</span>
-<span class="w">  </span><span class="k">implicit none</span>
-
-<span class="k">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">f2</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">f3</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">251</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">j</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">kb</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">kd</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
-<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">m</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">q</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">qm</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">s0</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">sp</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ss</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
-<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">     </span><span class="n">qm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.5D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="mf">6.1D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">13</span><span class="mf">4.7D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.7D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span>
-<span class="k">     </span><span class="n">qm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">7.0D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3.1D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.126D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">          </span><span class="o">+</span><span class="w"> </span><span class="mf">0.0037D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"></span>
-<span class="w">  </span><span class="k">end if</span>
-
-<span class="k">  </span><span class="n">km</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">qm</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-
-<span class="k">     do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">        </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-<span class="w">     </span><span class="k">end do</span>
-
-<span class="k">     if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        </span><span class="n">fc</span><span class="p">((</span><span class="n">m</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">           </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">end if</span>
-<span class="k">     else if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        </span><span class="n">fc</span><span class="p">(</span><span class="n">m</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"></span>
-<span class="w">     </span><span class="k">else</span>
-<span class="k">        </span><span class="n">fc</span><span class="p">((</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"></span>
-<span class="w">     </span><span class="k">end if</span>
-
-<span class="k">     return</span>
-
-<span class="k">  end if</span>
-
-<span class="k">  </span><span class="n">kb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">  </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-<span class="w">  </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D-100</span><span class="w"></span>
-<span class="w">  </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-<span class="w">  </span><span class="n">fc</span><span class="p">(</span><span class="n">km</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-
-<span class="k">     </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">km</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
-<span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">        </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-
-<span class="k">           </span><span class="n">kb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">           </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D-100</span><span class="w"></span>
-<span class="w">           </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-<span class="w">           </span><span class="n">f3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="n">fc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">           </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">kb</span><span class="w"></span>
-<span class="w">              </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
-<span class="w">              </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">              </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-<span class="w">              </span><span class="n">fc</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">                 </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">              </span><span class="k">else</span>
-<span class="k">                 </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">              </span><span class="k">end if</span>
-<span class="k">           end do</span>
-
-<span class="k">           </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">           </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">           </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ss</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">                 </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">f2</span><span class="w"></span>
-<span class="w">              </span><span class="k">else</span>
-<span class="k">                 </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
-<span class="w">              </span><span class="k">end if</span>
-<span class="k">           end do</span>
-<span class="k">           </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">           </span><span class="k">exit</span>
-<span class="k">        else</span>
-<span class="k">           </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">           </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">        </span><span class="k">end if</span>
-
-<span class="k">     end do</span>
-
-<span class="k">     if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">        </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">           </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">end do</span>
-<span class="k">     end if</span>
-
-<span class="k">  else if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-
-<span class="k">     </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">km</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
-<span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">        </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">           </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">           </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">        </span><span class="k">else</span>
-<span class="k">           </span><span class="n">kb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">           </span><span class="n">f3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">           </span><span class="k">exit</span>
-<span class="k">        end if</span>
-
-<span class="k">     end do</span>
-
-<span class="k">     if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-
-<span class="k">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">           </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">end do</span>
-
-<span class="k">     else</span>
-
-<span class="k">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D-100</span><span class="w"></span>
-<span class="w">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-<span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">           </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
-<span class="w">           </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">           </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">              </span><span class="n">fc</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">              </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">           </span><span class="k">else</span>
-<span class="k">              </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">           </span><span class="k">end if</span>
-<span class="k">        end do</span>
-
-<span class="k">        </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">        </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">        </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ss</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">              </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">f2</span><span class="w"></span>
-<span class="w">           </span><span class="k">else</span>
-<span class="k">              </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="k">end if</span>
-<span class="k">        end do</span>
-
-<span class="k">     end if</span>
-
-<span class="k">  else if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-
-<span class="k">     </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">     </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">km</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
-<span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
-<span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">        </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nb">abs</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">           </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">           </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="w">        </span><span class="k">else</span>
-<span class="k">           </span><span class="n">kb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="w">           </span><span class="n">f3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">           </span><span class="k">exit</span>
-<span class="k">        end if</span>
-<span class="k">     end do</span>
-
-<span class="k">     if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-
-<span class="k">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">           </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">end do</span>
-
-<span class="k">     else</span>
-
-<span class="k">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D-100</span><span class="w"></span>
-<span class="w">        </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
-<span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">           </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
-<span class="w">           </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">           </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
-<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">              </span><span class="n">fc</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">              </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">           </span><span class="k">else</span>
-<span class="k">              </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
-<span class="w">           </span><span class="k">end if</span>
-<span class="k">        end do</span>
-
-<span class="k">        </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">        </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">f3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">        </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ss</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">kb</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">              </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">f3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">f2</span><span class="w"></span>
-<span class="w">           </span><span class="k">else</span>
-<span class="k">              </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
-<span class="w">           </span><span class="k">end if</span>
-<span class="k">        end do</span>
-
-<span class="k">     end if</span>
-
-<span class="k">  end if</span>
-
-<span class="k">  if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">     do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
-<span class="w">        </span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">fc</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
-<span class="w">     </span><span class="k">end do</span>
-<span class="k">  end if</span>
-
-<span class="k">  return</span>
-<span class="k">end subroutine </span><span class="n">fcoef</span><span class="w"></span>
-</pre></div>
-
-    </section>
-    <br>
     
     </div>
   </div>

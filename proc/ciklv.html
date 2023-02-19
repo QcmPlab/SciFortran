@@ -95,12 +95,11 @@
 
             <li id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/SF_SPECIAL.f90"> Source File</a>
+              <a href="../src/special_functions.f90"> Source File</a>
             </li>
         </ul>
         <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/sf_special.f90.html'>SF_SPECIAL.f90</a></li>
-              <li><a href='../module/sf_special.html'>SF_SPECIAL</a></li>
+              <li><a href='../sourcefile/special_functions.f90.html'>special_functions.f90</a></li>
           <li class="active">ciklv</li>
         </ol>
       </div>
@@ -137,6 +136,12 @@
   
   
   
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/ciklv.html#src">ciklv</a>
+      </div>
+    </div>
 
 
   </div>
@@ -144,7 +149,7 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>public  subroutine ciklv(v, z, cbiv, cdiv, cbkv, cdkv)  
+    <h2> subroutine ciklv(v, z, cbiv, cdiv, cbkv, cdkv)  
 </h2>
     
 
@@ -199,7 +204,7 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-v~30"></span>
+              <span class="anchor" id="variable-v~10"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -214,7 +219,7 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-z~43"></span>
+              <span class="anchor" id="variable-z~8"></span>
               complex(kind=8)
             </td>
 <td></td>
@@ -229,7 +234,7 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-cbiv~2"></span>
+              <span class="anchor" id="variable-cbiv"></span>
               complex(kind=8)
             </td>
 <td></td>
@@ -244,7 +249,7 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-cdiv~2"></span>
+              <span class="anchor" id="variable-cdiv"></span>
               complex(kind=8)
             </td>
 <td></td>
@@ -259,7 +264,7 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-cbkv~2"></span>
+              <span class="anchor" id="variable-cbkv"></span>
               complex(kind=8)
             </td>
 <td></td>
@@ -274,7 +279,7 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-cdkv~2"></span>
+              <span class="anchor" id="variable-cdkv"></span>
               complex(kind=8)
             </td>
 <td></td>
@@ -414,6 +419,12 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
   
   
   
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/ciklv.html#src">ciklv</a>
+      </div>
+    </div>
 
 
     </section>
@@ -428,6 +439,128 @@ Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).
 
 
     
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">ciklv</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">cbiv</span><span class="p">,</span><span class="w"> </span><span class="n">cdiv</span><span class="p">,</span><span class="w"> </span><span class="n">cbkv</span><span class="p">,</span><span class="w"> </span><span class="n">cdkv</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="c">!*****************************************************************************80</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!! CIKLV: modified Bessel functions Iv(z), Kv(z), complex argument, large order.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Discussion:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    This procedure computes modified Bessel functions Iv(z) and</span>
+<span class="w">  </span><span class="c">!    Kv(z) and their derivatives with a complex argument and a large order.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Licensing:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    This routine is copyrighted by Shanjie Zhang and Jianming Jin.  However, </span>
+<span class="w">  </span><span class="c">!    they give permission to incorporate this routine into a user program </span>
+<span class="w">  </span><span class="c">!    provided that the copyright is acknowledged.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Modified:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    31 July 2012</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Author:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Reference:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Shanjie Zhang, Jianming Jin,</span>
+<span class="w">  </span><span class="c">!    Computation of Special Functions,</span>
+<span class="w">  </span><span class="c">!    Wiley, 1996,</span>
+<span class="w">  </span><span class="c">!    ISBN: 0-471-11963-6,</span>
+<span class="w">  </span><span class="c">!    LC: QA351.C45.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!  Parameters:</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) V, the order of Iv(z) and Kv(z).</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Input, complex ( kind = 8 ) Z, the argument.</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="c">!    Output, real ( kind = 8 ) CBIV, CDIV, CBKV, CDKV, the values of</span>
+<span class="w">  </span><span class="c">!    Iv(z), Iv&#39;(z), Kv(z), Kv&#39;(z).</span>
+<span class="w">  </span><span class="c">!</span>
+<span class="w">  </span><span class="k">implicit none</span>
+
+<span class="k">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">91</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cbiv</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cbkv</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cdiv</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cdkv</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ceta</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cf</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cfi</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cfk</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">csi</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">csk</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ct</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ct2</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">cws</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">l0</span><span class="w"></span>
+<span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">lf</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">pi</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">v0</span><span class="w"></span>
+<span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">vr</span><span class="w"></span>
+<span class="w">  </span><span class="kt">complex</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">z</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592653589793D+00</span><span class="w"></span>
+<span class="w">  </span><span class="n">km</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="w"></span>
+<span class="w">  </span><span class="k">call </span><span class="n">cjk</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">km</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">do </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
+
+<span class="w">     </span><span class="n">v0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
+<span class="w">     </span><span class="n">cws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="n">ceta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cws</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cws</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="n">ct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">cws</span><span class="w"></span>
+<span class="w">     </span><span class="n">ct2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ct</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ct</span><span class="w"></span>
+<span class="w">     </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
+<span class="w">        </span><span class="n">l0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="n">lf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="w">        </span><span class="n">cf</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="n">lf</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">l0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
+<span class="w">           </span><span class="n">cf</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cf</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ct2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="k">        </span><span class="n">cf</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cf</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ct</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="w">     </span><span class="k">end do</span>
+<span class="k">     </span><span class="n">vr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">v0</span><span class="w"></span>
+<span class="w">     </span><span class="n">csi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
+<span class="w">        </span><span class="n">csi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csi</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cf</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vr</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="w">     </span><span class="k">end do</span>
+<span class="k">     </span><span class="n">cbiv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ct</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ceta</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">csi</span><span class="w"></span>
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">cfi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cbiv</span><span class="w"></span>
+<span class="w">     </span><span class="k">end if</span>
+<span class="k">     </span><span class="n">csk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cmplx</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="w"></span>
+<span class="w">        </span><span class="n">csk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">csk</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cf</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vr</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="w">     </span><span class="k">end do</span>
+<span class="k">     </span><span class="n">cbkv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ct</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">2.0D+00</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ceta</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">csk</span><span class="w"></span>
+
+<span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">cfk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cbkv</span><span class="w"></span>
+<span class="w">     </span><span class="k">end if</span>
+
+<span class="k">  end do</span>
+
+<span class="k">  </span><span class="n">cdiv</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="n">cfi</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cbiv</span><span class="w"></span>
+<span class="w">  </span><span class="n">cdkv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cfk</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cbkv</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">return</span>
+<span class="k">end subroutine </span><span class="n">ciklv</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
     
     </div>
   </div>
