@@ -408,63 +408,63 @@
 <polygon fill="none" stroke="black" points="113,-150 0,-150 0,-126 113,-126 113,-150"/>
 <text text-anchor="middle" x="56.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">lanczos_parpack_d</text>
 </g>
-<!-- get_master_mpi -->
+<!-- assert_shape -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node2" class="node">
-<title>get_master_mpi</title>
-<polygon fill="#777777" stroke="#777777" points="247,-276 149,-276 149,-252 247,-252 247,-276"/>
-<text text-anchor="middle" x="198" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_master_mpi</text>
+<title>assert_shape</title>
+<polygon fill="#777777" stroke="#777777" points="239,-276 157,-276 157,-252 239,-252 239,-276"/>
+<text text-anchor="middle" x="198" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_shape</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;get_master_mpi -->
+<!-- proc~lanczos_parpack_d&#45;&gt;assert_shape -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_edge1" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;get_master_mpi</title>
+<title>proc~lanczos_parpack_d&#45;&gt;assert_shape</title>
 <path fill="none" stroke="#000000" d="M65.45,-150.26C79.84,-171.61 112.16,-215.96 149,-243 150.88,-244.38 152.86,-245.69 154.9,-246.94"/>
 <polygon fill="#000000" stroke="#000000" points="153.71,-250.27 164.17,-251.97 157.05,-244.12 153.71,-250.27"/>
 </g>
-<!-- pdsaupd -->
+<!-- pdseupd -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node3" class="node">
-<title>pdsaupd</title>
+<title>pdseupd</title>
 <polygon fill="#777777" stroke="#777777" points="227,-234 169,-234 169,-210 227,-210 227,-234"/>
-<text text-anchor="middle" x="198" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsaupd</text>
+<text text-anchor="middle" x="198" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdseupd</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;pdsaupd -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_edge3" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;pdsaupd</title>
+<!-- proc~lanczos_parpack_d&#45;&gt;pdseupd -->
+<g id="proc~~lanczos_parpack_d~~CallsGraph_edge4" class="edge">
+<title>proc~lanczos_parpack_d&#45;&gt;pdseupd</title>
 <path fill="none" stroke="#000000" d="M73.1,-150.11C90.86,-163.57 121.02,-185.43 149,-201 152.43,-202.91 156.08,-204.77 159.76,-206.55"/>
 <polygon fill="#000000" stroke="#000000" points="158.35,-209.76 168.9,-210.78 161.29,-203.4 158.35,-209.76"/>
 </g>
-<!-- allreduce_mpi -->
+<!-- mpi_allreduce -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node4" class="node">
-<title>allreduce_mpi</title>
+<title>mpi_allreduce</title>
 <polygon fill="#777777" stroke="#777777" points="242,-192 154,-192 154,-168 242,-168 242,-192"/>
-<text text-anchor="middle" x="198" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">allreduce_mpi</text>
+<text text-anchor="middle" x="198" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;allreduce_mpi -->
+<!-- proc~lanczos_parpack_d&#45;&gt;mpi_allreduce -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_edge2" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;allreduce_mpi</title>
+<title>proc~lanczos_parpack_d&#45;&gt;mpi_allreduce</title>
 <path fill="none" stroke="#000000" d="M97.48,-150.04C112.94,-154.69 130.82,-160.07 147.11,-164.98"/>
 <polygon fill="#000000" stroke="#000000" points="146.43,-168.43 157.02,-167.96 148.45,-161.73 146.43,-168.43"/>
 </g>
-<!-- assert_shape -->
+<!-- allreduce_mpi -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node5" class="node">
-<title>assert_shape</title>
-<polygon fill="#777777" stroke="#777777" points="239,-150 157,-150 157,-126 239,-126 239,-150"/>
-<text text-anchor="middle" x="198" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">assert_shape</text>
+<title>allreduce_mpi</title>
+<polygon fill="#777777" stroke="#777777" points="242,-150 154,-150 154,-126 242,-126 242,-150"/>
+<text text-anchor="middle" x="198" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">allreduce_mpi</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;assert_shape -->
-<g id="proc~~lanczos_parpack_d~~CallsGraph_edge4" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;assert_shape</title>
-<path fill="none" stroke="#000000" d="M113.03,-138C124.09,-138 135.64,-138 146.52,-138"/>
-<polygon fill="#000000" stroke="#000000" points="146.7,-141.5 156.7,-138 146.7,-134.5 146.7,-141.5"/>
+<!-- proc~lanczos_parpack_d&#45;&gt;allreduce_mpi -->
+<g id="proc~~lanczos_parpack_d~~CallsGraph_edge3" class="edge">
+<title>proc~lanczos_parpack_d&#45;&gt;allreduce_mpi</title>
+<path fill="none" stroke="#000000" d="M113.03,-138C123.07,-138 133.52,-138 143.5,-138"/>
+<polygon fill="#000000" stroke="#000000" points="143.69,-141.5 153.69,-138 143.69,-134.5 143.69,-141.5"/>
 </g>
-<!-- mpi_allreduce -->
+<!-- get_master_mpi -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node6" class="node">
-<title>mpi_allreduce</title>
-<polygon fill="#777777" stroke="#777777" points="242,-108 154,-108 154,-84 242,-84 242,-108"/>
-<text text-anchor="middle" x="198" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi_allreduce</text>
+<title>get_master_mpi</title>
+<polygon fill="#777777" stroke="#777777" points="247,-108 149,-108 149,-84 247,-84 247,-108"/>
+<text text-anchor="middle" x="198" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_master_mpi</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;mpi_allreduce -->
+<!-- proc~lanczos_parpack_d&#45;&gt;get_master_mpi -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_edge5" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;mpi_allreduce</title>
+<title>proc~lanczos_parpack_d&#45;&gt;get_master_mpi</title>
 <path fill="none" stroke="#000000" d="M97.48,-125.96C112.94,-121.31 130.82,-115.93 147.11,-111.02"/>
 <polygon fill="#000000" stroke="#000000" points="148.45,-114.27 157.02,-108.04 146.43,-107.57 148.45,-114.27"/>
 </g>
@@ -480,15 +480,15 @@
 <path fill="none" stroke="#000000" d="M73.1,-125.89C90.86,-112.43 121.02,-90.57 149,-75 151.86,-73.41 154.87,-71.85 157.92,-70.34"/>
 <polygon fill="#000000" stroke="#000000" points="159.56,-73.44 167.12,-66.02 156.59,-67.1 159.56,-73.44"/>
 </g>
-<!-- pdseupd -->
+<!-- pdsaupd -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_node8" class="node">
-<title>pdseupd</title>
+<title>pdsaupd</title>
 <polygon fill="#777777" stroke="#777777" points="227,-24 169,-24 169,0 227,0 227,-24"/>
-<text text-anchor="middle" x="198" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdseupd</text>
+<text text-anchor="middle" x="198" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsaupd</text>
 </g>
-<!-- proc~lanczos_parpack_d&#45;&gt;pdseupd -->
+<!-- proc~lanczos_parpack_d&#45;&gt;pdsaupd -->
 <g id="proc~~lanczos_parpack_d~~CallsGraph_edge7" class="edge">
-<title>proc~lanczos_parpack_d&#45;&gt;pdseupd</title>
+<title>proc~lanczos_parpack_d&#45;&gt;pdsaupd</title>
 <path fill="none" stroke="#000000" d="M65.45,-125.74C79.84,-104.39 112.16,-60.04 149,-33 152.38,-30.52 156.1,-28.25 159.93,-26.19"/>
 <polygon fill="#000000" stroke="#000000" points="161.5,-29.33 168.95,-21.8 158.43,-23.03 161.5,-29.33"/>
 </g>
