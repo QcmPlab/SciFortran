@@ -343,7 +343,7 @@
 <a id="ln-38" name="ln-38" href="#ln-38"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">i_assert_shape_N5</span><span class="w"></span>
 <a id="ln-39" name="ln-39" href="#ln-39"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">i_assert_shape_N6</span><span class="w"></span>
 <a id="ln-40" name="ln-40" href="#ln-40"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">i_assert_shape_N7</span><span class="w"></span>
-<a id="ln-41" name="ln-41" href="#ln-41"></a><span class="cp">#if __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8     </span>
+<a id="ln-41" name="ln-41" href="#ln-41"></a><span class="cp">#if defined __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8     </span>
 <a id="ln-42" name="ln-42" href="#ln-42"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">i_assert_shape_N8</span><span class="w"></span>
 <a id="ln-43" name="ln-43" href="#ln-43"></a><span class="cp">#endif</span>
 <a id="ln-44" name="ln-44" href="#ln-44"></a><span class="w">     </span><span class="c">!</span>
@@ -354,7 +354,7 @@
 <a id="ln-49" name="ln-49" href="#ln-49"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">d_assert_shape_N5</span><span class="w"></span>
 <a id="ln-50" name="ln-50" href="#ln-50"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">d_assert_shape_N6</span><span class="w"></span>
 <a id="ln-51" name="ln-51" href="#ln-51"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">d_assert_shape_N7</span><span class="w"></span>
-<a id="ln-52" name="ln-52" href="#ln-52"></a><span class="cp">#if __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
+<a id="ln-52" name="ln-52" href="#ln-52"></a><span class="cp">#if defined __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
 <a id="ln-53" name="ln-53" href="#ln-53"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">d_assert_shape_N8</span><span class="w"></span>
 <a id="ln-54" name="ln-54" href="#ln-54"></a><span class="cp">#endif</span>
 <a id="ln-55" name="ln-55" href="#ln-55"></a><span class="w">     </span><span class="c">!</span>
@@ -365,7 +365,7 @@
 <a id="ln-60" name="ln-60" href="#ln-60"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">z_assert_shape_N5</span><span class="w"></span>
 <a id="ln-61" name="ln-61" href="#ln-61"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">z_assert_shape_N6</span><span class="w"></span>
 <a id="ln-62" name="ln-62" href="#ln-62"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">z_assert_shape_N7</span><span class="w"></span>
-<a id="ln-63" name="ln-63" href="#ln-63"></a><span class="cp">#if __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
+<a id="ln-63" name="ln-63" href="#ln-63"></a><span class="cp">#if defined __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
 <a id="ln-64" name="ln-64" href="#ln-64"></a><span class="w">     </span><span class="k">module procedure </span><span class="n">z_assert_shape_N8</span><span class="w"></span>
 <a id="ln-65" name="ln-65" href="#ln-65"></a><span class="cp">#endif</span>
 <a id="ln-66" name="ln-66" href="#ln-66"></a><span class="w">  </span><span class="k">end interface </span><span class="n">assert_shape</span><span class="w"></span>
@@ -504,7 +504,7 @@
 <a id="ln-199" name="ln-199" href="#ln-199"></a><span class="w">       </span><span class="k">stop</span><span class="w"> </span><span class="s2">&quot;assert_shape error: wrong matrix shape&quot;</span><span class="w"></span>
 <a id="ln-200" name="ln-200" href="#ln-200"></a><span class="w">    </span><span class="k">end if</span>
 <a id="ln-201" name="ln-201" href="#ln-201"></a><span class="k">  end subroutine </span><span class="n">i_assert_shape_N7</span><span class="w"></span>
-<a id="ln-202" name="ln-202" href="#ln-202"></a><span class="cp">#if __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
+<a id="ln-202" name="ln-202" href="#ln-202"></a><span class="cp">#if defined __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
 <a id="ln-203" name="ln-203" href="#ln-203"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">i_assert_shape_N8</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">Ndim</span><span class="p">,</span><span class="n">routine</span><span class="p">,</span><span class="n">matname</span><span class="p">)</span><span class="w"></span>
 <a id="ln-204" name="ln-204" href="#ln-204"></a><span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(:,:,:,:,:,:,:,:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
 <a id="ln-205" name="ln-205" href="#ln-205"></a><span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">            </span><span class="kd">::</span><span class="w"> </span><span class="n">Ndim</span><span class="w"></span>
@@ -589,7 +589,7 @@
 <a id="ln-284" name="ln-284" href="#ln-284"></a><span class="w">       </span><span class="k">stop</span><span class="w"> </span><span class="s2">&quot;assert_shape error: wrong matrix shape&quot;</span><span class="w"></span>
 <a id="ln-285" name="ln-285" href="#ln-285"></a><span class="w">    </span><span class="k">end if</span>
 <a id="ln-286" name="ln-286" href="#ln-286"></a><span class="k">  end subroutine </span><span class="n">d_assert_shape_N7</span><span class="w"></span>
-<a id="ln-287" name="ln-287" href="#ln-287"></a><span class="cp">#if __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
+<a id="ln-287" name="ln-287" href="#ln-287"></a><span class="cp">#if defined __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
 <a id="ln-288" name="ln-288" href="#ln-288"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">d_assert_shape_N8</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">Ndim</span><span class="p">,</span><span class="n">routine</span><span class="p">,</span><span class="n">matname</span><span class="p">)</span><span class="w"></span>
 <a id="ln-289" name="ln-289" href="#ln-289"></a><span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:,:,:,:,:,:,:,:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
 <a id="ln-290" name="ln-290" href="#ln-290"></a><span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">            </span><span class="kd">::</span><span class="w"> </span><span class="n">Ndim</span><span class="w"></span>
@@ -674,7 +674,7 @@
 <a id="ln-369" name="ln-369" href="#ln-369"></a><span class="w">       </span><span class="k">stop</span><span class="w"> </span><span class="s2">&quot;assert_shape error: wrong matrix shape&quot;</span><span class="w"></span>
 <a id="ln-370" name="ln-370" href="#ln-370"></a><span class="w">    </span><span class="k">end if</span>
 <a id="ln-371" name="ln-371" href="#ln-371"></a><span class="k">  end subroutine </span><span class="n">z_assert_shape_N7</span><span class="w"></span>
-<a id="ln-372" name="ln-372" href="#ln-372"></a><span class="cp">#if __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
+<a id="ln-372" name="ln-372" href="#ln-372"></a><span class="cp">#if defined __GFORTRAN__ &amp;&amp;  __GNUC__ &gt; 8</span>
 <a id="ln-373" name="ln-373" href="#ln-373"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">z_assert_shape_N8</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">Ndim</span><span class="p">,</span><span class="n">routine</span><span class="p">,</span><span class="n">matname</span><span class="p">)</span><span class="w"></span>
 <a id="ln-374" name="ln-374" href="#ln-374"></a><span class="w">    </span><span class="kt">complex</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:,:,:,:,:,:,:,:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
 <a id="ln-375" name="ln-375" href="#ln-375"></a><span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">            </span><span class="kd">::</span><span class="w"> </span><span class="n">Ndim</span><span class="w"></span>
