@@ -95,11 +95,11 @@
 
             <li id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/interpolate_cubspl_routines.f90"> Source File</a>
+              <a href="../src/interpolate_pppack.f90"> Source File</a>
             </li>
         </ul>
         <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/interpolate_cubspl_routines.f90.html'>interpolate_cubspl_routines.f90</a></li>
+              <li><a href='../sourcefile/interpolate_pppack.f90.html'>interpolate_pppack.f90</a></li>
           <li class="active">ppvalu</li>
         </ol>
       </div>
@@ -153,7 +153,7 @@
 </h2>
     
 
-    <hr>
+    <p><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*80</p>
 <p>! PPVALU evaluates a piecewise polynomial function or its derivative.</p>
 <p>Discussion:</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">PPVALU</span> <span class="nv">calculates</span> <span class="nv">the</span> <span class="nv">value</span> <span class="nv">at</span> <span class="nv">X</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">JDERIV</span><span class="o">-</span><span class="nv">th</span> <span class="nv">derivative</span> <span class="nv">of</span>
@@ -203,9 +203,8 @@ LC: QA1.A647.v27.
 <span class="nv">piecewise</span> <span class="nv">polynomial</span> <span class="nv">representation</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">function</span> <span class="nv">F</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">evaluated</span>.
 
 <span class="nv">Input</span>, <span class="nv">integer</span> <span class="ss">(</span> <span class="nv">kind</span> <span class="o">=</span> <span class="mi">4</span> <span class="ss">)</span> <span class="nv">K</span>, <span class="nv">the</span> <span class="nv">order</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">polynomial</span> <span class="nv">pieces</span> <span class="nv">that</span> 
-<span class="nv">make</span> <span class="nv">up</span> <span class="nv">the</span> <span class="nv">function</span> <span class="nv">F</span>.  
-<span class="nv">The</span> <span class="nv">usual</span> <span class="nv">value</span> <span class="k">for</span> <span class="nv">K</span> <span class="nv">is</span> <span class="mi">4</span>, <span class="nv">signifying</span> <span class="nv">a</span> <span class="nv">piecewise</span> 
-<span class="nv">cubic</span> <span class="nv">polynomial</span>.
+<span class="nv">make</span> <span class="nv">up</span> <span class="nv">the</span> <span class="nv">function</span> <span class="nv">F</span>.  <span class="nv">The</span> <span class="nv">usual</span> <span class="nv">value</span> <span class="k">for</span> <span class="nv">K</span> <span class="nv">is</span> <span class="mi">4</span>, <span class="nv">signifying</span> <span class="nv">a</span> 
+<span class="nv">piecewise</span> <span class="nv">cubic</span> <span class="nv">polynomial</span>.
 
 <span class="nv">Input</span>, <span class="nv">real</span> <span class="ss">(</span> <span class="nv">kind</span> <span class="o">=</span> <span class="mi">8</span> <span class="ss">)</span> <span class="nv">X</span>, <span class="nv">the</span> <span class="nv">point</span> <span class="nv">at</span> <span class="nv">which</span> <span class="nv">to</span> <span class="nv">evaluate</span> <span class="nv">F</span> <span class="nv">or</span>
 <span class="nv">of</span> <span class="nv">its</span> <span class="nv">derivatives</span>.
@@ -262,7 +261,7 @@ LC: QA1.A647.v27.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~12"></span>
+              <span class="anchor" id="variable-l~24"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -277,7 +276,7 @@ LC: QA1.A647.v27.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~20"></span>
+              <span class="anchor" id="variable-k~24"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -292,7 +291,7 @@ LC: QA1.A647.v27.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~17"></span>
+              <span class="anchor" id="variable-x~232"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -307,7 +306,7 @@ LC: QA1.A647.v27.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-jderiv~3"></span>
+              <span class="anchor" id="variable-jderiv~4"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -477,7 +476,8 @@ LC: QA1.A647.v27.
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span><span class="k">function </span><span class="n">ppvalu</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">break</span><span class="p">,</span><span class="w"> </span><span class="n">coef</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">jderiv</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="c">!***********************************************************************</span>
+
+<span class="w">  </span><span class="c">!*****************************************************************************80</span>
 <span class="w">  </span><span class="c">!</span>
 <span class="w">  </span><span class="c">!! PPVALU evaluates a piecewise polynomial function or its derivative.</span>
 <span class="w">  </span><span class="c">!</span>
@@ -530,9 +530,8 @@ LC: QA1.A647.v27.
 <span class="w">  </span><span class="c">!    piecewise polynomial representation of the function F to be evaluated.</span>
 <span class="w">  </span><span class="c">!</span>
 <span class="w">  </span><span class="c">!    Input, integer ( kind = 4 ) K, the order of the polynomial pieces that </span>
-<span class="w">  </span><span class="c">!    make up the function F.  </span>
-<span class="w">  </span><span class="c">!    The usual value for K is 4, signifying a piecewise </span>
-<span class="w">  </span><span class="c">!    cubic polynomial.</span>
+<span class="w">  </span><span class="c">!    make up the function F.  The usual value for K is 4, signifying a </span>
+<span class="w">  </span><span class="c">!    piecewise cubic polynomial.</span>
 <span class="w">  </span><span class="c">!</span>
 <span class="w">  </span><span class="c">!    Input, real ( kind = 8 ) X, the point at which to evaluate F or</span>
 <span class="w">  </span><span class="c">!    of its derivatives.</span>
@@ -546,8 +545,10 @@ LC: QA1.A647.v27.
 <span class="w">  </span><span class="c">!    derivative of F at X.</span>
 <span class="w">  </span><span class="c">!</span>
 <span class="w">  </span><span class="k">implicit none</span>
+
 <span class="k">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
 <span class="w">  </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">l</span><span class="w"></span>
+
 <span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">break</span><span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
 <span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">coef</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">)</span><span class="w"></span>
 <span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">fmmjdr</span><span class="w"></span>
@@ -559,7 +560,9 @@ LC: QA1.A647.v27.
 <span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">ppvalu</span><span class="w"></span>
 <span class="w">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">value</span>
 <span class="k">  </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+
 <span class="w">  </span><span class="k">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"></span>
+
 <span class="w">  </span><span class="n">fmmjdr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">jderiv</span><span class="w"></span>
 <span class="w">  </span><span class="c">!</span>
 <span class="w">  </span><span class="c">!  Derivatives of order K or higher are identically zero.</span>
@@ -576,15 +579,21 @@ LC: QA1.A647.v27.
 <span class="w">  </span><span class="c">!</span>
 <span class="w">  </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">break</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
 <span class="w">  </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+
 <span class="w">  </span><span class="k">do</span>
+
 <span class="k">     value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">fmmjdr</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">coef</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
 <span class="w">     </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 <span class="w">     </span><span class="n">fmmjdr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fmmjdr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.0D+00</span><span class="w"></span>
+
 <span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fmmjdr</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0D+00</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">        exit</span>
 <span class="k">     end if</span>
+
 <span class="k">  end do</span>
+
 <span class="k">  </span><span class="n">ppvalu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span>
+
 <span class="k">  return</span>
 <span class="k">end function </span><span class="n">ppvalu</span><span class="w"></span>
 </pre></div>

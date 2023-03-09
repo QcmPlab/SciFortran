@@ -167,7 +167,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~10"></span>
+              <span class="anchor" id="variable-a~50"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -197,7 +197,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nblock~8"></span>
+              <span class="anchor" id="variable-nblock~14"></span>
               integer
             </td>
 <td></td>
@@ -242,7 +242,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-uplo"></span>
+              <span class="anchor" id="variable-uplo~4"></span>
               character(len=1),
             </td>
 <td></td>
@@ -356,65 +356,65 @@
 <polygon fill="none" stroke="black" points="95,-234 0,-234 0,-210 95,-210 95,-234"/>
 <text text-anchor="middle" x="47.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50">p_deigh_simple</text>
 </g>
-<!-- descinit -->
+<!-- free_unit -->
 <g id="proc~~p_deigh_simple~~CallsGraph_node2" class="node">
-<title>descinit</title>
-<polygon fill="#777777" stroke="#777777" points="206,-444 152,-444 152,-420 206,-420 206,-444"/>
-<text text-anchor="middle" x="179" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
+<title>free_unit</title>
+<polygon fill="#777777" stroke="#777777" points="208.5,-444 149.5,-444 149.5,-420 208.5,-420 208.5,-444"/>
+<text text-anchor="middle" x="179" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">free_unit</text>
 </g>
-<!-- proc~p_deigh_simple&#45;&gt;descinit -->
+<!-- proc~p_deigh_simple&#45;&gt;free_unit -->
 <g id="proc~~p_deigh_simple~~CallsGraph_edge1" class="edge">
-<title>proc~p_deigh_simple&#45;&gt;descinit</title>
-<path fill="none" stroke="#000000" d="M50.68,-234.34C57.09,-267.28 78.82,-358.37 131,-411 134.44,-414.47 138.55,-417.41 142.89,-419.9"/>
-<polygon fill="#000000" stroke="#000000" points="141.46,-423.09 151.97,-424.38 144.55,-416.82 141.46,-423.09"/>
+<title>proc~p_deigh_simple&#45;&gt;free_unit</title>
+<path fill="none" stroke="#000000" d="M50.68,-234.34C57.09,-267.28 78.82,-358.37 131,-411 133.67,-413.7 136.76,-416.08 140.04,-418.17"/>
+<polygon fill="#000000" stroke="#000000" points="138.58,-421.37 149.04,-423.07 141.93,-415.22 138.58,-421.37"/>
 </g>
-<!-- pdsyevd -->
+<!-- pdsyevx -->
 <g id="proc~~p_deigh_simple~~CallsGraph_node3" class="node">
-<title>pdsyevd</title>
-<polygon fill="#777777" stroke="#777777" points="207.5,-402 150.5,-402 150.5,-378 207.5,-378 207.5,-402"/>
-<text text-anchor="middle" x="179" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsyevd</text>
+<title>pdsyevx</title>
+<polygon fill="#777777" stroke="#777777" points="207,-402 151,-402 151,-378 207,-378 207,-402"/>
+<text text-anchor="middle" x="179" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsyevx</text>
 </g>
-<!-- proc~p_deigh_simple&#45;&gt;pdsyevd -->
+<!-- proc~p_deigh_simple&#45;&gt;pdsyevx -->
 <g id="proc~~p_deigh_simple~~CallsGraph_edge4" class="edge">
-<title>proc~p_deigh_simple&#45;&gt;pdsyevd</title>
-<path fill="none" stroke="#000000" d="M52.41,-234.36C61.73,-262.02 87.77,-329.54 131,-369 134.12,-371.85 137.69,-374.36 141.43,-376.56"/>
-<polygon fill="#000000" stroke="#000000" points="139.88,-379.69 150.37,-381.15 143.08,-373.47 139.88,-379.69"/>
-</g>
-<!-- gather_blacs -->
-<g id="proc~~p_deigh_simple~~CallsGraph_node4" class="node">
-<title>gather_blacs</title>
-<polygon fill="#777777" stroke="#777777" points="219.5,-360 138.5,-360 138.5,-336 219.5,-336 219.5,-360"/>
-<text text-anchor="middle" x="179" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
-</g>
-<!-- proc~p_deigh_simple&#45;&gt;gather_blacs -->
-<g id="proc~~p_deigh_simple~~CallsGraph_edge5" class="edge">
-<title>proc~p_deigh_simple&#45;&gt;gather_blacs</title>
-<path fill="none" stroke="#000000" d="M55.4,-234.27C67.95,-255.66 96.45,-300.05 131,-327 132.77,-328.38 134.66,-329.7 136.6,-330.95"/>
-<polygon fill="#000000" stroke="#000000" points="135.04,-334.08 145.46,-335.97 138.49,-327.99 135.04,-334.08"/>
-</g>
-<!-- blacs_gridinfo -->
-<g id="proc~~p_deigh_simple~~CallsGraph_node5" class="node">
-<title>blacs_gridinfo</title>
-<polygon fill="#777777" stroke="#777777" points="222.5,-318 135.5,-318 135.5,-294 222.5,-294 222.5,-318"/>
-<text text-anchor="middle" x="179" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
-</g>
-<!-- proc~p_deigh_simple&#45;&gt;blacs_gridinfo -->
-<g id="proc~~p_deigh_simple~~CallsGraph_edge2" class="edge">
-<title>proc~p_deigh_simple&#45;&gt;blacs_gridinfo</title>
-<path fill="none" stroke="#000000" d="M62.38,-234.22C78.23,-247.76 105.28,-269.72 131,-285 133.61,-286.55 136.34,-288.05 139.14,-289.5"/>
-<polygon fill="#000000" stroke="#000000" points="137.62,-292.66 148.14,-293.91 140.7,-286.37 137.62,-292.66"/>
+<title>proc~p_deigh_simple&#45;&gt;pdsyevx</title>
+<path fill="none" stroke="#000000" d="M52.41,-234.36C61.73,-262.02 87.77,-329.54 131,-369 134.19,-371.91 137.86,-374.48 141.7,-376.72"/>
+<polygon fill="#000000" stroke="#000000" points="140.36,-379.96 150.86,-381.37 143.53,-373.72 140.36,-379.96"/>
 </g>
 <!-- pdsyevr -->
-<g id="proc~~p_deigh_simple~~CallsGraph_node6" class="node">
+<g id="proc~~p_deigh_simple~~CallsGraph_node4" class="node">
 <title>pdsyevr</title>
-<polygon fill="#777777" stroke="#777777" points="206.5,-276 151.5,-276 151.5,-252 206.5,-252 206.5,-276"/>
-<text text-anchor="middle" x="179" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsyevr</text>
+<polygon fill="#777777" stroke="#777777" points="206.5,-360 151.5,-360 151.5,-336 206.5,-336 206.5,-360"/>
+<text text-anchor="middle" x="179" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsyevr</text>
 </g>
 <!-- proc~p_deigh_simple&#45;&gt;pdsyevr -->
 <g id="proc~~p_deigh_simple~~CallsGraph_edge3" class="edge">
 <title>proc~p_deigh_simple&#45;&gt;pdsyevr</title>
-<path fill="none" stroke="#000000" d="M85.61,-234.04C103.1,-239.71 123.91,-246.46 141.35,-252.11"/>
-<polygon fill="#000000" stroke="#000000" points="140.58,-255.54 151.17,-255.3 142.74,-248.88 140.58,-255.54"/>
+<path fill="none" stroke="#000000" d="M55.4,-234.27C67.95,-255.66 96.45,-300.05 131,-327 134.41,-329.66 138.21,-332.06 142.13,-334.21"/>
+<polygon fill="#000000" stroke="#000000" points="140.85,-337.49 151.37,-338.77 143.95,-331.21 140.85,-337.49"/>
+</g>
+<!-- gather_blacs -->
+<g id="proc~~p_deigh_simple~~CallsGraph_node5" class="node">
+<title>gather_blacs</title>
+<polygon fill="#777777" stroke="#777777" points="219.5,-318 138.5,-318 138.5,-294 219.5,-294 219.5,-318"/>
+<text text-anchor="middle" x="179" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gather_blacs</text>
+</g>
+<!-- proc~p_deigh_simple&#45;&gt;gather_blacs -->
+<g id="proc~~p_deigh_simple~~CallsGraph_edge5" class="edge">
+<title>proc~p_deigh_simple&#45;&gt;gather_blacs</title>
+<path fill="none" stroke="#000000" d="M62.38,-234.22C78.23,-247.76 105.28,-269.72 131,-285 133.61,-286.55 136.34,-288.05 139.14,-289.5"/>
+<polygon fill="#000000" stroke="#000000" points="137.62,-292.66 148.14,-293.91 140.7,-286.37 137.62,-292.66"/>
+</g>
+<!-- descinit -->
+<g id="proc~~p_deigh_simple~~CallsGraph_node6" class="node">
+<title>descinit</title>
+<polygon fill="#777777" stroke="#777777" points="206,-276 152,-276 152,-252 206,-252 206,-276"/>
+<text text-anchor="middle" x="179" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">descinit</text>
+</g>
+<!-- proc~p_deigh_simple&#45;&gt;descinit -->
+<g id="proc~~p_deigh_simple~~CallsGraph_edge2" class="edge">
+<title>proc~p_deigh_simple&#45;&gt;descinit</title>
+<path fill="none" stroke="#000000" d="M85.61,-234.04C103.35,-239.79 124.51,-246.65 142.09,-252.35"/>
+<polygon fill="#000000" stroke="#000000" points="141.39,-255.81 151.98,-255.56 143.55,-249.15 141.39,-255.81"/>
 </g>
 <!-- dlamch -->
 <g id="proc~~p_deigh_simple~~CallsGraph_node7" class="node">
@@ -428,29 +428,29 @@
 <path fill="none" stroke="#000000" d="M95.25,-222C110.53,-222 127.25,-222 141.64,-222"/>
 <polygon fill="#000000" stroke="#000000" points="141.66,-225.5 151.66,-222 141.66,-218.5 141.66,-225.5"/>
 </g>
-<!-- numroc -->
+<!-- blacs_gridinfo -->
 <g id="proc~~p_deigh_simple~~CallsGraph_node8" class="node">
+<title>blacs_gridinfo</title>
+<polygon fill="#777777" stroke="#777777" points="222.5,-192 135.5,-192 135.5,-168 222.5,-168 222.5,-192"/>
+<text text-anchor="middle" x="179" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">blacs_gridinfo</text>
+</g>
+<!-- proc~p_deigh_simple&#45;&gt;blacs_gridinfo -->
+<g id="proc~~p_deigh_simple~~CallsGraph_edge7" class="edge">
+<title>proc~p_deigh_simple&#45;&gt;blacs_gridinfo</title>
+<path fill="none" stroke="#000000" d="M85.61,-209.96C99.83,-205.35 116.25,-200.03 131.26,-195.16"/>
+<polygon fill="#000000" stroke="#000000" points="132.45,-198.45 140.89,-192.04 130.29,-191.79 132.45,-198.45"/>
+</g>
+<!-- numroc -->
+<g id="proc~~p_deigh_simple~~CallsGraph_node9" class="node">
 <title>numroc</title>
-<polygon fill="#777777" stroke="#777777" points="206,-192 152,-192 152,-168 206,-168 206,-192"/>
-<text text-anchor="middle" x="179" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
+<polygon fill="#777777" stroke="#777777" points="206,-150 152,-150 152,-126 206,-126 206,-150"/>
+<text text-anchor="middle" x="179" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">numroc</text>
 </g>
 <!-- proc~p_deigh_simple&#45;&gt;numroc -->
-<g id="proc~~p_deigh_simple~~CallsGraph_edge7" class="edge">
-<title>proc~p_deigh_simple&#45;&gt;numroc</title>
-<path fill="none" stroke="#000000" d="M85.61,-209.96C103.35,-204.21 124.51,-197.35 142.09,-191.65"/>
-<polygon fill="#000000" stroke="#000000" points="143.55,-194.85 151.98,-188.44 141.39,-188.19 143.55,-194.85"/>
-</g>
-<!-- free_unit -->
-<g id="proc~~p_deigh_simple~~CallsGraph_node9" class="node">
-<title>free_unit</title>
-<polygon fill="#777777" stroke="#777777" points="208.5,-150 149.5,-150 149.5,-126 208.5,-126 208.5,-150"/>
-<text text-anchor="middle" x="179" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">free_unit</text>
-</g>
-<!-- proc~p_deigh_simple&#45;&gt;free_unit -->
 <g id="proc~~p_deigh_simple~~CallsGraph_edge8" class="edge">
-<title>proc~p_deigh_simple&#45;&gt;free_unit</title>
-<path fill="none" stroke="#000000" d="M62.38,-209.78C78.23,-196.24 105.28,-174.28 131,-159 133.84,-157.31 136.85,-155.67 139.9,-154.1"/>
-<polygon fill="#000000" stroke="#000000" points="141.66,-157.14 149.13,-149.63 138.61,-150.84 141.66,-157.14"/>
+<title>proc~p_deigh_simple&#45;&gt;numroc</title>
+<path fill="none" stroke="#000000" d="M62.38,-209.78C78.23,-196.24 105.28,-174.28 131,-159 134.63,-156.84 138.52,-154.77 142.45,-152.81"/>
+<polygon fill="#000000" stroke="#000000" points="144.04,-155.93 151.6,-148.51 141.06,-149.6 144.04,-155.93"/>
 </g>
 <!-- distribute_blacs -->
 <g id="proc~~p_deigh_simple~~CallsGraph_node10" class="node">
@@ -476,17 +476,17 @@
 <path fill="none" stroke="#000000" d="M52.41,-209.64C61.73,-181.98 87.77,-114.46 131,-75 134.43,-71.87 138.41,-69.14 142.58,-66.78"/>
 <polygon fill="#000000" stroke="#000000" points="144.43,-69.77 151.84,-62.2 141.32,-63.5 144.43,-69.77"/>
 </g>
-<!-- pdsyevx -->
+<!-- pdsyevd -->
 <g id="proc~~p_deigh_simple~~CallsGraph_node12" class="node">
-<title>pdsyevx</title>
-<polygon fill="#777777" stroke="#777777" points="207,-24 151,-24 151,0 207,0 207,-24"/>
-<text text-anchor="middle" x="179" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsyevx</text>
+<title>pdsyevd</title>
+<polygon fill="#777777" stroke="#777777" points="207.5,-24 150.5,-24 150.5,0 207.5,0 207.5,-24"/>
+<text text-anchor="middle" x="179" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pdsyevd</text>
 </g>
-<!-- proc~p_deigh_simple&#45;&gt;pdsyevx -->
+<!-- proc~p_deigh_simple&#45;&gt;pdsyevd -->
 <g id="proc~~p_deigh_simple~~CallsGraph_edge11" class="edge">
-<title>proc~p_deigh_simple&#45;&gt;pdsyevx</title>
-<path fill="none" stroke="#000000" d="M50.68,-209.66C57.09,-176.72 78.82,-85.63 131,-33 134.2,-29.77 137.99,-27 142,-24.62"/>
-<polygon fill="#000000" stroke="#000000" points="143.67,-27.7 151,-20.05 140.5,-21.46 143.67,-27.7"/>
+<title>proc~p_deigh_simple&#45;&gt;pdsyevd</title>
+<path fill="none" stroke="#000000" d="M50.68,-209.66C57.09,-176.72 78.82,-85.63 131,-33 133.97,-30 137.45,-27.39 141.14,-25.14"/>
+<polygon fill="#000000" stroke="#000000" points="142.79,-28.23 150.02,-20.48 139.54,-22.03 142.79,-28.23"/>
 </g>
 </g>
 </svg>
