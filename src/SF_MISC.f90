@@ -451,7 +451,7 @@ contains
 
   !> subroutine to sort using the quicksort algorithm
   subroutine sort_quicksort_i(a,indx)
-    integer, dimension(:),intent(inout)               :: a
+    integer,dimension(:),intent(inout)                :: a
     integer,dimension(size(a)),intent(inout),optional :: indx
     integer,dimension(size(a))                        :: indx_a
     integer                                           :: i
