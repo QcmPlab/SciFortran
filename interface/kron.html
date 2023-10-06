@@ -100,7 +100,7 @@
           <li id="statements"><i class="fa fa-list-ol"></i>
             <a data-toggle="tooltip"
                data-placement="bottom" data-html="true"
-               title="<p> 0.0% of total for procedures.</p>Including implementation: 48 statements,  0.1% of total for procedures.">3 statements</a>
+               title="<p> 0.0% of total for procedures.</p>Including implementation: 84 statements,  0.1% of total for procedures.">7 statements</a>
           </li>
 
             <li id="source-file">
@@ -156,6 +156,8 @@
         <div class="list-group">
             <a class="list-group-item" href="../interface/kron.html#moduleprocedure-i_kronecker_product">i_kronecker_product</a>
             <a class="list-group-item" href="../interface/kron.html#moduleprocedure-d_kronecker_product">d_kronecker_product</a>
+            <a class="list-group-item" href="../interface/kron.html#moduleprocedure-dc_kronecker_product">dc_kronecker_product</a>
+            <a class="list-group-item" href="../interface/kron.html#moduleprocedure-cd_kronecker_product">cd_kronecker_product</a>
             <a class="list-group-item" href="../interface/kron.html#moduleprocedure-c_kronecker_product">c_kronecker_product</a>
         </div>
       </div>
@@ -201,6 +203,8 @@
         <div class="list-group">
             <a class="list-group-item" href="../interface/kron.html#moduleprocedure-i_kronecker_product">i_kronecker_product</a>
             <a class="list-group-item" href="../interface/kron.html#moduleprocedure-d_kronecker_product">d_kronecker_product</a>
+            <a class="list-group-item" href="../interface/kron.html#moduleprocedure-dc_kronecker_product">dc_kronecker_product</a>
+            <a class="list-group-item" href="../interface/kron.html#moduleprocedure-cd_kronecker_product">cd_kronecker_product</a>
             <a class="list-group-item" href="../interface/kron.html#moduleprocedure-c_kronecker_product">c_kronecker_product</a>
         </div>
       </div>
@@ -326,6 +330,124 @@
     <h4>
     Return Value
     <small>real(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+            <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-dc_kronecker_product~2"></span><h3>private  function dc_kronecker_product(A, B) result(AxB)  
+</h3></div>
+    <div class="panel-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+            <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-cd_kronecker_product~2"></span><h3>private  function cd_kronecker_product(A, B) result(AxB)  
+</h3></div>
+    <div class="panel-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
     </h4>
     
 

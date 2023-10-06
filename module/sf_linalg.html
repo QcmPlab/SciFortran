@@ -100,7 +100,7 @@
           <li id="statements"><i class="fa fa-list-ol"></i>
             <a data-toggle="tooltip"
                data-placement="bottom" data-html="true"
-               title=" 8.2% of total for modules and submodules.">3367 statements</a>
+               title=" 8.3% of total for modules and submodules.">3411 statements</a>
           </li>
 
             <li id="source-file">
@@ -174,7 +174,7 @@
             <a class="list-group-item" href="../module/sf_linalg.html#interface-ones">ones</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-kron">kron</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-kronecker_product">kronecker_product</a>
-            <a class="list-group-item" href="../module/sf_linalg.html#interface-kroenecker_product">kroenecker_product</a>
+            <a class="list-group-item" href="../module/sf_linalg.html#interface-operator%28.kx.%29">operator(.kx.)</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-outerprod">outerprod</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-cross_product">cross_product</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-s3_product">s3_product</a>
@@ -562,7 +562,7 @@ modules which it uses.
             <a class="list-group-item" href="../module/sf_linalg.html#interface-ones">ones</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-kron">kron</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-kronecker_product">kronecker_product</a>
-            <a class="list-group-item" href="../module/sf_linalg.html#interface-kroenecker_product">kroenecker_product</a>
+            <a class="list-group-item" href="../module/sf_linalg.html#interface-operator%28.kx.%29">operator(.kx.)</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-outerprod">outerprod</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-cross_product">cross_product</a>
             <a class="list-group-item" href="../module/sf_linalg.html#interface-s3_product">s3_product</a>
@@ -7222,6 +7222,122 @@ modules which it uses.
           </li>
           <li class="list-group-item">
                 <h3>
+    private  function dc_kronecker_product(A, B) result(AxB)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function cd_kronecker_product(A, B) result(AxB)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
     private  function c_kronecker_product(A, B) result(AxB)  
 
     </h3>
@@ -7406,6 +7522,122 @@ modules which it uses.
           </li>
           <li class="list-group-item">
                 <h3>
+    private  function dc_kronecker_product(A, B) result(AxB)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function cd_kronecker_product(A, B) result(AxB)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
     private  function c_kronecker_product(A, B) result(AxB)  
 
     </h3>
@@ -7467,8 +7699,8 @@ modules which it uses.
 
               <div class="panel panel-default">
     <div class="panel-heading codesum">
-      <span class="anchor" id="interface-kroenecker_product"></span>
-      <h3>public        interface <a href='../interface/kroenecker_product.html'>kroenecker_product</a> 
+      <span class="anchor" id="interface-operator%28.kx.%29"></span>
+      <h3>public        interface <a href='../interface/operator%28.kx.%29.html'>operator(.kx.)</a> 
       </h3>
     </div>
     <ul class="list-group">
@@ -7584,6 +7816,122 @@ modules which it uses.
     <h4>
     Return Value
     <small>real(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function dc_kronecker_product(A, B) result(AxB)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
+    </h4>
+    
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  function cd_kronecker_product(A, B) result(AxB)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Intent</th><th>Optional</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              complex(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>A</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" ></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>B</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>complex(kind=8), (size(A,1)*size(B,1),size(A,2)*size(B,2))</small>
     </h4>
     
 
