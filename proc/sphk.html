@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -72,8 +75,7 @@
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
                  title=" 0.1% of total for procedures.">41 statements</a>
             </li>
 
@@ -195,7 +197,7 @@ Output, real ( kind = 8 ) SK(0:N), DK(0:N), the values of kn(x) and kn&#39;(x).
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~73"></span>
+              <span class="anchor" id="variable-n~191"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -210,7 +212,7 @@ Output, real ( kind = 8 ) SK(0:N), DK(0:N), the values of kn(x) and kn&#39;(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~116"></span>
+              <span class="anchor" id="variable-x~235"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -225,7 +227,7 @@ Output, real ( kind = 8 ) SK(0:N), DK(0:N), the values of kn(x) and kn&#39;(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nm~17"></span>
+              <span class="anchor" id="variable-nm~36"></span>
               integer(kind=4)
             </td>
 <td></td>
@@ -240,7 +242,7 @@ Output, real ( kind = 8 ) SK(0:N), DK(0:N), the values of kn(x) and kn&#39;(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sk"></span>
+              <span class="anchor" id="variable-sk~6"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -255,7 +257,7 @@ Output, real ( kind = 8 ) SK(0:N), DK(0:N), the values of kn(x) and kn&#39;(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-dk~4"></span>
+              <span class="anchor" id="variable-dk~8"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -388,7 +390,10 @@ Output, real ( kind = 8 ) SK(0:N), DK(0:N), the values of kn(x) and kn&#39;(x).
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
+          <div class="col">
+            <p>
+              SciFortran
+ was developed by QcmP Lab members<br>              &copy; 2024 
 </p>
           </div>
           <div class="col">

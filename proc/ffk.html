@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -72,8 +75,7 @@
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
                  title=" 0.2% of total for procedures.">152 statements</a>
             </li>
 
@@ -209,7 +211,7 @@ Re[K+/-(x)], Im[K+/-(x)], |K+/-(x)|, Arg[K+/-(x)]  (Degs.).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~51"></span>
+              <span class="anchor" id="variable-x~164"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -224,7 +226,7 @@ Re[K+/-(x)], Im[K+/-(x)], |K+/-(x)|, Arg[K+/-(x)]  (Degs.).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fr"></span>
+              <span class="anchor" id="variable-fr~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -239,7 +241,7 @@ Re[K+/-(x)], Im[K+/-(x)], |K+/-(x)|, Arg[K+/-(x)]  (Degs.).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fi"></span>
+              <span class="anchor" id="variable-fi~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -254,7 +256,7 @@ Re[K+/-(x)], Im[K+/-(x)], |K+/-(x)|, Arg[K+/-(x)]  (Degs.).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fm~3"></span>
+              <span class="anchor" id="variable-fm~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -314,7 +316,7 @@ Re[K+/-(x)], Im[K+/-(x)], |K+/-(x)|, Arg[K+/-(x)]  (Degs.).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-gm"></span>
+              <span class="anchor" id="variable-gm~3"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -329,7 +331,7 @@ Re[K+/-(x)], Im[K+/-(x)], |K+/-(x)|, Arg[K+/-(x)]  (Degs.).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ga"></span>
+              <span class="anchor" id="variable-ga~8"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -593,7 +595,10 @@ Re[K+/-(x)], Im[K+/-(x)], |K+/-(x)|, Arg[K+/-(x)]  (Degs.).
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
+          <div class="col">
+            <p>
+              SciFortran
+ was developed by QcmP Lab members<br>              &copy; 2024 
 </p>
           </div>
           <div class="col">

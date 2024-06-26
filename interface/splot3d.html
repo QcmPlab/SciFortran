@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -72,8 +75,7 @@
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
                  title="<p> 0.0% of total for procedures.</p>Including implementation: 327 statements,  0.5% of total for procedures.">6 statements</a>
             </li>
 
@@ -154,7 +156,7 @@
 
         <h2>Module Procedures</h2>
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-d_splot3d~3"></span><h3>private  subroutine d_splot3D(pname, X1, X2, Y, xmin, xmax, ymin, ymax, nosurface, wlines, nlines)  
+    <div class="card-header codesum"><span class="anchor" id="proc-d_splot3d"></span> <h3>private  subroutine d_splot3D(pname, X1, X2, Y, xmin, xmax, ymin, ymax, nosurface, wlines, nlines)  
 </h3></div>
     <div class="card-body">
         
@@ -172,7 +174,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-pname~146"></span>
+              <span class="anchor" id="variable-pname~134"></span>
               character(len=*)
             </td>
 <td></td>
@@ -187,7 +189,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x1~9"></span>
+              <span class="anchor" id="variable-x1"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -202,7 +204,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x2~9"></span>
+              <span class="anchor" id="variable-x2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -217,7 +219,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~10"></span>
+              <span class="anchor" id="variable-y~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -232,7 +234,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmin~20"></span>
+              <span class="anchor" id="variable-xmin~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -247,7 +249,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmax~12"></span>
+              <span class="anchor" id="variable-xmax~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -262,7 +264,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymin~9"></span>
+              <span class="anchor" id="variable-ymin"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -277,7 +279,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymax~9"></span>
+              <span class="anchor" id="variable-ymax"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -292,7 +294,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nosurface~5"></span>
+              <span class="anchor" id="variable-nosurface"></span>
               logical,
             </td>
 <td></td>
@@ -307,7 +309,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-wlines~5"></span>
+              <span class="anchor" id="variable-wlines"></span>
               logical,
             </td>
 <td></td>
@@ -322,7 +324,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nlines~5"></span>
+              <span class="anchor" id="variable-nlines"></span>
               integer,
             </td>
 <td></td>
@@ -343,7 +345,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-c_splot3d~3"></span><h3>private  subroutine c_splot3D(pname, X1, X2, Y, xmin, xmax, ymin, ymax, nosurface, wlines, nlines)  
+    <div class="card-header codesum"><span class="anchor" id="proc-c_splot3d"></span> <h3>private  subroutine c_splot3D(pname, X1, X2, Y, xmin, xmax, ymin, ymax, nosurface, wlines, nlines)  
 </h3></div>
     <div class="card-body">
         
@@ -361,7 +363,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-pname~147"></span>
+              <span class="anchor" id="variable-pname~135"></span>
               character(len=*)
             </td>
 <td></td>
@@ -376,7 +378,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x1~10"></span>
+              <span class="anchor" id="variable-x1~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -391,7 +393,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x2~10"></span>
+              <span class="anchor" id="variable-x2~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -406,7 +408,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~11"></span>
+              <span class="anchor" id="variable-y~5"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -421,7 +423,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmin~21"></span>
+              <span class="anchor" id="variable-xmin~5"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -436,7 +438,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmax~13"></span>
+              <span class="anchor" id="variable-xmax~5"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -451,7 +453,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymin~10"></span>
+              <span class="anchor" id="variable-ymin~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -466,7 +468,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymax~10"></span>
+              <span class="anchor" id="variable-ymax~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -481,7 +483,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nosurface~6"></span>
+              <span class="anchor" id="variable-nosurface~2"></span>
               logical,
             </td>
 <td></td>
@@ -496,7 +498,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-wlines~6"></span>
+              <span class="anchor" id="variable-wlines~2"></span>
               logical,
             </td>
 <td></td>
@@ -511,7 +513,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nlines~6"></span>
+              <span class="anchor" id="variable-nlines~2"></span>
               integer,
             </td>
 <td></td>
@@ -532,7 +534,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-d_splot3d_animate~3"></span><h3>private  subroutine d_splot3d_animate(pname, X1, X2, Y, xmin, xmax, ymin, ymax)  
+    <div class="card-header codesum"><span class="anchor" id="proc-d_splot3d_animate"></span> <h3>private  subroutine d_splot3d_animate(pname, X1, X2, Y, xmin, xmax, ymin, ymax)  
 </h3></div>
     <div class="card-body">
         
@@ -550,7 +552,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-pname~148"></span>
+              <span class="anchor" id="variable-pname~136"></span>
               character(len=*)
             </td>
 <td></td>
@@ -565,7 +567,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x1~11"></span>
+              <span class="anchor" id="variable-x1~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -580,7 +582,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x2~11"></span>
+              <span class="anchor" id="variable-x2~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -595,7 +597,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~12"></span>
+              <span class="anchor" id="variable-y~6"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -610,7 +612,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmin~22"></span>
+              <span class="anchor" id="variable-xmin~6"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -625,7 +627,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmax~14"></span>
+              <span class="anchor" id="variable-xmax~6"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -640,7 +642,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymin~11"></span>
+              <span class="anchor" id="variable-ymin~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -655,7 +657,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymax~11"></span>
+              <span class="anchor" id="variable-ymax~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -676,7 +678,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-c_splot3d_animate~3"></span><h3>private  subroutine c_splot3d_animate(pname, X1, X2, Y, xmin, xmax, ymin, ymax)  
+    <div class="card-header codesum"><span class="anchor" id="proc-c_splot3d_animate"></span> <h3>private  subroutine c_splot3d_animate(pname, X1, X2, Y, xmin, xmax, ymin, ymax)  
 </h3></div>
     <div class="card-body">
         
@@ -694,7 +696,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-pname~149"></span>
+              <span class="anchor" id="variable-pname~137"></span>
               character(len=*)
             </td>
 <td></td>
@@ -709,7 +711,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x1~12"></span>
+              <span class="anchor" id="variable-x1~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -724,7 +726,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x2~12"></span>
+              <span class="anchor" id="variable-x2~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -739,7 +741,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~13"></span>
+              <span class="anchor" id="variable-y~7"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -754,7 +756,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmin~23"></span>
+              <span class="anchor" id="variable-xmin~7"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -769,7 +771,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmax~15"></span>
+              <span class="anchor" id="variable-xmax~7"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -784,7 +786,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymin~12"></span>
+              <span class="anchor" id="variable-ymin~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -799,7 +801,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ymax~12"></span>
+              <span class="anchor" id="variable-ymax~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -826,7 +828,10 @@
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
+          <div class="col">
+            <p>
+              SciFortran
+ was developed by QcmP Lab members<br>              &copy; 2024 
 </p>
           </div>
           <div class="col">

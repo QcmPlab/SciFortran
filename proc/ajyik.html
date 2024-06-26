@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -72,8 +75,7 @@
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
                  title=" 0.4% of total for procedures.">223 statements</a>
             </li>
 
@@ -193,7 +195,7 @@ K1/3(x), K2/3(x).
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~24"></span>
+              <span class="anchor" id="variable-x~131"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -208,7 +210,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vj1"></span>
+              <span class="anchor" id="variable-vj1~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -223,7 +225,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vj2"></span>
+              <span class="anchor" id="variable-vj2~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -238,7 +240,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vy1"></span>
+              <span class="anchor" id="variable-vy1~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -253,7 +255,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vy2"></span>
+              <span class="anchor" id="variable-vy2~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -268,7 +270,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vi1"></span>
+              <span class="anchor" id="variable-vi1~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -283,7 +285,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vi2"></span>
+              <span class="anchor" id="variable-vi2~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -298,7 +300,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vk1"></span>
+              <span class="anchor" id="variable-vk1~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -313,7 +315,7 @@ K1/3(x), K2/3(x).
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vk2"></span>
+              <span class="anchor" id="variable-vk2~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -667,7 +669,10 @@ K1/3(x), K2/3(x).
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
+          <div class="col">
+            <p>
+              SciFortran
+ was developed by QcmP Lab members<br>              &copy; 2024 
 </p>
           </div>
           <div class="col">

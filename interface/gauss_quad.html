@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -72,8 +75,7 @@
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
                  title="<p> 0.0% of total for procedures.</p>Including implementation: 349 statements,  0.6% of total for procedures.">8 statements</a>
             </li>
 
@@ -156,7 +158,7 @@
 
         <h2>Module Procedures</h2>
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-integrate_1d_func_main"></span><h3>private  subroutine integrate_1d_func_main(m, fx, xl, xu, ans, tol, method, ierr, err)  
+    <div class="card-header codesum"><span class="anchor" id="proc-integrate_1d_func_main"></span> <h3>private  subroutine integrate_1d_func_main(m, fx, xl, xu, ans, tol, method, ierr, err)  
 </h3></div>
     <div class="card-body">
         
@@ -174,7 +176,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~148"></span>
+              <span class="anchor" id="variable-m~152"></span>
               integer
             </td>
 <td></td>
@@ -189,7 +191,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~2"></span>
+              <span class="anchor" id="variable-fx~6"></span>
               procedure(f_x)
             </td>
 <td></td>
@@ -219,7 +221,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xu"></span>
+              <span class="anchor" id="variable-xu~2"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -249,7 +251,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~54"></span>
+              <span class="anchor" id="variable-tol~14"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -279,370 +281,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ierr~3"></span>
-              integer,
-            </td>
-<td>intent(out),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ierr</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-err~4"></span>
-              real(kind=8),
-            </td>
-<td>intent(out),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>err</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-integrate_nd_func_main"></span><h3>private  subroutine integrate_nd_func_main(m, fxvec, xl, xu, ans, methods, method, tols, tol, ierr, err)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-m~149"></span>
-              integer
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>m</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fxvec"></span>
-              procedure(f_xvec)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>fxvec</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-xl~4"></span>
-              real(kind=8),
-            </td>
-<td>intent(in),</td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>xl</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-xu~2"></span>
-              real(kind=8),
-            </td>
-<td>intent(in),</td>
-              <td></td>            <td>
-              dimension(size(xl))
-            </td>
-            <td>::</td>
-            <td><strong>xu</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ans~11"></span>
-              real(kind=8),
-            </td>
-<td>intent(inout),</td>
-              <td></td>            <td>
-              dimension(m)
-            </td>
-            <td>::</td>
-            <td><strong>ans</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-methods"></span>
-              integer,
-            </td>
-<td>intent(in),</td>
-              <td>optional,</td>            <td>
-              dimension(size(xl))
-            </td>
-            <td>::</td>
-            <td><strong>methods</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-method~6"></span>
-              integer,
-            </td>
-<td>intent(in),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>method</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tols"></span>
-              real(kind=8),
-            </td>
-<td>intent(in),</td>
-              <td>optional,</td>            <td>
-              dimension(size(xl))
-            </td>
-            <td>::</td>
-            <td><strong>tols</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tol~55"></span>
-              real(kind=8),
-            </td>
-<td>intent(in),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tol</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ierr~4"></span>
-              integer,
-            </td>
-<td>intent(out),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ierr</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-err~5"></span>
-              real(kind=8),
-            </td>
-<td>intent(out),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>err</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-integrate_1d_func_1"></span><h3>private  subroutine integrate_1d_func_1(func, xl, xu, ans, tol, method, ierr, err)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="7">
-              <small>    <h5>
-    private  function func(x)  
-
-    </h5>
-  
-
-  <h6>Arguments</h6>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~554"></span>
-              real(kind=8)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>x</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-    <h6>
-    Return Value
-    <small>real(kind=8)</small>
-    </h6>
-    
-</small>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-xl~5"></span>
-              real(kind=8),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>xl</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-xu~3"></span>
-              real(kind=8),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>xu</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ans~12"></span>
-              real(kind=8),
-            </td>
-<td>intent(inout)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ans</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tol~56"></span>
-              real(kind=8),
-            </td>
-<td>intent(in),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tol</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-method~7"></span>
-              integer,
-            </td>
-<td>intent(in),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>method</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ierr~5"></span>
+              <span class="anchor" id="variable-ierr~14"></span>
               integer,
             </td>
 <td>intent(out),</td>
@@ -678,7 +317,196 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-integrate_nd_func_1"></span><h3>private  subroutine integrate_nd_func_1(func, xl, xu, ans, methods, method, tols, tol, ierr, err)  
+    <div class="card-header codesum"><span class="anchor" id="proc-integrate_nd_func_main"></span> <h3>private  subroutine integrate_nd_func_main(m, fxvec, xl, xu, ans, methods, method, tols, tol, ierr, err)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m~154"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>m</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fxvec~2"></span>
+              procedure(f_xvec)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fxvec</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xl~5"></span>
+              real(kind=8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>xl</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xu~4"></span>
+              real(kind=8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(size(xl))
+            </td>
+            <td>::</td>
+            <td><strong>xu</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ans~12"></span>
+              real(kind=8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(m)
+            </td>
+            <td>::</td>
+            <td><strong>ans</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-methods"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(size(xl))
+            </td>
+            <td>::</td>
+            <td><strong>methods</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-method~7"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>method</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tols"></span>
+              real(kind=8),
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(size(xl))
+            </td>
+            <td>::</td>
+            <td><strong>tols</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol~16"></span>
+              real(kind=8),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ierr~16"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ierr</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-err~8"></span>
+              real(kind=8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>err</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-integrate_1d_func_1"></span> <h3>private  subroutine integrate_1d_func_1(func, xl, xu, ans, tol, method, ierr, err)  
 </h3></div>
     <div class="card-body">
         
@@ -715,7 +543,181 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~555"></span>
+              <span class="anchor" id="variable-x~269"></span>
+              real(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h6>
+    Return Value
+    <small>real(kind=8)</small>
+    </h6>
+    
+</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xl~4"></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xl</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xu~3"></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xu</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ans~11"></span>
+              real(kind=8),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ans</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol~15"></span>
+              real(kind=8),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-method~6"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>method</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ierr~15"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ierr</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-err~7"></span>
+              real(kind=8),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>err</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-integrate_nd_func_1"></span> <h3>private  subroutine integrate_nd_func_1(func, xl, xu, ans, methods, method, tols, tol, ierr, err)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+    private  function func(x)  
+
+    </h5>
+  
+
+  <h6>Arguments</h6>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~271"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -756,7 +758,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xu~4"></span>
+              <span class="anchor" id="variable-xu~5"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -831,7 +833,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~57"></span>
+              <span class="anchor" id="variable-tol~17"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -846,7 +848,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ierr~6"></span>
+              <span class="anchor" id="variable-ierr~17"></span>
               integer,
             </td>
 <td>intent(out),</td>
@@ -861,7 +863,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-err~7"></span>
+              <span class="anchor" id="variable-err~9"></span>
               real(kind=8),
             </td>
 <td>intent(out),</td>
@@ -882,7 +884,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-integrate_1d_sample"></span><h3>private  subroutine integrate_1d_sample(fsample, xl, xu, ans, tol, method, ierr, err)  
+    <div class="card-header codesum"><span class="anchor" id="proc-integrate_1d_sample"></span> <h3>private  subroutine integrate_1d_sample(fsample, xl, xu, ans, tol, method, ierr, err)  
 </h3></div>
     <div class="card-body">
         
@@ -900,7 +902,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-fsample~2"></span>
+              <span class="anchor" id="variable-fsample~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -930,7 +932,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xu~5"></span>
+              <span class="anchor" id="variable-xu~6"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -960,7 +962,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~58"></span>
+              <span class="anchor" id="variable-tol~18"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -990,7 +992,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ierr~7"></span>
+              <span class="anchor" id="variable-ierr~18"></span>
               integer,
             </td>
 <td>intent(out),</td>
@@ -1005,7 +1007,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-err~8"></span>
+              <span class="anchor" id="variable-err~10"></span>
               real(kind=8),
             </td>
 <td>intent(out),</td>
@@ -1026,7 +1028,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-integrate_2d_sample"></span><h3>private  subroutine integrate_2d_sample(fsample, xl, xu, ans, methods, method, tols, tol, ierr, err)  
+    <div class="card-header codesum"><span class="anchor" id="proc-integrate_2d_sample"></span> <h3>private  subroutine integrate_2d_sample(fsample, xl, xu, ans, methods, method, tols, tol, ierr, err)  
 </h3></div>
     <div class="card-body">
         
@@ -1044,7 +1046,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-fsample~3"></span>
+              <span class="anchor" id="variable-fsample~4"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -1074,7 +1076,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xu~6"></span>
+              <span class="anchor" id="variable-xu~7"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -1149,7 +1151,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~59"></span>
+              <span class="anchor" id="variable-tol~19"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -1164,7 +1166,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ierr~8"></span>
+              <span class="anchor" id="variable-ierr~19"></span>
               integer,
             </td>
 <td>intent(out),</td>
@@ -1179,7 +1181,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-err~9"></span>
+              <span class="anchor" id="variable-err~11"></span>
               real(kind=8),
             </td>
 <td>intent(out),</td>
@@ -1206,7 +1208,10 @@
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>SciFortran was developed by QcmP Lab members<br>&copy; 2023 
+          <div class="col">
+            <p>
+              SciFortran
+ was developed by QcmP Lab members<br>              &copy; 2024 
 </p>
           </div>
           <div class="col">
