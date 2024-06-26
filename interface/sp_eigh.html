@@ -156,221 +156,7 @@
 
         <h2>Module Procedures</h2>
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-lanczos_arpack_d~2"></span> <h3>private  subroutine lanczos_arpack_d(MatVec, eval, evec, Nblock, Nitermax, bmat, v0, tol, iverbose)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="7">
-              <small>    <h5>
-    private  subroutine MatVec(Nloc, vin, vout)  
-
-    </h5>
-  
-
-  <h6>Arguments</h6>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nloc~8"></span>
-              integer
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>Nloc</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-vin~9"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(Nloc)
-            </td>
-            <td>::</td>
-            <td><strong>vin</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-vout~9"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(Nloc)
-            </td>
-            <td>::</td>
-            <td><strong>vout</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-</small>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-eval~3"></span>
-              real(kind=8)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>eval</strong>(:)</td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-evec~3"></span>
-              real(kind=8)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>evec</strong>(:,:)</td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nblock~5"></span>
-              integer,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>Nblock</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nitermax~5"></span>
-              integer,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>Nitermax</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-bmat~3"></span>
-              character(len=1),
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>bmat</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-v0~17"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>v0</strong>(size(evec,1))</td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tol~8"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tol</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-iverbose~6"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>iverbose</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-lanczos_arpack_c~2"></span> <h3>private  subroutine lanczos_arpack_c(MatVec, eval, evec, Nblock, Nitermax, bmat, v0, tol, iverbose)  
+    <div class="card-header codesum"><span class="anchor" id="proc-lanczos_arpack_d"></span> <h3>private  subroutine lanczos_arpack_d(MatVec, eval, evec, Nblock, Nitermax, bmat, v0, tol, iverbose)  
 </h3></div>
     <div class="card-body">
         
@@ -422,7 +208,221 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vin~10"></span>
+              <span class="anchor" id="variable-vin~13"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vout~13"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-eval"></span>
+              real(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>eval</strong>(:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-evec"></span>
+              real(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>evec</strong>(:,:)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nblock~3"></span>
+              integer,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nblock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nitermax~5"></span>
+              integer,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nitermax</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bmat"></span>
+              character(len=1),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bmat</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v0~15"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>v0</strong>(size(evec,1))</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tol~19"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tol</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iverbose~3"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iverbose</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-lanczos_arpack_c"></span> <h3>private  subroutine lanczos_arpack_c(MatVec, eval, evec, Nblock, Nitermax, bmat, v0, tol, iverbose)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+    private  subroutine MatVec(Nloc, vin, vout)  
+
+    </h5>
+  
+
+  <h6>Arguments</h6>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nloc~10"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nloc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vin~14"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -437,7 +437,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vout~10"></span>
+              <span class="anchor" id="variable-vout~14"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -458,7 +458,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-eval~4"></span>
+              <span class="anchor" id="variable-eval~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -473,7 +473,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-evec~4"></span>
+              <span class="anchor" id="variable-evec~2"></span>
               complex(kind=8)
             </td>
 <td></td>
@@ -488,7 +488,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nblock~6"></span>
+              <span class="anchor" id="variable-nblock~4"></span>
               integer,
             </td>
 <td></td>
@@ -518,7 +518,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-bmat~4"></span>
+              <span class="anchor" id="variable-bmat~2"></span>
               character(len=1),
             </td>
 <td></td>
@@ -533,7 +533,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-v0~18"></span>
+              <span class="anchor" id="variable-v0~16"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -548,7 +548,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~9"></span>
+              <span class="anchor" id="variable-tol~20"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -563,7 +563,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~7"></span>
+              <span class="anchor" id="variable-iverbose~4"></span>
               logical,
             </td>
 <td></td>
@@ -651,7 +651,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vin~11"></span>
+              <span class="anchor" id="variable-vin~15"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -666,7 +666,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vout~11"></span>
+              <span class="anchor" id="variable-vout~15"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -687,7 +687,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-eval~5"></span>
+              <span class="anchor" id="variable-eval~3"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -702,7 +702,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-evec~5"></span>
+              <span class="anchor" id="variable-evec~3"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -717,7 +717,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nblock~7"></span>
+              <span class="anchor" id="variable-nblock~5"></span>
               integer,
             </td>
 <td></td>
@@ -747,7 +747,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-v0~19"></span>
+              <span class="anchor" id="variable-v0~17"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -762,7 +762,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~10"></span>
+              <span class="anchor" id="variable-tol~21"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -777,7 +777,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~8"></span>
+              <span class="anchor" id="variable-iverbose~5"></span>
               logical,
             </td>
 <td></td>
@@ -792,7 +792,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vrandom~2"></span>
+              <span class="anchor" id="variable-vrandom~3"></span>
               logical,
             </td>
 <td></td>
@@ -880,7 +880,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vin~12"></span>
+              <span class="anchor" id="variable-vin~16"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -895,7 +895,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vout~12"></span>
+              <span class="anchor" id="variable-vout~16"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -916,7 +916,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-eval~6"></span>
+              <span class="anchor" id="variable-eval~4"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -931,7 +931,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-evec~6"></span>
+              <span class="anchor" id="variable-evec~4"></span>
               complex(kind=8)
             </td>
 <td></td>
@@ -946,7 +946,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nblock~8"></span>
+              <span class="anchor" id="variable-nblock~6"></span>
               integer,
             </td>
 <td></td>
@@ -976,7 +976,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-v0~20"></span>
+              <span class="anchor" id="variable-v0~18"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -991,7 +991,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~11"></span>
+              <span class="anchor" id="variable-tol~22"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1006,7 +1006,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~9"></span>
+              <span class="anchor" id="variable-iverbose~6"></span>
               logical,
             </td>
 <td></td>
@@ -1021,7 +1021,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vrandom~3"></span>
+              <span class="anchor" id="variable-vrandom~4"></span>
               logical,
             </td>
 <td></td>

@@ -154,7 +154,7 @@
 
         <h2>Module Procedures</h2>
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-d_adaptive_mix~2"></span> <h3>private  subroutine d_adaptive_mix(x, Fx, alpha, iter)  
+    <div class="card-header codesum"><span class="anchor" id="proc-d_adaptive_mix"></span> <h3>private  subroutine d_adaptive_mix(x, Fx, alpha, iter)  
 </h3></div>
     <div class="card-body">
         
@@ -172,7 +172,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~597"></span>
+              <span class="anchor" id="variable-x~550"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -187,7 +187,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~32"></span>
+              <span class="anchor" id="variable-fx~31"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -196,6 +196,90 @@
             </td>
             <td>::</td>
             <td><strong>Fx</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-alpha~34"></span>
+              real(kind=8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>alpha</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iter~61"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iter</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-c_adaptive_mix"></span> <h3>private  subroutine c_adaptive_mix(z, Fz, alpha, iter)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-z~57"></span>
+              complex(kind=8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>z</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fz"></span>
+              complex(kind=8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(size(z))
+            </td>
+            <td>::</td>
+            <td><strong>Fz</strong></td>
             <td>
                 
             </td>
@@ -217,91 +301,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~54"></span>
-              integer,
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>iter</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-c_adaptive_mix~2"></span> <h3>private  subroutine c_adaptive_mix(z, Fz, alpha, iter)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-z~99"></span>
-              complex(kind=8),
-            </td>
-<td>intent(inout),</td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>z</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fz~2"></span>
-              complex(kind=8),
-            </td>
-<td>intent(in),</td>
-              <td></td>            <td>
-              dimension(size(z))
-            </td>
-            <td>::</td>
-            <td><strong>Fz</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-alpha~36"></span>
-              real(kind=8),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>alpha</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-iter~55"></span>
+              <span class="anchor" id="variable-iter~62"></span>
               integer,
             </td>
 <td>intent(in)</td>
