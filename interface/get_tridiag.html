@@ -156,7 +156,7 @@
 
         <h2>Module Procedures</h2>
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-d_get_tridiag"></span> <h3>private  subroutine d_get_tridiag(Amat, sub, diag, over)  
+    <div class="card-header codesum"><span class="anchor" id="proc-d_get_tridiag~2"></span> <h3>private  subroutine d_get_tridiag(Amat, sub, diag, over)  
 </h3></div>
     <div class="card-body">
         
@@ -174,7 +174,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-amat~17"></span>
+              <span class="anchor" id="variable-amat~25"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -189,210 +189,12 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sub~5"></span>
+              <span class="anchor" id="variable-sub~10"></span>
               real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
               dimension(size(Amat,1)-1)
-            </td>
-            <td>::</td>
-            <td><strong>sub</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-diag~19"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Amat,1))
-            </td>
-            <td>::</td>
-            <td><strong>diag</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-over~5"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td>optional,</td>            <td>
-              dimension(size(Amat,1)-1)
-            </td>
-            <td>::</td>
-            <td><strong>over</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-c_get_tridiag"></span> <h3>private  subroutine c_get_tridiag(Amat, sub, diag, over)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-amat~18"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Amat</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-sub~6"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Amat,1)-1)
-            </td>
-            <td>::</td>
-            <td><strong>sub</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-diag~20"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Amat,1))
-            </td>
-            <td>::</td>
-            <td><strong>diag</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-over~6"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td>optional,</td>            <td>
-              dimension(size(Amat,1)-1)
-            </td>
-            <td>::</td>
-            <td><strong>over</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-d_get_tridiag_block"></span> <h3>private  subroutine d_get_tridiag_block(Nblock, Nsize, Amat, sub, diag, over)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nblock~22"></span>
-              integer
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>Nblock</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nsize~5"></span>
-              integer
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>Nsize</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-amat~19"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(Nblock*Nsize,Nblock*Nsize)
-            </td>
-            <td>::</td>
-            <td><strong>Amat</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-sub~7"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(Nblock-1,Nsize,Nsize)
             </td>
             <td>::</td>
             <td><strong>sub</strong></td>
@@ -407,6 +209,204 @@
             </td>
 <td></td>
               <td></td>            <td>
+              dimension(size(Amat,1))
+            </td>
+            <td>::</td>
+            <td><strong>diag</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-over~9"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td>optional,</td>            <td>
+              dimension(size(Amat,1)-1)
+            </td>
+            <td>::</td>
+            <td><strong>over</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-c_get_tridiag~2"></span> <h3>private  subroutine c_get_tridiag(Amat, sub, diag, over)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-amat~26"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Amat</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sub~11"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Amat,1)-1)
+            </td>
+            <td>::</td>
+            <td><strong>sub</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-diag~22"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Amat,1))
+            </td>
+            <td>::</td>
+            <td><strong>diag</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-over~10"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td>optional,</td>            <td>
+              dimension(size(Amat,1)-1)
+            </td>
+            <td>::</td>
+            <td><strong>over</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-d_get_tridiag_block~2"></span> <h3>private  subroutine d_get_tridiag_block(Nblock, Nsize, Amat, sub, diag, over)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nblock~25"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nblock</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nsize~9"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nsize</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-amat~27"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(Nblock*Nsize,Nblock*Nsize)
+            </td>
+            <td>::</td>
+            <td><strong>Amat</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sub~12"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(Nblock-1,Nsize,Nsize)
+            </td>
+            <td>::</td>
+            <td><strong>sub</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-diag~23"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
               dimension(Nblock,Nsize,Nsize)
             </td>
             <td>::</td>
@@ -417,7 +417,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-over~7"></span>
+              <span class="anchor" id="variable-over~11"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -438,7 +438,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-c_get_tridiag_block"></span> <h3>private  subroutine c_get_tridiag_block(Nblock, Nsize, Amat, sub, diag, over)  
+    <div class="card-header codesum"><span class="anchor" id="proc-c_get_tridiag_block~2"></span> <h3>private  subroutine c_get_tridiag_block(Nblock, Nsize, Amat, sub, diag, over)  
 </h3></div>
     <div class="card-body">
         
@@ -456,7 +456,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-nblock~23"></span>
+              <span class="anchor" id="variable-nblock~26"></span>
               integer
             </td>
 <td></td>
@@ -471,7 +471,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nsize~6"></span>
+              <span class="anchor" id="variable-nsize~10"></span>
               integer
             </td>
 <td></td>
@@ -486,7 +486,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-amat~20"></span>
+              <span class="anchor" id="variable-amat~28"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -501,7 +501,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sub~8"></span>
+              <span class="anchor" id="variable-sub~13"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -516,7 +516,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-diag~22"></span>
+              <span class="anchor" id="variable-diag~24"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -531,7 +531,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-over~8"></span>
+              <span class="anchor" id="variable-over~12"></span>
               complex(kind=8),
             </td>
 <td></td>
