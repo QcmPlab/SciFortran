@@ -514,7 +514,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-xin~6"></span>
+              <span class="anchor" id="variable-xin~7"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -529,7 +529,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-yin~2"></span>
+              <span class="anchor" id="variable-yin~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -544,7 +544,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fin~6"></span>
+              <span class="anchor" id="variable-fin~15"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -589,7 +589,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fout"></span>
+              <span class="anchor" id="variable-fout~9"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -611,120 +611,6 @@
 
             <div class="card">
     <div class="card-header codesum"><span class="anchor" id="proc-d_linear_spline_2d_v"></span> <h3>private  subroutine d_linear_spline_2d_v(xin, yin, fin, xout, yout, fout)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-xin~7"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>xin</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-yin~3"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>yin</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fin~7"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(xin),size(yin))
-            </td>
-            <td>::</td>
-            <td><strong>fin</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-xout~2"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>xout</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-yout~2"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>yout</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-fout~2"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(xout),size(yout))
-            </td>
-            <td>::</td>
-            <td><strong>fout</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-c_linear_spline_2d_s"></span> <h3>private  subroutine c_linear_spline_2d_s(xin, yin, fin, xout, yout, fout)  
 </h3></div>
     <div class="card-body">
         
@@ -772,8 +658,8 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fin~8"></span>
-              complex(kind=8),
+              <span class="anchor" id="variable-fin~16"></span>
+              real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
@@ -787,12 +673,12 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xout~3"></span>
-              real(kind=8)
+              <span class="anchor" id="variable-xout~2"></span>
+              real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              
+              dimension(:)
             </td>
             <td>::</td>
             <td><strong>xout</strong></td>
@@ -802,12 +688,12 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-yout~3"></span>
-              real(kind=8)
+              <span class="anchor" id="variable-yout~2"></span>
+              real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              
+              dimension(:)
             </td>
             <td>::</td>
             <td><strong>yout</strong></td>
@@ -817,12 +703,12 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fout~3"></span>
-              complex(kind=8)
+              <span class="anchor" id="variable-fout~10"></span>
+              real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              
+              dimension(size(xout),size(yout))
             </td>
             <td>::</td>
             <td><strong>fout</strong></td>
@@ -838,7 +724,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-c_linear_spline_2d_v"></span> <h3>private  subroutine c_linear_spline_2d_v(xin, yin, fin, xout, yout, fout)  
+    <div class="card-header codesum"><span class="anchor" id="proc-c_linear_spline_2d_s"></span> <h3>private  subroutine c_linear_spline_2d_s(xin, yin, fin, xout, yout, fout)  
 </h3></div>
     <div class="card-body">
         
@@ -886,7 +772,121 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fin~9"></span>
+              <span class="anchor" id="variable-fin~17"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(xin),size(yin))
+            </td>
+            <td>::</td>
+            <td><strong>fin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xout~3"></span>
+              real(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yout~3"></span>
+              real(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>yout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fout~11"></span>
+              complex(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-c_linear_spline_2d_v"></span> <h3>private  subroutine c_linear_spline_2d_v(xin, yin, fin, xout, yout, fout)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xin~10"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>xin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yin~6"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>yin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fin~18"></span>
               complex(kind=8),
             </td>
 <td></td>
@@ -931,7 +931,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fout~4"></span>
+              <span class="anchor" id="variable-fout~12"></span>
               complex(kind=8),
             </td>
 <td></td>

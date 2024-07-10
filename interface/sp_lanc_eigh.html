@@ -193,7 +193,206 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-nloc~22"></span>
+              <span class="anchor" id="variable-nloc~17"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nloc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vin~29"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vin</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vout~29"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(Nloc)
+            </td>
+            <td>::</td>
+            <td><strong>vout</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-egs~4"></span>
+              real(kind=8)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>egs</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vect~4"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>vect</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nitermax~16"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Nitermax</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iverbose~20"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iverbose</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-threshold~15"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>threshold</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ncheck~4"></span>
+              integer,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ncheck</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vrandom~8"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>vrandom</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-lanczos_eigh_c~2"></span> <h3>private  subroutine lanczos_eigh_c(MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="7">
+              <small>    <h5>
+    private  subroutine MatVec(Nloc, vin, vout)  
+
+    </h5>
+  
+
+  <h6>Arguments</h6>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nloc~20"></span>
               integer
             </td>
 <td></td>
@@ -209,7 +408,7 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vin~35"></span>
-              real(kind=8),
+              complex(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
@@ -224,7 +423,7 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vout~35"></span>
-              real(kind=8),
+              complex(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
@@ -260,7 +459,7 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vect~5"></span>
-              real(kind=8),
+              complex(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
@@ -355,7 +554,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-lanczos_eigh_c~2"></span> <h3>private  subroutine lanczos_eigh_c(MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)  
+    <div class="card-header codesum"><span class="anchor" id="proc-mpi_lanczos_eigh_d~2"></span> <h3>private  subroutine mpi_lanczos_eigh_d(MpiComm, MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)  
 </h3></div>
     <div class="card-body">
         
@@ -371,6 +570,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mpicomm~8"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>MpiComm</strong></td>
+            <td>
+                
+            </td>
+        </tr>
         <tr>
             <td colspan="7">
               <small>    <h5>
@@ -392,7 +606,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-nloc~25"></span>
+              <span class="anchor" id="variable-nloc~23"></span>
               integer
             </td>
 <td></td>
@@ -408,14 +622,14 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vin~41"></span>
-              complex(kind=8),
+              real(kind=8)
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(Nloc)
+              
             </td>
             <td>::</td>
-            <td><strong>vin</strong></td>
+            <td><strong>vin</strong>(Nloc)</td>
             <td>
                 
             </td>
@@ -423,14 +637,14 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vout~41"></span>
-              complex(kind=8),
+              real(kind=8)
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(Nloc)
+              
             </td>
             <td>::</td>
-            <td><strong>vout</strong></td>
+            <td><strong>vout</strong>(Nloc)</td>
             <td>
                 
             </td>
@@ -459,7 +673,7 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vect~6"></span>
-              complex(kind=8),
+              real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
@@ -554,7 +768,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-mpi_lanczos_eigh_d~2"></span> <h3>private  subroutine mpi_lanczos_eigh_d(MpiComm, MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)  
+    <div class="card-header codesum"><span class="anchor" id="proc-mpi_lanczos_eigh_c"></span> <h3>private  subroutine mpi_lanczos_eigh_c(MpiComm, MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)  
 </h3></div>
     <div class="card-body">
         
@@ -622,7 +836,7 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vin~47"></span>
-              real(kind=8)
+              complex(kind=8)
             </td>
 <td></td>
               <td></td>            <td>
@@ -637,7 +851,7 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vout~47"></span>
-              real(kind=8)
+              complex(kind=8)
             </td>
 <td></td>
               <td></td>            <td>
@@ -673,7 +887,7 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vect~7"></span>
-              real(kind=8),
+              complex(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
@@ -748,220 +962,6 @@
         <tr>
             <td>
               <span class="anchor" id="variable-vrandom~11"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>vrandom</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-mpi_lanczos_eigh_c~2"></span> <h3>private  subroutine mpi_lanczos_eigh_c(MpiComm, MatVec, egs, vect, Nitermax, iverbose, threshold, ncheck, vrandom)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-mpicomm~14"></span>
-              integer
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>MpiComm</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td colspan="7">
-              <small>    <h5>
-    private  subroutine MatVec(Nloc, vin, vout)  
-
-    </h5>
-  
-
-  <h6>Arguments</h6>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nloc~33"></span>
-              integer
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>Nloc</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-vin~53"></span>
-              complex(kind=8)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>vin</strong>(Nloc)</td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-vout~53"></span>
-              complex(kind=8)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>vout</strong>(Nloc)</td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-</small>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-egs~8"></span>
-              real(kind=8)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>egs</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-vect~8"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>vect</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-nitermax~24"></span>
-              integer
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>Nitermax</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-iverbose~24"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>iverbose</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-threshold~23"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>threshold</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-ncheck~8"></span>
-              integer,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ncheck</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-vrandom~12"></span>
               logical,
             </td>
 <td></td>
