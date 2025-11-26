@@ -12,14 +12,29 @@
 
     <title>lanczos_arpack_d &ndash; SciFortran</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="../css/pygments.css" rel="stylesheet">
     <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
@@ -96,9 +111,11 @@
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -114,7 +131,7 @@
       </a>
       <div id="common-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../proc/lanczos_arpack_d.html#common-debug~4">debug</a>
+            <a class="list-group-item" href="../proc/lanczos_arpack_d.html#common-debug~2">debug</a>
         </div>
       </div>
     </div>
@@ -189,7 +206,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-nloc~13"></span>
+              <span class="anchor" id="variable-nloc~7"></span>
               integer
             </td>
 <td></td>
@@ -204,7 +221,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vin~22"></span>
+              <span class="anchor" id="variable-vin~8"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -219,7 +236,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-vout~22"></span>
+              <span class="anchor" id="variable-vout~8"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -240,7 +257,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-eval~4"></span>
+              <span class="anchor" id="variable-eval~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -255,7 +272,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-evec~4"></span>
+              <span class="anchor" id="variable-evec~2"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -270,7 +287,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nblock~10"></span>
+              <span class="anchor" id="variable-nblock~26"></span>
               integer,
             </td>
 <td></td>
@@ -285,7 +302,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nitermax~10"></span>
+              <span class="anchor" id="variable-nitermax~4"></span>
               integer,
             </td>
 <td></td>
@@ -300,7 +317,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-bmat~4"></span>
+              <span class="anchor" id="variable-bmat~2"></span>
               character(len=1),
             </td>
 <td></td>
@@ -315,7 +332,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-v0~18"></span>
+              <span class="anchor" id="variable-v0~16"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -330,7 +347,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~28"></span>
+              <span class="anchor" id="variable-tol~64"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -345,7 +362,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~11"></span>
+              <span class="anchor" id="variable-iverbose~7"></span>
               logical,
             </td>
 <td></td>
@@ -454,7 +471,7 @@
 <!-- Title: Graph Key Pages: 1 -->
 <svg width="641pt" height="28pt"
  viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1.16 1.16) rotate(0) translate(4 28)">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
 <title>Graph Key</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
 <!-- Subroutine -->
@@ -519,20 +536,20 @@ implementation in a submodule of an interface in a parent module.
       <h2>Common Blocks</h2>
         <div class="card">
     <div class="card-header codesum">
-      <span class="anchor" id="common-debug~4"></span>
+      <span class="anchor" id="common-debug~2"></span>
       <h3>
         <a href="#"
            data-bs-toggle="popover"
            data-bs-html="true"
            data-bs-trigger="focus"
            data-bs-title="Used elsewhere:"
-           data-bs-content="<a href="../proc/lanczos_arpack_d~2.html#common-debug~5">lanczos_arpack_d</a>
-      (subroutine)<br><a href="../proc/lanczos_arpack_c~2.html#common-debug~6">lanczos_arpack_c</a>
+           data-bs-content="<a href="../proc/lanczos_arpack_d~2.html#common-debug~3">lanczos_arpack_d</a>
+      (subroutine)<br><a href="../proc/lanczos_arpack_c~2.html#common-debug~4">lanczos_arpack_c</a>
+      (subroutine)<br><a href="../proc/lanczos_parpack_d.html#common-debug~5">lanczos_parpack_d</a>
+      (subroutine)<br><a href="../proc/lanczos_parpack_c.html#common-debug~6">lanczos_parpack_c</a>
+      (subroutine)<br><a href="../proc/lanczos_arpack_c.html#common-debug">lanczos_arpack_c</a>
       (subroutine)<br><a href="../proc/lanczos_parpack_d~2.html#common-debug~7">lanczos_parpack_d</a>
       (subroutine)<br><a href="../proc/lanczos_parpack_c~2.html#common-debug~8">lanczos_parpack_c</a>
-      (subroutine)<br><a href="../proc/lanczos_parpack_c.html#common-debug">lanczos_parpack_c</a>
-      (subroutine)<br><a href="../proc/lanczos_arpack_c.html#common-debug~2">lanczos_arpack_c</a>
-      (subroutine)<br><a href="../proc/lanczos_parpack_d.html#common-debug~3">lanczos_parpack_d</a>
       (subroutine)<br>">
            common /debug/        </a>
         
@@ -552,7 +569,7 @@ implementation in a submodule of an interface in a parent module.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-logfil~4"></span>
+              <span class="anchor" id="variable-logfil~2"></span>
               integer
             </td>
             <td>
@@ -568,7 +585,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ndigit~4"></span>
+              <span class="anchor" id="variable-ndigit~2"></span>
               integer
             </td>
             <td>
@@ -584,7 +601,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mgetv0~4"></span>
+              <span class="anchor" id="variable-mgetv0~2"></span>
               integer
             </td>
             <td>
@@ -600,7 +617,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-msaupd~4"></span>
+              <span class="anchor" id="variable-msaupd~2"></span>
               integer
             </td>
             <td>
@@ -616,7 +633,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-msaup2~4"></span>
+              <span class="anchor" id="variable-msaup2~2"></span>
               integer
             </td>
             <td>
@@ -632,7 +649,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-msaitr~4"></span>
+              <span class="anchor" id="variable-msaitr~2"></span>
               integer
             </td>
             <td>
@@ -648,7 +665,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mseigt~4"></span>
+              <span class="anchor" id="variable-mseigt~2"></span>
               integer
             </td>
             <td>
@@ -664,7 +681,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-msapps~4"></span>
+              <span class="anchor" id="variable-msapps~2"></span>
               integer
             </td>
             <td>
@@ -680,7 +697,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-msgets~4"></span>
+              <span class="anchor" id="variable-msgets~2"></span>
               integer
             </td>
             <td>
@@ -696,7 +713,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mseupd~4"></span>
+              <span class="anchor" id="variable-mseupd~2"></span>
               integer
             </td>
             <td>
@@ -712,7 +729,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mnaupd~4"></span>
+              <span class="anchor" id="variable-mnaupd~2"></span>
               integer
             </td>
             <td>
@@ -728,7 +745,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mnaup2~4"></span>
+              <span class="anchor" id="variable-mnaup2~2"></span>
               integer
             </td>
             <td>
@@ -744,7 +761,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mnaitr~4"></span>
+              <span class="anchor" id="variable-mnaitr~2"></span>
               integer
             </td>
             <td>
@@ -760,7 +777,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mneigh~4"></span>
+              <span class="anchor" id="variable-mneigh~2"></span>
               integer
             </td>
             <td>
@@ -776,7 +793,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mnapps~4"></span>
+              <span class="anchor" id="variable-mnapps~2"></span>
               integer
             </td>
             <td>
@@ -792,7 +809,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mngets~4"></span>
+              <span class="anchor" id="variable-mngets~2"></span>
               integer
             </td>
             <td>
@@ -808,7 +825,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mneupd~4"></span>
+              <span class="anchor" id="variable-mneupd~2"></span>
               integer
             </td>
             <td>
@@ -824,7 +841,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mcaupd~4"></span>
+              <span class="anchor" id="variable-mcaupd~2"></span>
               integer
             </td>
             <td>
@@ -840,7 +857,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mcaup2~4"></span>
+              <span class="anchor" id="variable-mcaup2~2"></span>
               integer
             </td>
             <td>
@@ -856,7 +873,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mcaitr~4"></span>
+              <span class="anchor" id="variable-mcaitr~2"></span>
               integer
             </td>
             <td>
@@ -872,7 +889,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mceigh~4"></span>
+              <span class="anchor" id="variable-mceigh~2"></span>
               integer
             </td>
             <td>
@@ -888,7 +905,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mcapps~4"></span>
+              <span class="anchor" id="variable-mcapps~2"></span>
               integer
             </td>
             <td>
@@ -904,7 +921,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mcgets~4"></span>
+              <span class="anchor" id="variable-mcgets~2"></span>
               integer
             </td>
             <td>
@@ -920,7 +937,7 @@ implementation in a submodule of an interface in a parent module.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mceupd~4"></span>
+              <span class="anchor" id="variable-mceupd~2"></span>
               integer
             </td>
             <td>
@@ -1135,7 +1152,7 @@ implementation in a submodule of an interface in a parent module.
           <div class="col">
             <p>
               SciFortran
- was developed by QcmP Lab members<br>              &copy; 2024 
+ was developed by QcmP Lab members<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
@@ -1148,27 +1165,5 @@ implementation in a submodule of an interface in a parent module.
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
-
-    <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>

@@ -12,14 +12,29 @@
 
     <title>SF_OPTIMIZE &ndash; SciFortran</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="../css/pygments.css" rel="stylesheet">
     <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
@@ -96,9 +111,11 @@
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -158,10 +175,10 @@
       </a>
       <div id="subs-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/sf_optimize.html#proc-brent~2">brent</a>
-            <a class="list-group-item" href="../module/sf_optimize.html#proc-bracket~2">bracket</a>
-            <a class="list-group-item" href="../module/sf_optimize.html#proc-fmin~2">fmin</a>
-            <a class="list-group-item" href="../module/sf_optimize.html#proc-broyden1~2">broyden1</a>
+            <a class="list-group-item" href="../module/sf_optimize.html#proc-brent">brent</a>
+            <a class="list-group-item" href="../module/sf_optimize.html#proc-bracket">bracket</a>
+            <a class="list-group-item" href="../module/sf_optimize.html#proc-fmin">fmin</a>
+            <a class="list-group-item" href="../module/sf_optimize.html#proc-broyden1">broyden1</a>
             <a class="list-group-item" href="../module/sf_optimize.html#proc-bisect~2">bisect</a>
             <a class="list-group-item" href="../module/sf_optimize.html#proc-fzero~2">fzero</a>
             <a class="list-group-item" href="../module/sf_optimize.html#proc-newton~2">newton</a>
@@ -191,9 +208,9 @@
             <li class="list-group-item">
               <ul class="list-inline">
                   <li class="list-inline-item"><a href='cgfit_routines.html'>CGFIT_ROUTINES</a></li>
+                  <li class="list-inline-item"><a href='sf_constants.html'>SF_CONSTANTS</a></li>
                   <li class="list-inline-item"><a href='sf_linalg.html'>SF_LINALG</a></li>
                   <li class="list-inline-item"><a href='broyden_routines.html'>BROYDEN_ROUTINES</a></li>
-                  <li class="list-inline-item"><a href='sf_constants.html'>SF_CONSTANTS</a></li>
               </ul>
             </li>
             <li class="list-group-item">
@@ -529,7 +546,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-p~47"></span>
+              <span class="anchor" id="variable-p~10"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -544,7 +561,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~138"></span>
+              <span class="anchor" id="variable-f~13"></span>
               procedure(<a href='../interface/cgfit_func.html'>cgfit_func</a>)
             </td>
 <td></td>
@@ -559,7 +576,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-df~65"></span>
+              <span class="anchor" id="variable-df~4"></span>
               procedure(<a href='../interface/cgfit_fjac.html'>cgfit_fjac</a>)
             </td>
 <td></td>
@@ -574,7 +591,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~35"></span>
+              <span class="anchor" id="variable-iter~9"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -589,7 +606,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fret~15"></span>
+              <span class="anchor" id="variable-fret~4"></span>
               real(kind=8),
             </td>
 <td>intent(out)</td>
@@ -604,7 +621,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ftol~9"></span>
+              <span class="anchor" id="variable-ftol"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -619,7 +636,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-itmax~15"></span>
+              <span class="anchor" id="variable-itmax~4"></span>
               integer,
             </td>
 <td></td>
@@ -634,7 +651,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-istop~3"></span>
+              <span class="anchor" id="variable-istop"></span>
               integer,
             </td>
 <td></td>
@@ -649,7 +666,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~12"></span>
+              <span class="anchor" id="variable-iverbose"></span>
               logical,
             </td>
 <td></td>
@@ -687,7 +704,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-p~48"></span>
+              <span class="anchor" id="variable-p~11"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -702,7 +719,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~139"></span>
+              <span class="anchor" id="variable-f~14"></span>
               procedure(<a href='../interface/cgfit_func.html'>cgfit_func</a>)
             </td>
 <td></td>
@@ -717,7 +734,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~36"></span>
+              <span class="anchor" id="variable-iter~10"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -732,7 +749,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fret~16"></span>
+              <span class="anchor" id="variable-fret~5"></span>
               real(kind=8),
             </td>
 <td>intent(out)</td>
@@ -747,7 +764,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ftol~10"></span>
+              <span class="anchor" id="variable-ftol~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -762,7 +779,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-itmax~16"></span>
+              <span class="anchor" id="variable-itmax~5"></span>
               integer,
             </td>
 <td></td>
@@ -777,7 +794,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-istop~4"></span>
+              <span class="anchor" id="variable-istop~2"></span>
               integer,
             </td>
 <td></td>
@@ -792,7 +809,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-deps~5"></span>
+              <span class="anchor" id="variable-deps"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -807,7 +824,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~13"></span>
+              <span class="anchor" id="variable-iverbose~2"></span>
               logical,
             </td>
 <td></td>
@@ -855,7 +872,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-p~52"></span>
+              <span class="anchor" id="variable-p~15"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -889,7 +906,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~195"></span>
+              <span class="anchor" id="variable-a~63"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -934,7 +951,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~196"></span>
+              <span class="anchor" id="variable-a~64"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -960,7 +977,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~39"></span>
+              <span class="anchor" id="variable-iter~13"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -975,7 +992,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fret~19"></span>
+              <span class="anchor" id="variable-fret~8"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -990,7 +1007,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ftol~13"></span>
+              <span class="anchor" id="variable-ftol~5"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1005,7 +1022,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-itmax~19"></span>
+              <span class="anchor" id="variable-itmax~8"></span>
               integer,
             </td>
 <td></td>
@@ -1020,7 +1037,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-imethod~3"></span>
+              <span class="anchor" id="variable-imethod"></span>
               integer,
             </td>
 <td></td>
@@ -1035,7 +1052,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverb1~3"></span>
+              <span class="anchor" id="variable-iverb1"></span>
               integer,
             </td>
 <td></td>
@@ -1050,7 +1067,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverb2~3"></span>
+              <span class="anchor" id="variable-iverb2"></span>
               integer,
             </td>
 <td></td>
@@ -1088,7 +1105,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-p~53"></span>
+              <span class="anchor" id="variable-p~16"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -1103,7 +1120,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fcn~6"></span>
+              <span class="anchor" id="variable-fcn~3"></span>
               procedure(<a href='../interface/cgfit_func.html'>cgfit_func</a>)
             </td>
 <td></td>
@@ -1118,7 +1135,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~40"></span>
+              <span class="anchor" id="variable-iter~14"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -1133,7 +1150,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fret~20"></span>
+              <span class="anchor" id="variable-fret~9"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -1148,7 +1165,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ftol~14"></span>
+              <span class="anchor" id="variable-ftol~6"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1163,7 +1180,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-itmax~20"></span>
+              <span class="anchor" id="variable-itmax~9"></span>
               integer,
             </td>
 <td></td>
@@ -1178,7 +1195,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-imethod~4"></span>
+              <span class="anchor" id="variable-imethod~2"></span>
               integer,
             </td>
 <td></td>
@@ -1193,7 +1210,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-deps~8"></span>
+              <span class="anchor" id="variable-deps~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1208,7 +1225,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverb1~4"></span>
+              <span class="anchor" id="variable-iverb1~2"></span>
               integer,
             </td>
 <td></td>
@@ -1223,7 +1240,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverb2~4"></span>
+              <span class="anchor" id="variable-iverb2~2"></span>
               integer,
             </td>
 <td></td>
@@ -1271,7 +1288,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-p~50"></span>
+              <span class="anchor" id="variable-p~13"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -1286,7 +1303,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fcn~4"></span>
+              <span class="anchor" id="variable-fcn"></span>
               procedure(<a href='../interface/cgfit_func.html'>cgfit_func</a>)
             </td>
 <td></td>
@@ -1301,7 +1318,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~37"></span>
+              <span class="anchor" id="variable-iter~11"></span>
               integer
             </td>
 <td></td>
@@ -1316,7 +1333,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fret~17"></span>
+              <span class="anchor" id="variable-fret~6"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -1331,7 +1348,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ftol~11"></span>
+              <span class="anchor" id="variable-ftol~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1346,7 +1363,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-itmax~17"></span>
+              <span class="anchor" id="variable-itmax~6"></span>
               integer,
             </td>
 <td></td>
@@ -1361,7 +1378,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~14"></span>
+              <span class="anchor" id="variable-iverbose~3"></span>
               logical,
             </td>
 <td></td>
@@ -1376,7 +1393,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mode~6"></span>
+              <span class="anchor" id="variable-mode~3"></span>
               integer,
             </td>
 <td></td>
@@ -1391,7 +1408,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-new_version~3"></span>
+              <span class="anchor" id="variable-new_version"></span>
               logical,
             </td>
 <td></td>
@@ -1406,7 +1423,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hh_par~3"></span>
+              <span class="anchor" id="variable-hh_par"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1444,7 +1461,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-p~51"></span>
+              <span class="anchor" id="variable-p~14"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -1478,7 +1495,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~288"></span>
+              <span class="anchor" id="variable-n~55"></span>
               integer
             </td>
 <td></td>
@@ -1493,7 +1510,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x_~16"></span>
+              <span class="anchor" id="variable-x_~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1508,7 +1525,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f_~2"></span>
+              <span class="anchor" id="variable-f_"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -1529,7 +1546,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~38"></span>
+              <span class="anchor" id="variable-iter~12"></span>
               integer
             </td>
 <td></td>
@@ -1544,7 +1561,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fret~18"></span>
+              <span class="anchor" id="variable-fret~7"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -1559,7 +1576,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ftol~12"></span>
+              <span class="anchor" id="variable-ftol~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1574,7 +1591,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-itmax~18"></span>
+              <span class="anchor" id="variable-itmax~7"></span>
               integer,
             </td>
 <td></td>
@@ -1589,7 +1606,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iverbose~15"></span>
+              <span class="anchor" id="variable-iverbose~4"></span>
               logical,
             </td>
 <td></td>
@@ -1604,7 +1621,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mode~7"></span>
+              <span class="anchor" id="variable-mode~4"></span>
               integer,
             </td>
 <td></td>
@@ -1619,7 +1636,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-new_version~4"></span>
+              <span class="anchor" id="variable-new_version~2"></span>
               logical,
             </td>
 <td></td>
@@ -1634,7 +1651,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-hh_par~4"></span>
+              <span class="anchor" id="variable-hh_par~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1701,7 +1718,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~165"></span>
+              <span class="anchor" id="variable-a~33"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1716,7 +1733,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~190"></span>
+              <span class="anchor" id="variable-m~11"></span>
               integer
             </td>
 <td></td>
@@ -1742,7 +1759,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~166"></span>
+              <span class="anchor" id="variable-a~34"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1757,7 +1774,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~191"></span>
+              <span class="anchor" id="variable-m~12"></span>
               integer
             </td>
 <td></td>
@@ -1772,7 +1789,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~42"></span>
+              <span class="anchor" id="variable-tol~10"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1787,7 +1804,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~39"></span>
+              <span class="anchor" id="variable-info~3"></span>
               integer,
             </td>
 <td></td>
@@ -1844,7 +1861,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~168"></span>
+              <span class="anchor" id="variable-a~36"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1859,7 +1876,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~193"></span>
+              <span class="anchor" id="variable-m~14"></span>
               integer
             </td>
 <td></td>
@@ -1874,7 +1891,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~134"></span>
+              <span class="anchor" id="variable-f~9"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1895,7 +1912,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~169"></span>
+              <span class="anchor" id="variable-a~37"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1910,7 +1927,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~194"></span>
+              <span class="anchor" id="variable-m~15"></span>
               integer
             </td>
 <td></td>
@@ -1925,7 +1942,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~43"></span>
+              <span class="anchor" id="variable-tol~11"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -1940,7 +1957,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~40"></span>
+              <span class="anchor" id="variable-info~4"></span>
               integer,
             </td>
 <td></td>
@@ -1997,7 +2014,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~171"></span>
+              <span class="anchor" id="variable-a~39"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2012,7 +2029,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~196"></span>
+              <span class="anchor" id="variable-m~17"></span>
               integer
             </td>
 <td></td>
@@ -2057,7 +2074,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~172"></span>
+              <span class="anchor" id="variable-a~40"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2072,7 +2089,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~197"></span>
+              <span class="anchor" id="variable-m~18"></span>
               integer
             </td>
 <td></td>
@@ -2098,7 +2115,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~173"></span>
+              <span class="anchor" id="variable-a~41"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2113,7 +2130,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~198"></span>
+              <span class="anchor" id="variable-m~19"></span>
               integer
             </td>
 <td></td>
@@ -2128,7 +2145,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~44"></span>
+              <span class="anchor" id="variable-tol~12"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2143,7 +2160,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~41"></span>
+              <span class="anchor" id="variable-info~5"></span>
               integer,
             </td>
 <td></td>
@@ -2200,7 +2217,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~175"></span>
+              <span class="anchor" id="variable-a~43"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2215,7 +2232,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~200"></span>
+              <span class="anchor" id="variable-m~21"></span>
               integer
             </td>
 <td></td>
@@ -2230,7 +2247,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~135"></span>
+              <span class="anchor" id="variable-f~10"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2270,7 +2287,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~176"></span>
+              <span class="anchor" id="variable-a~44"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2285,7 +2302,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~201"></span>
+              <span class="anchor" id="variable-m~22"></span>
               integer
             </td>
 <td></td>
@@ -2300,7 +2317,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-df~63"></span>
+              <span class="anchor" id="variable-df~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2321,7 +2338,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~177"></span>
+              <span class="anchor" id="variable-a~45"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2336,7 +2353,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~202"></span>
+              <span class="anchor" id="variable-m~23"></span>
               integer
             </td>
 <td></td>
@@ -2351,7 +2368,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~45"></span>
+              <span class="anchor" id="variable-tol~13"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2366,7 +2383,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~42"></span>
+              <span class="anchor" id="variable-info~6"></span>
               integer,
             </td>
 <td></td>
@@ -2433,7 +2450,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~401"></span>
+              <span class="anchor" id="variable-x~48"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2448,7 +2465,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~179"></span>
+              <span class="anchor" id="variable-a~47"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2474,7 +2491,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~180"></span>
+              <span class="anchor" id="variable-a~48"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2489,7 +2506,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xdata~5"></span>
+              <span class="anchor" id="variable-xdata"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2504,7 +2521,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ydata~5"></span>
+              <span class="anchor" id="variable-ydata"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2519,7 +2536,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~46"></span>
+              <span class="anchor" id="variable-tol~14"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2534,7 +2551,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~43"></span>
+              <span class="anchor" id="variable-info~7"></span>
               integer,
             </td>
 <td></td>
@@ -2591,7 +2608,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~402"></span>
+              <span class="anchor" id="variable-x~49"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2606,7 +2623,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~182"></span>
+              <span class="anchor" id="variable-a~50"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2621,7 +2638,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~136"></span>
+              <span class="anchor" id="variable-f~11"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2642,7 +2659,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~183"></span>
+              <span class="anchor" id="variable-a~51"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2657,7 +2674,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xdata~6"></span>
+              <span class="anchor" id="variable-xdata~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2672,7 +2689,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ydata~6"></span>
+              <span class="anchor" id="variable-ydata~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2687,7 +2704,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~47"></span>
+              <span class="anchor" id="variable-tol~15"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2702,7 +2719,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~44"></span>
+              <span class="anchor" id="variable-info~8"></span>
               integer,
             </td>
 <td></td>
@@ -2759,7 +2776,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~403"></span>
+              <span class="anchor" id="variable-x~50"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2774,7 +2791,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~185"></span>
+              <span class="anchor" id="variable-a~53"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2819,7 +2836,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~404"></span>
+              <span class="anchor" id="variable-x~51"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2834,7 +2851,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~186"></span>
+              <span class="anchor" id="variable-a~54"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2860,7 +2877,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~187"></span>
+              <span class="anchor" id="variable-a~55"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2875,7 +2892,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xdata~7"></span>
+              <span class="anchor" id="variable-xdata~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2890,7 +2907,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ydata~7"></span>
+              <span class="anchor" id="variable-ydata~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2905,7 +2922,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~48"></span>
+              <span class="anchor" id="variable-tol~16"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2920,7 +2937,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~45"></span>
+              <span class="anchor" id="variable-info~9"></span>
               integer,
             </td>
 <td></td>
@@ -2977,7 +2994,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~405"></span>
+              <span class="anchor" id="variable-x~52"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -2992,7 +3009,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~189"></span>
+              <span class="anchor" id="variable-a~57"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3007,7 +3024,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~137"></span>
+              <span class="anchor" id="variable-f~12"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3047,7 +3064,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~406"></span>
+              <span class="anchor" id="variable-x~53"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3062,7 +3079,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~190"></span>
+              <span class="anchor" id="variable-a~58"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3077,7 +3094,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-df~64"></span>
+              <span class="anchor" id="variable-df~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3098,7 +3115,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~191"></span>
+              <span class="anchor" id="variable-a~59"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3113,7 +3130,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xdata~8"></span>
+              <span class="anchor" id="variable-xdata~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3128,7 +3145,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ydata~8"></span>
+              <span class="anchor" id="variable-ydata~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3143,7 +3160,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~49"></span>
+              <span class="anchor" id="variable-tol~17"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3158,7 +3175,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~46"></span>
+              <span class="anchor" id="variable-info~10"></span>
               integer,
             </td>
 <td></td>
@@ -3225,7 +3242,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~391"></span>
+              <span class="anchor" id="variable-x~38"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -3270,7 +3287,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~392"></span>
+              <span class="anchor" id="variable-x~39"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -3296,7 +3313,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmin~29"></span>
+              <span class="anchor" id="variable-xmin~6"></span>
               real(kind=8),
             </td>
 <td>intent(inout)</td>
@@ -3311,7 +3328,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-brack~5"></span>
+              <span class="anchor" id="variable-brack~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3326,7 +3343,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~39"></span>
+              <span class="anchor" id="variable-tol~7"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3341,7 +3358,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-niter~5"></span>
+              <span class="anchor" id="variable-niter~2"></span>
               integer,
             </td>
 <td></td>
@@ -3398,7 +3415,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~393"></span>
+              <span class="anchor" id="variable-x~40"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -3424,7 +3441,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmin~30"></span>
+              <span class="anchor" id="variable-xmin~7"></span>
               real(kind=8),
             </td>
 <td>intent(inout)</td>
@@ -3439,7 +3456,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-brack~6"></span>
+              <span class="anchor" id="variable-brack~3"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3454,7 +3471,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~40"></span>
+              <span class="anchor" id="variable-tol~8"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3469,7 +3486,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-niter~6"></span>
+              <span class="anchor" id="variable-niter~3"></span>
               integer,
             </td>
 <td></td>
@@ -3536,7 +3553,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~414"></span>
+              <span class="anchor" id="variable-x~61"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3581,7 +3598,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~415"></span>
+              <span class="anchor" id="variable-x~62"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3607,7 +3624,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~416"></span>
+              <span class="anchor" id="variable-x~63"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3622,7 +3639,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~51"></span>
+              <span class="anchor" id="variable-l~17"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3637,7 +3654,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-u~32"></span>
+              <span class="anchor" id="variable-u~12"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3697,7 +3714,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iprint~8"></span>
+              <span class="anchor" id="variable-iprint~4"></span>
               integer,
             </td>
 <td></td>
@@ -3769,7 +3786,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~417"></span>
+              <span class="anchor" id="variable-x~64"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3795,7 +3812,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~418"></span>
+              <span class="anchor" id="variable-x~65"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3810,7 +3827,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~52"></span>
+              <span class="anchor" id="variable-l~18"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3825,7 +3842,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-u~33"></span>
+              <span class="anchor" id="variable-u~13"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -3885,7 +3902,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iprint~9"></span>
+              <span class="anchor" id="variable-iprint~5"></span>
               integer,
             </td>
 <td></td>
@@ -3948,7 +3965,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~419"></span>
+              <span class="anchor" id="variable-x~66"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -3963,7 +3980,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~4"></span>
+              <span class="anchor" id="variable-fx"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -3978,7 +3995,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~6"></span>
+              <span class="anchor" id="variable-alpha~2"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4016,7 +4033,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~420"></span>
+              <span class="anchor" id="variable-x~67"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4031,7 +4048,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~5"></span>
+              <span class="anchor" id="variable-fx~2"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4046,7 +4063,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~7"></span>
+              <span class="anchor" id="variable-alpha~3"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4084,7 +4101,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~421"></span>
+              <span class="anchor" id="variable-x~68"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4099,7 +4116,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~6"></span>
+              <span class="anchor" id="variable-fx~3"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4114,7 +4131,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~8"></span>
+              <span class="anchor" id="variable-alpha~4"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4152,7 +4169,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~422"></span>
+              <span class="anchor" id="variable-x~69"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4167,7 +4184,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~7"></span>
+              <span class="anchor" id="variable-fx~4"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4182,7 +4199,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~9"></span>
+              <span class="anchor" id="variable-alpha~5"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4220,7 +4237,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~423"></span>
+              <span class="anchor" id="variable-x~70"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4235,7 +4252,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~8"></span>
+              <span class="anchor" id="variable-fx~5"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4250,7 +4267,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~10"></span>
+              <span class="anchor" id="variable-alpha~6"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4288,7 +4305,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~424"></span>
+              <span class="anchor" id="variable-x~71"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4303,7 +4320,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~9"></span>
+              <span class="anchor" id="variable-fx~6"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4318,7 +4335,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~11"></span>
+              <span class="anchor" id="variable-alpha~7"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4356,7 +4373,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~425"></span>
+              <span class="anchor" id="variable-x~72"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4371,7 +4388,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~10"></span>
+              <span class="anchor" id="variable-fx~7"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4386,7 +4403,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~12"></span>
+              <span class="anchor" id="variable-alpha~8"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4424,7 +4441,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~426"></span>
+              <span class="anchor" id="variable-x~73"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4439,7 +4456,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~11"></span>
+              <span class="anchor" id="variable-fx~8"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4454,7 +4471,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~13"></span>
+              <span class="anchor" id="variable-alpha~9"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4492,7 +4509,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~427"></span>
+              <span class="anchor" id="variable-x~74"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4507,7 +4524,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~12"></span>
+              <span class="anchor" id="variable-fx~9"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4522,7 +4539,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~14"></span>
+              <span class="anchor" id="variable-alpha~10"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4560,7 +4577,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~428"></span>
+              <span class="anchor" id="variable-x~75"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4575,7 +4592,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~13"></span>
+              <span class="anchor" id="variable-fx~10"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4590,7 +4607,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~15"></span>
+              <span class="anchor" id="variable-alpha~11"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4628,7 +4645,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~429"></span>
+              <span class="anchor" id="variable-x~76"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4643,7 +4660,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~14"></span>
+              <span class="anchor" id="variable-fx~11"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4658,7 +4675,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~16"></span>
+              <span class="anchor" id="variable-alpha~12"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4696,7 +4713,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~430"></span>
+              <span class="anchor" id="variable-x~77"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4711,7 +4728,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~15"></span>
+              <span class="anchor" id="variable-fx~12"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4726,7 +4743,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~17"></span>
+              <span class="anchor" id="variable-alpha~13"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4764,7 +4781,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~431"></span>
+              <span class="anchor" id="variable-x~78"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4779,7 +4796,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~16"></span>
+              <span class="anchor" id="variable-fx~13"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4794,7 +4811,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~18"></span>
+              <span class="anchor" id="variable-alpha~14"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4832,7 +4849,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~432"></span>
+              <span class="anchor" id="variable-x~79"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4847,7 +4864,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~17"></span>
+              <span class="anchor" id="variable-fx~14"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4862,7 +4879,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~19"></span>
+              <span class="anchor" id="variable-alpha~15"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4910,7 +4927,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~433"></span>
+              <span class="anchor" id="variable-x~80"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -4925,7 +4942,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~18"></span>
+              <span class="anchor" id="variable-fx~15"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -4940,7 +4957,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~20"></span>
+              <span class="anchor" id="variable-alpha~16"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -4955,7 +4972,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~41"></span>
+              <span class="anchor" id="variable-iter~15"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -4993,7 +5010,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-z~47"></span>
+              <span class="anchor" id="variable-z~4"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -5008,7 +5025,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fz~2"></span>
+              <span class="anchor" id="variable-fz"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5023,7 +5040,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~21"></span>
+              <span class="anchor" id="variable-alpha~17"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -5038,7 +5055,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~42"></span>
+              <span class="anchor" id="variable-iter~16"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5086,7 +5103,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~434"></span>
+              <span class="anchor" id="variable-x~81"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -5101,7 +5118,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~19"></span>
+              <span class="anchor" id="variable-fx~16"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5116,7 +5133,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~22"></span>
+              <span class="anchor" id="variable-alpha~18"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -5131,7 +5148,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~25"></span>
+              <span class="anchor" id="variable-m~2"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5146,7 +5163,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~43"></span>
+              <span class="anchor" id="variable-iter~17"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5161,7 +5178,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-w0~20"></span>
+              <span class="anchor" id="variable-w0"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5199,7 +5216,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~435"></span>
+              <span class="anchor" id="variable-x~82"></span>
               complex(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -5214,7 +5231,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fx~20"></span>
+              <span class="anchor" id="variable-fx~17"></span>
               complex(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5229,7 +5246,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-alpha~23"></span>
+              <span class="anchor" id="variable-alpha~19"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -5244,7 +5261,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-m~26"></span>
+              <span class="anchor" id="variable-m~3"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5259,7 +5276,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iter~44"></span>
+              <span class="anchor" id="variable-iter~18"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5274,7 +5291,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-w0~21"></span>
+              <span class="anchor" id="variable-w0~2"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5341,7 +5358,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~436"></span>
+              <span class="anchor" id="variable-x~83"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5367,7 +5384,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~437"></span>
+              <span class="anchor" id="variable-x~84"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5382,7 +5399,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~51"></span>
+              <span class="anchor" id="variable-tol~19"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5397,7 +5414,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~47"></span>
+              <span class="anchor" id="variable-info~11"></span>
               integer,
             </td>
 <td></td>
@@ -5412,7 +5429,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-check~44"></span>
+              <span class="anchor" id="variable-check~2"></span>
               logical,
             </td>
 <td></td>
@@ -5484,7 +5501,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~439"></span>
+              <span class="anchor" id="variable-x~86"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5499,7 +5516,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ff~2"></span>
+              <span class="anchor" id="variable-ff"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5520,7 +5537,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~440"></span>
+              <span class="anchor" id="variable-x~87"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5535,7 +5552,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~52"></span>
+              <span class="anchor" id="variable-tol~20"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5550,7 +5567,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~48"></span>
+              <span class="anchor" id="variable-info~12"></span>
               integer,
             </td>
 <td></td>
@@ -5565,7 +5582,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-check~45"></span>
+              <span class="anchor" id="variable-check~3"></span>
               logical,
             </td>
 <td></td>
@@ -5637,7 +5654,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~442"></span>
+              <span class="anchor" id="variable-x~89"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5682,7 +5699,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~443"></span>
+              <span class="anchor" id="variable-x~90"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5708,7 +5725,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~444"></span>
+              <span class="anchor" id="variable-x~91"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5723,7 +5740,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~53"></span>
+              <span class="anchor" id="variable-tol~21"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5738,7 +5755,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~49"></span>
+              <span class="anchor" id="variable-info~13"></span>
               integer,
             </td>
 <td></td>
@@ -5753,7 +5770,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-check~46"></span>
+              <span class="anchor" id="variable-check~4"></span>
               logical,
             </td>
 <td></td>
@@ -5810,7 +5827,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~446"></span>
+              <span class="anchor" id="variable-x~93"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5825,7 +5842,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~147"></span>
+              <span class="anchor" id="variable-f~22"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5865,7 +5882,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~447"></span>
+              <span class="anchor" id="variable-x~94"></span>
               real(kind=8),
             </td>
 <td>intent(in),</td>
@@ -5880,7 +5897,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-df~67"></span>
+              <span class="anchor" id="variable-df~6"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5901,7 +5918,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~448"></span>
+              <span class="anchor" id="variable-x~95"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5916,7 +5933,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~54"></span>
+              <span class="anchor" id="variable-tol~22"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -5931,7 +5948,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-info~50"></span>
+              <span class="anchor" id="variable-info~14"></span>
               integer,
             </td>
 <td></td>
@@ -5946,7 +5963,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-check~47"></span>
+              <span class="anchor" id="variable-check~5"></span>
               logical,
             </td>
 <td></td>
@@ -6013,7 +6030,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~452"></span>
+              <span class="anchor" id="variable-x~99"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -6039,7 +6056,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~197"></span>
+              <span class="anchor" id="variable-a~65"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -6054,7 +6071,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~115"></span>
+              <span class="anchor" id="variable-b~34"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -6069,7 +6086,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~56"></span>
+              <span class="anchor" id="variable-tol~24"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6100,7 +6117,7 @@ modules which it uses.
         <section>
           <h2>Subroutines</h2>
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-brent~2"></span> <h3>public  subroutine <a href='../proc/brent~2.html'>brent</a>(func, xmin, brack, tol, niter)  
+    <div class="card-header codesum"><span class="anchor" id="proc-brent"></span> <h3>public  subroutine <a href='../proc/brent.html'>brent</a>(func, xmin, brack, tol, niter)  
 </h3></div>
     <div class="card-body">
           
@@ -6138,7 +6155,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~388"></span>
+              <span class="anchor" id="variable-x~35"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6164,7 +6181,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xmin~27"></span>
+              <span class="anchor" id="variable-xmin~4"></span>
               real(kind=8),
             </td>
 <td>intent(inout)</td>
@@ -6179,7 +6196,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-brack~4"></span>
+              <span class="anchor" id="variable-brack"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6194,7 +6211,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~37"></span>
+              <span class="anchor" id="variable-tol~5"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6209,7 +6226,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-niter~4"></span>
+              <span class="anchor" id="variable-niter"></span>
               integer,
             </td>
 <td></td>
@@ -6230,7 +6247,7 @@ modules which it uses.
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-bracket~2"></span> <h3>public  subroutine <a href='../proc/bracket~2.html'>bracket</a>(ax, bx, cx, fa, fb, fc, func)  
+    <div class="card-header codesum"><span class="anchor" id="proc-bracket"></span> <h3>public  subroutine <a href='../proc/bracket.html'>bracket</a>(ax, bx, cx, fa, fb, fc, func)  
 </h3></div>
     <div class="card-body">
           
@@ -6249,7 +6266,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-ax~21"></span>
+              <span class="anchor" id="variable-ax~6"></span>
               real(kind=8),
             </td>
 <td>intent(inout)</td>
@@ -6264,7 +6281,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-bx~17"></span>
+              <span class="anchor" id="variable-bx~6"></span>
               real(kind=8),
             </td>
 <td>intent(inout)</td>
@@ -6279,7 +6296,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-cx~11"></span>
+              <span class="anchor" id="variable-cx~3"></span>
               real(kind=8),
             </td>
 <td>intent(out)</td>
@@ -6294,7 +6311,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fa~14"></span>
+              <span class="anchor" id="variable-fa~6"></span>
               real(kind=8),
             </td>
 <td>intent(out)</td>
@@ -6309,7 +6326,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fb~13"></span>
+              <span class="anchor" id="variable-fb~6"></span>
               real(kind=8),
             </td>
 <td>intent(out)</td>
@@ -6324,7 +6341,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fc~6"></span>
+              <span class="anchor" id="variable-fc~3"></span>
               real(kind=8),
             </td>
 <td>intent(out)</td>
@@ -6358,7 +6375,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~400"></span>
+              <span class="anchor" id="variable-x~47"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6390,7 +6407,7 @@ modules which it uses.
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-fmin~2"></span> <h3>public  subroutine <a href='../proc/fmin~2.html'>fmin</a>(fn, start, lambda, tol, conv_check, max_fun_calls, fun_calls, num_restart, ierr)  
+    <div class="card-header codesum"><span class="anchor" id="proc-fmin"></span> <h3>public  subroutine <a href='../proc/fmin.html'>fmin</a>(fn, start, lambda, tol, conv_check, max_fun_calls, fun_calls, num_restart, ierr)  
 </h3></div>
     <div class="card-body">
           
@@ -6428,7 +6445,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~407"></span>
+              <span class="anchor" id="variable-x~54"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6454,7 +6471,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-start~10"></span>
+              <span class="anchor" id="variable-start"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6469,7 +6486,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-lambda~3"></span>
+              <span class="anchor" id="variable-lambda"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6484,7 +6501,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~50"></span>
+              <span class="anchor" id="variable-tol~18"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6499,7 +6516,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-conv_check~2"></span>
+              <span class="anchor" id="variable-conv_check"></span>
               integer,
             </td>
 <td></td>
@@ -6514,7 +6531,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-max_fun_calls~2"></span>
+              <span class="anchor" id="variable-max_fun_calls"></span>
               integer,
             </td>
 <td></td>
@@ -6529,7 +6546,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-fun_calls~2"></span>
+              <span class="anchor" id="variable-fun_calls"></span>
               integer,
             </td>
 <td></td>
@@ -6544,7 +6561,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-num_restart~2"></span>
+              <span class="anchor" id="variable-num_restart"></span>
               integer,
             </td>
 <td></td>
@@ -6559,7 +6576,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ierr~17"></span>
+              <span class="anchor" id="variable-ierr"></span>
               integer,
             </td>
 <td></td>
@@ -6580,7 +6597,7 @@ modules which it uses.
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-broyden1~2"></span> <h3>public  subroutine <a href='../proc/broyden1~2.html'>broyden1</a>(ff, x, check, maxits, tol, tol1, tolmin, stpmx, noexit)  
+    <div class="card-header codesum"><span class="anchor" id="proc-broyden1"></span> <h3>public  subroutine <a href='../proc/broyden1.html'>broyden1</a>(ff, x, check, maxits, tol, tol1, tolmin, stpmx, noexit)  
 </h3></div>
     <div class="card-body">
           
@@ -6599,7 +6616,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-ff~3"></span>
+              <span class="anchor" id="variable-ff~2"></span>
               procedure(<a href='../interface/broydn_func.html'>broydn_func</a>)
             </td>
 <td></td>
@@ -6614,7 +6631,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~450"></span>
+              <span class="anchor" id="variable-x~97"></span>
               real(kind=8),
             </td>
 <td>intent(inout),</td>
@@ -6629,7 +6646,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-check~48"></span>
+              <span class="anchor" id="variable-check~6"></span>
               logical,
             </td>
 <td></td>
@@ -6644,7 +6661,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-maxits~2"></span>
+              <span class="anchor" id="variable-maxits"></span>
               integer,
             </td>
 <td></td>
@@ -6659,7 +6676,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol~55"></span>
+              <span class="anchor" id="variable-tol~23"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6674,7 +6691,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tol1~9"></span>
+              <span class="anchor" id="variable-tol1~4"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6689,7 +6706,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tolmin~2"></span>
+              <span class="anchor" id="variable-tolmin"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6704,7 +6721,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-stpmx~2"></span>
+              <span class="anchor" id="variable-stpmx"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6719,7 +6736,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-noexit~2"></span>
+              <span class="anchor" id="variable-noexit"></span>
               logical,
             </td>
 <td></td>
@@ -6778,7 +6795,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~454"></span>
+              <span class="anchor" id="variable-x~101"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6804,7 +6821,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x1~23"></span>
+              <span class="anchor" id="variable-x1~4"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6819,7 +6836,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x2~29"></span>
+              <span class="anchor" id="variable-x2~4"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6834,7 +6851,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-eps~84"></span>
+              <span class="anchor" id="variable-eps~12"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -6923,7 +6940,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~455"></span>
+              <span class="anchor" id="variable-x~102"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -6949,7 +6966,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~118"></span>
+              <span class="anchor" id="variable-b~37"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6964,7 +6981,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-c~90"></span>
+              <span class="anchor" id="variable-c~18"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -6979,7 +6996,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iflag~35"></span>
+              <span class="anchor" id="variable-iflag~27"></span>
               integer
             </td>
 <td></td>
@@ -7083,7 +7100,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~456"></span>
+              <span class="anchor" id="variable-x~103"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -7124,7 +7141,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-eps~85"></span>
+              <span class="anchor" id="variable-eps~13"></span>
               real(kind=8),
             </td>
 <td></td>
@@ -7175,7 +7192,7 @@ modules which it uses.
           <div class="col">
             <p>
               SciFortran
- was developed by QcmP Lab members<br>              &copy; 2024 
+ was developed by QcmP Lab members<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
@@ -7188,27 +7205,5 @@ modules which it uses.
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
-
-    <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>

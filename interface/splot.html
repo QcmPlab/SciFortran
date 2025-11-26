@@ -12,14 +12,29 @@
 
     <title>splot &ndash; SciFortran</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="../css/pygments.css" rel="stylesheet">
     <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
@@ -97,9 +112,11 @@
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -166,7 +183,931 @@
 
         <h2>Module Procedures</h2>
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota1_rr~2"></span> <h3>private  subroutine splotA1_RR(pname, X, Y1, append)  
+    <div class="card-header codesum"><span class="anchor" id="proc-splota1_rr"></span> <h3>private  subroutine splotA1_RR(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~101"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~67"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~91"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(X))
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~25"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota1_rc"></span> <h3>private  subroutine splotA1_RC(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~102"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~68"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~92"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(X))
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~26"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota2_rr"></span> <h3>private  subroutine splotA2_RR(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~103"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~69"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,2))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~93"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~27"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota2_rc"></span> <h3>private  subroutine splotA2_RC(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~104"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~70"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,2))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~94"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~28"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota3_rr~2"></span> <h3>private  subroutine splotA3_RR(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~105"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~71"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,3))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~95"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~29"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota3_rc~2"></span> <h3>private  subroutine splotA3_RC(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~106"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~72"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,3))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~96"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~30"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota4_rr"></span> <h3>private  subroutine splotA4_RR(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~107"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~73"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,4))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~97"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:,:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~31"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota4_rc"></span> <h3>private  subroutine splotA4_RC(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~108"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~74"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,4))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~98"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:,:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~32"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota5_rr"></span> <h3>private  subroutine splotA5_RR(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~109"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~75"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,5))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~99"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:,:,:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~33"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota5_rc"></span> <h3>private  subroutine splotA5_RC(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~110"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~76"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,5))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~100"></span>
+              complex(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:,:,:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~34"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota6_rr"></span> <h3>private  subroutine splotA6_RR(pname, X, Y1, append)  
+</h3></div>
+    <div class="card-body">
+        
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pname~111"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~77"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(size(Y1,6))
+            </td>
+            <td>::</td>
+            <td><strong>X</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y1~101"></span>
+              real(kind=8),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(:,:,:,:,:,:)
+            </td>
+            <td>::</td>
+            <td><strong>Y1</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-append~35"></span>
+              logical,
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>append</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-splota6_rc"></span> <h3>private  subroutine splotA6_RC(pname, X, Y1, append)  
 </h3></div>
     <div class="card-body">
         
@@ -199,12 +1140,12 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~87"></span>
+              <span class="anchor" id="variable-x~78"></span>
               real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(:)
+              dimension(size(Y1,6))
             </td>
             <td>::</td>
             <td><strong>X</strong></td>
@@ -215,11 +1156,11 @@
         <tr>
             <td>
               <span class="anchor" id="variable-y1~102"></span>
-              real(kind=8),
+              complex(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(size(X))
+              dimension(:,:,:,:,:,:)
             </td>
             <td>::</td>
             <td><strong>Y1</strong></td>
@@ -229,7 +1170,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-append~27"></span>
+              <span class="anchor" id="variable-append~36"></span>
               logical,
             </td>
 <td></td>
@@ -250,7 +1191,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota1_rc~2"></span> <h3>private  subroutine splotA1_RC(pname, X, Y1, append)  
+    <div class="card-header codesum"><span class="anchor" id="proc-splota7_rr"></span> <h3>private  subroutine splotA7_RR(pname, X, Y1, append)  
 </h3></div>
     <div class="card-body">
         
@@ -283,12 +1224,12 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~88"></span>
+              <span class="anchor" id="variable-x~79"></span>
               real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(:)
+              dimension(size(Y1,7))
             </td>
             <td>::</td>
             <td><strong>X</strong></td>
@@ -299,11 +1240,11 @@
         <tr>
             <td>
               <span class="anchor" id="variable-y1~103"></span>
-              complex(kind=8),
+              real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(size(X))
+              dimension(:,:,:,:,:,:,:)
             </td>
             <td>::</td>
             <td><strong>Y1</strong></td>
@@ -313,7 +1254,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-append~28"></span>
+              <span class="anchor" id="variable-append~37"></span>
               logical,
             </td>
 <td></td>
@@ -334,7 +1275,7 @@
   </div>
 
             <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota2_rr~2"></span> <h3>private  subroutine splotA2_RR(pname, X, Y1, append)  
+    <div class="card-header codesum"><span class="anchor" id="proc-splota7_rc"></span> <h3>private  subroutine splotA7_RC(pname, X, Y1, append)  
 </h3></div>
     <div class="card-body">
         
@@ -367,12 +1308,12 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~89"></span>
+              <span class="anchor" id="variable-x~80"></span>
               real(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(size(Y1,2))
+              dimension(size(Y1,7))
             </td>
             <td>::</td>
             <td><strong>X</strong></td>
@@ -383,767 +1324,11 @@
         <tr>
             <td>
               <span class="anchor" id="variable-y1~104"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~29"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota2_rc~2"></span> <h3>private  subroutine splotA2_RC(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~115"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~90"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,2))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~105"></span>
               complex(kind=8),
             </td>
 <td></td>
               <td></td>            <td>
-              dimension(:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~30"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota3_rr~3"></span> <h3>private  subroutine splotA3_RR(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~116"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~91"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,3))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~106"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~31"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota3_rc~3"></span> <h3>private  subroutine splotA3_RC(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~117"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~92"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,3))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~107"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~32"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota4_rr~2"></span> <h3>private  subroutine splotA4_RR(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~118"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~93"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,4))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~108"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~33"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota4_rc~2"></span> <h3>private  subroutine splotA4_RC(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~119"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~94"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,4))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~109"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~34"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota5_rr~2"></span> <h3>private  subroutine splotA5_RR(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~120"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~95"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,5))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~110"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~35"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota5_rc~2"></span> <h3>private  subroutine splotA5_RC(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~121"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~96"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,5))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~111"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~36"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota6_rr~2"></span> <h3>private  subroutine splotA6_RR(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~122"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~97"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,6))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~112"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~37"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota6_rc~2"></span> <h3>private  subroutine splotA6_RC(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~123"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~98"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,6))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~113"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:,:,:)
+              dimension(:,:,:,:,:,:,:)
             </td>
             <td>::</td>
             <td><strong>Y1</strong></td>
@@ -1173,174 +1358,6 @@
     </div>
   </div>
 
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota7_rr~2"></span> <h3>private  subroutine splotA7_RR(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~124"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~99"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,7))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~114"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:,:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~39"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-            <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-splota7_rc~2"></span> <h3>private  subroutine splotA7_RC(pname, X, Y1, append)  
-</h3></div>
-    <div class="card-body">
-        
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-pname~125"></span>
-              character(len=*)
-            </td>
-<td></td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>pname</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-x~100"></span>
-              real(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(size(Y1,7))
-            </td>
-            <td>::</td>
-            <td><strong>X</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-y1~115"></span>
-              complex(kind=8),
-            </td>
-<td></td>
-              <td></td>            <td>
-              dimension(:,:,:,:,:,:,:)
-            </td>
-            <td>::</td>
-            <td><strong>Y1</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-append~40"></span>
-              logical,
-            </td>
-<td></td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>append</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
 </div>
   </div>
       <hr>
@@ -1351,7 +1368,7 @@
           <div class="col">
             <p>
               SciFortran
- was developed by QcmP Lab members<br>              &copy; 2024 
+ was developed by QcmP Lab members<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
@@ -1364,27 +1381,5 @@
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
-
-    <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>

@@ -12,14 +12,29 @@
 
     <title>SF_CONSTANTS &ndash; SciFortran</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="../css/pygments.css" rel="stylesheet">
     <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
@@ -96,9 +111,11 @@
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -115,14 +132,14 @@
       </a>
       <div id="vars-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/sf_constants.html#variable-zero~11">zero</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-xi~10">xi</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-one~10">one</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-sqrt2~2">sqrt2</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-sqrt3~2">sqrt3</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-zero">zero</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-xi~3">xi</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-one">one</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-sqrt2">sqrt2</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-sqrt3">sqrt3</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-sqrt6">sqrt6</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-pi~89">pi</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-pi2~5">pi2</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-pi~9">pi</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-pi2~4">pi2</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-gamma_euler">gamma_euler</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-euler">euler</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-max_int">max_int</a>
@@ -130,9 +147,9 @@
             <a class="list-group-item" href="../module/sf_constants.html#variable-epsilonr">epsilonr</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-epsilonq">epsilonq</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-dbl">dbl</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-dp~2">dp</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-dp">dp</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-ddp">ddp</a>
-            <a class="list-group-item" href="../module/sf_constants.html#variable-sp~4">sp</a>
+            <a class="list-group-item" href="../module/sf_constants.html#variable-sp">sp</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-avogadro_constant">Avogadro_constant</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-bohr_magneton">Bohr_magneton</a>
             <a class="list-group-item" href="../module/sf_constants.html#variable-bohr_magneton_in_evot">Bohr_magneton_in_eVoT</a>
@@ -460,7 +477,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-zero~11"></span>
+              <span class="anchor" id="variable-zero"></span>
               complex(kind=8),
             </td>
               <td>public,</td>
@@ -477,7 +494,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xi~10"></span>
+              <span class="anchor" id="variable-xi~3"></span>
               complex(kind=8),
             </td>
               <td>public,</td>
@@ -494,7 +511,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-one~10"></span>
+              <span class="anchor" id="variable-one"></span>
               complex(kind=8),
             </td>
               <td>public,</td>
@@ -511,7 +528,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sqrt2~2"></span>
+              <span class="anchor" id="variable-sqrt2"></span>
               real(kind=8),
             </td>
               <td>public,</td>
@@ -528,7 +545,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sqrt3~2"></span>
+              <span class="anchor" id="variable-sqrt3"></span>
               real(kind=8),
             </td>
               <td>public,</td>
@@ -562,7 +579,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pi~89"></span>
+              <span class="anchor" id="variable-pi~9"></span>
               real(kind=8),
             </td>
               <td>public,</td>
@@ -579,7 +596,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pi2~5"></span>
+              <span class="anchor" id="variable-pi2~4"></span>
               real(kind=8),
             </td>
               <td>public,</td>
@@ -715,7 +732,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-dp~2"></span>
+              <span class="anchor" id="variable-dp"></span>
               integer,
             </td>
               <td>public,</td>
@@ -749,7 +766,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sp~4"></span>
+              <span class="anchor" id="variable-sp"></span>
               integer,
             </td>
               <td>public,</td>
@@ -2127,7 +2144,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~221"></span>
+              <span class="anchor" id="variable-a~78"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2171,7 +2188,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~222"></span>
+              <span class="anchor" id="variable-a~79"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2215,7 +2232,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~223"></span>
+              <span class="anchor" id="variable-a~80"></span>
               complex(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2269,7 +2286,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~218"></span>
+              <span class="anchor" id="variable-a~75"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2313,7 +2330,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~219"></span>
+              <span class="anchor" id="variable-a~76"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2357,7 +2374,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~220"></span>
+              <span class="anchor" id="variable-a~77"></span>
               complex(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2411,7 +2428,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-time~4"></span>
+              <span class="anchor" id="variable-time"></span>
               integer
             </td>
 <td></td>
@@ -2450,7 +2467,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-time~5"></span>
+              <span class="anchor" id="variable-time~2"></span>
               real
             </td>
 <td></td>
@@ -2489,7 +2506,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-time~6"></span>
+              <span class="anchor" id="variable-time~3"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -2537,7 +2554,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~218"></span>
+              <span class="anchor" id="variable-a~75"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2582,7 +2599,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~219"></span>
+              <span class="anchor" id="variable-a~76"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2627,7 +2644,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~220"></span>
+              <span class="anchor" id="variable-a~77"></span>
               complex(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2672,7 +2689,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~221"></span>
+              <span class="anchor" id="variable-a~78"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2717,7 +2734,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~222"></span>
+              <span class="anchor" id="variable-a~79"></span>
               real(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2762,7 +2779,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~223"></span>
+              <span class="anchor" id="variable-a~80"></span>
               complex(kind=8),
             </td>
 <td>intent(in)</td>
@@ -2812,7 +2829,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-unit~43"></span>
+              <span class="anchor" id="variable-unit~18"></span>
               integer,
             </td>
 <td></td>
@@ -2852,7 +2869,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-dummy~5"></span>
+              <span class="anchor" id="variable-dummy"></span>
               integer(kind=4),
             </td>
 <td></td>
@@ -2867,7 +2884,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-unit~44"></span>
+              <span class="anchor" id="variable-unit~19"></span>
               integer
             </td>
 <td></td>
@@ -2907,7 +2924,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-msg~2"></span>
+              <span class="anchor" id="variable-msg"></span>
               character(len=*)
             </td>
 <td></td>
@@ -2947,7 +2964,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-time~4"></span>
+              <span class="anchor" id="variable-time"></span>
               integer
             </td>
 <td></td>
@@ -2987,7 +3004,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-time~5"></span>
+              <span class="anchor" id="variable-time~2"></span>
               real
             </td>
 <td></td>
@@ -3027,7 +3044,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-time~6"></span>
+              <span class="anchor" id="variable-time~3"></span>
               real(kind=8)
             </td>
 <td></td>
@@ -3063,7 +3080,7 @@ parameter
           <div class="col">
             <p>
               SciFortran
- was developed by QcmP Lab members<br>              &copy; 2024 
+ was developed by QcmP Lab members<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
@@ -3076,27 +3093,5 @@ parameter
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
-
-    <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>
