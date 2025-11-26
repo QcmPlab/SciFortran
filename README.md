@@ -1,3 +1,7 @@
+# `⚠rchived`  
+> The development of SciFortran has moved [elsewhere](https://github.com/SciFortran/SciFortran), so this repository is now archived: it will not be updated (you cannot push, we will not sync with the new upstream) nor deleted, to preserve any possible links (git remotes in local clones, git submodules, etc.) to break.
+-----
+
 # SciFortran
 
 [![Ubuntu](https://img.shields.io/github/actions/workflow/status/QcmPlab/SciFortran/Ubuntu_Scheduled.yml?label=Ubuntu&logo=ubuntu&style=flat-square)](https://github.com/QcmPlab/SciFortran/actions/workflows/Scheduled.yml) 
